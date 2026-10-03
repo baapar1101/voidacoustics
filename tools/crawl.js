@@ -146,9 +146,21 @@ async function fetchWithRetry(url, attempts = 3) {
 // ------------------------------------------------------------------------ run
 
 async function main() {
-  const seeds = process.argv.slice(2);
+  // Seeds may be passed as args, or via @file / --seeds=file (Windows has a
+  // ~32k command-line limit, which a few hundred URLs will blow through).
+  let raw = [];
+  for (const a of process.argv.slice(2)) {
+    if (a.startsWith('@') || a.startsWith('--seeds=')) {
+      const f = a.replace(/^@/, '').replace(/^--seeds=/, '');
+      raw.push(...(await fsp.readFile(f, 'utf8')).split(/\r?\n/));
+    } else {
+      raw.push(a);
+    }
+  }
+  const seeds = raw.map((s) => s.trim()).filter(Boolean);
+
   if (!seeds.length) {
-    console.error('usage: node tools/crawl.js <url> [url...]');
+    console.error('usage: node tools/crawl.js <url> [url...] | node tools/crawl.js @seeds.txt');
     process.exit(1);
   }
 

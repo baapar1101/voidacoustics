@@ -41,7 +41,10 @@ function rewrite(html) {
   // drop the complianz CSS template placeholder (never resolvable)
   out = out.replace(/\/wp-content\/uploads\/complianz\/css\/banner-[^"'\s]*\.css[^"'\s]*/g, '');
   // drop cache-busting query strings on local asset refs
-  out = out.replace(/(\/wp-(?:content|includes)\/[^\s"'`)]*?)\?ver=[0-9a-f]+/gi, '$1');
+  // Strip the WP cache-busting param. Value may be dotted (ver=6.1.7) or hex
+  // (ver=2c532d7e2be36f6af233), so match up to the next delimiter -- NOT [0-9a-f]+,
+  // which truncates at the first '.' and corrupts the filename.
+  out = out.replace(/(\/wp-(?:content|includes)\/[^\s"'`)]*?)\?ver=[^&\s"'`)]*/gi, '$1');
   return out;
 }
 
