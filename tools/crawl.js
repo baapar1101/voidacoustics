@@ -21,6 +21,7 @@ const MIRROR = path.join(__dirname, '..', 'mirror');
 const CONCURRENCY = 8;
 const MAX_PAGES = Number(process.env.MAX_PAGES) || 400;
 const TIMEOUT_MS = 45000;
+const LARGE_TIMEOUT_MS = 300000; // zips / PDFs can be >10MB on a slow link
 
 const ASSET_EXT = new Set([
   'css', 'js', 'mjs', 'jpg', 'jpeg', 'png', 'gif', 'webp', 'avif', 'svg', 'ico',
@@ -115,10 +116,12 @@ function extractLinks(html, pageUrl) {
 // ------------------------------------------------------------------- fetching
 
 async function fetchWithRetry(url, attempts = 3) {
+  const isBig = /\.(zip|pdf|mp4|mp3|psd|ai|sketch)(\?|$)/i.test(url);
+  const timeout = isBig ? LARGE_TIMEOUT_MS : TIMEOUT_MS;
   let lastErr;
   for (let i = 0; i < attempts; i++) {
     const ctl = new AbortController();
-    const timer = setTimeout(() => ctl.abort(), TIMEOUT_MS);
+    const timer = setTimeout(() => ctl.abort(), timeout);
     try {
       const res = await fetch(url, {
         headers: { 'User-Agent': UA, Accept: '*/*', 'Accept-Language': 'en-US,en;q=0.9' },
