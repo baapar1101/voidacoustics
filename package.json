@@ -1,0 +1,13 @@
+{
+  "name": "voidacoustics-local",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local static mirror of voidacoustics.com for development",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "verify": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/verify-local.ps1",
+    "verify:http": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/verify-http.ps1",
+    "sync:assets": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/download-assets.ps1"
+  }
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Dimensions" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #ff023d;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2.75px;
+      }
+    </style>
+  </defs>
+  <polyline class="cls-1" points="27.5 15.62 37.34 11.31 20 4.2 2.66 11.31 12.5 15.62"/>
+  <polyline class="cls-1" points="27.26 24.07 37.34 19.65 27.5 15.62 20 18.91 12.5 15.62 2.66 19.65 12.74 24.07"/>
+  <polygon class="cls-1" points="12.74 24.07 2.66 28.2 20 35.8 37.34 28.2 27.26 24.07 20 27.25 12.74 24.07"/>
+</svg>
