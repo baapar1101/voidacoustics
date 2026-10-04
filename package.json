@@ -9,5 +9,19 @@
     "verify": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/verify-local.ps1",
     "verify:http": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/verify-http.ps1",
     "sync:assets": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/download-assets.ps1"
+  },
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baapar1101/voidacoustics.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/baapar1101/voidacoustics/issues"
+  },
+  "homepage": "https://github.com/baapar1101/voidacoustics#readme",
+  "dependencies": {
+    "astro": "^7.3.5"
   }
 }
