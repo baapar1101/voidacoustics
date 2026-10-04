@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Dimensions" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #ff023d;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2.75px;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M3.87,36.48V4.29h32.19v32.19H3.87Z"/>
+  <path class="cls-1" d="M3.87,28.43h32.19"/>
+  <path class="cls-1" d="M3.87,20.38h32.19"/>
+  <path class="cls-1" d="M3.87,12.34h32.19"/>
+  <path class="cls-1" d="M28.01,4.29v32.19"/>
+  <path class="cls-1" d="M19.96,4.29v32.19"/>
+  <path class="cls-1" d="M11.91,4.29v32.19"/>
+</svg>

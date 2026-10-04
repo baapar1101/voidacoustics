@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Dimensions" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #ff023d;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2.75px;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M13.74,30.96c6.05,0,10.96-4.91,10.96-10.96s-4.91-10.96-10.96-10.96S2.78,13.95,2.78,20s4.91,10.96,10.96,10.96Z"/>
+  <path class="cls-1" d="M26.26,30.96c6.05,0,10.96-4.91,10.96-10.96s-4.91-10.96-10.96-10.96-10.96,4.91-10.96,10.96,4.91,10.96,10.96,10.96Z"/>
+</svg>

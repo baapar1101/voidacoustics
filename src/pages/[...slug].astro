@@ -1,0 +1,22 @@
+---
+/**
+ * Catch-all route for every mirrored page except the homepage.
+ *
+ * One route handles all ~1500 documents instead of 1500 near-identical
+ * .astro files. Each source document is emitted byte-for-byte apart from the
+ * same-site URL rewrite, so WordPress/Weglot markup is preserved exactly.
+ */
+import { listPages, readPage } from '../lib/pages.mjs';
+import { rewriteUrls } from '../lib/rewrite.mjs';
+
+export function getStaticPaths() {
+  return listPages()
+    .filter((p) => p.slug !== '') // homepage has its own route
+    .map((p) => ({ params: { slug: p.slug } }));
+}
+
+const raw = readPage(Astro.params.slug) ?? '<!doctype html><title>404</title>';
+const html = rewriteUrls(raw);
+---
+
+<Fragment set:html={html} />

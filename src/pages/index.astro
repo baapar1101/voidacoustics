@@ -1,0 +1,13 @@
+---
+/**
+ * Mirrored homepage. Renders the original WordPress document verbatim --
+ * these are compiled pages, not templates, so there is nothing to decompose.
+ */
+import { readPage } from '../lib/pages.mjs';
+import { rewriteUrls } from '../lib/rewrite.mjs';
+
+const raw = readPage('/') ?? '<!doctype html><title>missing</title>';
+const html = rewriteUrls(raw);
+---
+
+<Fragment set:html={html} />
