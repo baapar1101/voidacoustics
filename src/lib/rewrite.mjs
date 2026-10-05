@@ -16,8 +16,6 @@ const VER_RE = /(\/wp-(?:content|includes|json)\/[^\s"'`)]*?)\?ver=[^&\s"'`)]*/g
 export function rewriteUrls(html) {
   let out = html.replace(HOST_RE, (m, p) => (p && p.length > 1 ? p : '/'));
   out = out.replace(PROTO_REL_RE, (m, pre, p) => `${pre}${p && p.length > 1 ? p : '/'}`);
-  // complianz injects a templated path that can never resolve
-  out = out.replace(/\/wp-content\/uploads\/complianz\/css\/banner-[^"'\s]*\.css[^"'\s]*/gi, '');
   out = out.replace(VER_RE, '$1');
   return out;
 }
