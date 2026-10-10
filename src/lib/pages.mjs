@@ -2,7 +2,27 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-export const ROOT = path.resolve(fileURLToPath(new URL('../..', import.meta.url)));
+/**
+ * Astro/Vite rewrites `import.meta.url` when it bundles this module, so the
+ * file-relative path above can point into the build cache. Resolve the project
+ * root by walking up until a directory containing `mirror/` is found -- starting
+ * from both this module's URL and the process cwd.
+ */
+function findRoot() {
+  const starts = [path.dirname(fileURLToPath(import.meta.url)), process.cwd()];
+  for (const start of starts) {
+    let dir = path.resolve(start);
+    for (;;) {
+      if (fs.existsSync(path.join(dir, 'mirror'))) return dir;
+      const up = path.dirname(dir);
+      if (up === dir) break;
+      dir = up;
+    }
+  }
+  return path.resolve(fileURLToPath(new URL('../..', import.meta.url)));
+}
+
+export const ROOT = findRoot();
 export const MIRROR = path.join(ROOT, 'mirror');
 
 /**
