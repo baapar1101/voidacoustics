@@ -2,7 +2,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-const ROOT = __dirname;
+const ROOT = fs.existsSync(path.join(__dirname, 'dist')) ? path.join(__dirname, 'dist') : __dirname;
 const PORT = Number(process.env.PORT) || 5173;
 const HOST = process.env.HOST || '127.0.0.1';
 
@@ -43,11 +43,17 @@ const server = http.createServer((req, res) => {
   if (pathname.endsWith('/')) pathname += 'index.html';
 
   // resolve + block traversal outside ROOT
-  const filePath = path.join(ROOT, path.normalize(pathname).replace(/^([/\\])+/, ''));
+  let filePath = path.join(ROOT, path.normalize(pathname).replace(/^([/\\])+/, ''));
   if (!filePath.startsWith(ROOT)) {
     res.writeHead(403).end('Forbidden');
     return;
   }
+
+  try {
+    if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
+      filePath = path.join(filePath, 'index.html');
+    }
+  } catch {}
 
   fs.stat(filePath, (err, stat) => {
     if (err || !stat.isFile()) {

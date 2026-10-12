@@ -15,8 +15,9 @@ export function getStaticPaths() {
     .map((p) => ({ params: { slug: p.slug } }));
 }
 
+const isEn = Astro.params.slug === 'en' || Astro.params.slug.startsWith('en/');
 const raw = readPage(Astro.params.slug) ?? '<!doctype html><title>404</title>';
-const html = rewriteUrls(raw);
+const html = rewriteUrls(raw, isEn ? 'en' : 'fa');
 ---
 
 <Fragment set:html={html} />

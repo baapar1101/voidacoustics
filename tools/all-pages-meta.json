@@ -1,0 +1,1039 @@
+[
+  {
+    "slug": "about/",
+    "rel": "about/index.html",
+    "title": "About Us | Void Acoustics",
+    "desc": "The history, design philosophy and innovation behind Void Acoustics."
+  },
+  {
+    "slug": "avintegration/",
+    "rel": "avintegration/index.html",
+    "title": "AV Integration | Commercial Audio Solutions | Void Acoustics",
+    "desc": "Design-led audio solutions that combine visual appeal with commercial performance for AV integration projects."
+  },
+  {
+    "slug": "careers/",
+    "rel": "careers/index.html",
+    "title": "Careers | Void Acoustics",
+    "desc": "Career opportunities with Void Acoustics."
+  },
+  {
+    "slug": "contact/",
+    "rel": "contact/index.html",
+    "title": "Contact Us | Void Acoustics",
+    "desc": "Sales enquiries, technical support and partnership enquiries for Void Acoustics."
+  },
+  {
+    "slug": "cookies/",
+    "rel": "cookies/index.html",
+    "title": "Cookie Policy | Void Acoustics",
+    "desc": "Information about how Void Acoustics uses cookies across this website."
+  },
+  {
+    "slug": "customisation/",
+    "rel": "customisation/index.html",
+    "title": "Customisation Options | Finishes &amp; Materials | Void Acoustics",
+    "desc": "Explore custom finishes and colour options available for selected Void Acoustics products, including RAL colours, Natural Wood and KROME."
+  },
+  {
+    "slug": "design/",
+    "rel": "design/index.html",
+    "title": "Design Your Sound System | Void Acoustics",
+    "desc": "Guidance on selecting, integrating and optimising a professional sound system."
+  },
+  {
+    "slug": "discover/apresski/",
+    "rel": "discover/apresski/index.html",
+    "title": "Après-Ski | Mountain Hospitality Sound | Void Acoustics",
+    "desc": "Mountain hospitality sound for terraces, chalets and late-night alpine venues."
+  },
+  {
+    "slug": "discover/artsculture/",
+    "rel": "discover/artsculture/index.html",
+    "title": "Arts &amp; Culture | Immersive Sound Systems | Void Acoustics",
+    "desc": "Intentional sound that guides attention, supports immersion and respects the space."
+  },
+  {
+    "slug": "discover/barsrestaurants/",
+    "rel": "discover/barsrestaurants/index.html",
+    "title": "Bars &amp; Restaurants | Hospitality Sound Systems | Void Acoustics",
+    "desc": "Audio that balances conversation, atmosphere and energy throughout the venue."
+  },
+  {
+    "slug": "discover/beachpoolrooftop/",
+    "rel": "discover/beachpoolrooftop/index.html",
+    "title": "Beach, Pool &amp; Rooftop | Outdoor Venue Sound | Void Acoustics",
+    "desc": "Outdoor sound for open-air spaces that move from relaxation to celebration."
+  },
+  {
+    "slug": "discover/clubculture/",
+    "rel": "discover/clubculture/index.html",
+    "title": "Club Culture | Nightlife Sound Systems | Void Acoustics",
+    "desc": "Nightlife systems with physical low-end impact and unmistakable visual presence."
+  },
+  {
+    "slug": "discover/djmonitoring/",
+    "rel": "discover/djmonitoring/index.html",
+    "title": "DJ Monitoring | DJ Booth Sound Systems | Void Acoustics",
+    "desc": "Physical low-end energy and sculpted visual presence built for the booth."
+  },
+  {
+    "slug": "discover/fashionretail/",
+    "rel": "discover/fashionretail/index.html",
+    "title": "Fashion &amp; Retail | Boutique Retail Sound Systems | Void Acoustics",
+    "desc": "Sound that shapes brand identity and makes boutique spaces feel considered."
+  },
+  {
+    "slug": "discover/festivalsevents/",
+    "rel": "discover/festivalsevents/index.html",
+    "title": "Festivals &amp; Events | Live Event Sound Systems | Void Acoustics",
+    "desc": "Powerful sound and impact for immersive events, stages and open-air gatherings."
+  },
+  {
+    "slug": "discover/healthwellbeing/",
+    "rel": "discover/healthwellbeing/index.html",
+    "title": "Health &amp; Wellbeing | Fitness &amp; Wellness Sound | Void Acoustics",
+    "desc": "Controlled audio that moves between calm focus and high-energy performance."
+  },
+  {
+    "slug": "discover/hotelsresorts/",
+    "rel": "discover/hotelsresorts/index.html",
+    "title": "Hotels &amp; Resorts | Hospitality Sound Systems | Void Acoustics",
+    "desc": "Sound across the guest journey, from arrival spaces to late-night venues."
+  },
+  {
+    "slug": "discover/",
+    "rel": "discover/index.html",
+    "title": "Discover | Sound Systems for Every Setting | Void Acoustics",
+    "desc": "Real-world installations and sound systems across hospitality, entertainment and commercial environments."
+  },
+  {
+    "slug": "discover/residential/",
+    "rel": "discover/residential/index.html",
+    "title": "Residential | Design-Led Home Audio | Void Acoustics",
+    "desc": "Design-led sound for homes that live, entertain and perform beautifully."
+  },
+  {
+    "slug": "discover/yachting/",
+    "rel": "discover/yachting/index.html",
+    "title": "Yachting | Design-Led Onboard Sound | Void Acoustics",
+    "desc": "Design-led onboard sound for entertaining, luxury interiors and private living."
+  },
+  {
+    "slug": "flyframe/",
+    "rel": "flyframe/index.html",
+    "title": "Air Array Fly Frame | Void Acoustics",
+    "desc": "Discover the Air Array Fly Frame, designed to expand the deployment possibilities of the Incubus System with flexible flown configurations."
+  },
+  {
+    "slug": "hearvoid/",
+    "rel": "hearvoid/index.html",
+    "title": "Hear Void | Global Installation Map | Void Acoustics",
+    "desc": "Real-world Void Acoustics installations, case studies and upcoming events."
+  },
+  {
+    "slug": "history/",
+    "rel": "history/index.html",
+    "title": "Our History | Void Acoustics",
+    "desc": "The story of Void Acoustics from its beginnings to the present day."
+  },
+  {
+    "slug": "hospitality/",
+    "rel": "hospitality/index.html",
+    "title": "Hospitality | Venue Sound Systems | Void Acoustics",
+    "desc": "Design-led audio solutions for memorable hospitality spaces, from relaxed daytime service to high-energy nights."
+  },
+  {
+    "slug": "/",
+    "rel": "index.html",
+    "title": "Professional Loudspeakers &amp; Sound Systems | Void Acoustics",
+    "desc": "Design-led professional loudspeakers, subwoofers and amplification for hospitality, entertainment and commercial environments."
+  },
+  {
+    "slug": "insights/8streetbrickell/",
+    "rel": "insights/8streetbrickell/index.html",
+    "title": "8Street Brickell | Bar Sound System, Miami | Void Acoustics",
+    "desc": "A Void Acoustics sound system combining iconic design with exceptional sound at 8Street Brickell, Miami."
+  },
+  {
+    "slug": "insights/albertsbar/",
+    "rel": "insights/albertsbar/index.html",
+    "title": "Albert&#039;s Bar | Bar Sound System, New York | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering clarity and atmosphere for dining, nightlife and live events at Albert&#039;s Bar, New York."
+  },
+  {
+    "slug": "insights/baccarat/",
+    "rel": "insights/baccarat/index.html",
+    "title": "Baccarat | Bar Sound System, Bangkok | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering power, clarity and precision for house and techno at Baccarat, Bangkok."
+  },
+  {
+    "slug": "insights/baryardatkimpton/",
+    "rel": "insights/baryardatkimpton/index.html",
+    "title": "BarYard at Kimpton Maa-Lai | Bar Sound System, Bangkok | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering balanced sound for rooftop hospitality at Bar.Yard, Bangkok."
+  },
+  {
+    "slug": "insights/basilicadelourdes/",
+    "rel": "insights/basilicadelourdes/index.html",
+    "title": "Basilica de Lourdes | Event Sound System, Santiago | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering an immersive listening experience at the Basilica of Lourdes, Santiago, Chile."
+  },
+  {
+    "slug": "insights/bayzhiltonbeach/",
+    "rel": "insights/bayzhiltonbeach/index.html",
+    "title": "Bayz Hilton Beach | Beach Sound System, Tel Aviv | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering flexibility and consistent coverage at Bayz Hilton Beach, Tel Aviv."
+  },
+  {
+    "slug": "insights/bazique2025/",
+    "rel": "insights/bazique2025/index.html",
+    "title": "Bazique 2025 | Festival Sound System, Cape Town | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering powerful festival sound at Bazique Festival, Cape Town."
+  },
+  {
+    "slug": "insights/baziquefestival/",
+    "rel": "insights/baziquefestival/index.html",
+    "title": "Bazique 2025 | Festival Sound System, Cape Town | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering powerful festival sound at Bazique Festival, Cape Town."
+  },
+  {
+    "slug": "insights/bestial/",
+    "rel": "insights/bestial/index.html",
+    "title": "Bestial | Bar Sound System, Madrid | Void Acoustics",
+    "desc": "A Void Acoustics sound system combining bold design with exceptional sound at Bestial, Madrid."
+  },
+  {
+    "slug": "insights/bestregards/",
+    "rel": "insights/bestregards/index.html",
+    "title": "Best Regards | Bar Sound System, Houston | Void Acoustics",
+    "desc": "A Void Acoustics sound system featuring custom green Air Motion and Airten V3 loudspeakers enhances Best Regards, Houston."
+  },
+  {
+    "slug": "insights/blinders/",
+    "rel": "insights/blinders/index.html",
+    "title": "Blinders | Bar Sound System, Charlotte | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering seamless transitions from live sports to nightlife at Blinders, Charlotte."
+  },
+  {
+    "slug": "insights/blitz/",
+    "rel": "insights/blitz/index.html",
+    "title": "Blitz | Club Culture Sound System, Munich | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering precision audio for Blitz, Munich."
+  },
+  {
+    "slug": "insights/boomtown2024/",
+    "rel": "insights/boomtown2024/index.html",
+    "title": "Boomtown 2024 | Festival Sound System, Winchester | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering powerful festival sound through a long-standing partnership with Boomtown Fair."
+  },
+  {
+    "slug": "insights/boomtown2026/",
+    "rel": "insights/boomtown2026/index.html",
+    "title": "Boomtown Fair 2026 | Festival Sound System | Void Acoustics",
+    "desc": "Void Acoustics delivers immersive festival sound at Boomtown Fair 2026, including the expanded Spectrum 360 stage and UK debut of Air 12."
+  },
+  {
+    "slug": "insights/boumboum/",
+    "rel": "insights/boumboum/index.html",
+    "title": "Boum Boum | Club Culture Sound System, Paris | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivers exceptional sound at Boum Boum, supporting nightlife and live entertainment in the heart of Paris."
+  },
+  {
+    "slug": "insights/capeweligama/",
+    "rel": "insights/capeweligama/index.html",
+    "title": "Cape Weligama | Resort Sound System, Sri Lanka | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering discreet, design-led sound throughout Cape Weligama, Sri Lanka."
+  },
+  {
+    "slug": "insights/centraldumplingbar/",
+    "rel": "insights/centraldumplingbar/index.html",
+    "title": "Central | Restaurant Sound System, Brisbane | Void Acoustics",
+    "desc": "A Void Acoustics sound system helps Central transition from Hong Kong-inspired dining to Saturday night disco sittings in Brisbane."
+  },
+  {
+    "slug": "insights/chateaudenmark/",
+    "rel": "insights/chateaudenmark/index.html",
+    "title": "Chateau Denmark | Hotel Sound System, London | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering bespoke audio throughout Chateau Denmark, London."
+  },
+  {
+    "slug": "insights/chromeekkamai/",
+    "rel": "insights/chromeekkamai/index.html",
+    "title": "Chrome Ekkamai | Club Culture Sound System, Bangkok | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering powerful, high-clarity nightclub audio at Chrome Ekkamai, Bangkok."
+  },
+  {
+    "slug": "insights/church-facilities-expo/",
+    "rel": "insights/church-facilities-expo/index.html",
+    "title": "Church Facilities Expo 2026 | Void Acoustics",
+    "desc": "Void Acoustics joined Church Facilities Expo 2026 in Birmingham, Alabama, with live loudspeaker demos and educational church audio sessions."
+  },
+  {
+    "slug": "insights/cubobar/",
+    "rel": "insights/cubobar/index.html",
+    "title": "Cubo Bar | Beach Bar Sound System, Varna | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering power, clarity and control for DJs and live performances at Cubo Bar, Varna."
+  },
+  {
+    "slug": "insights/dirtybird2021/",
+    "rel": "insights/dirtybird2021/index.html",
+    "title": "Dirtybird Campout 2021 | Festival Sound System, California | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering precision, clarity and controlled coverage at Dirtybird Campout, California."
+  },
+  {
+    "slug": "insights/djsally/",
+    "rel": "insights/djsally/index.html",
+    "title": "DJ Sally | Event Sound System, Guangzhou | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering power, clarity and precision for DJ Sally&#039;s symphonic performance in Guangzhou, China."
+  },
+  {
+    "slug": "insights/dotsbayhouse/",
+    "rel": "insights/dotsbayhouse/index.html",
+    "title": "Dots Bay House | Beachfront Sound System | Void Acoustics",
+    "desc": "Discover how Void Acoustics transformed the sound at Dots Bay House in Hiriketiya, Sri Lanka, with a high-performance beachfront audio system."
+  },
+  {
+    "slug": "insights/eden/",
+    "rel": "insights/eden/index.html",
+    "title": "Eden | Club Culture Sound System, Ibiza | Void Acoustics",
+    "desc": "A Void Acoustics sound system featuring the custom gold Incubus System delivers exceptional sound throughout Eden Ibiza."
+  },
+  {
+    "slug": "insights/emergence/",
+    "rel": "insights/emergence/index.html",
+    "title": "Emergence Installation | Arts &amp; Culture Sound System, London | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering immersive audio for the award-winning Emergence art installation In London."
+  },
+  {
+    "slug": "insights/fatboyizakaya/",
+    "rel": "insights/fatboyizakaya/index.html",
+    "title": "Fatboy Izakaya | Restaurant Sound System, Bangkok | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering energy and atmosphere from dining through to nightlife at Fatboy Izakaya, Bangkok."
+  },
+  {
+    "slug": "insights/gilgamesh/",
+    "rel": "insights/gilgamesh/index.html",
+    "title": "Gilgamesh | Restaurant Sound System, London | Void Acoustics",
+    "desc": "A Void Acoustics sound system balancing discreet integration with powerful performance at Gilgamesh, London."
+  },
+  {
+    "slug": "insights/glassisland/",
+    "rel": "insights/glassisland/index.html",
+    "title": "Glass Island | Yachting Sound System, Sydney | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering clarity, balance and energy aboard Glass Island, Sydney."
+  },
+  {
+    "slug": "insights/glastonbury2024/",
+    "rel": "insights/glastonbury2024/index.html",
+    "title": "Glastonbury 2024 | Festival Sound System, Somerset | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering clarity, control and consistent coverage at Glastonbury Festival, Somerset."
+  },
+  {
+    "slug": "insights/heatedroom/",
+    "rel": "insights/heatedroom/index.html",
+    "title": "Heated Room | Health &amp; Wellbeing Sound System, LA | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering energy, clarity and control throughout Heated Room, West Hollywood."
+  },
+  {
+    "slug": "insights/helmartgallery/",
+    "rel": "insights/helmartgallery/index.html",
+    "title": "Helm Art Gallery | Arts &amp; Culture Sound System, Brighton | Void Acoustics",
+    "desc": "A Void Acoustics sound system enhancing atmosphere and contemporary art at Helm Gallery, Brighton."
+  },
+  {
+    "slug": "insights/hpe/",
+    "rel": "insights/hpe/index.html",
+    "title": "Hewlett Packard Enterprise | Corporate Sound System, Texas | Void Acoustics",
+    "desc": "A Void Acoustics sound system supporting collaboration, events and outdoor experiences at HPE&#039;s headquarters, Spring, Texas."
+  },
+  {
+    "slug": "insights/",
+    "rel": "insights/index.html",
+    "title": "Insights | Case Studies, Blogs, News &amp; Events | Void Acoustics",
+    "desc": "Case studies, blog articles and news from Void Acoustics."
+  },
+  {
+    "slug": "insights/jetwinglighthouse/",
+    "rel": "insights/jetwinglighthouse/index.html",
+    "title": "Jetwing Lighthouse, Galle - Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering controlled coverage and beachfront entertainment at Jetwing Lighthouse Hotel, Galle."
+  },
+  {
+    "slug": "insights/jinbolawskybar/",
+    "rel": "insights/jinbolawskybar/index.html",
+    "title": "Jin Bo Law Skybar | Rooftop Sound System, London | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering clarity, coverage and performance at Jin Bo Law Skybar, London."
+  },
+  {
+    "slug": "insights/kimptonvividora/",
+    "rel": "insights/kimptonvividora/index.html",
+    "title": "Kimpton Vividora | Hotel Sound System, Barcelona | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering clarity, control and atmosphere at Kimpton Vividora, Barcelona."
+  },
+  {
+    "slug": "insights/kingdomofsweets/",
+    "rel": "insights/kingdomofsweets/index.html",
+    "title": "Kingdom of Sweets | Retail Sound System, UK | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering tailored retail audio across Kingdom of Sweets locations in the UK."
+  },
+  {
+    "slug": "insights/kingscrosshotel/",
+    "rel": "insights/kingscrosshotel/index.html",
+    "title": "Kings Cross Hotel | Hotel Sound System, Sydney | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering club-grade performance and consistent coverage at Kings Cross Hotel, Sydney."
+  },
+  {
+    "slug": "insights/kiosk/",
+    "rel": "insights/kiosk/index.html",
+    "title": "Kiosk | Restaurant Sound System, Budapest | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering consistent coverage and flexible performance at Kiosk, Budapest."
+  },
+  {
+    "slug": "insights/la-feria-de-diseno/",
+    "rel": "insights/la-feria-de-diseno/index.html",
+    "title": "La Feria De Diseño Medellín 2026 | Void Acoustics",
+    "desc": "Void Acoustics joined VIVO at La Feria de Diseño Medellín 2026, bringing design-led audio to the world of architecture and interiors."
+  },
+  {
+    "slug": "insights/lanna2023/",
+    "rel": "insights/lanna2023/index.html",
+    "title": "Lanna Festival 2023 | Festival Sound System, Gijón | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering clarity, precision and powerful low-end performance at Lanna Festival, Gijón."
+  },
+  {
+    "slug": "insights/lannaclub/",
+    "rel": "insights/lannaclub/index.html",
+    "title": "Lanna Club | Club Culture Sound System, Gijón | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering detailed sound and powerful low-end performance at Lanna Club, Gijón."
+  },
+  {
+    "slug": "insights/muin/",
+    "rel": "insights/muin/index.html",
+    "title": "MUIN | Club Culture Sound System, Bangkok | Void Acoustics",
+    "desc": "A Void Acoustics sound system brings powerful bass to MUIN&#039;s LIVIN room, helping redefine the nightlife experience in Bangkok."
+  },
+  {
+    "slug": "insights/nextopia/",
+    "rel": "insights/nextopia/index.html",
+    "title": "Nextopia | Retail Sound System, Bangkok | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering consistency, control and immersive sound across Nextopia, Bangkok."
+  },
+  {
+    "slug": "insights/nokubeachhouse/",
+    "rel": "insights/nokubeachhouse/index.html",
+    "title": "Noku Beach House | Residential Sound System, Bali | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering clarity, consistent coverage and discreet integration at Noku Beach House, Bali."
+  },
+  {
+    "slug": "insights/paradisomusicroom/",
+    "rel": "insights/paradisomusicroom/index.html",
+    "title": "Paradiso Music Room | Club Culture Sound System, Byron Bay | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering world class nightclub audio and distinctive design at Paradiso Music Room in Byron Bay, Australia."
+  },
+  {
+    "slug": "insights/qtansalon/",
+    "rel": "insights/qtansalon/index.html",
+    "title": "Q-Tan Salon | Retail Sound System, Crook | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering nightclub-quality audio throughout Q-Tan Salon in Northeast England."
+  },
+  {
+    "slug": "insights/quintoconcept/",
+    "rel": "insights/quintoconcept/index.html",
+    "title": "Quinto | Retail Sound System, Ulaanbaatar | Void Acoustics",
+    "desc": "A Void Acoustics sound system brings exceptional sound to Quinto Concept, complementing its contemporary retail concept in Ulaanbaatar."
+  },
+  {
+    "slug": "insights/riser/",
+    "rel": "insights/riser/index.html",
+    "title": "Riser | Club Culture Sound System, Tbilisi | Void Acoustics",
+    "desc": "A Void Acoustics sound system featuring Air, Arcline, Stasys and Cyclone sits at the heart of Riser’s underground scene in Tbilisi."
+  },
+  {
+    "slug": "insights/rockwater/",
+    "rel": "insights/rockwater/index.html",
+    "title": "Rockwater | Beach Sound System, Branksome | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering discreet integration, exceptional sound and day-to-night performance at Rockwater, Branksome."
+  },
+  {
+    "slug": "insights/sissikuss/",
+    "rel": "insights/sissikuss/index.html",
+    "title": "Sissikuss | Retail Sound System, Bad Ischl | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering adaptable day-to-night performance and bespoke design at Sissikuss, Bad Ischl, Austria."
+  },
+  {
+    "slug": "insights/studio338/",
+    "rel": "insights/studio338/index.html",
+    "title": "Studio 338 | Club Culture Sound System, London | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivers exceptional audio throughout Studio 338, the brand&#039;s flagship UK nightclub"
+  },
+  {
+    "slug": "insights/themartini/",
+    "rel": "insights/themartini/index.html",
+    "title": "The Martini | Restaurant Sound System, Varna | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivers clear audio throughout The Martini&#039;s flagship venue, supporting dining and nightlife in Varna."
+  },
+  {
+    "slug": "insights/tokio/",
+    "rel": "insights/tokio/index.html",
+    "title": "TOKIO | Restaurant Sound System, Budapest | Void Acoustics",
+    "desc": "A Void Acoustics sound system complements TOKIO&#039;s contemporary interior, delivering clear, efficient audio throughout the restaurant."
+  },
+  {
+    "slug": "insights/urbnsurf/",
+    "rel": "insights/urbnsurf/index.html",
+    "title": "URBNSURF | Pool Sound System, Sydney | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivering flexibility, atmosphere and consistent sound across URBNSURF Sydney."
+  },
+  {
+    "slug": "insights/visionandcolour2024/",
+    "rel": "insights/visionandcolour2024/index.html",
+    "title": "Vision &amp; Colour 2024 | Festival Sound System, Zhuhai | Void Acoustics",
+    "desc": "A Void Acoustics Incubus System made its Chinese festival debut at Vision &amp; Colour Music Festival, delivering powerful sound in Zhuhai."
+  },
+  {
+    "slug": "insights/void-experience/",
+    "rel": "insights/void-experience/index.html",
+    "title": "The Void Experience: Global Event Series | Void Acoustics"
+  },
+  {
+    "slug": "insights/void-experience-poland/",
+    "rel": "insights/void-experience-poland/index.html",
+    "title": "The Void Experience Poland 2026 | Void Acoustics",
+    "desc": "Discover highlights from the first Void Experience Poland, bringing customers and audio professionals together in Warsaw."
+  },
+  {
+    "slug": "insights/void-meets-vegas/",
+    "rel": "insights/void-meets-vegas/index.html",
+    "title": "Void Meets Vegas 2026 | Void Acoustics",
+    "desc": "Discover highlights from Void Meets Vegas, where customers and partners came together during InfoComm in Las Vegas."
+  },
+  {
+    "slug": "insights/voltgym/",
+    "rel": "insights/voltgym/index.html",
+    "title": "Volt Gym | Health &amp; Wellbeing Sound System, Lancashire | Void Acoustics",
+    "desc": "A Void Acoustics sound system with custom RAL finishes delivers powerful multi-zone audio at Volt Gym in Lancashire."
+  },
+  {
+    "slug": "insights/whiterockbeachclub/",
+    "rel": "insights/whiterockbeachclub/index.html",
+    "title": "White Rock Beach Club | Beach Sound System, Bali | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivers premium, weather-resistant audio across the 3,000-capacity White Rock Beach Club in Bali."
+  },
+  {
+    "slug": "insights/wolfkopweekender2025/",
+    "rel": "insights/wolfkopweekender2025/index.html",
+    "title": "Wolfkop Weekender 2025 | Festival Sound System, Western Cape | Void Acoustics",
+    "desc": "A Void Acoustics sound system delivers high-impact audio across both main stages at Wolfkop Weekender, one of South Africa&#039;s leading EDM festivals."
+  },
+  {
+    "slug": "interiordesign/",
+    "rel": "interiordesign/index.html",
+    "title": "Interior Design | Design-Led Audio Solutions | Void Acoustics",
+    "desc": "Design-led audio solutions that shape atmosphere and create memorable interior spaces."
+  },
+  {
+    "slug": "krome/",
+    "rel": "krome/index.html",
+    "title": "KROME | Custom Metallic Finishes | Void Acoustics",
+    "desc": "Premium metallic KROME finishes for selected Void Acoustics products."
+  },
+  {
+    "slug": "merchandise/",
+    "rel": "merchandise/index.html",
+    "title": "Official Merchandise | Void Acoustics",
+    "desc": "Official Void Acoustics merchandise and branded apparel."
+  },
+  {
+    "slug": "naturalwood/",
+    "rel": "naturalwood/index.html",
+    "title": "Natural Wood Collection | Venu Series Wood Finishes | Void Acoustics",
+    "desc": "Natural wood finishes for selected Void Acoustics products."
+  },
+  {
+    "slug": "partnerlocator/",
+    "rel": "partnerlocator/index.html",
+    "title": "Partner Locator | Buy or Hire Worldwide | Void Acoustics",
+    "desc": "Find authorised Void Acoustics distributors, dealers and installation partners."
+  },
+  {
+    "slug": "privacy/",
+    "rel": "privacy/index.html",
+    "title": "Privacy Policy | Void Acoustics",
+    "desc": "Information about how Void Acoustics collects, uses and protects personal information."
+  },
+  {
+    "slug": "products/air/air12/",
+    "rel": "products/air/air12/index.html",
+    "title": "Air 12 | Sculptural Coaxial Loudspeaker | Void Acoustics",
+    "desc": "Discover Air 12, a sculptural coaxial loudspeaker with controlled coverage."
+  },
+  {
+    "slug": "products/air/air15/",
+    "rel": "products/air/air15/index.html",
+    "title": "Air 15 | 15-Inch Sculptural Subwoofer | Void Acoustics",
+    "desc": "Discover Air 15, a 15 inch sculptural subwoofer."
+  },
+  {
+    "slug": "products/air/air8/",
+    "rel": "products/air/air8/index.html",
+    "title": "Air 8 | Compact Two-Way Loudspeaker | Void Acoustics",
+    "desc": "Discover Air 8, a compact two-way surface-mount loudspeaker."
+  },
+  {
+    "slug": "products/air/airmotion/",
+    "rel": "products/air/airmotion/index.html",
+    "title": "Air Motion | Horn-Loaded Three-Way Loudspeaker | Void Acoustics",
+    "desc": "Discover Air Motion, a horn-loaded three-way loudspeaker with precision directivity."
+  },
+  {
+    "slug": "products/air/airstream/",
+    "rel": "products/air/airstream/index.html",
+    "title": "Air Stream | High-Output Point Source Monitor | Void Acoustics",
+    "desc": "Discover Air Stream, a high-output three-way point source monitor."
+  },
+  {
+    "slug": "products/air/airtenv3/",
+    "rel": "products/air/airtenv3/index.html",
+    "title": "Airten V3 | Dual 10-Inch Coaxial Loudspeaker | Void Acoustics",
+    "desc": "Discover Airten V3, a visually striking dual 10 inch coaxial loudspeaker."
+  },
+  {
+    "slug": "products/air/airvantage/",
+    "rel": "products/air/airvantage/index.html",
+    "title": "Air Vantage | 12-Inch Coaxial Loudspeaker | Void Acoustics",
+    "desc": "Discover Air Vantage, a horn-loaded 12 inch coaxial loudspeaker."
+  },
+  {
+    "slug": "products/air/",
+    "rel": "products/air/index.html",
+    "title": "Air Series | Statement Loudspeakers | Void Acoustics",
+    "desc": "High-impact statement loudspeakers for premium entertainment environments."
+  },
+  {
+    "slug": "products/air/subvantage/",
+    "rel": "products/air/subvantage/index.html",
+    "title": "Sub Vantage | Quad 15-Inch Subwoofer | Void Acoustics",
+    "desc": "Discover Sub Vantage, a quad 15 inch subwoofer with fast transient response."
+  },
+  {
+    "slug": "products/air/trimotion/",
+    "rel": "products/air/trimotion/index.html",
+    "title": "Tri Motion | Horn-Loaded Three-Way Loudspeaker | Void Acoustics",
+    "desc": "Discover Tri Motion, a horn-loaded three-way loudspeaker with triangular design."
+  },
+  {
+    "slug": "products/air/xair/",
+    "rel": "products/air/xair/index.html",
+    "title": "Xair | Dual 18-Inch Horn-Loaded Subwoofer | Void Acoustics",
+    "desc": "Discover Xair, a dual 18 inch horn-loaded subwoofer."
+  },
+  {
+    "slug": "products/amplifiers/biasq15plus/",
+    "rel": "products/amplifiers/biasq15plus/index.html",
+    "title": "Bias Q1.5+ | 4-Channel Medium System Amplifier | Void Acoustics",
+    "desc": "Discover Bias Q1.5+, a 4 channel amplifier for medium systems."
+  },
+  {
+    "slug": "products/amplifiers/biasq1plus/",
+    "rel": "products/amplifiers/biasq1plus/index.html",
+    "title": "Bias Q1+ | 4-Channel Amplifier for Small Systems | Void Acoustics",
+    "desc": "Discover Bias Q1+, a 4 channel amplifier for small systems."
+  },
+  {
+    "slug": "products/amplifiers/biasq2plus/",
+    "rel": "products/amplifiers/biasq2plus/index.html",
+    "title": "Bias Q2+ | 4-Channel Amplifier for Large Systems | Void Acoustics",
+    "desc": "Discover Bias Q2+, a 4 channel amplifier for large systems."
+  },
+  {
+    "slug": "products/amplifiers/biasq3/",
+    "rel": "products/amplifiers/biasq3/index.html",
+    "title": "Bias Q3 | 4-Channel Touring System Amplifier | Void Acoustics",
+    "desc": "Discover Bias Q3, a 4 channel amplifier for touring systems."
+  },
+  {
+    "slug": "products/amplifiers/biasq5/",
+    "rel": "products/amplifiers/biasq5/index.html",
+    "title": "Bias Q5 | Flagship DSP Amplifier | Void Acoustics",
+    "desc": "Discover Bias Q5, Void Acoustics&#039; flagship DSP amplifier for large systems."
+  },
+  {
+    "slug": "products/amplifiers/inca1000/",
+    "rel": "products/amplifiers/inca1000/index.html",
+    "title": "Inca 1000 | 8-Channel Amplifier | Void Acoustics",
+    "desc": "Discover Inca 1000, an 8-channel amplifier delivering up to 125 W per channel."
+  },
+  {
+    "slug": "products/amplifiers/inca2000/",
+    "rel": "products/amplifiers/inca2000/index.html",
+    "title": "Inca 2000 | 4-Channel Amplifier | Void Acoustics",
+    "desc": "Discover Inca 2000, a 4-channel amplifier delivering up to 500 W per channel."
+  },
+  {
+    "slug": "products/amplifiers/inca500/",
+    "rel": "products/amplifiers/inca500/index.html",
+    "title": "Inca 500 | Compact 4-Channel Amplifier | Void Acoustics",
+    "desc": "Discover Inca 500, a compact 4-channel amplifier delivering up to 125 W per channel."
+  },
+  {
+    "slug": "products/amplifiers/",
+    "rel": "products/amplifiers/index.html",
+    "title": "Professional Audio Amplifiers | Void Acoustics",
+    "desc": "Precision amplification for complete system control and performance."
+  },
+  {
+    "slug": "products/arcline/arcline118/",
+    "rel": "products/arcline/arcline118/index.html",
+    "title": "Arcline 118 | 18-Inch Touring Subwoofer | Void Acoustics",
+    "desc": "Discover Arcline 118, an 18 inch touring subwoofer."
+  },
+  {
+    "slug": "products/arcline/arcline218/",
+    "rel": "products/arcline/arcline218/index.html",
+    "title": "Arcline 218 | Dual 18-Inch Touring Subwoofer | Void Acoustics",
+    "desc": "Discover Arcline 218, a dual 18 inch touring subwoofer."
+  },
+  {
+    "slug": "products/arcline/arcline8/",
+    "rel": "products/arcline/arcline8/index.html",
+    "title": "Arcline 8 | Three-Way Line Array Loudspeaker | Void Acoustics",
+    "desc": "Discover Arcline 8, a three-way line array module with wide coverage."
+  },
+  {
+    "slug": "products/arcline/arclite/",
+    "rel": "products/arcline/arclite/index.html",
+    "title": "Arclite | 15-Inch Arrayable Loudspeaker | Void Acoustics",
+    "desc": "Discover Arclite, a 15 inch three-way arrayable point source loudspeaker."
+  },
+  {
+    "slug": "products/arcline/arclite15b/",
+    "rel": "products/arcline/arclite15b/index.html",
+    "title": "Arclite 15B | Mid-Bass Extension for Arclite | Void Acoustics",
+    "desc": "Discover Arclite 15B, a 15 inch mid-bass extension for the Arclite system."
+  },
+  {
+    "slug": "products/arcline/arcm12/",
+    "rel": "products/arcline/arcm12/index.html",
+    "title": "ArcM 12 | 12-Inch Coaxial Stage Monitor | Void Acoustics",
+    "desc": "Discover ArcM 12, a 12 inch coaxial stage monitor."
+  },
+  {
+    "slug": "products/arcline/arcm15/",
+    "rel": "products/arcline/arcm15/index.html",
+    "title": "ArcM 15 | 15-Inch Coaxial Stage Monitor | Void Acoustics",
+    "desc": "Discover ArcM 15, a 15 inch coaxial stage monitor."
+  },
+  {
+    "slug": "products/arcline/",
+    "rel": "products/arcline/index.html",
+    "title": "Arcline Series | Tour-Grade Sound Systems | Void Acoustics",
+    "desc": "Tour-grade systems for large-scale events and venues."
+  },
+  {
+    "slug": "products/cirrus/cirrus61/",
+    "rel": "products/cirrus/cirrus61/index.html",
+    "title": "Cirrus 6.1 | Wide-Coverage Ceiling Loudspeaker | Void Acoustics",
+    "desc": "Discover Cirrus 6.1, a ceiling loudspeaker with wide coverage."
+  },
+  {
+    "slug": "products/cirrus/",
+    "rel": "products/cirrus/index.html",
+    "title": "Cirrus Series | Discreet Ceiling Loudspeakers | Void Acoustics",
+    "desc": "Discreet ceiling loudspeakers for seamlessly integrated spaces."
+  },
+  {
+    "slug": "products/cyclone/cyclone10/",
+    "rel": "products/cyclone/cyclone10/index.html",
+    "title": "Cyclone 10 | IP-55 Rated 10-Inch Loudspeaker | Void Acoustics",
+    "desc": "Discover Cyclone 10, an IP-55 rated 10 inch two-way loudspeaker."
+  },
+  {
+    "slug": "products/cyclone/cyclone208/",
+    "rel": "products/cyclone/cyclone208/index.html",
+    "title": "Cyclone 208 | Dual 8-Inch Floor Stand Subwoofer | Void Acoustics",
+    "desc": "Discover Cyclone 208, a dual 8 inch subwoofer with floor stand."
+  },
+  {
+    "slug": "products/cyclone/cyclone208i/",
+    "rel": "products/cyclone/cyclone208i/index.html",
+    "title": "Cyclone 208i | Active Dual 8-Inch Subwoofer | Void Acoustics",
+    "desc": "Discover Cyclone 208i, an active dual 8 inch subwoofer."
+  },
+  {
+    "slug": "products/cyclone/cyclone4/",
+    "rel": "products/cyclone/cyclone4/index.html",
+    "title": "Cyclone 4 | IP-55 4-Inch Coaxial Loudspeaker | Void Acoustics",
+    "desc": "Discover Cyclone 4, a compact IP-55 rated coaxial 4 inch loudspeaker."
+  },
+  {
+    "slug": "products/cyclone/cyclone55/",
+    "rel": "products/cyclone/cyclone55/index.html",
+    "title": "Cyclone 55 | IP-55 Rated Dual 5-Inch Loudspeaker | Void Acoustics",
+    "desc": "Discover Cyclone 55, an IP-55 rated dual 5 inch loudspeaker."
+  },
+  {
+    "slug": "products/cyclone/cyclone8/",
+    "rel": "products/cyclone/cyclone8/index.html",
+    "title": "Cyclone 8 | IP-55 8-Inch Coaxial Loudspeaker | Void Acoustics",
+    "desc": "Discover Cyclone 8, an IP-55 rated coaxial 8 inch loudspeaker."
+  },
+  {
+    "slug": "products/cyclone/cyclone8v2/",
+    "rel": "products/cyclone/cyclone8v2/index.html",
+    "title": "Cyclone 8 V2 | IP-55 8-Inch Coaxial Loudspeaker | Void Acoustics",
+    "desc": "Discover Cyclone 8 V2, an IP-55 rated coaxial 8 inch loudspeaker."
+  },
+  {
+    "slug": "products/cyclone/cyclonebass/",
+    "rel": "products/cyclone/cyclonebass/index.html",
+    "title": "Cyclone Bass | IP-55 Rated 12-Inch Subwoofer | Void Acoustics",
+    "desc": "Discover Cyclone Bass, an IP-55 rated 12 inch subwoofer."
+  },
+  {
+    "slug": "products/cyclone/",
+    "rel": "products/cyclone/index.html",
+    "title": "Cyclone Series | Outdoor &amp; Hospitality Audio | Void Acoustics",
+    "desc": "Versatile loudspeakers for hospitality and outdoor environments."
+  },
+  {
+    "slug": "products/incubus/airarray/",
+    "rel": "products/incubus/airarray/index.html",
+    "title": "Air Array | Distinctive Loudspeaker Array | Void Acoustics",
+    "desc": "Discover Air Array, a distinctive loudspeaker array for large-scale performance."
+  },
+  {
+    "slug": "products/incubus/hyperfold/",
+    "rel": "products/incubus/hyperfold/index.html",
+    "title": "Hyperfold | Quad 15-Inch Folded Horn Subwoofer | Void Acoustics",
+    "desc": "Discover Hyperfold, a quad 15 inch folded horn subwoofer."
+  },
+  {
+    "slug": "products/incubus/incubussub/",
+    "rel": "products/incubus/incubussub/index.html",
+    "title": "Incubus Sub | Triple 21-Inch Hybrid Subwoofer | Void Acoustics",
+    "desc": "Discover Incubus Sub, a triple 21 inch hybrid horn-loaded bandpass enclosure."
+  },
+  {
+    "slug": "products/incubus/",
+    "rel": "products/incubus/index.html",
+    "title": "Incubus System | Flagship Dance Sound System | Void Acoustics",
+    "desc": "Flagship dance system for iconic nightlife and festival spaces."
+  },
+  {
+    "slug": "products/",
+    "rel": "products/index.html",
+    "title": "Products | Loudspeakers, Subwoofers &amp; Amplifiers | Void Acoustics",
+    "desc": "Professional loudspeakers, subwoofers and amplification for every application and environment."
+  },
+  {
+    "slug": "products/indigo/",
+    "rel": "products/indigo/index.html",
+    "title": "Indigo Series | Compact Hospitality Loudspeakers | Void Acoustics",
+    "desc": "Compact loudspeakers for design-led hospitality spaces."
+  },
+  {
+    "slug": "products/indigo/indigo6pro/",
+    "rel": "products/indigo/indigo6pro/index.html",
+    "title": "Indigo 6 Pro | 6.5-Inch Coaxial Loudspeaker | Void Acoustics",
+    "desc": "Discover Indigo 6 Pro, a 6.5 inch sculpted coaxial loudspeaker."
+  },
+  {
+    "slug": "products/indigo/indigo6s/",
+    "rel": "products/indigo/indigo6s/index.html",
+    "title": "Indigo 6s | 6.5-Inch Design-Led Loudspeaker | Void Acoustics",
+    "desc": "Discover Indigo 6s, a 6.5 inch loudspeaker for design-led interiors."
+  },
+  {
+    "slug": "products/indigo/indigosub/",
+    "rel": "products/indigo/indigosub/index.html",
+    "title": "Indigo Sub | 12-Inch Low-Frequency Subwoofer | Void Acoustics",
+    "desc": "Discover Indigo Sub, a 12 inch subwoofer for low-frequency reinforcement."
+  },
+  {
+    "slug": "products/nexus/",
+    "rel": "products/nexus/index.html",
+    "title": "Nexus System | Modular Dance Sound System | Void Acoustics",
+    "desc": "Scalable modular system for immersive dance environments."
+  },
+  {
+    "slug": "products/nexus/nexus6/",
+    "rel": "products/nexus/nexus6/index.html",
+    "title": "Nexus 6 | Array System with Virtual Arc Technology | Void Acoustics",
+    "desc": "Discover Nexus 6, an array system with Virtual Arc technology."
+  },
+  {
+    "slug": "products/nexus/nexusq/",
+    "rel": "products/nexus/nexusq/index.html",
+    "title": "Nexus Q | Multi Driver Upper-Bass Enclosure | Void Acoustics",
+    "desc": "Discover Nexus Q, a multi-driver upper-bass enclosure."
+  },
+  {
+    "slug": "products/nexus/nexusx/",
+    "rel": "products/nexus/nexusx/index.html",
+    "title": "Nexus X | Companion Subwoofer to Nexus Q | Void Acoustics",
+    "desc": "Discover Nexus X, a high-efficiency companion subwoofer for Nexus Q."
+  },
+  {
+    "slug": "products/nexus/nexusxl/",
+    "rel": "products/nexus/nexusxl/index.html",
+    "title": "Nexus XL | Extended Companion Subwoofer to Nexus Q | Void Acoustics",
+    "desc": "Discover Nexus XL, an extended low-frequency companion subwoofer for Nexus Q."
+  },
+  {
+    "slug": "products/stasys/",
+    "rel": "products/stasys/index.html",
+    "title": "Stasys Series | High-Performance Subwoofers | Void Acoustics",
+    "desc": "High-performance subwoofers for exceptional low-frequency impact."
+  },
+  {
+    "slug": "products/stasys/stasys118/",
+    "rel": "products/stasys/stasys118/index.html",
+    "title": "Stasys 118 | 18-Inch Reflex Subwoofer | Void Acoustics",
+    "desc": "Discover Stasys 118, an 18 inch reflex subwoofer with Tourcoat finish."
+  },
+  {
+    "slug": "products/stasys/stasys218/",
+    "rel": "products/stasys/stasys218/index.html",
+    "title": "Stasys 218 | Dual 18-Inch Reflex Subwoofer | Void Acoustics",
+    "desc": "Discover Stasys 218, a dual 18 inch reflex subwoofer with Tourcoat finish."
+  },
+  {
+    "slug": "products/stasys/stasysxv2/",
+    "rel": "products/stasys/stasysxv2/index.html",
+    "title": "Stasys XV2 | Dual 18-Inch Horn-Loaded Subwoofer | Void Acoustics",
+    "desc": "Discover Stasys XV2, a dual 18 inch high-impact horn-loaded subwoofer."
+  },
+  {
+    "slug": "products/subwoofers/",
+    "rel": "products/subwoofers/index.html",
+    "title": "Professional Subwoofers | Void Acoustics",
+    "desc": "A comprehensive overview of all Void subwoofers."
+  },
+  {
+    "slug": "products/venu/",
+    "rel": "products/venu/index.html",
+    "title": "Venu Series | Installation Loudspeakers | Void Acoustics",
+    "desc": "Comprehensive loudspeaker range for discreet contemporary interiors."
+  },
+  {
+    "slug": "products/venu/venu10v2/",
+    "rel": "products/venu/venu10v2/index.html",
+    "title": "Venu 10 V2 | Two-Way 10-Inch Loudspeaker | Void Acoustics",
+    "desc": "Discover Venu 10 V2, a two-way 10 inch installation loudspeaker."
+  },
+  {
+    "slug": "products/venu/venu112v2/",
+    "rel": "products/venu/venu112v2/index.html",
+    "title": "Venu 112 V2 | 12-Inch Installation Subwoofer | Void Acoustics",
+    "desc": "Discover Venu 112 V2, a 12 inch installation subwoofer."
+  },
+  {
+    "slug": "products/venu/venu115v2/",
+    "rel": "products/venu/venu115v2/index.html",
+    "title": "Venu 115 V2 | 15-Inch Installation Subwoofer | Void Acoustics",
+    "desc": "Discover Venu 115 V2, a 15 inch installation subwoofer."
+  },
+  {
+    "slug": "products/venu/venu118v2/",
+    "rel": "products/venu/venu118v2/index.html",
+    "title": "Venu 118 V2 | 18-Inch Installation Subwoofer | Void Acoustics",
+    "desc": "Discover Venu 118 V2, an 18 inch installation subwoofer."
+  },
+  {
+    "slug": "products/venu/venu12v2/",
+    "rel": "products/venu/venu12v2/index.html",
+    "title": "Venu 12 V2 | Two-Way 12-Inch Loudspeaker | Void Acoustics",
+    "desc": "Discover Venu 12 V2, a two-way 12 inch installation loudspeaker."
+  },
+  {
+    "slug": "products/venu/venu14v2/",
+    "rel": "products/venu/venu14v2/index.html",
+    "title": "Venu 14 V2 | Coaxial 13.5-Inch Loudspeaker | Void Acoustics",
+    "desc": "Discover Venu 14 V2, a coaxial 13.5 inch point source loudspeaker."
+  },
+  {
+    "slug": "products/venu/venu15v2/",
+    "rel": "products/venu/venu15v2/index.html",
+    "title": "Venu 15 V2 | Two-Way 15-Inch Loudspeaker | Void Acoustics",
+    "desc": "Discover Venu 15 V2, a two-way 15 inch installation loudspeaker."
+  },
+  {
+    "slug": "products/venu/venu208/",
+    "rel": "products/venu/venu208/index.html",
+    "title": "Venu 208 | Dual 8-Inch Installation Subwoofer | Void Acoustics",
+    "desc": "Discover Venu 208, a dual 8 inch installation subwoofer."
+  },
+  {
+    "slug": "products/venu/venu208i/",
+    "rel": "products/venu/venu208i/index.html",
+    "title": "Venu 208i | Active Dual 8-Inch Subwoofer | Void Acoustics",
+    "desc": "Discover Venu 208i, an active dual 8 inch subwoofer with DSP."
+  },
+  {
+    "slug": "products/venu/venu210iv2/",
+    "rel": "products/venu/venu210iv2/index.html",
+    "title": "Venu 210i V2 | Active Dual 10-Inch Subwoofer | Void Acoustics",
+    "desc": "Discover Venu 210i V2, an active dual 10 inch subwoofer with DSP."
+  },
+  {
+    "slug": "products/venu/venu212v2/",
+    "rel": "products/venu/venu212v2/index.html",
+    "title": "Venu 212 V2 | Dual 12-Inch Subwoofer | Void Acoustics",
+    "desc": "Discover Venu 212 V2, a dual 12 inch installation subwoofer."
+  },
+  {
+    "slug": "products/venu/venu215iv2/",
+    "rel": "products/venu/venu215iv2/index.html",
+    "title": "Venu 215i V2 | Active Dual 15-Inch Subwoofer | Void Acoustics",
+    "desc": "Discover Venu 215i V2, an active dual 15 inch subwoofer with DSP."
+  },
+  {
+    "slug": "products/venu/venu215v2/",
+    "rel": "products/venu/venu215v2/index.html",
+    "title": "Venu 215 V2 | Dual 15-Inch Subwoofer | Void Acoustics",
+    "desc": "Discover Venu 215 V2, a dual 15 inch installation subwoofer."
+  },
+  {
+    "slug": "products/venu/venu218v2/",
+    "rel": "products/venu/venu218v2/index.html",
+    "title": "Venu 218 V2 | Dual 18-Inch Subwoofer | Void Acoustics",
+    "desc": "Discover Venu 218 V2, a dual 18 inch installation subwoofer."
+  },
+  {
+    "slug": "products/venu/venu6v2/",
+    "rel": "products/venu/venu6v2/index.html",
+    "title": "Venu 6 V2 | Two-Way 6-Inch Loudspeaker | Void Acoustics",
+    "desc": "Discover Venu 6 V2, a two-way 6 inch installation loudspeaker."
+  },
+  {
+    "slug": "products/venu/venu8v2/",
+    "rel": "products/venu/venu8v2/index.html",
+    "title": "Venu 8 V2 | Two-Way 8-Inch Loudspeaker | Void Acoustics",
+    "desc": "Discover Venu 8 V2, a two-way 8 inch installation loudspeaker."
+  },
+  {
+    "slug": "ralcolours/",
+    "rel": "ralcolours/index.html",
+    "title": "RAL Colours | Bespoke Colour Matching | Void Acoustics",
+    "desc": "Custom RAL colour finishes for selected Void Acoustics products."
+  },
+  {
+    "slug": "resources/",
+    "rel": "resources/index.html",
+    "title": "Resources | Product Documents, Training &amp; Support | Void Acoustics",
+    "desc": "Training videos, product documentation, brochures and technical resources from Void Acoustics."
+  },
+  {
+    "slug": "terms/",
+    "rel": "terms/index.html",
+    "title": "Terms &amp; Conditions | Void Acoustics",
+    "desc": "Terms and conditions for using the Void Acoustics website and services."
+  },
+  {
+    "slug": "understandsound/",
+    "rel": "understandsound/index.html",
+    "title": "Understanding Sound Systems | Void Acoustics",
+    "desc": "An introduction to sound system design and the principles behind great sound."
+  }
+]
