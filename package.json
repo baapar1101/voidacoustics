@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/baapar1101/voidacoustics#readme",
   "dependencies": {
-    "astro": "^7.3.5"
+    "astro": "^7.3.5",
+    "parse5": "^8.0.1"
   }
 }

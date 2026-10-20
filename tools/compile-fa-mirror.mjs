@@ -8,6 +8,86 @@ const ROOT_MIRROR = path.join(process.cwd(), 'mirror');
 // Load full glossary
 const glossary = JSON.parse(fs.readFileSync('tools/full-glossary.json', 'utf8'));
 
+// Human-reviewed copy for the most visible journeys. These entries take
+// precedence over the machine-built glossary so the Persian site reads like a
+// considered local edition instead of a word-for-word translation.
+const curatedTranslations = {
+  'Where nightlife meets hospitality': 'جایی که هیجان شب با مهمان‌نوازی پیوند می‌خورد',
+  'Discover your space': 'فضای مناسب خود را پیدا کنید',
+  'Browse products': 'مشاهده محصولات',
+  'Make it unmistakably yours': 'امضای منحصربه‌فرد شما',
+  'Explore custom finishes': 'رنگ و پرداخت سفارشی',
+  'Proven night after night': 'آزموده‌شده، شب پس از شب',
+  'Learn the history': 'داستان وید را بخوانید',
+  'Hear. Feel. Connect.': 'بشنوید. حس کنید. پیوند بسازید.',
+  'Different by design': 'طراحی که متفاوت شنیده می‌شود',
+  'Materially different': 'تفاوت از جنس متریال',
+  'Distinctive audio solutions crafted in fibreglass, refined with Natural Wood, and engineered for the road.': 'راهکارهای صوتی شاخص؛ ساخته‌شده از فایبرگلاس، تکمیل‌شده با چوب طبیعی و مهندسی‌شده برای اجرا.',
+  'Explore products': 'مشاهده محصولات',
+  'Made to be custom': 'ساخته‌شده برای شما',
+  'Bespoke colours and finishes designed to complement your brand, venue, and environment.': 'رنگ‌ها و پرداخت‌های سفارشی که با هویت برند، معماری و فضای شما هماهنگ می‌شوند.',
+  'Discover customisation': 'سفارشی‌سازی را ببینید',
+  'Born in nightlife': 'زادهٔ فرهنگ شب',
+  'Audio systems shaped by 25 years of nightlife heritage and trusted across venues worldwide.': 'سیستم‌های صوتی با پشتوانهٔ ۲۵ سال تجربه در فرهنگ شب و مورد اعتماد مجموعه‌ها در سراسر جهان.',
+  'Learn about Void': 'آشنایی با وید',
+  'Sound for every setting': 'صدایی برای هر فضا',
+  'Join the movement': 'به جریان وید بپیوندید',
+  'Hear Void': 'صدای وید را تجربه کنید',
+  'Explore real-world installations near you or experience Void in person at upcoming events.': 'اجرای واقعی سیستم‌های وید را در نزدیکی خود پیدا کنید یا در رویدادهای پیش رو تجربه‌شان کنید.',
+  'Explore installations': 'مشاهده پروژه‌ها',
+  'Design your project': 'پروژه‌تان را با صدای درست آغاز کنید',
+  'Create the right audio solution for your bar, hotel, restaurant, retail space, or venue with support from our team.': 'با همراهی تیم ما، راهکار صوتی مناسب برای بار، هتل، رستوران، فروشگاه یا مجموعهٔ خود را طراحی کنید.',
+  'Start your project': 'شروع طراحی پروژه',
+  'Find a partner': 'نمایندهٔ مورد تأیید را پیدا کنید',
+  'Search for an approved Void partner for design, supply, installation, and local support.': 'برای طراحی، تأمین، نصب و پشتیبانی محلی، نزدیک‌ترین همکار رسمی وید را پیدا کنید.',
+  'Locate a partner': 'یافتن نماینده',
+  'Explore the full range': 'همهٔ محصولات را ببینید',
+  'High-impact statement loudspeakers for premium entertainment environments': 'بلندگوهایی با حضور بصری و صوتی قدرتمند برای فضاهای سرگرمی ممتاز',
+  'High-impact statement loudspeakers for premium entertainment environments.': 'بلندگوهایی با حضور بصری و صوتی قدرتمند برای فضاهای سرگرمی ممتاز.',
+  'Versatile loudspeakers for hospitality and outdoor environments': 'بلندگوهای منعطف برای فضاهای پذیرایی و محیط‌های باز',
+  'Versatile loudspeakers for hospitality and outdoor environments.': 'بلندگوهای منعطف برای فضاهای پذیرایی و محیط‌های باز.',
+  'Comprehensive loudspeaker range for discreet contemporary interiors': 'مجموعه‌ای کامل از بلندگوها برای فضاهای داخلی مدرن و مینیمال',
+  'Comprehensive loudspeaker range for discreet contemporary interiors.': 'مجموعه‌ای کامل از بلندگوها برای فضاهای داخلی مدرن و مینیمال.',
+  'Precision amplification for complete system control and performance': 'تقویت دقیق برای کنترل کامل سیستم و اجرای بی‌نقص',
+  'Precision amplification for complete system control and performance.': 'تقویت دقیق برای کنترل کامل سیستم و اجرای بی‌نقص.',
+  'View all': 'مشاهده همه',
+  'Premium apparel and accessories for the global Void community': 'پوشاک و اکسسوری‌های ممتاز برای دوستداران وید در سراسر جهان',
+  'Shop merch': 'ورود به فروشگاه',
+  'Supporting Documents': 'مستندات پشتیبان',
+  'Full Specifications': 'مشخصات کامل',
+  'key features': 'ویژگی‌های کلیدی',
+  'Key features': 'ویژگی‌های کلیدی',
+  'Accessories': 'لوازم جانبی',
+  'Explore system design': 'راهنمای طراحی سیستم',
+  'Understand what your space needs': 'نیاز صوتی فضای خود را بشناسید',
+  'Every space deserves careful consideration to achieve the best possible performance.': 'هر فضا برای رسیدن به بهترین عملکرد ممکن، به بررسی دقیق نیاز دارد.',
+  'Tell us about your space and goals': 'دربارهٔ فضا و هدفتان بگویید',
+  'Define the right solution for you': 'راهکار مناسب را انتخاب کنید',
+  'Connect with the right integration partner': 'به همکار اجرایی مناسب متصل شوید',
+  'Case studies': 'پروژه‌های اجراشده',
+  'Discover real world success stories': 'داستان پروژه‌های موفق را ببینید',
+  'overview': 'معرفی',
+  'Overview': 'معرفی',
+  'Beach Pool & Rooftop': 'ساحل، استخر و روف‌تاپ',
+  'Select Resource': 'انتخاب منبع',
+  'Designed to work together': 'طراحی‌شده برای عملکرد هماهنگ',
+  'View Technical Resources': 'مشاهده منابع فنی',
+  'Support Docs & Accessories': 'مستندات پشتیبانی و لوازم جانبی',
+  'Accessory Guide': 'راهنمای لوازم جانبی',
+  'Related Products': 'محصولات مرتبط',
+  'Download': 'دانلود',
+  'Contact us': 'تماس با ما',
+  'Read more': 'بیشتر بخوانید',
+  'Manage options': 'مدیریت گزینه‌ها',
+  'Manage services': 'مدیریت سرویس‌ها',
+  'Deny': 'رد کردن',
+  'Save': 'ذخیره',
+  'Manage Cookies': 'مدیریت کوکی‌ها',
+  'Stay ahead with our monthly newsletter featuring product updates, events, case studies and more.': 'با خبرنامهٔ ماهانهٔ ما از محصولات تازه، رویدادها و پروژه‌های جدید باخبر شوید.'
+};
+
+Object.assign(glossary, curatedTranslations);
+
 // Sort dictionary keys by length descending to match longest phrases first if needed
 const sortedGlossaryKeys = Object.keys(glossary).sort((a, b) => b.length - a.length);
 
@@ -106,7 +186,193 @@ const FA_HEAD_INJECTION = `
 			width: auto !important;
 			height: auto !important;
 		}
+
+		/* 2026 Persian art direction: cinematic, tactile, and image-led. */
+		:root {
+			--void-red: #ff1748;
+			--void-red-deep: #a8002d;
+			--void-ink: #070707;
+			--void-ivory: #f3f0e9;
+		}
+		html[dir="rtl"] body {
+			background: var(--void-ivory);
+			font-feature-settings: "ss01", "ss02";
+		}
+		html[dir="rtl"] .site-header {
+			margin: 14px 18px 0;
+			width: calc(100% - 36px);
+			border: 1px solid rgba(255,255,255,.14);
+			border-radius: 18px;
+			color: #fff;
+			background: rgba(7,7,7,.72);
+			box-shadow: 0 12px 40px rgba(0,0,0,.18);
+			backdrop-filter: blur(18px) saturate(140%);
+			-webkit-backdrop-filter: blur(18px) saturate(140%);
+		}
+		html[dir="rtl"] .site-header .menu-dropdown { color: #111; }
+		html[dir="rtl"] .hero-slider .min-h-screen-d::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+			z-index: 25;
+			pointer-events: none;
+			background:
+				radial-gradient(circle at 74% 40%, transparent 0 24%, rgba(0,0,0,.14) 55%),
+				linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.22) 58%, rgba(0,0,0,.62));
+		}
+		html[dir="rtl"] .hero-slider .page-width { max-width: 1180px; }
+		html[dir="rtl"] .hero-slider .component-heading {
+			max-width: 16ch;
+			font-size: clamp(3rem, 6.8vw, 7.25rem);
+			font-weight: 780;
+			line-height: 1.08;
+			text-wrap: balance;
+			text-shadow: 0 8px 32px rgba(0,0,0,.38);
+		}
+		html[dir="rtl"] .button {
+			border-radius: 999px !important;
+			padding-inline: 1.65rem !important;
+			box-shadow: 0 10px 28px rgba(0,0,0,.14);
+			transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease !important;
+		}
+		html[dir="rtl"] .button:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 16px 38px rgba(0,0,0,.22);
+		}
+		html[dir="rtl"] .button--red { background: var(--void-red) !important; }
+		html[dir="rtl"] main > section:not(.hero-slider) {
+			position: relative;
+			isolation: isolate;
+		}
+		html[dir="rtl"] main > section:not(.hero-slider) .component-heading {
+			font-weight: 720;
+			line-height: 1.2;
+		}
+		html[dir="rtl"] .bg-surface-200 {
+			background-color: var(--void-ivory) !important;
+		}
+		html[dir="rtl"] .rounded-2xl {
+			border-radius: 26px !important;
+		}
+		html[dir="rtl"] .grid > .rounded-2xl,
+		html[dir="rtl"] .grid > div > .rounded-2xl {
+			border: 1px solid rgba(255,255,255,.12);
+			box-shadow: 0 24px 70px rgba(0,0,0,.14);
+			transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease;
+		}
+		html[dir="rtl"] .grid > .rounded-2xl:hover,
+		html[dir="rtl"] .grid > div > .rounded-2xl:hover {
+			transform: translateY(-8px);
+			box-shadow: 0 32px 80px rgba(0,0,0,.22);
+		}
+		html[dir="rtl"] .cards-slider-gradient {
+			background:
+				radial-gradient(circle at 12% 30%, rgba(255,23,72,.24), transparent 34%),
+				linear-gradient(135deg, #050505 0%, #160008 58%, #33000f 100%) !important;
+			border-top: 1px solid rgba(255,255,255,.08);
+		}
+		html[dir="rtl"] .cards-slider-gradient .splide__slide > .rounded-2xl {
+			border: 1px solid rgba(255,255,255,.16);
+			box-shadow: 0 24px 60px rgba(0,0,0,.34);
+		}
+		html[dir="rtl"] .text-eyebrow {
+			display: inline-flex;
+			align-items: center;
+			gap: .65rem;
+			font-weight: 750;
+		}
+		html[dir="rtl"] .text-eyebrow::before {
+			content: "";
+			width: 2.25rem;
+			height: 2px;
+			background: currentColor;
+		}
+		html[dir="rtl"] .fa-signature-rail {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			background: #090909;
+			color: white;
+			border-block: 1px solid rgba(255,255,255,.1);
+		}
+		html[dir="rtl"] .fa-signature-rail a {
+			display: grid;
+			grid-template-columns: auto 1fr;
+			grid-template-rows: auto auto;
+			gap: .15rem 1rem;
+			padding: 1.75rem clamp(1rem, 3vw, 3.5rem);
+			color: white;
+			border-inline-start: 1px solid rgba(255,255,255,.1);
+			transition: background .25s ease;
+		}
+		html[dir="rtl"] .fa-signature-rail a:hover { background: rgba(255,23,72,.16); }
+		html[dir="rtl"] .fa-signature-rail span {
+			grid-row: 1 / 3;
+			align-self: center;
+			color: var(--void-red);
+			font-size: .78rem;
+			font-weight: 800;
+		}
+		html[dir="rtl"] .fa-signature-rail strong { font-size: 1.05rem; }
+		html[dir="rtl"] .fa-signature-rail small { color: rgba(255,255,255,.62); }
+		html[dir="rtl"] .footer-cta-block {
+			background-position: left center !important;
+			text-align: right !important;
+			border: 1px solid rgba(255,255,255,.18);
+			box-shadow: 0 30px 90px rgba(0,0,0,.32);
+		}
+		html[dir="rtl"] .footer-cta-block > .flex-1 { padding-left: min(42vw, 480px); }
+		html[dir="rtl"] .footer-cta-block .component-heading {
+			font-size: clamp(1.8rem, 3vw, 3.25rem);
+			line-height: 1.3;
+		}
+		@media (max-width: 767px) {
+			html[dir="rtl"] .site-header {
+				margin: 8px 8px 0;
+				width: calc(100% - 16px);
+				border-radius: 14px;
+			}
+			html[dir="rtl"] .hero-slider .component-heading { font-size: clamp(2.5rem, 12vw, 4.4rem); }
+			html[dir="rtl"] .fa-signature-rail { grid-template-columns: 1fr; }
+			html[dir="rtl"] .fa-signature-rail a { border-top: 1px solid rgba(255,255,255,.1); }
+			html[dir="rtl"] .footer-cta-block {
+				background-position: center bottom !important;
+				background-size: 115% auto !important;
+				padding-bottom: 68% !important;
+			}
+			html[dir="rtl"] .footer-cta-block > .flex-1 { padding-left: 0; }
+		}
+		@media (prefers-reduced-motion: reduce) {
+			html[dir="rtl"] *, html[dir="rtl"] *::before, html[dir="rtl"] *::after {
+				scroll-behavior: auto !important;
+				transition-duration: .01ms !important;
+			}
+		}
 	</style>
+	<script id="fa-image-hydration">
+		document.addEventListener('DOMContentLoaded', function () {
+			var hydrate = function (img) {
+				if (img.dataset.src) img.src = img.dataset.src;
+				if (img.dataset.srcset) img.srcset = img.dataset.srcset;
+				if (img.dataset.sizes) img.sizes = img.dataset.sizes;
+			};
+			var images = document.querySelectorAll('img[data-src]');
+			if (!('IntersectionObserver' in window)) {
+				images.forEach(hydrate);
+				return;
+			}
+			var observer = new IntersectionObserver(function (entries) {
+				entries.forEach(function (entry) {
+					if (!entry.isIntersecting) return;
+					hydrate(entry.target);
+					observer.unobserve(entry.target);
+				});
+			}, { rootMargin: '400px 0px' });
+			images.forEach(function (img) {
+				img.loading = 'lazy';
+				observer.observe(img);
+			});
+		});
+	</script>
 `;
 
 function escapeHtml(str) {
@@ -374,6 +640,42 @@ export async function compileAll() {
     let faHtml = originalHtml;
     for (const r of cleanReplacements) {
       faHtml = faHtml.slice(0, r.startOffset) + r.replacement + faHtml.slice(r.endOffset);
+    }
+
+    // Parent-level replacements can overlap translated child nodes in parse5.
+    // Normalize the language control and consent copy after DOM edits so these
+    // global interface elements are consistently Persian on every page.
+    const persianSwitcher = `
+<aside data-wg-notranslate="" class="country-selector weglot-dropdown close_outside_click closed weglot-shortcode wg-" tabindex="0" aria-expanded="false" aria-label="تغییر زبان به انگلیسی">
+	<input id="wg_choice_fa" class="weglot_choice" type="checkbox" name="menu"/>
+	<label data-l="fa" tabindex="-1" for="wg_choice_fa" class="wgcurrent wg-li weglot-lang weglot-language flag-3 wg-fa" data-code-language="wg-fa" data-name-language="FA">
+		<span class="wglanguage-name">FA</span>
+	</label>
+	<ul role="none">
+		<li data-l="en" class="wg-li weglot-lang weglot-language flag-3 wg-en" role="option">
+			<a title="English" class="weglot-language-en" role="option" href="${enPath}">EN</a>
+		</li>
+	</ul>
+</aside>`;
+    faHtml = faHtml.replace(/<aside[^>]*class="[^"]*weglot-dropdown[^"]*"[^>]*>[\s\S]*?<\/aside>/i, persianSwitcher);
+    faHtml = faHtml
+      .replace(
+        'We use necessary cookies to make our site work. We also have performance based analytic cookies to help us improve our site and your user experience. Using this tool will set a cookie on your device to remember your preferences.',
+        'برای عملکرد درست سایت از کوکی‌های ضروری استفاده می‌کنیم. کوکی‌های آماری نیز کمک می‌کنند تجربهٔ شما را بهتر کنیم. انتخاب شما روی همین دستگاه ذخیره می‌شود.'
+      )
+      .replace(/>Cookie Policy</g, '>سیاست کوکی‌ها<')
+      .replace(/>Privacy Policy</g, '>سیاست حفظ حریم خصوصی<');
+
+    // Give the Persian homepage a compact editorial bridge between the
+    // cinematic hero and the product story, using the same visual language.
+    if (cleanSlug === '') {
+      const signatureRail = `
+<section class="fa-signature-rail" aria-label="ویژگی‌های طراحی وید">
+	<a href="/products/"><span>۰۱</span><strong>فرم مجسمه‌وار</strong><small>صدایی که دیده می‌شود</small></a>
+	<a href="/design/"><span>۰۲</span><strong>مهندسی صدای حرفه‌ای</strong><small>طراحی دقیق برای هر فضا</small></a>
+	<a href="/customisation/"><span>۰۳</span><strong>هویت منحصربه‌فرد</strong><small>رنگ و پرداخت هماهنگ با پروژه</small></a>
+</section>`;
+      faHtml = faHtml.replace(/(<section[^>]*class="[^"]*hero-slider[\s\S]*?<\/section>)/i, `$1${signatureRail}`);
     }
 
     // Determine target file for Persian page

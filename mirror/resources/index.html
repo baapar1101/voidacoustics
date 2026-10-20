@@ -90,7 +90,193 @@
 			width: auto !important;
 			height: auto !important;
 		}
+
+		/* 2026 Persian art direction: cinematic, tactile, and image-led. */
+		:root {
+			--void-red: #ff1748;
+			--void-red-deep: #a8002d;
+			--void-ink: #070707;
+			--void-ivory: #f3f0e9;
+		}
+		html[dir="rtl"] body {
+			background: var(--void-ivory);
+			font-feature-settings: "ss01", "ss02";
+		}
+		html[dir="rtl"] .site-header {
+			margin: 14px 18px 0;
+			width: calc(100% - 36px);
+			border: 1px solid rgba(255,255,255,.14);
+			border-radius: 18px;
+			color: #fff;
+			background: rgba(7,7,7,.72);
+			box-shadow: 0 12px 40px rgba(0,0,0,.18);
+			backdrop-filter: blur(18px) saturate(140%);
+			-webkit-backdrop-filter: blur(18px) saturate(140%);
+		}
+		html[dir="rtl"] .site-header .menu-dropdown { color: #111; }
+		html[dir="rtl"] .hero-slider .min-h-screen-d::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+			z-index: 25;
+			pointer-events: none;
+			background:
+				radial-gradient(circle at 74% 40%, transparent 0 24%, rgba(0,0,0,.14) 55%),
+				linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.22) 58%, rgba(0,0,0,.62));
+		}
+		html[dir="rtl"] .hero-slider .page-width { max-width: 1180px; }
+		html[dir="rtl"] .hero-slider .component-heading {
+			max-width: 16ch;
+			font-size: clamp(3rem, 6.8vw, 7.25rem);
+			font-weight: 780;
+			line-height: 1.08;
+			text-wrap: balance;
+			text-shadow: 0 8px 32px rgba(0,0,0,.38);
+		}
+		html[dir="rtl"] .button {
+			border-radius: 999px !important;
+			padding-inline: 1.65rem !important;
+			box-shadow: 0 10px 28px rgba(0,0,0,.14);
+			transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease !important;
+		}
+		html[dir="rtl"] .button:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 16px 38px rgba(0,0,0,.22);
+		}
+		html[dir="rtl"] .button--red { background: var(--void-red) !important; }
+		html[dir="rtl"] main > section:not(.hero-slider) {
+			position: relative;
+			isolation: isolate;
+		}
+		html[dir="rtl"] main > section:not(.hero-slider) .component-heading {
+			font-weight: 720;
+			line-height: 1.2;
+		}
+		html[dir="rtl"] .bg-surface-200 {
+			background-color: var(--void-ivory) !important;
+		}
+		html[dir="rtl"] .rounded-2xl {
+			border-radius: 26px !important;
+		}
+		html[dir="rtl"] .grid > .rounded-2xl,
+		html[dir="rtl"] .grid > div > .rounded-2xl {
+			border: 1px solid rgba(255,255,255,.12);
+			box-shadow: 0 24px 70px rgba(0,0,0,.14);
+			transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease;
+		}
+		html[dir="rtl"] .grid > .rounded-2xl:hover,
+		html[dir="rtl"] .grid > div > .rounded-2xl:hover {
+			transform: translateY(-8px);
+			box-shadow: 0 32px 80px rgba(0,0,0,.22);
+		}
+		html[dir="rtl"] .cards-slider-gradient {
+			background:
+				radial-gradient(circle at 12% 30%, rgba(255,23,72,.24), transparent 34%),
+				linear-gradient(135deg, #050505 0%, #160008 58%, #33000f 100%) !important;
+			border-top: 1px solid rgba(255,255,255,.08);
+		}
+		html[dir="rtl"] .cards-slider-gradient .splide__slide > .rounded-2xl {
+			border: 1px solid rgba(255,255,255,.16);
+			box-shadow: 0 24px 60px rgba(0,0,0,.34);
+		}
+		html[dir="rtl"] .text-eyebrow {
+			display: inline-flex;
+			align-items: center;
+			gap: .65rem;
+			font-weight: 750;
+		}
+		html[dir="rtl"] .text-eyebrow::before {
+			content: "";
+			width: 2.25rem;
+			height: 2px;
+			background: currentColor;
+		}
+		html[dir="rtl"] .fa-signature-rail {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			background: #090909;
+			color: white;
+			border-block: 1px solid rgba(255,255,255,.1);
+		}
+		html[dir="rtl"] .fa-signature-rail a {
+			display: grid;
+			grid-template-columns: auto 1fr;
+			grid-template-rows: auto auto;
+			gap: .15rem 1rem;
+			padding: 1.75rem clamp(1rem, 3vw, 3.5rem);
+			color: white;
+			border-inline-start: 1px solid rgba(255,255,255,.1);
+			transition: background .25s ease;
+		}
+		html[dir="rtl"] .fa-signature-rail a:hover { background: rgba(255,23,72,.16); }
+		html[dir="rtl"] .fa-signature-rail span {
+			grid-row: 1 / 3;
+			align-self: center;
+			color: var(--void-red);
+			font-size: .78rem;
+			font-weight: 800;
+		}
+		html[dir="rtl"] .fa-signature-rail strong { font-size: 1.05rem; }
+		html[dir="rtl"] .fa-signature-rail small { color: rgba(255,255,255,.62); }
+		html[dir="rtl"] .footer-cta-block {
+			background-position: left center !important;
+			text-align: right !important;
+			border: 1px solid rgba(255,255,255,.18);
+			box-shadow: 0 30px 90px rgba(0,0,0,.32);
+		}
+		html[dir="rtl"] .footer-cta-block > .flex-1 { padding-left: min(42vw, 480px); }
+		html[dir="rtl"] .footer-cta-block .component-heading {
+			font-size: clamp(1.8rem, 3vw, 3.25rem);
+			line-height: 1.3;
+		}
+		@media (max-width: 767px) {
+			html[dir="rtl"] .site-header {
+				margin: 8px 8px 0;
+				width: calc(100% - 16px);
+				border-radius: 14px;
+			}
+			html[dir="rtl"] .hero-slider .component-heading { font-size: clamp(2.5rem, 12vw, 4.4rem); }
+			html[dir="rtl"] .fa-signature-rail { grid-template-columns: 1fr; }
+			html[dir="rtl"] .fa-signature-rail a { border-top: 1px solid rgba(255,255,255,.1); }
+			html[dir="rtl"] .footer-cta-block {
+				background-position: center bottom !important;
+				background-size: 115% auto !important;
+				padding-bottom: 68% !important;
+			}
+			html[dir="rtl"] .footer-cta-block > .flex-1 { padding-left: 0; }
+		}
+		@media (prefers-reduced-motion: reduce) {
+			html[dir="rtl"] *, html[dir="rtl"] *::before, html[dir="rtl"] *::after {
+				scroll-behavior: auto !important;
+				transition-duration: .01ms !important;
+			}
+		}
 	</style>
+	<script id="fa-image-hydration">
+		document.addEventListener('DOMContentLoaded', function () {
+			var hydrate = function (img) {
+				if (img.dataset.src) img.src = img.dataset.src;
+				if (img.dataset.srcset) img.srcset = img.dataset.srcset;
+				if (img.dataset.sizes) img.sizes = img.dataset.sizes;
+			};
+			var images = document.querySelectorAll('img[data-src]');
+			if (!('IntersectionObserver' in window)) {
+				images.forEach(hydrate);
+				return;
+			}
+			var observer = new IntersectionObserver(function (entries) {
+				entries.forEach(function (entry) {
+					if (!entry.isIntersecting) return;
+					hydrate(entry.target);
+					observer.unobserve(entry.target);
+				});
+			}, { rootMargin: '400px 0px' });
+			images.forEach(function (img) {
+				img.loading = 'lazy';
+				observer.observe(img);
+			});
+		});
+	</script>
 
 	
 	
@@ -828,7 +1014,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="https://voidacoustics.com/contact/">تماس با ما</a></li>
 <li id="menu-item-7558" class="mobile-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-7558"><a href="https://voidacoustics.com/design/">طراحی سیستم صوتی شما</a></li>
 <li id="menu-item-4482" class="mobile-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4482"><a href="https://voidacoustics.com/understandsound/">آشنایی با سیستم‌های صوتی</a></li>
-<li id="menu-item-7557" class="mobile-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-7557"><a href="https://voidacoustics.com/hearvoid/">صدای وید را بشنوید</a></li>
+<li id="menu-item-7557" class="mobile-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-7557"><a href="https://voidacoustics.com/hearvoid/">صدای وید را تجربه کنید</a></li>
 <li id="menu-item-4227" class="mobile-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4227"><a href="https://voidacoustics.com/partnerlocator/">یافتن نمایندگی‌ها</a></li>
 <li id="menu-item-4483" class="mobile-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4483"><a href="https://voidacoustics.com/naturalwood/">مجموعه چوب طبیعی</a></li>
 <li id="menu-item-7638" class="mobile-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-7638"><a href="https://voidacoustics.com/merchandise/">محصولات اختصاصی وید</a></li>
@@ -838,14 +1024,20 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 
 
-<aside data-wg-notranslate="" class="country-selector weglot-dropdown close_outside_click closed weglot-shortcode wg-" tabindex="0" aria-expanded="false" aria-label="زبان انتخاب شده: انگلیسی">
-	<input id="wg_choice_en" class="weglot_choice" type="checkbox" name="menu"/>
-	<label data-l="en" tabindex="-1" for="wg_choice_en" class="wgcurrent wg-li weglot-lang weglot-language flag-3 wg-en" data-code-language="wg-en" data-name-language="EN">
-		<span class="wglanguage-name">EN</span>
+
+
+
+
+
+
+<aside data-wg-notranslate="" class="country-selector weglot-dropdown close_outside_click closed weglot-shortcode wg-" tabindex="0" aria-expanded="false" aria-label="تغییر زبان به انگلیسی">
+	<input id="wg_choice_fa" class="weglot_choice" type="checkbox" name="menu"/>
+	<label data-l="fa" tabindex="-1" for="wg_choice_fa" class="wgcurrent wg-li weglot-lang weglot-language flag-3 wg-fa" data-code-language="wg-fa" data-name-language="FA">
+		<span class="wglanguage-name">FA</span>
 	</label>
 	<ul role="none">
-		<li data-l="fa" class="wg-li weglot-lang weglot-language flag-3 wg-fa" role="option">
-			<a title="زبان: فارسی" class="weglot-language-fa" role="option" href="/resources//">FA</a>
+		<li data-l="en" class="wg-li weglot-lang weglot-language flag-3 wg-en" role="option">
+			<a title="English" class="weglot-language-en" role="option" href="/en/resources//">EN</a>
 		</li>
 	</ul>
 </aside>					
@@ -979,7 +1171,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 				<div class="tabs-mobile-container sticky top-[var(--scrollTopOffset)]">
 					<div class="tabs-mobile-control-wrap py-8">
 						<button type="button" class="button button--black w-full flex items-center button--lg justify-between" data-toggle="mobile-tabs">
-							<span>Select Resource</span>
+							<span>انتخاب منبع</span>
 							<span class="-rotate-90"><svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M7 1L1 7.5003L7 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
@@ -1111,7 +1303,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10520-2.2-Void-Acoustics-Air-8-User-Guide-1.pdf" target="_blank" rel="noopener">Air 8 User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10706-2.0-Void-Acoustics-Air-8-Spec-Sheet.pdf" target="_blank" rel="noopener">Air 8 Specification Sheet</a></li>
@@ -1121,7 +1313,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Air_8_v2.2.gll">Air 8 GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/T51-Ceiling-Bracket-350mm-Black.pdf" target="_blank" rel="noopener">T51 Ceiling Bracket (350mm) &#8211; Black</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/T51-Pole-Bracket-Black.pdf" target="_blank" rel="noopener">T51 Pole Bracket &#8211; Black</a></li>
@@ -1147,7 +1339,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG11013-1.0-Air-12-User-Guide.pdf" target="_blank" rel="noopener">Air 12 User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10940-2.0-Void-Acoustics-Air-12-Spec-Sheet.pdf" target="_blank" rel="noopener">Air 12 Specification Sheet</a></li>
@@ -1157,7 +1349,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Air_12_v2.2.gll">Air 12 GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/T80-Ceiling-Bracket-1000mm-Black.pdf" target="_blank" rel="noopener">T80 Ceiling Bracket (1000mm) &#8211; Black</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/T80-Ceiling-Bracket-1000mm-White.pdf" target="_blank" rel="noopener">T80 Ceiling Bracket (1000mm) &#8211; White</a></li>
@@ -1187,7 +1379,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10517-2.2-Void-Acoustics-Airten-V3-User-Manual.pdf" target="_blank" rel="noopener">Airten V3 User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10748-2.0-Void-Acoustics-Airten-V3-Spec-Sheet.pdf" target="_blank" rel="noopener">Airten V3 Specfication Sheet</a></li>
@@ -1197,7 +1389,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Airten_V3_v2.2.gll">Airten V3 GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Airten-V3-Flightcase-Holds-Two.pdf" target="_blank" rel="noopener">Airten V3 Flightcase</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Heavy-Duty-Top-Hat-Casting-Black.pdf" target="_blank" rel="noopener">Heavy Duty Top Hat Casting &#8211; Black</a></li>
@@ -1232,7 +1424,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10527-2.2-Void-Acoustics-Air-Vantage-User-Guide.pdf" target="_blank" rel="noopener">Air Vantage User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10747-2.0-Void-Acoustics-Air-Vantage-Spec-Sheet.pdf" target="_blank" rel="noopener">Air Vantage Specification Sheet</a></li>
@@ -1242,7 +1434,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Air_Vantage_v2.2.gll">Air Vantage GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TU-Ceiling-Bracket-1000mm-Black.pdf" target="_blank" rel="noopener">T75 Ceiling Bracket (1000mm) &#8211; Black</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/T75-Ceiling-Bracket-1000mm-White.pdf" target="_blank" rel="noopener">T75 Ceiling Bracket (1000mm) &#8211; White</a></li>
@@ -1271,7 +1463,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10519-2.3-Void-Acoustics-Air-Motion-User-Guide.pdf" target="_blank" rel="noopener">Air Motion User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10745-2-0-Void-Acoustics-Air-Motion-Spec-Sheet.pdf" target="_blank" rel="noopener">Air Motion Specification Sheet</a></li>
@@ -1284,7 +1476,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Air_Motion_V2_v2.3.gll" target="_blank" rel="noopener">Air Motion GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Heavy-Duty-Top-Hat-Casting-Black.pdf" target="_blank" rel="noopener">Heavy Duty Top Hat Casting &#8211; Black</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Heavy-Duty-Top-Hat-Casting-White.pdf" target="_blank" rel="noopener">Heavy Duty Top Hat Casting &#8211; White</a></li>
@@ -1318,7 +1510,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10555-3.1-Tri-Motion-User-Guide.pdf" target="_blank" rel="noopener">Tri Motion User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10751-2.0-Void-Acoustics-Tri-Motion-Spec-Sheet.pdf" target="_blank" rel="noopener">Tri Motion Specification Sheet</a></li>
@@ -1331,7 +1523,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Tri_Motion_v2.5.gll">Tri Motion GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Heavy-Duty-Top-Hat-Casting-Black.pdf" target="_blank" rel="noopener">Heavy Duty Top Hat Casting – Black</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Heavy-Duty-Top-Hat-Casting-White.pdf" target="_blank" rel="noopener">Heavy Duty Top Hat Casting – White</a></li>
@@ -1364,7 +1556,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10521-1.1-Void-Acoustics-Air-Stream-User-Guide.pdf" target="_blank" rel="noopener">Air Stream User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10746-2.0-Void-Acoustics-Air-Stream-Spec-Sheet.pdf" target="_blank" rel="noopener">Air Stream Specification Sheet</a></li>
@@ -1389,7 +1581,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10709-1.2-Void-Acoustics-Air-15-User-Guide.pdf" target="_blank" rel="noopener">Air 15 User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10687-2.0-Void-Acoustics-Air-15-Spec-Sheet.pdf" target="_blank" rel="noopener">Air 15 Specification Sheet</a></li>
@@ -1414,7 +1606,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10554-2.2-Void-Acoustics-Sub-Vantage-User-Guide.pdf" target="_blank" rel="noopener">Sub Vantage User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10750-2.0-Void-Acoustics-Sub-Vantage-Spec-Sheet.pdf" target="_blank" rel="noopener">Sub Vantage Specification Sheet</a></li>
@@ -1424,7 +1616,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Sub_Vantage_v2.1.gll">Sub Vantage GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Heavy-Duty-Top-Hat.pdf" target="_blank" rel="noopener">Heavy Duty Top Hat</a></li>
 </ul>
@@ -1445,7 +1637,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10526-2.2-Void-Acoustics-Xair-User-Guide.pdf" target="_blank" rel="noopener">Xair User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10749-2.0-Void-Acoustics-Xair-Spec-Sheet.pdf" target="_blank" rel="noopener">Xair Specification Sheet</a></li>
@@ -1455,7 +1647,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Stasys_Xair_v2.3.gll">Xair GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Heavy-Duty-Top-Hat.pdf" target="_blank" rel="noopener">Heavy Duty Top Hat</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Stasys-Xair-XV2-Mounting-Board.pdf" target="_blank" rel="noopener">Xair/XV2 Mounting Board</a></li>
@@ -1476,7 +1668,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10602-2.2-Void-Acoustics-Arcline-8212-User-Guide.pdf" target="_blank" rel="noopener">Arcline 8/212 User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10752-2.0-Void-Acoustics-Arcline-8-Spec-Sheet1.pdf" target="_blank" rel="noopener">Arcline 8 Specification Sheet</a></li>
@@ -1488,7 +1680,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Void_Acoustics_Arcline_8_v20a.gll">Arcline 8 / 212 GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Arcline-8-Flightcase.pdf" target="_blank" rel="noopener">Arcline 8 Flightcase</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Arcline-8-Fly-Frame.pdf" target="_blank" rel="noopener">Arcline 8 Fly Frame</a></li>
@@ -1511,7 +1703,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10710-Void-Acoustics-1.1-Arclite-and-Arclite-15B-User-Guide.pdf" target="_blank" rel="noopener">Arclite User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10685-2.0-Void-Acoustics-Arclite-Spec-Sheet1.pdf" target="_blank" rel="noopener">Arclite Specification Sheet</a></li>
@@ -1523,7 +1715,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Arclite_3D.dwg">Arclite 3D Model</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Arclite-Lift-Beam.pdf" target="_blank" rel="noopener">Arclite Lift Beam</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Arclite-Vertical-Fly-Bar.pdf" target="_blank" rel="noopener">Arclite Vertical Fly Bar</a></li>
@@ -1544,7 +1736,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10710-Void-Acoustics-1.1-Arclite-and-Arclite-15B-User-Guide.pdf" target="_blank" rel="noopener">Arclite 15B User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD11092-2.0-Void-Acoustics-Arclite-15B-Spec-Sheet1.pdf" target="_blank" rel="noopener">Arclite 15B Specification Sheet</a></li>
@@ -1556,7 +1748,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Arclite-15B-v1_2.gll">Arclite 15B GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Arclite-15B-Ground-Stack-Board.pdf" target="_blank" rel="noopener">Arclite 15B &#8211; Ground Stack Board</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Arclite-15B-Rigging-Assembly.pdf" target="_blank" rel="noopener">Arclite 15B &#8211; Rigging Assembly</a></li>
@@ -1577,7 +1769,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10569-2.2-Void-Acoustics-ArcM-12-User-Guide1.pdf" target="_blank" rel="noopener">ArcM 12 User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10756-2.0-Void-Acoustics-ArcM-12-Spec-Sheet1.pdf" target="_blank" rel="noopener">ArcM 12 Specification Sheet</a></li>
@@ -1587,7 +1779,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/ArcM-12-V10.gll">ArcM 12 GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/ArcM-12-Flightcase.pdf" target="_blank" rel="noopener">ArcM 12 Flightcase</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/T80-Ceiling-Bracket-1000mm-Black.pdf" target="_blank" rel="noopener">T80 Ceiling Bracket (1000mm) – Black</a></li>
@@ -1618,7 +1810,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10568-2.2-Void-Acoustics-ArcM-15-User-Guide.pdf" target="_blank" rel="noopener">ArcM 15 User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10757-2-0-Void-Acoustics-ArcM-15-Spec-Sheet.pdf">ArcM 15 Specification Sheet</a></li>
@@ -1628,7 +1820,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/ArcM-15-V10.gll">ArcM 15 GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/ArcM-15-Flightcase.pdf" target="_blank" rel="noopener">ArcM 15 Flightcase</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/T80-Ceiling-Bracket-1000mm-Black.pdf" target="_blank" rel="noopener">T80 Ceiling Bracket (1000mm) – Black</a></li>
@@ -1659,7 +1851,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10562-2.2-Void-Acoustics-Arcline-118-User-Guide.pdf" target="_blank" rel="noopener">Arcline 118 User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10753-2.0-Void-Acoustics-Arcline-118-Spec-Sheet1.pdf" target="_blank" rel="noopener">Arcline 118 Specification Sheet</a></li>
@@ -1684,7 +1876,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10563-2.2-Void-Acoustics-Arcline-218-User-Guide.pdf" target="_blank" rel="noopener">Arcline 218 User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10755-2.0-Void-Acoustics-Arcline-218-Spec-Sheet1.pdf" target="_blank" rel="noopener">Arcline 218 Specification Sheet</a></li>
@@ -1694,7 +1886,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Arcline-218-V10.gll">Arcline 218 GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5 class="uk-accordion-title">Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5 class="uk-accordion-title">لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Arcline-218-Mounting-Board.pdf" target="_blank" rel="noopener">Arcline 218 Mounting Board</a></li>
 </ul>
@@ -1715,7 +1907,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG11085-2.1-Void-Acoustics-Cirrus-6.1-User-Guide-1.pdf" target="_blank" rel="noopener">Cirrus Series User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD11093-2.0-Void-Acoustics-Cirrus-6.1-Spec-Sheet.pdf" target="_blank" rel="noopener">Cirrus 6.1 Specification Sheet</a></li>
@@ -1738,7 +1930,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10567-1.3-Void-Acoustics-Cyclone-4-User-Guide-1.pdf" target="_blank" rel="noopener">Cyclone 4 User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10636-2-0-Void-Acoustics-Cyclone-4-Spec-Sheet.pdf" target="_blank" rel="noopener">Cyclone 4 Specification Sheet</a></li>
@@ -1748,7 +1940,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Cyclone_4_v2.3.gll">Cyclone 4 GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5 class="uk-accordion-title uk-active">Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5 class="uk-accordion-title uk-active">لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/T51-Ceiling-Bracket-350mm-Black.pdf" target="_blank" rel="noopener">T51 Ceiling Bracket (350mm) – Black</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/T51-Ceiling-Bracket-350mm-White.pdf" target="_blank" rel="noopener">T51 Ceiling Bracket (350mm) – White</a></li>
@@ -1776,7 +1968,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10583-2.5-Void-Acoustics-Cyclone-55-User-Guide-1.pdf" target="_blank" rel="noopener">Cyclone 55 User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10740-2-0-Void-Acoustics-Cyclone-55-Spec-Sheet.pdf" target="_blank" rel="noopener">Cyclone 55 Specification Sheet</a></li>
@@ -1786,7 +1978,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Cyclone_55_v2.3.gll">Cyclone 55 GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5 class="uk-accordion-title uk-active">Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5 class="uk-accordion-title uk-active">لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/T51-Ceiling-Bracket-350mm-Black.pdf" target="_blank" rel="noopener">T51 Ceiling Bracket (350mm) – Black</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/T51-Ceiling-Bracket-350mm-White.pdf" target="_blank" rel="noopener">T51 Ceiling Bracket (350mm) – White</a></li>
@@ -1813,7 +2005,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10582-2.2-Void-Acoustics-Cyclone-8-User-Guide-1.pdf" target="_blank" rel="noopener">Cyclone 8 User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10742-2-0-Void-Acoustics-Cyclone-8-Spec-Sheet.pdf" target="_blank" rel="noopener">Cyclone 8 Specification Sheet</a></li>
@@ -1823,7 +2015,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Cyclone_8_v2.2.gll">Cyclone 8 GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5 class="uk-accordion-title uk-active">Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5 class="uk-accordion-title uk-active">لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/T80-Ceiling-Bracket-1000mm-Black.pdf" target="_blank" rel="noopener">T80 Ceiling Bracket (1000mm) – Black</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/T80-Ceiling-Bracket-1000mm-White.pdf" target="_blank" rel="noopener">T80 Ceiling Bracket (1000mm) – White</a></li>
@@ -1854,7 +2046,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG11137-1.0-Void-Acoustics-Cyclone-8-V2-User-Guide.pdf" target="_blank" rel="noopener">Cyclone 8 V2 User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD11120-2.0-Cyclone-8-V2-Specification-Sheet-1.pdf" target="_blank" rel="noopener">Cyclone 8 V2 Specification Sheet</a></li>
@@ -1863,7 +2055,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Cyclone-8-V2-3D-Model-Simple.dwg">Cyclone 8 V2 3D Model</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5 class="uk-accordion-title uk-active">Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5 class="uk-accordion-title uk-active">لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/T80-Ceiling-Bracket-1000mm-Black.pdf" target="_blank" rel="noopener">T80 Ceiling Bracket (1000mm) – Black</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/T80-Ceiling-Bracket-1000mm-White.pdf" target="_blank" rel="noopener">T80 Ceiling Bracket (1000mm) – White</a></li>
@@ -1893,7 +2085,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10588-2.3-Void-Acoustics-Cyclone-10-User-Guide-1.pdf" target="_blank" rel="noopener">Cyclone 10 User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10741-2.0-Void-Acoustics-Cyclone-10-Spec-Sheet.pdf" target="_blank" rel="noopener">Cyclone 10 Specification Sheet</a></li>
@@ -1903,7 +2095,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Cyclone_10_v2.2.gll">Cyclone 10 GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5 class="uk-accordion-title uk-active">Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5 class="uk-accordion-title uk-active">لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/T80-Ceiling-Bracket-1000mm-Black.pdf" target="_blank" rel="noopener">T80 Ceiling Bracket (1000mm) – Black</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/T80-Ceiling-Bracket-1000mm-White.pdf" target="_blank" rel="noopener">T80 Ceiling Bracket (1000mm) – White</a></li>
@@ -1934,7 +2126,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10708-1.1-Void-Acoustics-Cyclone-208-User-Guide-1.pdf" target="_blank" rel="noopener">Cyclone 208 User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10686-2.0-Void-Acoustics-Cyclone-208-Spec-Sheet.pdf" target="_blank" rel="noopener">Cyclone 208 Specification Sheet</a></li>
@@ -1959,7 +2151,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10916-1.1-Void-Acoustics-Cyclone-208i-User-Guide-1.pdf" target="_blank" rel="noopener">Cyclone 208i User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10852-2.0-Void-Acoustics-Cyclone-208i-Spec-Sheet.pdf" target="_blank" rel="noopener">Cyclone 208i Specification Sheet</a></li>
@@ -1985,7 +2177,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10589-2-3-Void-Acoustics-Cyclone-Bass-User-Guide-1.pdf" target="_blank" rel="noopener">Cyclone Bass User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10743-2-0-Void-Acoustics-Cyclone-Bass-Spec-Sheet.pdf" target="_blank" rel="noopener">Cyclone Bass Specification Sheet</a></li>
@@ -1995,7 +2187,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Cyclone_Bass_v2.3.gll">Cyclone Bass GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/T75-Ceiling-Bracket-1000mm-Black.pdf" target="_blank" rel="noopener">T75 Ceiling Bracket (1000mm) – Black</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/T75-Ceiling-Bracket-1000mm-White.pdf" target="_blank" rel="noopener">T75 Ceiling Bracket (1000mm) – White</a></li>
@@ -2024,7 +2216,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><span data-teams="true"><a id="menur1a8" class="fui-Link ___1q1shib f2hkw1w f3rmtva f1ewtqcl fyind8e f1k6fduh f1w7gpdv fk6fouc fjoy568 figsok6 f1s184ao f1mk8lai fnbmjn9 f1o700av f13mvf36 f1cmlufx f9n3di6 f1ids18y f1tx3yz7 f1deo86v f1eh06m1 f1iescvh fhgqx19 f1olyrje f1p93eir f1nev41a f1h8hb77 f1lqvz6u f10aw75t fsle3fq f17ae5zn" title="https://voidacoustics.com/wp-content/uploads/ug10570-3.0-void-acoustics-incubus-system-user-guide.pdf" href="https://voidacoustics.com/wp-content/uploads/UG10570-3.0-Void-Acoustics-Incubus-System-User-Guide.pdf" target="_blank" rel="noreferrer noopener" aria-label="Link Incubus System User Guide">Incubus System User Guide</a></span></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10758-2.0-Void-Acoustics-Air-Array-Spec-Sheet.pdf" target="_blank" rel="noopener">Air Array Specification Sheet</a></li>
@@ -2038,7 +2230,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Air_Array_v2.3.gll">Air Array GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Air-Array-Ground-Stack-Bracket.pdf" target="_blank" rel="noopener">Air Array Ground Stack Bracket</a></li>
 <li>Air Array Fly Frame</li>
@@ -2062,7 +2254,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><span data-teams="true"><a id="menur1a8" class="fui-Link ___1q1shib f2hkw1w f3rmtva f1ewtqcl fyind8e f1k6fduh f1w7gpdv fk6fouc fjoy568 figsok6 f1s184ao f1mk8lai fnbmjn9 f1o700av f13mvf36 f1cmlufx f9n3di6 f1ids18y f1tx3yz7 f1deo86v f1eh06m1 f1iescvh fhgqx19 f1olyrje f1p93eir f1nev41a f1h8hb77 f1lqvz6u f10aw75t fsle3fq f17ae5zn" title="https://voidacoustics.com/wp-content/uploads/ug10570-3.0-void-acoustics-incubus-system-user-guide.pdf" href="https://voidacoustics.com/wp-content/uploads/UG10570-3.0-Void-Acoustics-Incubus-System-User-Guide.pdf" target="_blank" rel="noreferrer noopener" aria-label="Link Incubus System User Guide">Incubus System User Guide</a></span></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10759-2.0-Void-Acoustics-Hyperfold-Spec-Sheet.pdf" target="_blank" rel="noopener">Hyperfold Specification Sheet</a></li>
@@ -2088,7 +2280,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><span data-teams="true"><a id="menur1a8" class="fui-Link ___1q1shib f2hkw1w f3rmtva f1ewtqcl fyind8e f1k6fduh f1w7gpdv fk6fouc fjoy568 figsok6 f1s184ao f1mk8lai fnbmjn9 f1o700av f13mvf36 f1cmlufx f9n3di6 f1ids18y f1tx3yz7 f1deo86v f1eh06m1 f1iescvh fhgqx19 f1olyrje f1p93eir f1nev41a f1h8hb77 f1lqvz6u f10aw75t fsle3fq f17ae5zn" title="https://voidacoustics.com/wp-content/uploads/ug10570-3.0-void-acoustics-incubus-system-user-guide.pdf" href="https://voidacoustics.com/wp-content/uploads/UG10570-3.0-Void-Acoustics-Incubus-System-User-Guide.pdf" target="_blank" rel="noreferrer noopener" aria-label="Link Incubus System User Guide">Incubus System User Guide</a></span></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10760-2.0-Void-Acoustics-Incubus-Sub-Spec-Sheet.pdf" target="_blank" rel="noopener">Incubus Sub Specification Sheet</a></li>
@@ -2114,7 +2306,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10571-2.1-Void-Acoustics-Indigo-Series-User-Guide-1.pdf" target="_blank" rel="noopener">Indigo Series User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10762-2.0-Void-Acoustics-Indigo-6s-Spec-Sheet.pdf" target="_blank" rel="noopener">Indigo 6s Specification Sheet</a></li>
@@ -2124,7 +2316,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Indigo_6s_v2.2.gll">Indigo 6s GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Indigo-6s-Mounting-Bracket-Black.pdf" target="_blank" rel="noopener">Indigo 6s Mounting Bracket &#8211; Black</a></li>
 </ul>
@@ -2145,7 +2337,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10571-2.1-Void-Acoustics-Indigo-Series-User-Guide-1.pdf" target="_blank" rel="noopener">Indigo Series User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10761-2.0-Void-Acoustics-Indigo-6-Pro-Spec-Sheet.pdf" target="_blank" rel="noopener">Indigo 6 Pro Specification Sheet</a></li>
@@ -2155,7 +2347,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Indigo_6_Pro_v2.2.gll">Indigo 6 Pro GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Indigo-6-Pro-Mounting-Bracket-Black.pdf" target="_blank" rel="noopener">Indigo 6 Pro Mounting Bracket &#8211; Black</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Indigo-System-Bracket.pdf" target="_blank" rel="noopener">Indigo System Bracket</a></li>
@@ -2176,7 +2368,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10571-2.1-Void-Acoustics-Indigo-Series-User-Guide-1.pdf" target="_blank" rel="noopener">Indigo Series User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD11094-2.0-Void-Acoustics-Indigo-Sub-Spec-Sheet.pdf" target="_blank" rel="noopener">Indigo Sub Specification Sheet</a></li>
@@ -2186,7 +2378,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Indigo_Sub_v2.2.gll">Indigo Sub GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Indigo-System-Bracket.pdf" target="_blank" rel="noopener">Indigo System Bracket</a></li>
 </ul>
@@ -2207,7 +2399,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10572-2.5-Void-Acoustics-Nexus-6-User-Guide-1.pdf" target="_blank" rel="noopener">Nexus 6 User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10763-2.0-Void-Acoustics-Nexus-6-Spec-Sheet.pdf" target="_blank" rel="noopener">Nexus 6 Specification Sheet</a></li>
@@ -2218,7 +2410,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Nexus_6_v2.gll">Nexus 6 GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Nexus-6-Ground-Stack-Bracket.pdf" target="_blank" rel="noopener">Nexus 6 Ground Stack Bracket</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Nexus-6-Wall-Bracket.pdf" target="_blank" rel="noopener">Nexus 6 Wall Bracket</a></li>
@@ -2240,7 +2432,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG11087-1.1-Void-Acoustics-Nexus-Q-1.pdf" target="_blank" rel="noopener">Nexus Q User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10764-2.0-Void-Acoustics-Nexus-Q-Spec-Sheet.pdf" target="_blank" rel="noopener">Nexus Q Specification Sheet</a></li>
@@ -2250,7 +2442,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Nexus_Q_v2.2.gll">Nexus Q GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Nexus-Mounting-Board.pdf" target="_blank" rel="noopener">Nexus Mounting Board</a></li>
 </ul>
@@ -2271,7 +2463,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG11086-1.1-Void-Acoustics-Nexus-X-1.pdf" target="_blank" rel="noopener">Nexus X User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10765-2.0-Void-Acoustics-Nexus-X-Spec-Sheet.pdf" target="_blank" rel="noopener">Nexus X Specification Sheet</a></li>
@@ -2281,7 +2473,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Nexus_X_v2.1.gll">Nexus X GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Nexus-Mounting-Board.pdf" target="_blank" rel="noopener">Nexus Mounting Board</a></li>
 </ul>
@@ -2302,7 +2494,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10578-2.2-Void-Acoustics-Nexus-XL-User-Guide-1.pdf" target="_blank" rel="noopener">Nexus XL User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10766-2.0-Void-Acoustics-Nexus-XL-Spec-Sheet.pdf" target="_blank" rel="noopener">Nexus XL Specification Sheet</a></li>
@@ -2312,7 +2504,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Nexus_XL_v2.2.gll">Nexus XL GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Heavy-Duty-Top-Hat.pdf" target="_blank" rel="noopener">Heavy Duty Top Hat</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Nexus-Mounting-Board.pdf" target="_blank" rel="noopener">Nexus Mounting Board</a></li>
@@ -2333,7 +2525,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG11025-1.2-Void-Acoustics-Stasys-118-User-Guide-1.pdf" target="_blank" rel="noopener">Stasys 118 User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10768-2.0-Void-Acoustics-Stasys-118-Spec-Sheet.pdf" target="_blank" rel="noopener">Stasys 118 Specification Sheet</a></li>
@@ -2358,7 +2550,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG11089-1.1-Void-Acoustics-Stasys-218-1.pdf" target="_blank" rel="noopener">Stasys 218 User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10769-2.0-Void-Acoustics-Stasys-218-Spec-Sheet.pdf" target="_blank" rel="noopener">Stasys 218 Specification Sheet</a></li>
@@ -2368,7 +2560,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Stasys_218_v2.1.gll">Stasys 218 GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																																											<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Stasys-218-Mounting-Board.pdf" target="_blank" rel="noopener">Stasys 218 Mounting Board</a></li>
 </ul>
@@ -2389,7 +2581,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG11090-1.1-Void-Acoustics-Stasys-XV2-1.pdf" target="_blank" rel="noopener">Stasys X V2 User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10770-2.0-Void-Acoustics-Stasys-XV2-Spec-Sheet.pdf" target="_blank" rel="noopener">Stasys X V2 Specification Sheet</a></li>
@@ -2400,7 +2592,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Stasys_XV2_v2.1.gll">Stasys X V2 GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																																											<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Stasys-Xair-XV2-Mounting-Board.pdf" target="_blank" rel="noopener">Stasys Xair/XV2 Mounting Board</a></li>
 </ul>
@@ -2420,7 +2612,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10579-2.4-Void-Acoustics-Venu-V2-Series-User-Guide-1.pdf" target="_blank" rel="noopener">Venu V2 Series User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10771-2.0-Void-Acoustics-Venu-6-V2-Spec-Sheet.pdf" target="_blank" rel="noopener">Venu 6 V2 Specification Sheet</a></li>
@@ -2430,7 +2622,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Venu_6_V2_v2.2.gll">Venu 6 V2 GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/3-Hole-Top-Hat-Black.pdf" target="_blank" rel="noopener">3 Hole Top Hat Black</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/3-Hole-Top-Hat-White.pdf" target="_blank" rel="noopener">3 Hole Top Hat White</a></li>
@@ -2466,7 +2658,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10579-2.4-Void-Acoustics-Venu-V2-Series-User-Guide-1.pdf" target="_blank" rel="noopener">Venu V2 Series User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10772-2.0-Void-Acoustics-Venu-8-V2-Spec-Sheet.pdf" target="_blank" rel="noopener">Venu 8 V2 Specification Sheet</a></li>
@@ -2512,7 +2704,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10579-2.4-Void-Acoustics-Venu-V2-Series-User-Guide-1.pdf" target="_blank" rel="noopener">Venu V2 Series User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10773-2.0-Void-Acoustics-Venu-10-V2-Spec-Sheet.pdf" target="_blank" rel="noopener">Venu 10 V2 Specification Sheet</a></li>
@@ -2522,7 +2714,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Venu_10_V2_v2.2.gll">Venu 10 V2 GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																																											<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/3-Hole-Top-Hat-Black.pdf" target="_blank" rel="noopener">3 Hole Top Hat Black</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/3-Hole-Top-Hat-White.pdf" target="_blank" rel="noopener">3 Hole Top Hat White</a></li>
@@ -2557,7 +2749,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10579-2.4-Void-Acoustics-Venu-V2-Series-User-Guide-1.pdf" target="_blank" rel="noopener">Venu V2 Series User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10774-2.0-Void-Acoustics-Venu-12-V2-Spec-Sheet.pdf" target="_blank" rel="noopener">Venu 12 V2 Specification Sheet</a></li>
@@ -2567,7 +2759,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Venu_12_V2_v2.2.gll">Venu 12 V2 GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/3-Hole-Top-Hat-Black.pdf" target="_blank" rel="noopener">3 Hole Top Hat Black</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/3-Hole-Top-Hat-White.pdf" target="_blank" rel="noopener">3 Hole Top Hat White</a></li>
@@ -2601,7 +2793,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10579-2.4-Void-Acoustics-Venu-V2-Series-User-Guide-1.pdf" target="_blank" rel="noopener">Venu V2 Series User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10831-2.0-Void-Acoustics-Venu-14-V2-Spec-Sheet.pdf" target="_blank" rel="noopener">Venu 14 V2 Specification Sheet</a></li>
@@ -2611,7 +2803,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Venu_14_V2_v2.2.gll">Venu 14 V2 GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/3-Hole-Top-Hat-Black.pdf" target="_blank" rel="noopener">3 Hole Top Hat Black</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/3-Hole-Top-Hat-White.pdf" target="_blank" rel="noopener">3 Hole Top Hat White</a></li>
@@ -2645,7 +2837,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10579-2.4-Void-Acoustics-Venu-V2-Series-User-Guide-1.pdf" target="_blank" rel="noopener">Venu V2 Series User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10775-2.0-Void-Acoustics-Venu-15-V2-Spec-Sheet.pdf" target="_blank" rel="noopener">Venu 15 V2 Specification Sheet</a></li>
@@ -2655,7 +2847,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Venu_15_V2_v2.2.gll">Venu 15 V2 GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/3-Hole-Top-Hat-Black.pdf" target="_blank" rel="noopener">3 Hole Top Hat Black</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/3-Hole-Top-Hat-White.pdf" target="_blank" rel="noopener">3 Hole Top Hat White</a></li>
@@ -2689,7 +2881,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10579-2.4-Void-Acoustics-Venu-V2-Series-User-Guide-1.pdf" target="_blank" rel="noopener">Venu V2 Series User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10778-2.0-Void-Acoustics-Venu-208-Spec-Sheet.pdf" target="_blank" rel="noopener">Venu 208 Specification Sheet</a></li>
@@ -2698,7 +2890,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/venu-208-3dsimple-1.dwg">Venu 208 3D Model</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/T75-Wall-Bracket-Black.pdf" target="_blank" rel="noopener">T75 Wall Bracket &#8211; Black</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/T75-Wall-Bracket-White.pdf" target="_blank" rel="noopener">T75 Wall Bracket &#8211; White</a></li>
@@ -2721,7 +2913,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10835-2.1-Void-Acoustics-Venu-V2i-Active-Series-User-Guide-1-1.pdf" target="_blank" rel="noopener">Venu V2i Powered Series User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10623-2.0-Void-Acoustics-Venu-208i-Spec-Sheet-1.pdf" target="_blank" rel="noopener">Venu 208i Specification Sheet</a></li>
@@ -2745,7 +2937,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10835-2.1-Void-Acoustics-Venu-V2i-Active-Series-User-Guide-1-1.pdf" target="_blank" rel="noopener">Venu V2i Powered Series User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10626-2.0-Void-Acoustics-Venu-210i-V2-Spec-Sheet.pdf" target="_blank" rel="noopener">Venu 210i V2 Specification Sheet</a></li>
@@ -2757,7 +2949,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Venu_210i_V2_v2.1.gll">Venu 210i GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Heavy-Duty-Top-Hat.pdf" target="_blank" rel="noopener">Heavy Duty Top Hat</a></li>
 </ul>
@@ -2778,7 +2970,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10579-2.4-Void-Acoustics-Venu-V2-Series-User-Guide-1.pdf" target="_blank" rel="noopener">Venu V2 Series User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10776-2.0-Void-Acoustics-Venu-112-V2-Spec-Sheet.pdf" target="_blank" rel="noopener">Venu 112 V2 Specification Sheet</a></li>
@@ -2788,7 +2980,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Venu_112_V2_v2.3.gll">Venu 112 V2 GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Heavy-Duty-Top-Hat.pdf" target="_blank" rel="noopener">Heavy Duty Top Hat</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/T75-Ceiling-Bracket-1000mm-Black.pdf" target="_blank" rel="noopener">T75 Ceiling Bracket (1000mm) – Black</a></li>
@@ -2821,7 +3013,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10579-2.4-Void-Acoustics-Venu-V2-Series-User-Guide-1.pdf" target="_blank" rel="noopener">Venu V2 Series User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10779-2.0-Void-Acoustics-Venu-212-V2-Spec-Sheet.pdf" target="_blank" rel="noopener">Venu 212 V2 Specification Sheet</a></li>
@@ -2831,7 +3023,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Venu_212_V2_v2.2.gll">Venu 212 V2 GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Heavy-Duty-Top-Hat.pdf" target="_blank" rel="noopener">Heavy Duty Top Hat</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Venu-212-V2-Yoke-Bracket-Black.pdf" target="_blank" rel="noopener">Venu 212 V2 Yoke Bracket &#8211; Black</a></li>
@@ -2853,7 +3045,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10579-2.4-Void-Acoustics-Venu-V2-Series-User-Guide-1.pdf" target="_blank" rel="noopener">Venu V2 Series User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10777-2.0-Void-Acoustics-Venu-115-V2-Spec-Sheet.pdf" target="_blank" rel="noopener">Venu 115 V2 Specification Sheet</a></li>
@@ -2863,7 +3055,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Venu_115_V2_v2.4.gll">Venu 115 V2 GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Heavy-Duty-Top-Hat.pdf" target="_blank" rel="noopener">Heavy Duty Top Hat</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/T75-Ceiling-Bracket-1000mm-Black.pdf" target="_blank" rel="noopener">T75 Ceiling Bracket (1000mm) – Black</a></li>
@@ -2895,7 +3087,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10579-2.4-Void-Acoustics-Venu-V2-Series-User-Guide-1.pdf" target="_blank" rel="noopener">Venu V2 Series User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10667-2.0-Void-Acoustics-Venu-215-V2-Spec-Sheet.pdf" target="_blank" rel="noopener">Venu 215 V2 Specification Sheet</a></li>
@@ -2905,7 +3097,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Venu_215_V2_v2.2.gll">Venu 215 V2 GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Heavy-Duty-Top-Hat.pdf" target="_blank" rel="noopener">Heavy Duty Top Hat</a></li>
 </ul>
@@ -2926,7 +3118,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10835-2.1-Void-Acoustics-Venu-V2i-Active-Series-User-Guide-1-1.pdf" target="_blank" rel="noopener">Venu V2i Powered Series User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10731-2.0-Void-Acoustics-Venu-215i-V2-Spec-Sheet.pdf" target="_blank" rel="noopener">Venu 215i V2 Specification Sheet</a></li>
@@ -2938,7 +3130,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Venu_215_V2_v2.2-1.gll">Venu 215i V2 GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Heavy-Duty-Top-Hat.pdf" target="_blank" rel="noopener">Heavy Duty Top Hat</a></li>
 </ul>
@@ -2959,7 +3151,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10579-2.4-Void-Acoustics-Venu-V2-Series-User-Guide-1.pdf" target="_blank" rel="noopener">Venu V2 Series User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10823-2.0-Void-Acoustics-Venu-118-V2-Spec-Sheet.pdf" target="_blank" rel="noopener">Venu 118 V2 Specification Sheet</a></li>
@@ -2969,7 +3161,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Venu_118_V2_v2.3.gll">Venu 118 V2 GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li style="list-style-type: none">
 <ul>
@@ -2994,7 +3186,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10579-2.4-Void-Acoustics-Venu-V2-Series-User-Guide-1.pdf" target="_blank" rel="noopener">Venu V2 Series User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10824-2.0-Void-Acoustics-Venu-218-V2-Spec-Sheet.pdf" target="_blank" rel="noopener">Venu 218 V2 Specification Sheet</a></li>
@@ -3004,7 +3196,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Venu_218_V2_v2.1.gll">Venu 218 V2 GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Heavy-Duty-Top-Hat.pdf" target="_blank" rel="noopener">Heavy Duty Top Hat</a></li>
 </ul>
@@ -3025,7 +3217,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10607-4-0-Void-Acoustics-Bias-D1-Q1-Q15-Q2-User-Guide.pdf" target="_blank" rel="noopener">Bias Q1+, Q1.5+, Q2+ User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10803-2.0-Void-Acoustics-Bias-Q1plus-Spec-Sheet.pdf" target="_blank" rel="noopener">Bias Q1+ Specification Sheet</a></li>
@@ -3036,7 +3228,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10959-1.1-Void-Acoustics-Amplifier-Comparison-Matrix.pdf" target="_blank" rel="noopener">Amplifier Comparison Matrix</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Bias-D1-Q1-Q1.5-Q2-Patch-Panel-Data-Sheet.pdf" target="_blank" rel="noopener">Bias D1/Q1/Q1.5/Q2 Patch Panel Data Sheet</a></li>
 </ul>
@@ -3057,7 +3249,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10607-4-0-Void-Acoustics-Bias-D1-Q1-Q15-Q2-User-Guide.pdf" target="_blank" rel="noopener">Bias Q1+, Q1.5+, Q2+ User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10804-2.0-Void-Acoustics-Bias-Q15plus-Spec-Sheet.pdf" target="_blank" rel="noopener">Bias Q1.5+ Specification Sheet</a></li>
@@ -3068,7 +3260,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10959-1.1-Void-Acoustics-Amplifier-Comparison-Matrix.pdf" target="_blank" rel="noopener">Amplifier Comparison Matrix</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Bias-D1-Q1-Q1.5-Q2-Patch-Panel-Data-Sheet.pdf" target="_blank" rel="noopener">Bias D1/Q1/Q1.5/Q2 Patch Panel Data Sheet</a></li>
 </ul>
@@ -3089,7 +3281,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10607-4-0-Void-Acoustics-Bias-D1-Q1-Q15-Q2-User-Guide.pdf" target="_blank" rel="noopener">Bias Q1+, Q1.5+, Q2+ User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10806-2.0-Void-Acoustics-Bias-Q2plus-Spec-Sheet.pdf" target="_blank" rel="noopener">Bias Q2+ Specification Sheet</a></li>
@@ -3100,7 +3292,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10959-1.1-Void-Acoustics-Amplifier-Comparison-Matrix.pdf" target="_blank" rel="noopener">Amplifier Comparison Matrix</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Bias-D1-Q1-Q1.5-Q2-Patch-Panel-Data-Sheet.pdf" target="_blank" rel="noopener">Bias D1/Q1/Q1.5/Q2 Patch Panel Data Sheet</a></li>
 </ul>
@@ -3121,7 +3313,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG10553-2-0-Void-Acousitcs-Bias-Q3-User-Guide.pdf" target="_blank" rel="noopener">Bias Q3 User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD11104-2.0-Void-Acoustics-Bias-Q3-Spec-Sheet.pdf" target="_blank" rel="noopener">Bias Q3 Specification Sheet</a></li>
@@ -3147,7 +3339,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG11068-1-1-Void-Acousics-Bias-Q5-User-Guide.pdf" target="_blank" rel="noopener">Bias Q5 User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD11067-2.0-Void-Acoustics-Bias-Q5-Spec-Sheet.pdf" target="_blank" rel="noopener">Bias Q5 Specification Sheet</a></li>
@@ -3173,7 +3365,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG11158-1.0-Inca-Series-User-Guide-8.pdf" target="_blank" rel="noopener">Inca User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD10639-2.1-Void-Acoustics-Inca-500-Spec-Sheet.pdf" target="_blank" rel="noopener">Inca 500 Specification Sheet</a></li>
@@ -3184,7 +3376,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Void-Acoustics-Speaker-Presets-1.4-1.zcl">Inca Series Preset Library</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accessories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li>Inca 500 Rack Mount Kit</li>
 <li>Inca 500 Wall/Desktop Mount Kit</li>
@@ -3206,7 +3398,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG11158-1.0-Inca-Series-User-Guide-8.pdf" target="_blank" rel="noopener">Inca 1000 User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD11163-2.0-Void-Acoustics-Inca-1000-Spec-Sheet.pdf" target="_blank" rel="noopener">Inca 1000 Specification Sheet</a></li>
@@ -3232,7 +3424,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												</button>
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
-																													<div class="flex-1 no-last-mb"><h5>Supporting Documents</h5>
+																													<div class="flex-1 no-last-mb"><h5>مستندات پشتیبان</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/UG11158-1.0-Inca-Series-User-Guide-8.pdf" target="_blank" rel="noopener">Inca 2000 User Guide</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/TD11164-2.0-Void-Acoustics-Inca-2000-Spec-Sheet.pdf" target="_blank" rel="noopener">Inca 2000 Specification Sheet</a></li>
@@ -3769,7 +3961,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 																					<div class="border-2 border-surface-200 rounded-lg group/accordion-wrap accordion-item">
 												<button type="button" data-accordion-toggle
 														class="py-5 px-6 flex items-center justify-between gap-4 w-full font-medium bg-surface-200 group-hover/accordion-wrap:bg-surface-50 transition-colors duration-300">
-													<span>Accessory Guide</span>
+													<span>راهنمای لوازم جانبی</span>
 													<span class="group-hover/accordion-wrap:text-primary"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 <line x1="17" y1="8.78516" y2="8.78516" stroke="currentColor" stroke-width="3"/>
 <line x1="8.21875" y1="17" x2="8.21875" y2="-6.55671e-08" stroke="currentColor" stroke-width="3"/>
@@ -3779,7 +3971,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												<div data-accordion-content>
 													<div class="flex flex-col sm:flex-row accordion-downloads-content text-sm pl-6 pr-12 pb-6 pt-2 gap-6">
 																													<div class="flex-1 no-last-mb"><ul>
-<li><a href="https://voidacoustics.com/wp-content/uploads/TD0967-1.1-Void-Acoustics-Accessory-Guide-2026.pdf" target="_blank" rel="noopener">Accessory Guide</a></li>
+<li><a href="https://voidacoustics.com/wp-content/uploads/TD0967-1.1-Void-Acoustics-Accessory-Guide-2026.pdf" target="_blank" rel="noopener">راهنمای لوازم جانبی</a></li>
 </ul>
 </div>
 																																									</div>
@@ -4533,7 +4725,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<div class="flex gap-4 justify-between sm:items-center flex-col sm:flex-row">
 											<div>
 							
-<h2 class="component-heading text-balance">Explore the full range</h2>
+<h2 class="component-heading text-balance">همهٔ محصولات را ببینید</h2>
 						</div>
 																<div class="flex-none">
 							
@@ -4569,7 +4761,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 				
 <h3 class="component-heading text-balance h4">سری Air</h3>
 									<div class="no-last-mb">
-						<p>High-impact statement loudspeakers for premium entertainment environments</p>
+						<p>بلندگوهایی با حضور بصری و صوتی قدرتمند برای فضاهای سرگرمی ممتاز</p>
 					</div>
 				
 							</div>
@@ -4594,7 +4786,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 				
 <h3 class="component-heading text-balance h4">سری Cyclone</h3>
 									<div class="no-last-mb">
-						<p>Versatile loudspeakers for hospitality and outdoor environments</p>
+						<p>بلندگوهای منعطف برای فضاهای پذیرایی و محیط‌های باز</p>
 					</div>
 				
 							</div>
@@ -4619,7 +4811,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 				
 <h3 class="component-heading text-balance h4">سری Venu</h3>
 									<div class="no-last-mb">
-						<p>Comprehensive loudspeaker range for discreet contemporary interiors</p>
+						<p>مجموعه‌ای کامل از بلندگوها برای فضاهای داخلی مدرن و مینیمال</p>
 					</div>
 				
 							</div>
@@ -4644,7 +4836,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 				
 <h3 class="component-heading text-balance h4">آمپلی‌فایرها</h3>
 									<div class="no-last-mb">
-						<p>Precision amplification for complete system control and performance</p>
+						<p>تقویت دقیق برای کنترل کامل سیستم و اجرای بی‌نقص</p>
 					</div>
 				
 							</div>
@@ -4863,7 +5055,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 				<div class="flex-1">
 					<div class="max-w-3xl">
 						
-<h2 class="component-heading text-balance">پوشاک و اکسسوری‌های اختصاصی و پریمیوم برای جامعه جهانی وید اکوستیکس</h2>
+<h2 class="component-heading text-balance">پوشاک و اکسسوری‌های ممتاز برای دوستداران وید در سراسر جهان</h2>
 					</div>
 				</div>
 				<div class="lg:flex-none">
@@ -4872,7 +5064,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 	<a class="button button--red button--filled button--lg"
 		target=""
 		href="https://voidacoustics.com/merchandise/">
-		فروشگاه محصولات اختصاصی	</a>
+		ورود به فروشگاه	</a>
 </div>
 				</div>
 			</div>
@@ -4917,7 +5109,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li id="menu-item-482" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-482"><a href="https://voidacoustics.com/customisation/">سفارشی‌سازی</a></li>
 <li id="menu-item-4134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4134"><a href="https://voidacoustics.com/insights/">بینش‌ها و پروژه‌ها</a></li>
 <li id="menu-item-233" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-233"><a href="https://voidacoustics.com/about/">درباره ما</a></li>
-<li id="menu-item-6384" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6384"><a href="https://voidacoustics.com/hearvoid/">صدای وید را بشنوید</a></li>
+<li id="menu-item-6384" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6384"><a href="https://voidacoustics.com/hearvoid/">صدای وید را تجربه کنید</a></li>
 <li id="menu-item-4246" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4246"><a href="https://voidacoustics.com/partnerlocator/">یافتن نمایندگی‌ها</a></li>
 <li id="menu-item-4133" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4133"><a href="https://voidacoustics.com/careers/">فرصت‌های شغلی</a></li>
 <li id="menu-item-7578" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7578"><a href="https://voidacoustics.com/merchandise/">محصولات اختصاصی وید</a></li>
@@ -4998,7 +5190,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 </ul>
 </li>
 <li id="menu-item-644" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-13 current_page_item menu-item-644"><a href="https://voidacoustics.com/resources/" aria-current="page">منابع و مستندات</a></li>
-<li id="menu-item-6385" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6385"><a href="https://voidacoustics.com/hearvoid/">صدای وید را بشنوید</a></li>
+<li id="menu-item-6385" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6385"><a href="https://voidacoustics.com/hearvoid/">صدای وید را تجربه کنید</a></li>
 <li id="menu-item-7639" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7639"><a href="https://voidacoustics.com/design/">طراحی سیستم صوتی شما</a></li>
 <li id="menu-item-6178" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6178"><a href="https://voidacoustics.com/merchandise/">محصولات اختصاصی وید</a></li>
 </ul>		</div>
@@ -5097,7 +5289,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 					
 <h2 class="component-heading text-balance">همراه با وید اکوستیکس</h2>
 											<div class="content-component no-last-mb sm:pr-24">
-							<p>Stay ahead with our monthly newsletter featuring product updates, events, case studies and more.</p>
+							<p>با خبرنامهٔ ماهانهٔ ما از محصولات تازه، رویدادها و پروژه‌های جدید باخبر شوید.</p>
 						</div>
 										
 <div class="wpcf7 no-js" id="wpcf7-f551-o3" lang="en-US" dir="ltr" data-wpcf7-id="551">
@@ -5195,7 +5387,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 	<div class="cmplz-divider cmplz-divider-header"></div>
 	<div class="cmplz-body">
-		<div class="cmplz-message" id="cmplz-message-1-optin">We use necessary cookies to make our site work. We also have performance based analytic cookies to help us improve our site and your user experience. Using this tool will set a cookie on your device to remember your preferences.</div>
+		<div class="cmplz-message" id="cmplz-message-1-optin">برای عملکرد درست سایت از کوکی‌های ضروری استفاده می‌کنیم. کوکی‌های آماری نیز کمک می‌کنند تجربهٔ شما را بهتر کنیم. انتخاب شما روی همین دستگاه ذخیره می‌شود.</div>
 		<!-- categories start -->
 		<div class="cmplz-categories">
 			<div class="cmplz-category cmplz-functional">
@@ -5309,8 +5501,8 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 	<div class="cmplz-links cmplz-information">
 		<ul>
-			<li><a class="cmplz-link cmplz-manage-options cookie-statement" href="#" data-relative_url="#cmplz-manage-consent-container">Manage options</a></li>
-			<li><a class="cmplz-link cmplz-manage-third-parties cookie-statement" href="#" data-relative_url="#cmplz-cookies-overview">Manage services</a></li>
+			<li><a class="cmplz-link cmplz-manage-options cookie-statement" href="#" data-relative_url="#cmplz-manage-consent-container">مدیریت گزینه‌ها</a></li>
+			<li><a class="cmplz-link cmplz-manage-third-parties cookie-statement" href="#" data-relative_url="#cmplz-cookies-overview">مدیریت سرویس‌ها</a></li>
 			<li><a class="cmplz-link cmplz-manage-vendors tcf cookie-statement" href="#" data-relative_url="#cmplz-tcf-wrapper">Manage {vendor_count} vendors</a></li>
 			<li><a class="cmplz-link cmplz-external cmplz-read-more-purposes tcf" target="_blank" rel="noopener noreferrer nofollow" href="https://cookiedatabase.org/tcf/purposes/" aria-label="Read more about TCF purposes on Cookie Database">Read more about these purposes</a></li>
 		</ul>
@@ -5320,9 +5512,9 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 	<div class="cmplz-buttons">
 		<button class="cmplz-btn cmplz-accept">پذیرش همه</button>
-		<button class="cmplz-btn cmplz-deny">Deny</button>
+		<button class="cmplz-btn cmplz-deny">رد کردن</button>
 		<button class="cmplz-btn cmplz-view-preferences">رد کردن</button>
-		<button class="cmplz-btn cmplz-save-preferences">Save</button>
+		<button class="cmplz-btn cmplz-save-preferences">ذخیره</button>
 		<a class="cmplz-btn cmplz-manage-options tcf cookie-statement" href="#" data-relative_url="#cmplz-manage-consent-container">رد کردن</a>
 			</div>
 
@@ -5336,7 +5528,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 			</div>
 </div>
 </div>
-					<div id="cmplz-manage-consent" data-nosnippet="true"><button class="cmplz-btn cmplz-hidden cmplz-manage-consent manage-consent-1" aria-haspopup="dialog" aria-controls="cmplz-cookiebanner-1-optin">Manage Cookies</button>
+					<div id="cmplz-manage-consent" data-nosnippet="true"><button class="cmplz-btn cmplz-hidden cmplz-manage-consent manage-consent-1" aria-haspopup="dialog" aria-controls="cmplz-cookiebanner-1-optin">مدیریت کوکی‌ها</button>
 
 </div>			<script>
 				(function(){let request = new XMLHttpRequest();

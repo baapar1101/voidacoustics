@@ -90,7 +90,193 @@
 			width: auto !important;
 			height: auto !important;
 		}
+
+		/* 2026 Persian art direction: cinematic, tactile, and image-led. */
+		:root {
+			--void-red: #ff1748;
+			--void-red-deep: #a8002d;
+			--void-ink: #070707;
+			--void-ivory: #f3f0e9;
+		}
+		html[dir="rtl"] body {
+			background: var(--void-ivory);
+			font-feature-settings: "ss01", "ss02";
+		}
+		html[dir="rtl"] .site-header {
+			margin: 14px 18px 0;
+			width: calc(100% - 36px);
+			border: 1px solid rgba(255,255,255,.14);
+			border-radius: 18px;
+			color: #fff;
+			background: rgba(7,7,7,.72);
+			box-shadow: 0 12px 40px rgba(0,0,0,.18);
+			backdrop-filter: blur(18px) saturate(140%);
+			-webkit-backdrop-filter: blur(18px) saturate(140%);
+		}
+		html[dir="rtl"] .site-header .menu-dropdown { color: #111; }
+		html[dir="rtl"] .hero-slider .min-h-screen-d::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+			z-index: 25;
+			pointer-events: none;
+			background:
+				radial-gradient(circle at 74% 40%, transparent 0 24%, rgba(0,0,0,.14) 55%),
+				linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.22) 58%, rgba(0,0,0,.62));
+		}
+		html[dir="rtl"] .hero-slider .page-width { max-width: 1180px; }
+		html[dir="rtl"] .hero-slider .component-heading {
+			max-width: 16ch;
+			font-size: clamp(3rem, 6.8vw, 7.25rem);
+			font-weight: 780;
+			line-height: 1.08;
+			text-wrap: balance;
+			text-shadow: 0 8px 32px rgba(0,0,0,.38);
+		}
+		html[dir="rtl"] .button {
+			border-radius: 999px !important;
+			padding-inline: 1.65rem !important;
+			box-shadow: 0 10px 28px rgba(0,0,0,.14);
+			transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease !important;
+		}
+		html[dir="rtl"] .button:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 16px 38px rgba(0,0,0,.22);
+		}
+		html[dir="rtl"] .button--red { background: var(--void-red) !important; }
+		html[dir="rtl"] main > section:not(.hero-slider) {
+			position: relative;
+			isolation: isolate;
+		}
+		html[dir="rtl"] main > section:not(.hero-slider) .component-heading {
+			font-weight: 720;
+			line-height: 1.2;
+		}
+		html[dir="rtl"] .bg-surface-200 {
+			background-color: var(--void-ivory) !important;
+		}
+		html[dir="rtl"] .rounded-2xl {
+			border-radius: 26px !important;
+		}
+		html[dir="rtl"] .grid > .rounded-2xl,
+		html[dir="rtl"] .grid > div > .rounded-2xl {
+			border: 1px solid rgba(255,255,255,.12);
+			box-shadow: 0 24px 70px rgba(0,0,0,.14);
+			transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease;
+		}
+		html[dir="rtl"] .grid > .rounded-2xl:hover,
+		html[dir="rtl"] .grid > div > .rounded-2xl:hover {
+			transform: translateY(-8px);
+			box-shadow: 0 32px 80px rgba(0,0,0,.22);
+		}
+		html[dir="rtl"] .cards-slider-gradient {
+			background:
+				radial-gradient(circle at 12% 30%, rgba(255,23,72,.24), transparent 34%),
+				linear-gradient(135deg, #050505 0%, #160008 58%, #33000f 100%) !important;
+			border-top: 1px solid rgba(255,255,255,.08);
+		}
+		html[dir="rtl"] .cards-slider-gradient .splide__slide > .rounded-2xl {
+			border: 1px solid rgba(255,255,255,.16);
+			box-shadow: 0 24px 60px rgba(0,0,0,.34);
+		}
+		html[dir="rtl"] .text-eyebrow {
+			display: inline-flex;
+			align-items: center;
+			gap: .65rem;
+			font-weight: 750;
+		}
+		html[dir="rtl"] .text-eyebrow::before {
+			content: "";
+			width: 2.25rem;
+			height: 2px;
+			background: currentColor;
+		}
+		html[dir="rtl"] .fa-signature-rail {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			background: #090909;
+			color: white;
+			border-block: 1px solid rgba(255,255,255,.1);
+		}
+		html[dir="rtl"] .fa-signature-rail a {
+			display: grid;
+			grid-template-columns: auto 1fr;
+			grid-template-rows: auto auto;
+			gap: .15rem 1rem;
+			padding: 1.75rem clamp(1rem, 3vw, 3.5rem);
+			color: white;
+			border-inline-start: 1px solid rgba(255,255,255,.1);
+			transition: background .25s ease;
+		}
+		html[dir="rtl"] .fa-signature-rail a:hover { background: rgba(255,23,72,.16); }
+		html[dir="rtl"] .fa-signature-rail span {
+			grid-row: 1 / 3;
+			align-self: center;
+			color: var(--void-red);
+			font-size: .78rem;
+			font-weight: 800;
+		}
+		html[dir="rtl"] .fa-signature-rail strong { font-size: 1.05rem; }
+		html[dir="rtl"] .fa-signature-rail small { color: rgba(255,255,255,.62); }
+		html[dir="rtl"] .footer-cta-block {
+			background-position: left center !important;
+			text-align: right !important;
+			border: 1px solid rgba(255,255,255,.18);
+			box-shadow: 0 30px 90px rgba(0,0,0,.32);
+		}
+		html[dir="rtl"] .footer-cta-block > .flex-1 { padding-left: min(42vw, 480px); }
+		html[dir="rtl"] .footer-cta-block .component-heading {
+			font-size: clamp(1.8rem, 3vw, 3.25rem);
+			line-height: 1.3;
+		}
+		@media (max-width: 767px) {
+			html[dir="rtl"] .site-header {
+				margin: 8px 8px 0;
+				width: calc(100% - 16px);
+				border-radius: 14px;
+			}
+			html[dir="rtl"] .hero-slider .component-heading { font-size: clamp(2.5rem, 12vw, 4.4rem); }
+			html[dir="rtl"] .fa-signature-rail { grid-template-columns: 1fr; }
+			html[dir="rtl"] .fa-signature-rail a { border-top: 1px solid rgba(255,255,255,.1); }
+			html[dir="rtl"] .footer-cta-block {
+				background-position: center bottom !important;
+				background-size: 115% auto !important;
+				padding-bottom: 68% !important;
+			}
+			html[dir="rtl"] .footer-cta-block > .flex-1 { padding-left: 0; }
+		}
+		@media (prefers-reduced-motion: reduce) {
+			html[dir="rtl"] *, html[dir="rtl"] *::before, html[dir="rtl"] *::after {
+				scroll-behavior: auto !important;
+				transition-duration: .01ms !important;
+			}
+		}
 	</style>
+	<script id="fa-image-hydration">
+		document.addEventListener('DOMContentLoaded', function () {
+			var hydrate = function (img) {
+				if (img.dataset.src) img.src = img.dataset.src;
+				if (img.dataset.srcset) img.srcset = img.dataset.srcset;
+				if (img.dataset.sizes) img.sizes = img.dataset.sizes;
+			};
+			var images = document.querySelectorAll('img[data-src]');
+			if (!('IntersectionObserver' in window)) {
+				images.forEach(hydrate);
+				return;
+			}
+			var observer = new IntersectionObserver(function (entries) {
+				entries.forEach(function (entry) {
+					if (!entry.isIntersecting) return;
+					hydrate(entry.target);
+					observer.unobserve(entry.target);
+				});
+			}, { rootMargin: '400px 0px' });
+			images.forEach(function (img) {
+				img.loading = 'lazy';
+				observer.observe(img);
+			});
+		});
+	</script>
 
 	
 	
@@ -828,7 +1014,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="https://voidacoustics.com/contact/">تماس با ما</a></li>
 <li id="menu-item-7558" class="mobile-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-7558"><a href="https://voidacoustics.com/design/">طراحی سیستم صوتی شما</a></li>
 <li id="menu-item-4482" class="mobile-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4482"><a href="https://voidacoustics.com/understandsound/">آشنایی با سیستم‌های صوتی</a></li>
-<li id="menu-item-7557" class="mobile-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-7557"><a href="https://voidacoustics.com/hearvoid/">صدای وید را بشنوید</a></li>
+<li id="menu-item-7557" class="mobile-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-7557"><a href="https://voidacoustics.com/hearvoid/">صدای وید را تجربه کنید</a></li>
 <li id="menu-item-4227" class="mobile-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4227"><a href="https://voidacoustics.com/partnerlocator/">یافتن نمایندگی‌ها</a></li>
 <li id="menu-item-4483" class="mobile-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4483"><a href="https://voidacoustics.com/naturalwood/">مجموعه چوب طبیعی</a></li>
 <li id="menu-item-7638" class="mobile-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-7638"><a href="https://voidacoustics.com/merchandise/">محصولات اختصاصی وید</a></li>
@@ -838,14 +1024,20 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 
 
-<aside data-wg-notranslate="" class="country-selector weglot-dropdown close_outside_click closed weglot-shortcode wg-" tabindex="0" aria-expanded="false" aria-label="زبان انتخاب شده: انگلیسی">
-	<input id="wg_choice_en" class="weglot_choice" type="checkbox" name="menu"/>
-	<label data-l="en" tabindex="-1" for="wg_choice_en" class="wgcurrent wg-li weglot-lang weglot-language flag-3 wg-en" data-code-language="wg-en" data-name-language="EN">
-		<span class="wglanguage-name">EN</span>
+
+
+
+
+
+
+<aside data-wg-notranslate="" class="country-selector weglot-dropdown close_outside_click closed weglot-shortcode wg-" tabindex="0" aria-expanded="false" aria-label="تغییر زبان به انگلیسی">
+	<input id="wg_choice_fa" class="weglot_choice" type="checkbox" name="menu"/>
+	<label data-l="fa" tabindex="-1" for="wg_choice_fa" class="wgcurrent wg-li weglot-lang weglot-language flag-3 wg-fa" data-code-language="wg-fa" data-name-language="FA">
+		<span class="wglanguage-name">FA</span>
 	</label>
 	<ul role="none">
-		<li data-l="fa" class="wg-li weglot-lang weglot-language flag-3 wg-fa" role="option">
-			<a title="زبان: فارسی" class="weglot-language-fa" role="option" href="/discover/barsrestaurants//">FA</a>
+		<li data-l="en" class="wg-li weglot-lang weglot-language flag-3 wg-en" role="option">
+			<a title="English" class="weglot-language-en" role="option" href="/en/discover/barsrestaurants//">EN</a>
 		</li>
 	</ul>
 </aside>					
@@ -925,7 +1117,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <div class="flex flex-col gap-4 sm:gap-6">
 
 	
-		<div class="text-eyebrow text-primary">بررسی اجمالی</div>
+		<div class="text-eyebrow text-primary">معرفی</div>
 
 	
 	
@@ -1180,7 +1372,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 	
 	
-<h3 class="component-heading text-balance">Understand what your space needs</h3>
+<h3 class="component-heading text-balance">نیاز صوتی فضای خود را بشناسید</h3>
 
 	
 		<div class="no-last-mb content-component content-list-check">
@@ -1199,7 +1391,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 	<a class="button button--red button--filled button--md"
 		target=""
 		href="https://voidacoustics.com/design/">
-		Explore system design	</a>
+		راهنمای طراحی سیستم	</a>
 </div>
 
 		
@@ -1216,15 +1408,15 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 						<div class="flex flex-col gap-4">
 															<div class="flex gap-4 sm:gap-8 text-base sm:text-xl xl:text-2xl items-center bg-white py-3 sm:py-6 xl:py-8 px-5 rounded-2xl">
 									<div class="h4 text-primary">01</div>
-									<div>Tell us about your space and goals</div>
+									<div>دربارهٔ فضا و هدفتان بگویید</div>
 								</div>
 															<div class="flex gap-4 sm:gap-8 text-base sm:text-xl xl:text-2xl items-center bg-white py-3 sm:py-6 xl:py-8 px-5 rounded-2xl">
 									<div class="h4 text-primary">02</div>
-									<div>Define the right solution for you</div>
+									<div>راهکار مناسب را انتخاب کنید</div>
 								</div>
 															<div class="flex gap-4 sm:gap-8 text-base sm:text-xl xl:text-2xl items-center bg-white py-3 sm:py-6 xl:py-8 px-5 rounded-2xl">
 									<div class="h4 text-primary">03</div>
-									<div>Connect with the right integration partner </div>
+									<div>به همکار اجرایی مناسب متصل شوید </div>
 								</div>
 													</div>
 
@@ -1241,11 +1433,11 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 		<div class="flex flex-col gap-10 sm:gap-12 sm:px-16 site-max:px-0">
 			<div class="flex flex-col gap-4">
 									<div class="text-primary text-eyebrow">
-						مطالعات موردی و پروژه‌ها					</div>
+						پروژه‌های اجراشده					</div>
 								<div class="flex gap-4 justify-between sm:items-center flex-col sm:flex-row">
 											<div>
 							
-<h2 class="component-heading text-balance">Discover real world success stories</h2>
+<h2 class="component-heading text-balance">داستان پروژه‌های موفق را ببینید</h2>
 						</div>
 																<div class="flex-none">
 							
@@ -1400,7 +1592,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 				<div class="flex-1">
 					<div class="max-w-3xl">
 						
-<h2 class="component-heading text-balance">پوشاک و اکسسوری‌های اختصاصی و پریمیوم برای جامعه جهانی وید اکوستیکس</h2>
+<h2 class="component-heading text-balance">پوشاک و اکسسوری‌های ممتاز برای دوستداران وید در سراسر جهان</h2>
 					</div>
 				</div>
 				<div class="lg:flex-none">
@@ -1409,7 +1601,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 	<a class="button button--red button--filled button--lg"
 		target=""
 		href="https://voidacoustics.com/merchandise/">
-		فروشگاه محصولات اختصاصی	</a>
+		ورود به فروشگاه	</a>
 </div>
 				</div>
 			</div>
@@ -1454,7 +1646,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li id="menu-item-482" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-482"><a href="https://voidacoustics.com/customisation/">سفارشی‌سازی</a></li>
 <li id="menu-item-4134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4134"><a href="https://voidacoustics.com/insights/">بینش‌ها و پروژه‌ها</a></li>
 <li id="menu-item-233" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-233"><a href="https://voidacoustics.com/about/">درباره ما</a></li>
-<li id="menu-item-6384" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6384"><a href="https://voidacoustics.com/hearvoid/">صدای وید را بشنوید</a></li>
+<li id="menu-item-6384" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6384"><a href="https://voidacoustics.com/hearvoid/">صدای وید را تجربه کنید</a></li>
 <li id="menu-item-4246" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4246"><a href="https://voidacoustics.com/partnerlocator/">یافتن نمایندگی‌ها</a></li>
 <li id="menu-item-4133" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4133"><a href="https://voidacoustics.com/careers/">فرصت‌های شغلی</a></li>
 <li id="menu-item-7578" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7578"><a href="https://voidacoustics.com/merchandise/">محصولات اختصاصی وید</a></li>
@@ -1535,7 +1727,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 </ul>
 </li>
 <li id="menu-item-644" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-644"><a href="https://voidacoustics.com/resources/">منابع و مستندات</a></li>
-<li id="menu-item-6385" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6385"><a href="https://voidacoustics.com/hearvoid/">صدای وید را بشنوید</a></li>
+<li id="menu-item-6385" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6385"><a href="https://voidacoustics.com/hearvoid/">صدای وید را تجربه کنید</a></li>
 <li id="menu-item-7639" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7639"><a href="https://voidacoustics.com/design/">طراحی سیستم صوتی شما</a></li>
 <li id="menu-item-6178" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6178"><a href="https://voidacoustics.com/merchandise/">محصولات اختصاصی وید</a></li>
 </ul>		</div>
@@ -1634,7 +1826,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 					
 <h2 class="component-heading text-balance">همراه با وید اکوستیکس</h2>
 											<div class="content-component no-last-mb sm:pr-24">
-							<p>Stay ahead with our monthly newsletter featuring product updates, events, case studies and more.</p>
+							<p>با خبرنامهٔ ماهانهٔ ما از محصولات تازه، رویدادها و پروژه‌های جدید باخبر شوید.</p>
 						</div>
 										
 <div class="wpcf7 no-js" id="wpcf7-f551-o1" lang="en-US" dir="ltr" data-wpcf7-id="551">
@@ -1732,7 +1924,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 	<div class="cmplz-divider cmplz-divider-header"></div>
 	<div class="cmplz-body">
-		<div class="cmplz-message" id="cmplz-message-1-optin">We use necessary cookies to make our site work. We also have performance based analytic cookies to help us improve our site and your user experience. Using this tool will set a cookie on your device to remember your preferences.</div>
+		<div class="cmplz-message" id="cmplz-message-1-optin">برای عملکرد درست سایت از کوکی‌های ضروری استفاده می‌کنیم. کوکی‌های آماری نیز کمک می‌کنند تجربهٔ شما را بهتر کنیم. انتخاب شما روی همین دستگاه ذخیره می‌شود.</div>
 		<!-- categories start -->
 		<div class="cmplz-categories">
 			<div class="cmplz-category cmplz-functional">
@@ -1846,8 +2038,8 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 	<div class="cmplz-links cmplz-information">
 		<ul>
-			<li><a class="cmplz-link cmplz-manage-options cookie-statement" href="#" data-relative_url="#cmplz-manage-consent-container">Manage options</a></li>
-			<li><a class="cmplz-link cmplz-manage-third-parties cookie-statement" href="#" data-relative_url="#cmplz-cookies-overview">Manage services</a></li>
+			<li><a class="cmplz-link cmplz-manage-options cookie-statement" href="#" data-relative_url="#cmplz-manage-consent-container">مدیریت گزینه‌ها</a></li>
+			<li><a class="cmplz-link cmplz-manage-third-parties cookie-statement" href="#" data-relative_url="#cmplz-cookies-overview">مدیریت سرویس‌ها</a></li>
 			<li><a class="cmplz-link cmplz-manage-vendors tcf cookie-statement" href="#" data-relative_url="#cmplz-tcf-wrapper">Manage {vendor_count} vendors</a></li>
 			<li><a class="cmplz-link cmplz-external cmplz-read-more-purposes tcf" target="_blank" rel="noopener noreferrer nofollow" href="https://cookiedatabase.org/tcf/purposes/" aria-label="Read more about TCF purposes on Cookie Database">Read more about these purposes</a></li>
 		</ul>
@@ -1857,9 +2049,9 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 	<div class="cmplz-buttons">
 		<button class="cmplz-btn cmplz-accept">پذیرش همه</button>
-		<button class="cmplz-btn cmplz-deny">Deny</button>
+		<button class="cmplz-btn cmplz-deny">رد کردن</button>
 		<button class="cmplz-btn cmplz-view-preferences">رد کردن</button>
-		<button class="cmplz-btn cmplz-save-preferences">Save</button>
+		<button class="cmplz-btn cmplz-save-preferences">ذخیره</button>
 		<a class="cmplz-btn cmplz-manage-options tcf cookie-statement" href="#" data-relative_url="#cmplz-manage-consent-container">رد کردن</a>
 			</div>
 
@@ -1873,7 +2065,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 			</div>
 </div>
 </div>
-					<div id="cmplz-manage-consent" data-nosnippet="true"><button class="cmplz-btn cmplz-hidden cmplz-manage-consent manage-consent-1" aria-haspopup="dialog" aria-controls="cmplz-cookiebanner-1-optin">Manage Cookies</button>
+					<div id="cmplz-manage-consent" data-nosnippet="true"><button class="cmplz-btn cmplz-hidden cmplz-manage-consent manage-consent-1" aria-haspopup="dialog" aria-controls="cmplz-cookiebanner-1-optin">مدیریت کوکی‌ها</button>
 
 </div>			<script>
 				(function(){let request = new XMLHttpRequest();
