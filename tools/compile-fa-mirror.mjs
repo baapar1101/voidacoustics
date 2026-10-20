@@ -411,11 +411,18 @@ const FA_HEAD_INJECTION = `
 				line-height: 1.45 !important;
 			}
 			html[dir="rtl"] #menu-main-nav > li > a::after {
-				content: "←";
+				content: "‹";
 				color: var(--void-red);
-				font-size: 1.05rem;
+				font-size: 1.65rem;
 				font-weight: 700;
+				line-height: 1;
 				opacity: .9;
+			}
+			html[dir="rtl"] #menu-main-nav::-webkit-scrollbar { width: 4px; }
+			html[dir="rtl"] #menu-main-nav::-webkit-scrollbar-track { background: transparent; }
+			html[dir="rtl"] #menu-main-nav::-webkit-scrollbar-thumb {
+				border-radius: 999px;
+				background: rgba(255,255,255,.26);
 			}
 			html[dir="rtl"] #menu-main-nav > li > a > svg { display: none !important; }
 			html[dir="rtl"] #menu-main-nav .menu-dropdown { display: none !important; }
