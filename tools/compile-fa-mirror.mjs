@@ -7,6 +7,10 @@ const ROOT_MIRROR = path.join(process.cwd(), 'mirror');
 
 // Load full glossary
 const glossary = JSON.parse(fs.readFileSync('tools/full-glossary.json', 'utf8'));
+const headingTranslationsPath = 'tools/fa-heading-translations.json';
+const headingTranslations = fs.existsSync(headingTranslationsPath)
+  ? JSON.parse(fs.readFileSync(headingTranslationsPath, 'utf8'))
+  : {};
 
 // Human-reviewed copy for the most visible journeys. These entries take
 // precedence over the machine-built glossary so the Persian site reads like a
@@ -86,7 +90,7 @@ const curatedTranslations = {
   'Stay ahead with our monthly newsletter featuring product updates, events, case studies and more.': 'با خبرنامهٔ ماهانهٔ ما از محصولات تازه، رویدادها و پروژه‌های جدید باخبر شوید.'
 };
 
-Object.assign(glossary, curatedTranslations);
+Object.assign(glossary, headingTranslations, curatedTranslations);
 
 // Sort dictionary keys by length descending to match longest phrases first if needed
 const sortedGlossaryKeys = Object.keys(glossary).sort((a, b) => b.length - a.length);
@@ -346,6 +350,88 @@ const FA_HEAD_INJECTION = `
 				scroll-behavior: auto !important;
 				transition-duration: .01ms !important;
 			}
+		}
+		@media (max-width: 959px) {
+			html[dir="rtl"] body.side-menu-open { overflow: hidden !important; }
+			html[dir="rtl"] .site-header,
+			html[dir="rtl"] body.side-menu-open .site-header {
+				z-index: 1000 !important;
+				color: #fff !important;
+				background: rgba(7,7,7,.94) !important;
+			}
+			html[dir="rtl"] .site-header .page-width,
+			html[dir="rtl"] .site-header .page-width > .flex { height: 62px; }
+			html[dir="rtl"] #primary-menu.side-menu {
+				position: fixed !important;
+				top: 77px !important;
+				right: 8px !important;
+				bottom: 8px !important;
+				left: 8px !important;
+				width: auto !important;
+				height: calc(100dvh - 85px) !important;
+				padding: 12px 20px 26px !important;
+				border: 1px solid rgba(255,255,255,.12) !important;
+				border-top: 0 !important;
+				border-radius: 0 0 22px 22px !important;
+				background: rgba(7,7,7,.98) !important;
+				box-shadow: 0 24px 70px rgba(0,0,0,.44) !important;
+				color: #fff !important;
+				overflow: hidden !important;
+			}
+			html[dir="rtl"] #menu-main-nav {
+				position: relative !important;
+				inset: auto !important;
+				display: flex !important;
+				flex-direction: column !important;
+				align-items: stretch !important;
+				gap: 0 !important;
+				width: 100% !important;
+				height: 100% !important;
+				padding: 4px 2px 72px !important;
+				overflow-x: hidden !important;
+				overflow-y: auto !important;
+				overscroll-behavior: contain;
+				scrollbar-width: thin;
+			}
+			html[dir="rtl"] #menu-main-nav > li {
+				position: relative !important;
+				flex: 0 0 auto !important;
+				width: 100% !important;
+				border-bottom: 1px solid rgba(255,255,255,.11) !important;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a {
+				display: flex !important;
+				align-items: center !important;
+				justify-content: space-between !important;
+				min-height: 54px !important;
+				padding: 0 4px !important;
+				color: #fff !important;
+				font-size: 1.05rem !important;
+				font-weight: 620 !important;
+				line-height: 1.45 !important;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a::after {
+				content: "←";
+				color: var(--void-red);
+				font-size: 1.05rem;
+				font-weight: 700;
+				opacity: .9;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a > svg { display: none !important; }
+			html[dir="rtl"] #menu-main-nav .menu-dropdown { display: none !important; }
+			html[dir="rtl"] #primary-menu-toggle {
+				position: relative;
+				z-index: 1100;
+				color: #fff !important;
+			}
+			html[dir="rtl"] #primary-menu-toggle .menu-button span { background-color: currentColor !important; }
+			html[dir="rtl"] body.side-menu-open #primary-menu-toggle {
+				width: 42px;
+				height: 42px;
+				border-radius: 999px;
+				background: rgba(255,255,255,.09);
+			}
+			html[dir="rtl"] #primary-menu .mobile-menu-back-button { display: none !important; }
 		}
 	</style>
 	<script id="fa-image-hydration">
@@ -665,6 +751,21 @@ export async function compileAll() {
       )
       .replace(/>Cookie Policy</g, '>سیاست کوکی‌ها<')
       .replace(/>Privacy Policy</g, '>سیاست حفظ حریم خصوصی<');
+    // Some technical headings contain inline markup such as <sup>. Translate
+    // their complete visible label after the node-level pass so no English
+    // fragments remain around those tags.
+    faHtml = faHtml.replace(/<(h[1-6])([^>]*)>([\s\S]*?)<\/\1>/gi, (full, tag, attrs, inner) => {
+      const plain = inner
+        .replace(/<[^>]+>/g, ' ')
+        .replace(/&amp;/g, '&')
+        .replace(/&quot;/g, '"')
+        .replace(/&#39;|&apos;/g, "'")
+        .replace(/&nbsp;/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+      const translated = translateText(plain).trim();
+      return translated !== plain ? `<${tag}${attrs}>${escapeHtml(translated)}</${tag}>` : full;
+    });
     faHtml = faHtml.replace(/(\/wp-content\/themes\/void2025\/js\/app\.js)(?:\?[^"']*)?/g, '$1?v=20261020-fa2');
 
     // Give the Persian homepage a compact editorial bridge between the

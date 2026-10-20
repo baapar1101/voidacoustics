@@ -251,6 +251,88 @@
 				transition-duration: .01ms !important;
 			}
 		}
+		@media (max-width: 959px) {
+			html[dir="rtl"] body.side-menu-open { overflow: hidden !important; }
+			html[dir="rtl"] .site-header,
+			html[dir="rtl"] body.side-menu-open .site-header {
+				z-index: 1000 !important;
+				color: #fff !important;
+				background: rgba(7,7,7,.94) !important;
+			}
+			html[dir="rtl"] .site-header .page-width,
+			html[dir="rtl"] .site-header .page-width > .flex { height: 62px; }
+			html[dir="rtl"] #primary-menu.side-menu {
+				position: fixed !important;
+				top: 77px !important;
+				right: 8px !important;
+				bottom: 8px !important;
+				left: 8px !important;
+				width: auto !important;
+				height: calc(100dvh - 85px) !important;
+				padding: 12px 20px 26px !important;
+				border: 1px solid rgba(255,255,255,.12) !important;
+				border-top: 0 !important;
+				border-radius: 0 0 22px 22px !important;
+				background: rgba(7,7,7,.98) !important;
+				box-shadow: 0 24px 70px rgba(0,0,0,.44) !important;
+				color: #fff !important;
+				overflow: hidden !important;
+			}
+			html[dir="rtl"] #menu-main-nav {
+				position: relative !important;
+				inset: auto !important;
+				display: flex !important;
+				flex-direction: column !important;
+				align-items: stretch !important;
+				gap: 0 !important;
+				width: 100% !important;
+				height: 100% !important;
+				padding: 4px 2px 72px !important;
+				overflow-x: hidden !important;
+				overflow-y: auto !important;
+				overscroll-behavior: contain;
+				scrollbar-width: thin;
+			}
+			html[dir="rtl"] #menu-main-nav > li {
+				position: relative !important;
+				flex: 0 0 auto !important;
+				width: 100% !important;
+				border-bottom: 1px solid rgba(255,255,255,.11) !important;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a {
+				display: flex !important;
+				align-items: center !important;
+				justify-content: space-between !important;
+				min-height: 54px !important;
+				padding: 0 4px !important;
+				color: #fff !important;
+				font-size: 1.05rem !important;
+				font-weight: 620 !important;
+				line-height: 1.45 !important;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a::after {
+				content: "←";
+				color: var(--void-red);
+				font-size: 1.05rem;
+				font-weight: 700;
+				opacity: .9;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a > svg { display: none !important; }
+			html[dir="rtl"] #menu-main-nav .menu-dropdown { display: none !important; }
+			html[dir="rtl"] #primary-menu-toggle {
+				position: relative;
+				z-index: 1100;
+				color: #fff !important;
+			}
+			html[dir="rtl"] #primary-menu-toggle .menu-button span { background-color: currentColor !important; }
+			html[dir="rtl"] body.side-menu-open #primary-menu-toggle {
+				width: 42px;
+				height: 42px;
+				border-radius: 999px;
+				background: rgba(255,255,255,.09);
+			}
+			html[dir="rtl"] #primary-menu .mobile-menu-back-button { display: none !important; }
+		}
 	</style>
 	<script id="fa-image-hydration">
 		document.addEventListener('DOMContentLoaded', function () {
@@ -299,12 +381,12 @@
 	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
 	<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->
-	<title>Terms & Conditions | Void Acoustics</title>
+	<title>شرایط و ضوابط | وید اکوستیکس</title>
 	<meta name="description" content="شرایط و قوانین استفاده از وبسایت و خدمات وید اکوستیکس." />
 	<link rel="canonical" href="https://voidacoustics.com/terms//" />
 	<meta property="og:locale" content="fa_IR" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Terms &amp; Conditions | Void Acoustics" />
+	<meta property="og:title" content="شرایط و ضوابط | وید اکوستیکس" />
 	<meta property="og:description" content="شرایط و قوانین استفاده از وبسایت و خدمات وید اکوستیکس." />
 	<meta property="og:url" content="https://voidacoustics.com/terms//" />
 	<meta property="og:site_name" content="وید اکوستیکس" />
@@ -775,7 +857,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 																		<li>
 										<a data-src="https://voidacoustics.com/wp-content/uploads/Stasys-XV2-featured-1-1024x576.jpg"
 											href="https://voidacoustics.com/products/stasys/stasysxv2/">
-											Stasys XV2										</a>
+											استاسیس XV۲										</a>
 									</li>
 																</ul>
 						</div>
@@ -1027,6 +1109,9 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 
 
+
+
+
 <aside data-wg-notranslate="" class="country-selector weglot-dropdown close_outside_click closed weglot-shortcode wg-" tabindex="0" aria-expanded="false" aria-label="تغییر زبان به انگلیسی">
 	<input id="wg_choice_fa" class="weglot_choice" type="checkbox" name="menu"/>
 	<label data-l="fa" tabindex="-1" for="wg_choice_fa" class="wgcurrent wg-li weglot-lang weglot-language flag-3 wg-fa" data-code-language="wg-fa" data-name-language="FA">
@@ -1080,7 +1165,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 			
 		
 		
-<h1 class="component-heading text-balance uppercase tracking-widest">شرایط و قوانین</h1>
+<h1 class="component-heading text-balance uppercase tracking-widest">شرایط و ضوابط</h1>
 
 		
 	</div>
@@ -1100,7 +1185,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-0-1-definitions"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>1 Definitions</span>
+											<span>۱ تعاریف</span>
 										</a>
 									</li>
 
@@ -1108,7 +1193,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-1-2-general"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>2 General</span>
+											<span>۲ عمومی</span>
 										</a>
 									</li>
 
@@ -1116,7 +1201,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-2-3-price-payment"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>3 Price &amp; Payment</span>
+											<span>۳ قیمت و پرداخت</span>
 										</a>
 									</li>
 
@@ -1124,7 +1209,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-3-4-description"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>4 Description</span>
+											<span>۴ توضیحات</span>
 										</a>
 									</li>
 
@@ -1132,7 +1217,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-4-5-sample"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>5 Sample</span>
+											<span>۵ نمونه</span>
 										</a>
 									</li>
 
@@ -1140,7 +1225,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-5-6-delivery"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>6 Delivery</span>
+											<span>۶ تحویل</span>
 										</a>
 									</li>
 
@@ -1148,7 +1233,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-6-7-risk"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>7 Risk</span>
+											<span>۷ ریسک</span>
 										</a>
 									</li>
 
@@ -1156,7 +1241,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-7-8-title"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>8 Title</span>
+											<span>۸ عنوان</span>
 										</a>
 									</li>
 
@@ -1164,7 +1249,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-8-9-warranty"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>9 Warranty</span>
+											<span>۹ گارانتی</span>
 										</a>
 									</li>
 
@@ -1172,7 +1257,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-9-10-liability"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>10 Liability</span>
+											<span>۱۰ مسئولیت</span>
 										</a>
 									</li>
 
@@ -1180,7 +1265,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-10-11-intellectual-property-rights"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>11 Intellectual Property Rights</span>
+											<span>۱۱ حقوق مالکیت معنوی</span>
 										</a>
 									</li>
 
@@ -1188,7 +1273,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-11-12-force-majeure"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>12 Force Majeure</span>
+											<span>۱۲ فورس ماژور</span>
 										</a>
 									</li>
 
@@ -1196,7 +1281,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-12-13-relationship-of-parties"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>13 Relationship of Parties</span>
+											<span>۱۳ روابط طرفین</span>
 										</a>
 									</li>
 
@@ -1204,7 +1289,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-13-14-waiver"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>14 Waiver</span>
+											<span>۱۴ چشم پوشی</span>
 										</a>
 									</li>
 
@@ -1212,7 +1297,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-14-15-assignment"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>15 Assignment</span>
+											<span>۱۵ تکلیف</span>
 										</a>
 									</li>
 
@@ -1220,7 +1305,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-15-16-severability"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>16 Severability </span>
+											<span>۱۶ قابلیت جداسازی </span>
 										</a>
 									</li>
 
@@ -1228,7 +1313,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-16-17-weee-regulations"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>17 WEEE Regulations</span>
+											<span>۱۷ مقررات WEEE</span>
 										</a>
 									</li>
 
@@ -1236,7 +1321,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-17-18-governing-law-jurisdictions"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>18 Governing Law &amp; Jurisdictions</span>
+											<span>۱۸ قانون حاکم و حوزه های قضایی</span>
 										</a>
 									</li>
 
@@ -1246,7 +1331,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 					</div>
 					<div class="lg:w-8/12 flex flex-col gap-16">
 													<div id="content-0-1-definitions" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">1 Definitions</h2>
+								<h2 class="h3">۱ تعاریف</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p>In this document the following words shall have the following meanings:</p>
 <p><strong>1.1</strong><br />
@@ -1262,7 +1347,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								</div>
 							</div>
 													<div id="content-1-2-general" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">2 General</h2>
+								<h2 class="h3">۲ عمومی</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p><strong>2.1</strong><br />
 These Terms and Conditions shall apply to all contracts for the sale of Goods by the Seller to the Buyer to the exclusion of all other terms and conditions referred to, offered or relied on by the Buyer whether in negotiation or at any stage in the dealings between the parties, including any standard or printed terms tendered by the Buyer, unless the Buyer specifically states in writing, separately from such terms, that it wishes such terms to apply and this has been acknowledged by the Seller in writing.</p>
@@ -1279,7 +1364,7 @@ These terms and conditions shall apply to the exclusion of any contrary terms in
 								</div>
 							</div>
 													<div id="content-2-3-price-payment" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">3 Price &amp; Payment</h2>
+								<h2 class="h3">۳ قیمت و پرداخت</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p><strong>3.1</strong><br />
 The price shall be that in the Seller’s current List Price less agreed discount level, or such other price as the parties may agree in writing. The price is exclusive of VAT and all costs or charges in relation to packaging, loading, unloading, carriage and insurance, all of which amounts the Buyer shall pay in addition when it is due to pay for the Goods.</p>
@@ -1300,19 +1385,19 @@ Deposit with order may be used to as confirmation of order and as such is not re
 								</div>
 							</div>
 													<div id="content-3-4-description" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">4 Description</h2>
+								<h2 class="h3">۴ توضیحات</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p>Any description given or applied to the Goods is given by way of identification only and the use of such description shall not constitute a sale by description. For the avoidance of doubt, the Buyer hereby affirms that it does not in any way rely on any description when entering into the contract.</p>
 								</div>
 							</div>
 													<div id="content-4-5-sample" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">5 Sample</h2>
+								<h2 class="h3">۵ نمونه</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p>Where a sample of the Goods is shown to and inspected by the Buyer, the parties hereto accept that such a sample is so shown and inspected for the sole purpose of enabling the Buyer to judge for itself the quality of the bulk, and not so as to constitute a sale by sample.</p>
 								</div>
 							</div>
 													<div id="content-5-6-delivery" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">6 Delivery</h2>
+								<h2 class="h3">۶ تحویل</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p><strong>6.1</strong><br />
 Unless otherwise agreed in writing, delivery of the Goods shall take place at the Seller’s place of business on the date specified by the Seller. The Buyer shall make all arrangements necessary to take delivery of the Goods whenever they are tendered for delivery.</p>
@@ -1347,13 +1432,13 @@ In relation to export declarations on all EXW shipments arranged by the Buyer, t
 								</div>
 							</div>
 													<div id="content-6-7-risk" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">7 Risk</h2>
+								<h2 class="h3">۷ ریسک</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p>Risk in the Goods shall pass to the Buyer at the moment the Goods are dispatched from the Seller’s premises. Where the Buyer chooses to collect the Goods itself, risk will pass when the Goods are entrusted to it or set aside for its collection, whichever happens first.</p>
 								</div>
 							</div>
 													<div id="content-7-8-title" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">8 Title</h2>
+								<h2 class="h3">۸ عنوان</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p><strong>8.1</strong><br />
 Ownership of the Goods shall not pass to the Buyer until the Seller has received in full (in cash or cleared funds) all sums due to it in respect of:</p>
@@ -1404,7 +1489,7 @@ On termination of the Contract, howsoever caused, the Seller’s (but not the Bu
 								</div>
 							</div>
 													<div id="content-8-9-warranty" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">9 Warranty</h2>
+								<h2 class="h3">۹ گارانتی</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p><strong>9.1</strong><br />
 For a period of four (4) years from the date of delivery to the original purchaser (as shown on the original invoice or sales receipt; a copy of this may be required as proof of warranty dates), the Seller warrants to the Buyer of each new Good (provided it was purchased at an Authorised Void Dealer and installed with Void approved amplifiers and settings) that it is free of defects in materials and workmanship and that each product will meet or exceed all factory published specifications for each respective model. The Seller agrees to repair or replace (at its discretion) all defective parts at no charge for labour or materials; subject to following provisions:</p>
@@ -1433,7 +1518,7 @@ No person has the authority to enlarge, amend, or modify this Warranty. This War
 								</div>
 							</div>
 													<div id="content-9-10-liability" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">10 Liability</h2>
+								<h2 class="h3">۱۰ مسئولیت</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p><strong>10.1</strong><br />
 Subject to condition 6 the following provisions set out the entire financial liability of the Seller (including any liability for the acts or omissions of its employees, agents and sub-contractors) to the Buyer in respect of:<br />
@@ -1476,50 +1561,50 @@ The Company shall not be liable to the Buyer for loss of profit, loss of busines
 								</div>
 							</div>
 													<div id="content-10-11-intellectual-property-rights" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">11 Intellectual Property Rights</h2>
+								<h2 class="h3">۱۱ حقوق مالکیت معنوی</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p>All Intellectual Property Rights produced from or arising as a result of the performance of this Agreement shall, so far as not already vested, become the absolute property of the Seller, and the Buyer shall do all that is reasonably necessary to ensure that such rights vest in the Seller by the execution of appropriate instruments or the making of agreements with third parties.</p>
 								</div>
 							</div>
 													<div id="content-11-12-force-majeure" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">12 Force Majeure</h2>
+								<h2 class="h3">۱۲ فورس ماژور</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p>The Seller shall not be liable for any delay or failure to perform any of its obligations if the delay or failure results from events or circumstances outside its reasonable control, including but not limited to acts of God, strikes, lock outs, accidents, war, fire, breakdown of plant or machinery or shortage or unavailability of raw materials from a natural source of supply, and the Seller shall be entitled to a reasonable extension of its obligations. If the delay persists for such time as the Seller considers unreasonable, it may, without liability on its part, terminate the contract.<strong><br />
 </strong></p>
 								</div>
 							</div>
 													<div id="content-12-13-relationship-of-parties" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">13 Relationship of Parties</h2>
+								<h2 class="h3">۱۳ روابط طرفین</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p>Nothing contained in these Terms and Conditions shall be construed as establishing or implying any partnership or joint venture between the parties and nothing in these Terms and Conditions shall be deemed to construe either of the parties as the agent of the other.</p>
 								</div>
 							</div>
 													<div id="content-13-14-waiver" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">14 Waiver</h2>
+								<h2 class="h3">۱۴ چشم پوشی</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p>The failure by either party to enforce at any time or for any period any one or more of the Terms and Conditions herein shall not be a waiver of them or of the right at any time subsequently to enforce all Terms and Conditions of this Agreement. Each right or remedy of the Seller under the contract is without prejudice to any other right or remedy of the Seller whether under the contract or not.</p>
 								</div>
 							</div>
 													<div id="content-14-15-assignment" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">15 Assignment</h2>
+								<h2 class="h3">۱۵ تکلیف</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p>The Seller may assign the contract or any part of it to any person, firm or company. The Buyer shall not be entitled to assign the contract or any part of it without the prior written consent of the Seller.</p>
 								</div>
 							</div>
 													<div id="content-15-16-severability" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">16 Severability </h2>
+								<h2 class="h3">۱۶ قابلیت جداسازی </h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p>If any term or provision of these Terms and Conditions is held invalid, illegal or unenforceable for any reason by any court of competent jurisdiction such provision shall be severed and the remainder of the provisions hereof shall continue in full force and effect as if these Terms and Conditions had been agreed with the invalid, illegal or unenforceable provision eliminated.</p>
 								</div>
 							</div>
 													<div id="content-16-17-weee-regulations" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">17 WEEE Regulations</h2>
+								<h2 class="h3">۱۷ مقررات WEEE</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p>When supplied as B2B EEE the producer invokes regulation 12.2 and passes all WEEE obligations to the B2B end user.</p>
 								</div>
 							</div>
 													<div id="content-17-18-governing-law-jurisdictions" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">18 Governing Law &amp; Jurisdictions</h2>
+								<h2 class="h3">۱۸ قانون حاکم و حوزه های قضایی</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p>This Agreement shall be governed by and construed in accordance with the law of England and the parties hereby submit to the exclusive jurisdiction of the English courts.</p>
 								</div>
@@ -2016,9 +2101,9 @@ The Company shall not be liable to the Buyer for loss of profit, loss of busines
 			<div class="flex-1">
 				<div class="flex gap-6 justify-between flex-col md:flex-row">
 					<div class="flex flex-col gap-2">
-						<div id="copyright-menu" class="menu-copyright-nav-container"><ul id="menu-copyright-nav" class="flex items-center gap-4 flex-wrap"><li id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-609 current_page_item menu-item-611"><a href="https://voidacoustics.com/terms/" aria-current="page">شرایط و قوانین</a></li>
+						<div id="copyright-menu" class="menu-copyright-nav-container"><ul id="menu-copyright-nav" class="flex items-center gap-4 flex-wrap"><li id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-609 current_page_item menu-item-611"><a href="https://voidacoustics.com/terms/" aria-current="page">شرایط و ضوابط</a></li>
 <li id="menu-item-4755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-4755"><a rel="privacy-policy" href="https://voidacoustics.com/privacy/">سیاست حفظ حریم خصوصی</a></li>
-<li id="menu-item-4754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4754"><a href="https://voidacoustics.com/cookies/">سیاست کوکی‌ها</a></li>
+<li id="menu-item-4754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4754"><a href="https://voidacoustics.com/cookies/">سیاست استفاده از کوکی‌ها</a></li>
 </ul></div>							<div>
 								تولیدکننده ثبت‌شده تجهیزات الکترونیکی: WEE/EK4517VW							</div>
 											</div>

@@ -251,6 +251,88 @@
 				transition-duration: .01ms !important;
 			}
 		}
+		@media (max-width: 959px) {
+			html[dir="rtl"] body.side-menu-open { overflow: hidden !important; }
+			html[dir="rtl"] .site-header,
+			html[dir="rtl"] body.side-menu-open .site-header {
+				z-index: 1000 !important;
+				color: #fff !important;
+				background: rgba(7,7,7,.94) !important;
+			}
+			html[dir="rtl"] .site-header .page-width,
+			html[dir="rtl"] .site-header .page-width > .flex { height: 62px; }
+			html[dir="rtl"] #primary-menu.side-menu {
+				position: fixed !important;
+				top: 77px !important;
+				right: 8px !important;
+				bottom: 8px !important;
+				left: 8px !important;
+				width: auto !important;
+				height: calc(100dvh - 85px) !important;
+				padding: 12px 20px 26px !important;
+				border: 1px solid rgba(255,255,255,.12) !important;
+				border-top: 0 !important;
+				border-radius: 0 0 22px 22px !important;
+				background: rgba(7,7,7,.98) !important;
+				box-shadow: 0 24px 70px rgba(0,0,0,.44) !important;
+				color: #fff !important;
+				overflow: hidden !important;
+			}
+			html[dir="rtl"] #menu-main-nav {
+				position: relative !important;
+				inset: auto !important;
+				display: flex !important;
+				flex-direction: column !important;
+				align-items: stretch !important;
+				gap: 0 !important;
+				width: 100% !important;
+				height: 100% !important;
+				padding: 4px 2px 72px !important;
+				overflow-x: hidden !important;
+				overflow-y: auto !important;
+				overscroll-behavior: contain;
+				scrollbar-width: thin;
+			}
+			html[dir="rtl"] #menu-main-nav > li {
+				position: relative !important;
+				flex: 0 0 auto !important;
+				width: 100% !important;
+				border-bottom: 1px solid rgba(255,255,255,.11) !important;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a {
+				display: flex !important;
+				align-items: center !important;
+				justify-content: space-between !important;
+				min-height: 54px !important;
+				padding: 0 4px !important;
+				color: #fff !important;
+				font-size: 1.05rem !important;
+				font-weight: 620 !important;
+				line-height: 1.45 !important;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a::after {
+				content: "←";
+				color: var(--void-red);
+				font-size: 1.05rem;
+				font-weight: 700;
+				opacity: .9;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a > svg { display: none !important; }
+			html[dir="rtl"] #menu-main-nav .menu-dropdown { display: none !important; }
+			html[dir="rtl"] #primary-menu-toggle {
+				position: relative;
+				z-index: 1100;
+				color: #fff !important;
+			}
+			html[dir="rtl"] #primary-menu-toggle .menu-button span { background-color: currentColor !important; }
+			html[dir="rtl"] body.side-menu-open #primary-menu-toggle {
+				width: 42px;
+				height: 42px;
+				border-radius: 999px;
+				background: rgba(255,255,255,.09);
+			}
+			html[dir="rtl"] #primary-menu .mobile-menu-back-button { display: none !important; }
+		}
 	</style>
 	<script id="fa-image-hydration">
 		document.addEventListener('DOMContentLoaded', function () {
@@ -299,12 +381,12 @@
 	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
 	<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->
-	<title>AV Integration | Commercial Audio Solutions | وید اکوستیکس</title>
+	<title>یکپارچه‌سازی صوتی و تصویری | راهکارهای صوتی تجاری | وید اکوستیکس</title>
 	<meta name="description" content="Design-led audio solutions that combine visual appeal with تجاری performance for AV integration projects." />
 	<link rel="canonical" href="https://voidacoustics.com/avintegration//" />
 	<meta property="og:locale" content="fa_IR" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="AV Integration | Commercial Audio Solutions | وید اکوستیکس" />
+	<meta property="og:title" content="یکپارچه‌سازی صوتی و تصویری | راهکارهای صوتی تجاری | وید اکوستیکس" />
 	<meta property="og:description" content="Design-led audio solutions that combine visual appeal with تجاری performance for AV integration projects." />
 	<meta property="og:url" content="https://voidacoustics.com/avintegration//" />
 	<meta property="og:site_name" content="وید اکوستیکس" />
@@ -779,7 +861,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 																		<li>
 										<a data-src="https://voidacoustics.com/wp-content/uploads/Stasys-XV2-featured-1-1024x576.jpg"
 											href="https://voidacoustics.com/products/stasys/stasysxv2/">
-											Stasys XV2										</a>
+											استاسیس XV۲										</a>
 									</li>
 																</ul>
 						</div>
@@ -1031,6 +1113,9 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 
 
+
+
+
 <aside data-wg-notranslate="" class="country-selector weglot-dropdown close_outside_click closed weglot-shortcode wg-" tabindex="0" aria-expanded="false" aria-label="تغییر زبان به انگلیسی">
 	<input id="wg_choice_fa" class="weglot_choice" type="checkbox" name="menu"/>
 	<label data-l="fa" tabindex="-1" for="wg_choice_fa" class="wgcurrent wg-li weglot-lang weglot-language flag-3 wg-fa" data-code-language="wg-fa" data-name-language="FA">
@@ -1095,7 +1180,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												
 											
 											
-<h1 class="component-heading text-balance tracking-widest uppercase">Dominate every AV deal</h1>
+<h1 class="component-heading text-balance tracking-widest uppercase">در هر پروژهٔ صوتی و تصویری برنده باشید</h1>
 										</div>
 
 										
@@ -1130,7 +1215,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 	
 	
-<h3 class="component-heading text-balance">Win projects with audio that adds value</h3>
+<h3 class="component-heading text-balance">با صدایی ارزش‌آفرین، پروژه‌های بیشتری جذب کنید</h3>
 
 	
 		<div class="no-last-mb content-component content-list-check">
@@ -1217,7 +1302,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 															<li class="splide__slide">
 									<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" width="395" height="395" data-src="https://voidacoustics.com/wp-content/uploads/nighclubsbars-19-395x395.jpg" class="rounded-2xl w-full" alt="" decoding="async" data-srcset="https://voidacoustics.com/wp-content/uploads/nighclubsbars-19-395x395.jpg 395w, https://voidacoustics.com/wp-content/uploads/nighclubsbars-19-300x300.jpg 300w, https://voidacoustics.com/wp-content/uploads/nighclubsbars-19-150x150.jpg 150w, https://voidacoustics.com/wp-content/uploads/nighclubsbars-19-768x768.jpg 768w, https://voidacoustics.com/wp-content/uploads/nighclubsbars-19-790x790.jpg 790w, https://voidacoustics.com/wp-content/uploads/nighclubsbars-19.jpg 1000w" data-sizes="(max-width: 395px) 100vw, 395px" /><noscript><img width="395" height="395" src="https://voidacoustics.com/wp-content/uploads/nighclubsbars-19-395x395.jpg" class="rounded-2xl w-full" alt="" decoding="async" srcset="https://voidacoustics.com/wp-content/uploads/nighclubsbars-19-395x395.jpg 395w, https://voidacoustics.com/wp-content/uploads/nighclubsbars-19-300x300.jpg 300w, https://voidacoustics.com/wp-content/uploads/nighclubsbars-19-150x150.jpg 150w, https://voidacoustics.com/wp-content/uploads/nighclubsbars-19-768x768.jpg 768w, https://voidacoustics.com/wp-content/uploads/nighclubsbars-19-790x790.jpg 790w, https://voidacoustics.com/wp-content/uploads/nighclubsbars-19.jpg 1000w" sizes="(max-width: 395px) 100vw, 395px" /></noscript>								</li>
 															<li class="splide__slide">
-									<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" width="395" height="395" data-src="https://voidacoustics.com/wp-content/uploads/Carousel-av-kingdomofsweets-395x395.jpg" class="rounded-2xl w-full" alt="Kingdom of Sweets" decoding="async" data-srcset="https://voidacoustics.com/wp-content/uploads/Carousel-av-kingdomofsweets-395x395.jpg 395w, https://voidacoustics.com/wp-content/uploads/Carousel-av-kingdomofsweets-300x300.jpg 300w, https://voidacoustics.com/wp-content/uploads/Carousel-av-kingdomofsweets-150x150.jpg 150w, https://voidacoustics.com/wp-content/uploads/Carousel-av-kingdomofsweets-768x768.jpg 768w, https://voidacoustics.com/wp-content/uploads/Carousel-av-kingdomofsweets.jpg 790w" data-sizes="(max-width: 395px) 100vw, 395px" /><noscript><img width="395" height="395" src="https://voidacoustics.com/wp-content/uploads/Carousel-av-kingdomofsweets-395x395.jpg" class="rounded-2xl w-full" alt="Kingdom of Sweets" decoding="async" srcset="https://voidacoustics.com/wp-content/uploads/Carousel-av-kingdomofsweets-395x395.jpg 395w, https://voidacoustics.com/wp-content/uploads/Carousel-av-kingdomofsweets-300x300.jpg 300w, https://voidacoustics.com/wp-content/uploads/Carousel-av-kingdomofsweets-150x150.jpg 150w, https://voidacoustics.com/wp-content/uploads/Carousel-av-kingdomofsweets-768x768.jpg 768w, https://voidacoustics.com/wp-content/uploads/Carousel-av-kingdomofsweets.jpg 790w" sizes="(max-width: 395px) 100vw, 395px" /></noscript>								</li>
+									<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" width="395" height="395" data-src="https://voidacoustics.com/wp-content/uploads/Carousel-av-kingdomofsweets-395x395.jpg" class="rounded-2xl w-full" alt="کینگدم آو سوییتس" decoding="async" data-srcset="https://voidacoustics.com/wp-content/uploads/Carousel-av-kingdomofsweets-395x395.jpg 395w, https://voidacoustics.com/wp-content/uploads/Carousel-av-kingdomofsweets-300x300.jpg 300w, https://voidacoustics.com/wp-content/uploads/Carousel-av-kingdomofsweets-150x150.jpg 150w, https://voidacoustics.com/wp-content/uploads/Carousel-av-kingdomofsweets-768x768.jpg 768w, https://voidacoustics.com/wp-content/uploads/Carousel-av-kingdomofsweets.jpg 790w" data-sizes="(max-width: 395px) 100vw, 395px" /><noscript><img width="395" height="395" src="https://voidacoustics.com/wp-content/uploads/Carousel-av-kingdomofsweets-395x395.jpg" class="rounded-2xl w-full" alt="Kingdom of Sweets" decoding="async" srcset="https://voidacoustics.com/wp-content/uploads/Carousel-av-kingdomofsweets-395x395.jpg 395w, https://voidacoustics.com/wp-content/uploads/Carousel-av-kingdomofsweets-300x300.jpg 300w, https://voidacoustics.com/wp-content/uploads/Carousel-av-kingdomofsweets-150x150.jpg 150w, https://voidacoustics.com/wp-content/uploads/Carousel-av-kingdomofsweets-768x768.jpg 768w, https://voidacoustics.com/wp-content/uploads/Carousel-av-kingdomofsweets.jpg 790w" sizes="(max-width: 395px) 100vw, 395px" /></noscript>								</li>
 															<li class="splide__slide">
 									<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" width="395" height="395" data-src="https://voidacoustics.com/wp-content/uploads/Carousel-av-restaurangart-395x395.jpg" class="rounded-2xl w-full" alt="Restaurang Art" decoding="async" data-srcset="https://voidacoustics.com/wp-content/uploads/Carousel-av-restaurangart-395x395.jpg 395w, https://voidacoustics.com/wp-content/uploads/Carousel-av-restaurangart-300x300.jpg 300w, https://voidacoustics.com/wp-content/uploads/Carousel-av-restaurangart-150x150.jpg 150w, https://voidacoustics.com/wp-content/uploads/Carousel-av-restaurangart-768x768.jpg 768w, https://voidacoustics.com/wp-content/uploads/Carousel-av-restaurangart.jpg 790w" data-sizes="(max-width: 395px) 100vw, 395px" /><noscript><img width="395" height="395" src="https://voidacoustics.com/wp-content/uploads/Carousel-av-restaurangart-395x395.jpg" class="rounded-2xl w-full" alt="Restaurang Art" decoding="async" srcset="https://voidacoustics.com/wp-content/uploads/Carousel-av-restaurangart-395x395.jpg 395w, https://voidacoustics.com/wp-content/uploads/Carousel-av-restaurangart-300x300.jpg 300w, https://voidacoustics.com/wp-content/uploads/Carousel-av-restaurangart-150x150.jpg 150w, https://voidacoustics.com/wp-content/uploads/Carousel-av-restaurangart-768x768.jpg 768w, https://voidacoustics.com/wp-content/uploads/Carousel-av-restaurangart.jpg 790w" sizes="(max-width: 395px) 100vw, 395px" /></noscript>								</li>
 													</ul>
@@ -1249,7 +1334,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 	
 	
-<h3 class="component-heading text-balance">Download our free guide and win more AV projects</h3>
+<h3 class="component-heading text-balance">راهنمای رایگان ما را دریافت کنید و پروژه‌های بیشتری بگیرید</h3>
 
 	
 		<div class="no-last-mb content-component content-list-check">
@@ -1329,7 +1414,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<div class="flex-1 flex flex-col gap-10">
 										<blockquote class="flex flex-col gap-6 font-medium">
 																							<div class="no-last-mb text-balance text-lg sm:text-xl xl:text-2xl">
-													<p>DJ SALLY, GUANGZHOU</p>
+													<p>دی‌جی سالی، گوانگژو</p>
 <p>&nbsp;</p>
 <p>“Void Acoustics products are designed thoroughly with flexible options. The product line is very rich, allowing customers to choose what’s right for different occasions.<span data-teams="true">”</span></p>
 												</div>
@@ -1389,7 +1474,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<div class="flex-1 flex flex-col gap-10">
 										<blockquote class="flex flex-col gap-6 font-medium">
 																							<div class="no-last-mb text-balance text-lg sm:text-xl xl:text-2xl">
-													<p>STUDIO 338, LONDON</p>
+													<p>استودیو ۳۳۸، لندن</p>
 <p>&nbsp;</p>
 <p>“Having worked with Void Acoustics for many years, they are always innovative and supportive towards the need to improve. The sound quality is unique, iconic, and truly steps up.”</p>
 												</div>
@@ -1434,7 +1519,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 	
 	
-<h3 class="component-heading text-balance">Differentiate your proposals</h3>
+<h3 class="component-heading text-balance">پیشنهادهای خود را متمایز کنید</h3>
 
 	
 		<div class="no-last-mb content-component content-list-check">
@@ -1510,7 +1595,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Stand-out.svg" class="w-full h-full object-contain" alt="" decoding="async" /><noscript><img src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Stand-out.svg" class="w-full h-full object-contain" alt="" decoding="async" /></noscript>							</span>
 											</div>
 
-											<h2 class="text-2xl font-medium text-balance">Stand out from your competition</h2>
+											<h2 class="text-2xl font-medium text-balance">از رقبا متمایز شوید</h2>
 					
 					
 						<div class="no-last-mb">
@@ -1524,7 +1609,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Tough-TourCoat.svg" class="w-full h-full object-contain" alt="" decoding="async" /><noscript><img src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Tough-TourCoat.svg" class="w-full h-full object-contain" alt="" decoding="async" /></noscript>							</span>
 											</div>
 
-											<h2 class="text-2xl font-medium text-balance">Create bespoke solutions</h2>
+											<h2 class="text-2xl font-medium text-balance">راهکارهای اختصاصی بسازید</h2>
 					
 					
 						<div class="no-last-mb">
@@ -1538,7 +1623,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Indoor-Outdoor.svg" class="w-full h-full object-contain" alt="" decoding="async" /><noscript><img src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Indoor-Outdoor.svg" class="w-full h-full object-contain" alt="" decoding="async" /></noscript>							</span>
 											</div>
 
-											<h2 class="text-2xl font-medium text-balance">Cover every application</h2>
+											<h2 class="text-2xl font-medium text-balance">برای هر کاربرد راهکاری داشته باشید</h2>
 					
 					
 						<div class="no-last-mb">
@@ -1552,7 +1637,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Satisfied.svg" class="w-full h-full object-contain" alt="" decoding="async" /><noscript><img src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Satisfied.svg" class="w-full h-full object-contain" alt="" decoding="async" /></noscript>							</span>
 											</div>
 
-											<h2 class="text-2xl font-medium text-balance">Proven in demanding environments</h2>
+											<h2 class="text-2xl font-medium text-balance">آزموده‌شده در سخت‌ترین محیط‌ها</h2>
 					
 					
 						<div class="no-last-mb">
@@ -1569,7 +1654,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 		<div class="flex flex-col gap-4">
 			
-<h2 class="component-heading text-balance">Integrate systems that perform</h2>
+<h2 class="component-heading text-balance">سیستم‌هایی یکپارچه کنید که واقعاً عملکرد دارند</h2>
 					</div>
 
 		
@@ -1579,7 +1664,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 					<div class="rounded-2xl overflow-hidden flex flex-col">
 						<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" width="395" height="215" data-src="https://voidacoustics.com/wp-content/uploads/avintegration-thenorm-395x215.jpg" class="w-full" alt="The Norm, Bangkok" decoding="async" data-srcset="https://voidacoustics.com/wp-content/uploads/avintegration-thenorm-395x215.jpg 395w, https://voidacoustics.com/wp-content/uploads/avintegration-thenorm-300x163.jpg 300w, https://voidacoustics.com/wp-content/uploads/avintegration-thenorm-768x418.jpg 768w, https://voidacoustics.com/wp-content/uploads/avintegration-thenorm-790x430.jpg 790w, https://voidacoustics.com/wp-content/uploads/avintegration-thenorm.jpg 1000w" data-sizes="(max-width: 395px) 100vw, 395px" /><noscript><img width="395" height="215" src="https://voidacoustics.com/wp-content/uploads/avintegration-thenorm-395x215.jpg" class="w-full" alt="The Norm, Bangkok" decoding="async" srcset="https://voidacoustics.com/wp-content/uploads/avintegration-thenorm-395x215.jpg 395w, https://voidacoustics.com/wp-content/uploads/avintegration-thenorm-300x163.jpg 300w, https://voidacoustics.com/wp-content/uploads/avintegration-thenorm-768x418.jpg 768w, https://voidacoustics.com/wp-content/uploads/avintegration-thenorm-790x430.jpg 790w, https://voidacoustics.com/wp-content/uploads/avintegration-thenorm.jpg 1000w" sizes="(max-width: 395px) 100vw, 395px" /></noscript>						<div class="bg-surface-200 p-6 lg:p-10 flex flex-col items-center text-center gap-8 flex-1 justify-between">
 							<div class="flex flex-col gap-4">
-								<h3>Refined hospitality systems</h3>
+								<h3>سیستم های پذیرایی تصفیه شده</h3>
 								<div class="no-last-mb">
 									<p>A flexible loudspeaker range designed for straightforward integration and available in Natural Wood finishes.</p>
 								</div>
@@ -1598,7 +1683,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 					<div class="rounded-2xl overflow-hidden flex flex-col">
 						<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" width="395" height="215" data-src="https://voidacoustics.com/wp-content/uploads/av-card-indigo-395x215.jpg" class="w-full" alt="سری Indigo" decoding="async" data-srcset="https://voidacoustics.com/wp-content/uploads/av-card-indigo-395x215.jpg 395w, https://voidacoustics.com/wp-content/uploads/av-card-indigo-300x163.jpg 300w, https://voidacoustics.com/wp-content/uploads/av-card-indigo-768x418.jpg 768w, https://voidacoustics.com/wp-content/uploads/av-card-indigo-790x430.jpg 790w, https://voidacoustics.com/wp-content/uploads/av-card-indigo.jpg 1000w" data-sizes="(max-width: 395px) 100vw, 395px" /><noscript><img width="395" height="215" src="https://voidacoustics.com/wp-content/uploads/av-card-indigo-395x215.jpg" class="w-full" alt="Indigo Series" decoding="async" srcset="https://voidacoustics.com/wp-content/uploads/av-card-indigo-395x215.jpg 395w, https://voidacoustics.com/wp-content/uploads/av-card-indigo-300x163.jpg 300w, https://voidacoustics.com/wp-content/uploads/av-card-indigo-768x418.jpg 768w, https://voidacoustics.com/wp-content/uploads/av-card-indigo-790x430.jpg 790w, https://voidacoustics.com/wp-content/uploads/av-card-indigo.jpg 1000w" sizes="(max-width: 395px) 100vw, 395px" /></noscript>						<div class="bg-surface-200 p-6 lg:p-10 flex flex-col items-center text-center gap-8 flex-1 justify-between">
 							<div class="flex flex-col gap-4">
-								<h3>Contemporary design-led audio</h3>
+								<h3>صوتی با طراحی معاصر</h3>
 								<div class="no-last-mb">
 									<p>Compact, high-performance solutions suited to contemporary, design-focused environments.</p>
 								</div>
@@ -1617,7 +1702,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 					<div class="rounded-2xl overflow-hidden flex flex-col">
 						<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" width="395" height="215" data-src="https://voidacoustics.com/wp-content/uploads/Avintegration-outdoors-395x215.jpg" class="w-full" alt="Bar 2909, Fort Worth" decoding="async" data-srcset="https://voidacoustics.com/wp-content/uploads/Avintegration-outdoors-395x215.jpg 395w, https://voidacoustics.com/wp-content/uploads/Avintegration-outdoors-300x163.jpg 300w, https://voidacoustics.com/wp-content/uploads/Avintegration-outdoors-768x418.jpg 768w, https://voidacoustics.com/wp-content/uploads/Avintegration-outdoors-790x430.jpg 790w, https://voidacoustics.com/wp-content/uploads/Avintegration-outdoors.jpg 1000w" data-sizes="(max-width: 395px) 100vw, 395px" /><noscript><img width="395" height="215" src="https://voidacoustics.com/wp-content/uploads/Avintegration-outdoors-395x215.jpg" class="w-full" alt="Bar 2909, Fort Worth" decoding="async" srcset="https://voidacoustics.com/wp-content/uploads/Avintegration-outdoors-395x215.jpg 395w, https://voidacoustics.com/wp-content/uploads/Avintegration-outdoors-300x163.jpg 300w, https://voidacoustics.com/wp-content/uploads/Avintegration-outdoors-768x418.jpg 768w, https://voidacoustics.com/wp-content/uploads/Avintegration-outdoors-790x430.jpg 790w, https://voidacoustics.com/wp-content/uploads/Avintegration-outdoors.jpg 1000w" sizes="(max-width: 395px) 100vw, 395px" /></noscript>						<div class="bg-surface-200 p-6 lg:p-10 flex flex-col items-center text-center gap-8 flex-1 justify-between">
 							<div class="flex flex-col gap-4">
-								<h3>Built for indoor and outdoor spaces</h3>
+								<h3>برای فضاهای داخلی و خارجی ساخته شده است</h3>
 								<div class="no-last-mb">
 									<p>Durable audio solutions designed to perform across both indoor and outdoor environments.</p>
 								</div>
@@ -1636,7 +1721,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 					<div class="rounded-2xl overflow-hidden flex flex-col">
 						<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" width="395" height="215" data-src="https://voidacoustics.com/wp-content/uploads/Av-card-air-395x215.jpg" class="w-full" alt="سری Air" decoding="async" data-srcset="https://voidacoustics.com/wp-content/uploads/Av-card-air-395x215.jpg 395w, https://voidacoustics.com/wp-content/uploads/Av-card-air-300x163.jpg 300w, https://voidacoustics.com/wp-content/uploads/Av-card-air-768x418.jpg 768w, https://voidacoustics.com/wp-content/uploads/Av-card-air-790x430.jpg 790w, https://voidacoustics.com/wp-content/uploads/Av-card-air.jpg 1000w" data-sizes="(max-width: 395px) 100vw, 395px" /><noscript><img width="395" height="215" src="https://voidacoustics.com/wp-content/uploads/Av-card-air-395x215.jpg" class="w-full" alt="Air Series" decoding="async" srcset="https://voidacoustics.com/wp-content/uploads/Av-card-air-395x215.jpg 395w, https://voidacoustics.com/wp-content/uploads/Av-card-air-300x163.jpg 300w, https://voidacoustics.com/wp-content/uploads/Av-card-air-768x418.jpg 768w, https://voidacoustics.com/wp-content/uploads/Av-card-air-790x430.jpg 790w, https://voidacoustics.com/wp-content/uploads/Av-card-air.jpg 1000w" sizes="(max-width: 395px) 100vw, 395px" /></noscript>						<div class="bg-surface-200 p-6 lg:p-10 flex flex-col items-center text-center gap-8 flex-1 justify-between">
 							<div class="flex flex-col gap-4">
-								<h3>Unmistakable visual impact</h3>
+								<h3>تاثیر بصری غیرقابل انکار</h3>
 								<div class="no-last-mb">
 									<p>Visually distinctive premium loudspeakers that help proposals stand out in bars, lounges and destination venues.</p>
 								</div>
@@ -1655,7 +1740,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 					<div class="rounded-2xl overflow-hidden flex flex-col">
 						<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" width="395" height="215" data-src="https://voidacoustics.com/wp-content/uploads/Av-card-nexus-395x215.jpg" class="w-full" alt="Nexus Series" decoding="async" data-srcset="https://voidacoustics.com/wp-content/uploads/Av-card-nexus-395x215.jpg 395w, https://voidacoustics.com/wp-content/uploads/Av-card-nexus-300x163.jpg 300w, https://voidacoustics.com/wp-content/uploads/Av-card-nexus-768x418.jpg 768w, https://voidacoustics.com/wp-content/uploads/Av-card-nexus-790x430.jpg 790w, https://voidacoustics.com/wp-content/uploads/Av-card-nexus.jpg 1000w" data-sizes="(max-width: 395px) 100vw, 395px" /><noscript><img width="395" height="215" src="https://voidacoustics.com/wp-content/uploads/Av-card-nexus-395x215.jpg" class="w-full" alt="Nexus Series" decoding="async" srcset="https://voidacoustics.com/wp-content/uploads/Av-card-nexus-395x215.jpg 395w, https://voidacoustics.com/wp-content/uploads/Av-card-nexus-300x163.jpg 300w, https://voidacoustics.com/wp-content/uploads/Av-card-nexus-768x418.jpg 768w, https://voidacoustics.com/wp-content/uploads/Av-card-nexus-790x430.jpg 790w, https://voidacoustics.com/wp-content/uploads/Av-card-nexus.jpg 1000w" sizes="(max-width: 395px) 100vw, 395px" /></noscript>						<div class="bg-surface-200 p-6 lg:p-10 flex flex-col items-center text-center gap-8 flex-1 justify-between">
 							<div class="flex flex-col gap-4">
-								<h3>Continue into the night</h3>
+								<h3>تا شب ادامه دهید</h3>
 								<div class="no-last-mb">
 									<p>High-energy systems for clubs and dance-led environments where sound, atmosphere and impact matter most.</p>
 								</div>
@@ -1674,7 +1759,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 					<div class="rounded-2xl overflow-hidden flex flex-col">
 						<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" width="395" height="215" data-src="https://voidacoustics.com/wp-content/uploads/Av-card-incubus-395x215.jpg" class="w-full" alt="Incubus Series" decoding="async" data-srcset="https://voidacoustics.com/wp-content/uploads/Av-card-incubus-395x215.jpg 395w, https://voidacoustics.com/wp-content/uploads/Av-card-incubus-300x163.jpg 300w, https://voidacoustics.com/wp-content/uploads/Av-card-incubus-768x418.jpg 768w, https://voidacoustics.com/wp-content/uploads/Av-card-incubus-790x430.jpg 790w, https://voidacoustics.com/wp-content/uploads/Av-card-incubus.jpg 1000w" data-sizes="(max-width: 395px) 100vw, 395px" /><noscript><img width="395" height="215" src="https://voidacoustics.com/wp-content/uploads/Av-card-incubus-395x215.jpg" class="w-full" alt="Incubus Series" decoding="async" srcset="https://voidacoustics.com/wp-content/uploads/Av-card-incubus-395x215.jpg 395w, https://voidacoustics.com/wp-content/uploads/Av-card-incubus-300x163.jpg 300w, https://voidacoustics.com/wp-content/uploads/Av-card-incubus-768x418.jpg 768w, https://voidacoustics.com/wp-content/uploads/Av-card-incubus-790x430.jpg 790w, https://voidacoustics.com/wp-content/uploads/Av-card-incubus.jpg 1000w" sizes="(max-width: 395px) 100vw, 395px" /></noscript>						<div class="bg-surface-200 p-6 lg:p-10 flex flex-col items-center text-center gap-8 flex-1 justify-between">
 							<div class="flex flex-col gap-4">
-								<h3>Flagship dance and event systems</h3>
+								<h3>سیستم های رقص و رویدادهای شاخص</h3>
 								<div class="no-last-mb">
 									<p>Large-format performance systems for iconic clubs, festivals and major entertainment environments.</p>
 								</div>
@@ -1710,7 +1795,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 	
 	
-<h3 class="component-heading text-balance">Understand what your client needs</h3>
+<h3 class="component-heading text-balance">درک کنید که مشتری شما به چه چیزی نیاز دارد</h3>
 
 	
 		<div class="no-last-mb content-component content-list-check">
@@ -1771,7 +1856,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 		<div class="flex flex-col gap-4">
 			
-<h2 class="component-heading text-balance">Installed in over 60 countries, trusted for over 20 years</h2>
+<h2 class="component-heading text-balance">نصب‌شده در بیش از ۶۰ کشور، با بیش از ۲۰ سال اعتماد جهانی</h2>
 					</div>
 
 		
@@ -1781,7 +1866,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 					<div class="rounded-2xl overflow-hidden flex flex-col">
 						<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" width="395" height="215" data-src="https://voidacoustics.com/wp-content/uploads/av-download-395x215.jpg" class="w-full" alt="Download our Pro Audio Guide" decoding="async" data-srcset="https://voidacoustics.com/wp-content/uploads/av-download-395x215.jpg 395w, https://voidacoustics.com/wp-content/uploads/av-download-300x163.jpg 300w, https://voidacoustics.com/wp-content/uploads/av-download-768x418.jpg 768w, https://voidacoustics.com/wp-content/uploads/av-download-790x430.jpg 790w, https://voidacoustics.com/wp-content/uploads/av-download.jpg 1000w" data-sizes="(max-width: 395px) 100vw, 395px" /><noscript><img width="395" height="215" src="https://voidacoustics.com/wp-content/uploads/av-download-395x215.jpg" class="w-full" alt="Download our Pro Audio Guide" decoding="async" srcset="https://voidacoustics.com/wp-content/uploads/av-download-395x215.jpg 395w, https://voidacoustics.com/wp-content/uploads/av-download-300x163.jpg 300w, https://voidacoustics.com/wp-content/uploads/av-download-768x418.jpg 768w, https://voidacoustics.com/wp-content/uploads/av-download-790x430.jpg 790w, https://voidacoustics.com/wp-content/uploads/av-download.jpg 1000w" sizes="(max-width: 395px) 100vw, 395px" /></noscript>						<div class="bg-surface-200 p-6 lg:p-10 flex flex-col items-center text-center gap-8 flex-1 justify-between">
 							<div class="flex flex-col gap-4">
-								<h3>Win more projects</h3>
+								<h3>پروژه های بیشتری را برنده شوید</h3>
 								<div class="no-last-mb">
 									<p>Download practical insights to strengthen proposals and impress your clients.</p>
 								</div>
@@ -1800,7 +1885,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 					<div class="rounded-2xl overflow-hidden flex flex-col">
 						<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" width="395" height="215" data-src="https://voidacoustics.com/wp-content/uploads/Void-products-395x215.jpg" class="w-full" alt="Discover Void Acoustic Products" decoding="async" data-srcset="https://voidacoustics.com/wp-content/uploads/Void-products-395x215.jpg 395w, https://voidacoustics.com/wp-content/uploads/Void-products-300x163.jpg 300w, https://voidacoustics.com/wp-content/uploads/Void-products-768x418.jpg 768w, https://voidacoustics.com/wp-content/uploads/Void-products-790x430.jpg 790w, https://voidacoustics.com/wp-content/uploads/Void-products.jpg 1000w" data-sizes="(max-width: 395px) 100vw, 395px" /><noscript><img width="395" height="215" src="https://voidacoustics.com/wp-content/uploads/Void-products-395x215.jpg" class="w-full" alt="Discover Void Acoustic Products" decoding="async" srcset="https://voidacoustics.com/wp-content/uploads/Void-products-395x215.jpg 395w, https://voidacoustics.com/wp-content/uploads/Void-products-300x163.jpg 300w, https://voidacoustics.com/wp-content/uploads/Void-products-768x418.jpg 768w, https://voidacoustics.com/wp-content/uploads/Void-products-790x430.jpg 790w, https://voidacoustics.com/wp-content/uploads/Void-products.jpg 1000w" sizes="(max-width: 395px) 100vw, 395px" /></noscript>						<div class="bg-surface-200 p-6 lg:p-10 flex flex-col items-center text-center gap-8 flex-1 justify-between">
 							<div class="flex flex-col gap-4">
-								<h3>Discover solutions</h3>
+								<h3>راه حل ها را کشف کنید</h3>
 								<div class="no-last-mb">
 									<p>Browse design-led audio solutions for every venue and application.</p>
 								</div>
@@ -1819,7 +1904,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 					<div class="rounded-2xl overflow-hidden flex flex-col">
 						<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" width="395" height="215" data-src="https://voidacoustics.com/wp-content/uploads/void-events-395x215.jpg" class="w-full" alt="Register interest in a Void event" decoding="async" data-srcset="https://voidacoustics.com/wp-content/uploads/void-events-395x215.jpg 395w, https://voidacoustics.com/wp-content/uploads/void-events-300x163.jpg 300w, https://voidacoustics.com/wp-content/uploads/void-events-768x418.jpg 768w, https://voidacoustics.com/wp-content/uploads/void-events-790x430.jpg 790w, https://voidacoustics.com/wp-content/uploads/void-events.jpg 1000w" data-sizes="(max-width: 395px) 100vw, 395px" /><noscript><img width="395" height="215" src="https://voidacoustics.com/wp-content/uploads/void-events-395x215.jpg" class="w-full" alt="Register interest in a Void event" decoding="async" srcset="https://voidacoustics.com/wp-content/uploads/void-events-395x215.jpg 395w, https://voidacoustics.com/wp-content/uploads/void-events-300x163.jpg 300w, https://voidacoustics.com/wp-content/uploads/void-events-768x418.jpg 768w, https://voidacoustics.com/wp-content/uploads/void-events-790x430.jpg 790w, https://voidacoustics.com/wp-content/uploads/void-events.jpg 1000w" sizes="(max-width: 395px) 100vw, 395px" /></noscript>						<div class="bg-surface-200 p-6 lg:p-10 flex flex-col items-center text-center gap-8 flex-1 justify-between">
 							<div class="flex flex-col gap-4">
-								<h3>Experience Void</h3>
+								<h3>وید را تجربه کنید</h3>
 								<div class="no-last-mb">
 									<p>Discover the Void Experience series and see what to expect at the next one.</p>
 								</div>
@@ -2205,9 +2290,9 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 			<div class="flex-1">
 				<div class="flex gap-6 justify-between flex-col md:flex-row">
 					<div class="flex flex-col gap-2">
-						<div id="copyright-menu" class="menu-copyright-nav-container"><ul id="menu-copyright-nav" class="flex items-center gap-4 flex-wrap"><li id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-611"><a href="https://voidacoustics.com/terms/">شرایط و قوانین</a></li>
+						<div id="copyright-menu" class="menu-copyright-nav-container"><ul id="menu-copyright-nav" class="flex items-center gap-4 flex-wrap"><li id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-611"><a href="https://voidacoustics.com/terms/">شرایط و ضوابط</a></li>
 <li id="menu-item-4755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-4755"><a rel="privacy-policy" href="https://voidacoustics.com/privacy/">سیاست حفظ حریم خصوصی</a></li>
-<li id="menu-item-4754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4754"><a href="https://voidacoustics.com/cookies/">سیاست کوکی‌ها</a></li>
+<li id="menu-item-4754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4754"><a href="https://voidacoustics.com/cookies/">سیاست استفاده از کوکی‌ها</a></li>
 </ul></div>							<div>
 								تولیدکننده ثبت‌شده تجهیزات الکترونیکی: WEE/EK4517VW							</div>
 											</div>

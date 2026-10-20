@@ -251,6 +251,88 @@
 				transition-duration: .01ms !important;
 			}
 		}
+		@media (max-width: 959px) {
+			html[dir="rtl"] body.side-menu-open { overflow: hidden !important; }
+			html[dir="rtl"] .site-header,
+			html[dir="rtl"] body.side-menu-open .site-header {
+				z-index: 1000 !important;
+				color: #fff !important;
+				background: rgba(7,7,7,.94) !important;
+			}
+			html[dir="rtl"] .site-header .page-width,
+			html[dir="rtl"] .site-header .page-width > .flex { height: 62px; }
+			html[dir="rtl"] #primary-menu.side-menu {
+				position: fixed !important;
+				top: 77px !important;
+				right: 8px !important;
+				bottom: 8px !important;
+				left: 8px !important;
+				width: auto !important;
+				height: calc(100dvh - 85px) !important;
+				padding: 12px 20px 26px !important;
+				border: 1px solid rgba(255,255,255,.12) !important;
+				border-top: 0 !important;
+				border-radius: 0 0 22px 22px !important;
+				background: rgba(7,7,7,.98) !important;
+				box-shadow: 0 24px 70px rgba(0,0,0,.44) !important;
+				color: #fff !important;
+				overflow: hidden !important;
+			}
+			html[dir="rtl"] #menu-main-nav {
+				position: relative !important;
+				inset: auto !important;
+				display: flex !important;
+				flex-direction: column !important;
+				align-items: stretch !important;
+				gap: 0 !important;
+				width: 100% !important;
+				height: 100% !important;
+				padding: 4px 2px 72px !important;
+				overflow-x: hidden !important;
+				overflow-y: auto !important;
+				overscroll-behavior: contain;
+				scrollbar-width: thin;
+			}
+			html[dir="rtl"] #menu-main-nav > li {
+				position: relative !important;
+				flex: 0 0 auto !important;
+				width: 100% !important;
+				border-bottom: 1px solid rgba(255,255,255,.11) !important;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a {
+				display: flex !important;
+				align-items: center !important;
+				justify-content: space-between !important;
+				min-height: 54px !important;
+				padding: 0 4px !important;
+				color: #fff !important;
+				font-size: 1.05rem !important;
+				font-weight: 620 !important;
+				line-height: 1.45 !important;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a::after {
+				content: "←";
+				color: var(--void-red);
+				font-size: 1.05rem;
+				font-weight: 700;
+				opacity: .9;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a > svg { display: none !important; }
+			html[dir="rtl"] #menu-main-nav .menu-dropdown { display: none !important; }
+			html[dir="rtl"] #primary-menu-toggle {
+				position: relative;
+				z-index: 1100;
+				color: #fff !important;
+			}
+			html[dir="rtl"] #primary-menu-toggle .menu-button span { background-color: currentColor !important; }
+			html[dir="rtl"] body.side-menu-open #primary-menu-toggle {
+				width: 42px;
+				height: 42px;
+				border-radius: 999px;
+				background: rgba(255,255,255,.09);
+			}
+			html[dir="rtl"] #primary-menu .mobile-menu-back-button { display: none !important; }
+		}
 	</style>
 	<script id="fa-image-hydration">
 		document.addEventListener('DOMContentLoaded', function () {
@@ -299,12 +381,12 @@
 	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
 	<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->
-	<title>Cookie Policy | وید اکوستیکس</title>
+	<title>خط مشی کوکی | وید اکوستیکس</title>
 	<meta name="description" content="Information about how وید اکوستیکس uses cookies across this website." />
 	<link rel="canonical" href="https://voidacoustics.com/cookies//" />
 	<meta property="og:locale" content="fa_IR" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Cookie Policy | وید اکوستیکس" />
+	<meta property="og:title" content="خط مشی کوکی | وید اکوستیکس" />
 	<meta property="og:description" content="Information about how وید اکوستیکس uses cookies across this website." />
 	<meta property="og:url" content="https://voidacoustics.com/cookies//" />
 	<meta property="og:site_name" content="وید اکوستیکس" />
@@ -775,7 +857,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 																		<li>
 										<a data-src="https://voidacoustics.com/wp-content/uploads/Stasys-XV2-featured-1-1024x576.jpg"
 											href="https://voidacoustics.com/products/stasys/stasysxv2/">
-											Stasys XV2										</a>
+											استاسیس XV۲										</a>
 									</li>
 																</ul>
 						</div>
@@ -1027,6 +1109,9 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 
 
+
+
+
 <aside data-wg-notranslate="" class="country-selector weglot-dropdown close_outside_click closed weglot-shortcode wg-" tabindex="0" aria-expanded="false" aria-label="تغییر زبان به انگلیسی">
 	<input id="wg_choice_fa" class="weglot_choice" type="checkbox" name="menu"/>
 	<label data-l="fa" tabindex="-1" for="wg_choice_fa" class="wgcurrent wg-li weglot-lang weglot-language flag-3 wg-fa" data-code-language="wg-fa" data-name-language="FA">
@@ -1080,7 +1165,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 			
 		
 		
-<h1 class="component-heading text-balance uppercase tracking-widest">سیاست کوکی‌ها</h1>
+<h1 class="component-heading text-balance uppercase tracking-widest">سیاست استفاده از کوکی‌ها</h1>
 
 		
 	</div>
@@ -1093,14 +1178,14 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 							<div class="flex flex-col lg:flex-row gap-12 lg:gap-6">
 					<div class="lg:w-4/12">
 						<div class="flex flex-col gap-4 lg:gap-8 xl:pr-24 sticky top-[var(--scrollTopOffset)]">
-							<div class="text-eyebrow pl-2">سیاست کوکی‌ها</div>
+							<div class="text-eyebrow pl-2">سیاست استفاده از کوکی‌ها</div>
 							<ul class="flex sm:flex-col gap-2 sm:gap-1 -mx-gutter sm:mx-0 px-gutter sm:px-0 overflow-x-scroll sm:overflow-hidden departments-list">
 
 								
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-0-1-purpose-of-this-policy"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>1. Purpose of This Policy</span>
+											<span>۱. هدف این سیاست</span>
 										</a>
 									</li>
 
@@ -1108,7 +1193,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-1-2-what-are-cookies"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>2. What Are Cookies?</span>
+											<span>۲. کوکی ها چیست؟</span>
 										</a>
 									</li>
 
@@ -1116,7 +1201,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-2-3-categories-of-cookies-we-use"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>3. Categories of Cookies We Use</span>
+											<span>۳. دسته های کوکی هایی که استفاده می کنیم</span>
 										</a>
 									</li>
 
@@ -1124,7 +1209,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-3-4-personal-data-collected-through-cookies"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>4. Personal Data Collected Through Cookies</span>
+											<span>۴. داده های شخصی جمع آوری شده از طریق کوکی ها</span>
 										</a>
 									</li>
 
@@ -1132,7 +1217,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-4-5-legal-basis-and-consent"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>5. Legal Basis and Consent</span>
+											<span>۵. مبنای قانونی و رضایت</span>
 										</a>
 									</li>
 
@@ -1140,7 +1225,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-5-6-third-party-cookies-and-processors"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>6. Third-Party Cookies and Processors</span>
+											<span>۶. کوکی ها و پردازنده های شخص ثالث</span>
 										</a>
 									</li>
 
@@ -1148,7 +1233,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-6-7-how-we-manage-cookie-related-risks"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>7. How We Manage Cookie-Related Risks</span>
+											<span>۷. چگونه ریسک های مرتبط با کوکی ها را مدیریت می کنیم</span>
 										</a>
 									</li>
 
@@ -1156,7 +1241,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-7-8-managing-your-cookie-preferences"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>8. Managing Your Cookie Preferences</span>
+											<span>۸. مدیریت تنظیمات کوکی شما</span>
 										</a>
 									</li>
 
@@ -1164,7 +1249,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-8-9-retention"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>9. Retention</span>
+											<span>۹. حفظ</span>
 										</a>
 									</li>
 
@@ -1172,7 +1257,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-9-10-updates-to-this-policy"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>10. Updates to This Policy</span>
+											<span>۱۰. به روز رسانی های این خط مشی</span>
 										</a>
 									</li>
 
@@ -1180,7 +1265,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-10-11-contact"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>11. Contact</span>
+											<span>۱۱. تماس</span>
 										</a>
 									</li>
 
@@ -1190,7 +1275,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 					</div>
 					<div class="lg:w-8/12 flex flex-col gap-16">
 													<div id="content-0-1-purpose-of-this-policy" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">1. Purpose of This Policy</h2>
+								<h2 class="h3">۱. هدف این سیاست</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p><strong>Last updated: 8 April 2026</strong></p>
 <p class="isSelectedEnd">This Cookie Policy explains how we use cookies and similar tracking technologies on our website.</p>
@@ -1199,7 +1284,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								</div>
 							</div>
 													<div id="content-1-2-what-are-cookies" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">2. What Are Cookies?</h2>
+								<h2 class="h3">۲. کوکی ها چیست؟</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p class="isSelectedEnd">Cookies are small text files stored on your device when you visit a website. They may be placed by us (<strong>first-party cookies</strong>) or by approved third parties (<strong>third-party cookies</strong>).</p>
 <p class="isSelectedEnd">Cookies can be:</p>
@@ -1211,26 +1296,26 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								</div>
 							</div>
 													<div id="content-2-3-categories-of-cookies-we-use" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">3. Categories of Cookies We Use</h2>
+								<h2 class="h3">۳. دسته های کوکی هایی که استفاده می کنیم</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p class="isSelectedEnd">We classify cookies based on their purpose and potential privacy impact.</p>
-<h5>3.1 Strictly Necessary Cookies</h5>
+<h5>۳.۱ کوکی های کاملا ضروری</h5>
 <ul data-spread="false">
 <li>Required for the website to function correctly (e.g., security, session management, and cookie consent preferences)</li>
 <li>Do not require user consent but are documented and reviewed as part of our ISMS</li>
 </ul>
-<h5>3.2 Functional Cookies</h5>
+<h5>۳.۲ کوکی های کاربردی</h5>
 <ul data-spread="false">
 <li>Enable enhanced features such as remembering user preferences</li>
 <li>These cookies are only activated after you provide consent</li>
 </ul>
-<h5>3.3 Analytics and Performance Cookies</h5>
+<h5>۳.۳ کوکی های تجزیه و تحلیل و عملکرد</h5>
 <ul data-spread="false">
 <li>Help us understand how visitors use the website (e.g., pages visited, time spent on the site, and navigation paths)</li>
 <li>May collect IP address and device information</li>
 <li>These cookies are only activated after you provide explicit consent</li>
 </ul>
-<h5>3.4 Marketing and Social Media Cookies</h5>
+<h5>۳.۴ کوکی های بازاریابی و رسانه های اجتماعی</h5>
 <ul data-spread="false">
 <li>Set by advertising networks or embedded social media platforms (e.g., YouTube, X/Twitter, Facebook, TikTok, and LinkedIn)</li>
 <li>Used to track browsing behaviour and build interest profiles</li>
@@ -1239,7 +1324,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								</div>
 							</div>
 													<div id="content-3-4-personal-data-collected-through-cookies" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">4. Personal Data Collected Through Cookies</h2>
+								<h2 class="h3">۴. داده های شخصی جمع آوری شده از طریق کوکی ها</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p class="isSelectedEnd">Depending on the cookie type, the following personal data may be collected:</p>
 <ul data-spread="false">
@@ -1253,7 +1338,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								</div>
 							</div>
 													<div id="content-4-5-legal-basis-and-consent" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">5. Legal Basis and Consent</h2>
+								<h2 class="h3">۵. مبنای قانونی و رضایت</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<ul>
 <li>Non-essential cookies are only activated after you provide explicit, granular consent through our cookie banner</li>
@@ -1263,7 +1348,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								</div>
 							</div>
 													<div id="content-5-6-third-party-cookies-and-processors" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">6. Third-Party Cookies and Processors</h2>
+								<h2 class="h3">۶. کوکی ها و پردازنده های شخص ثالث</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p class="isSelectedEnd">Some cookies are set by third-party providers. These providers may process your personal data in accordance with their own privacy notices and policies.</p>
 <p class="isSelectedEnd">Some third-party providers may process personal data outside the United Kingdom or European Economic Area (“EEA”).</p>
@@ -1271,9 +1356,9 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								</div>
 							</div>
 													<div id="content-6-7-how-we-manage-cookie-related-risks" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">7. How We Manage Cookie-Related Risks</h2>
+								<h2 class="h3">۷. چگونه ریسک های مرتبط با کوکی ها را مدیریت می کنیم</h2>
 								<div class="no-last-mb content-component content-style-lists">
-									<h5>7.1 Risk Assessment</h5>
+									<h5>۷.۱ ارزیابی ریسک</h5>
 <p class="isSelectedEnd">All cookies and tracking technologies are included within our risk assessment processes, including assessment of:</p>
 <ul data-spread="false">
 <li>Personal data processing risks</li>
@@ -1282,7 +1367,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li>Cross-site tracking risks</li>
 <li>Regulatory compliance risks</li>
 </ul>
-<h5>7.2 Controls Implemented</h5>
+<h5>۷.۲ کنترل های پیاده سازی شده است</h5>
 <p class="isSelectedEnd">We maintain appropriate technical and organisational controls, including:</p>
 <ul data-spread="false">
 <li>A consent management platform (“CMP”) with granular consent controls</li>
@@ -1292,33 +1377,33 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li>Logging and monitoring of cookie-related events</li>
 <li>Periodic internal audits</li>
 </ul>
-<h5>7.3 Continuous Improvement</h5>
+<h5>۷.۳ بهبود مستمر</h5>
 <p>Cookie usage is reviewed periodically and following significant website changes, consistent with our continuous improvement cycle.</p>
 								</div>
 							</div>
 													<div id="content-7-8-managing-your-cookie-preferences" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">8. Managing Your Cookie Preferences</h2>
+								<h2 class="h3">۸. مدیریت تنظیمات کوکی شما</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p class="isSelectedEnd">You can modify or withdraw your cookie preferences at any time using our cookie preference management tool.</p>
 <p>You may also delete cookies or local storage items through your browser settings.</p>
 								</div>
 							</div>
 													<div id="content-8-9-retention" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">9. Retention</h2>
+								<h2 class="h3">۹. حفظ</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p class="isSelectedEnd">Cookie data is retained only for as long as necessary to fulfil its intended purpose.</p>
 <p>Persistent cookies have defined expiry periods documented within our internal cookie management records.</p>
 								</div>
 							</div>
 													<div id="content-9-10-updates-to-this-policy" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">10. Updates to This Policy</h2>
+								<h2 class="h3">۱۰. به روز رسانی های این خط مشی</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p class="isSelectedEnd">We may update this Cookie Policy from time to time to reflect changes in technology, regulation, or our ISMS.</p>
 <p>Any updates will be published on this page together with an updated revision date.</p>
 								</div>
 							</div>
 													<div id="content-10-11-contact" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">11. Contact</h2>
+								<h2 class="h3">۱۱. تماس</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p class="isSelectedEnd">If you have any questions about this Cookie Policy or our Information Security Management System, please contact our Data Protection and Information Security Team at:</p>
 <p><a href="mailto:hello@voidacoustics.com">hello@voidacoustics.com</a></p>
@@ -1817,9 +1902,9 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 			<div class="flex-1">
 				<div class="flex gap-6 justify-between flex-col md:flex-row">
 					<div class="flex flex-col gap-2">
-						<div id="copyright-menu" class="menu-copyright-nav-container"><ul id="menu-copyright-nav" class="flex items-center gap-4 flex-wrap"><li id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-611"><a href="https://voidacoustics.com/terms/">شرایط و قوانین</a></li>
+						<div id="copyright-menu" class="menu-copyright-nav-container"><ul id="menu-copyright-nav" class="flex items-center gap-4 flex-wrap"><li id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-611"><a href="https://voidacoustics.com/terms/">شرایط و ضوابط</a></li>
 <li id="menu-item-4755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-4755"><a rel="privacy-policy" href="https://voidacoustics.com/privacy/">سیاست حفظ حریم خصوصی</a></li>
-<li id="menu-item-4754" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2812 current_page_item menu-item-4754"><a href="https://voidacoustics.com/cookies/" aria-current="page">سیاست کوکی‌ها</a></li>
+<li id="menu-item-4754" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2812 current_page_item menu-item-4754"><a href="https://voidacoustics.com/cookies/" aria-current="page">سیاست استفاده از کوکی‌ها</a></li>
 </ul></div>							<div>
 								تولیدکننده ثبت‌شده تجهیزات الکترونیکی: WEE/EK4517VW							</div>
 											</div>

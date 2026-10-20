@@ -251,6 +251,88 @@
 				transition-duration: .01ms !important;
 			}
 		}
+		@media (max-width: 959px) {
+			html[dir="rtl"] body.side-menu-open { overflow: hidden !important; }
+			html[dir="rtl"] .site-header,
+			html[dir="rtl"] body.side-menu-open .site-header {
+				z-index: 1000 !important;
+				color: #fff !important;
+				background: rgba(7,7,7,.94) !important;
+			}
+			html[dir="rtl"] .site-header .page-width,
+			html[dir="rtl"] .site-header .page-width > .flex { height: 62px; }
+			html[dir="rtl"] #primary-menu.side-menu {
+				position: fixed !important;
+				top: 77px !important;
+				right: 8px !important;
+				bottom: 8px !important;
+				left: 8px !important;
+				width: auto !important;
+				height: calc(100dvh - 85px) !important;
+				padding: 12px 20px 26px !important;
+				border: 1px solid rgba(255,255,255,.12) !important;
+				border-top: 0 !important;
+				border-radius: 0 0 22px 22px !important;
+				background: rgba(7,7,7,.98) !important;
+				box-shadow: 0 24px 70px rgba(0,0,0,.44) !important;
+				color: #fff !important;
+				overflow: hidden !important;
+			}
+			html[dir="rtl"] #menu-main-nav {
+				position: relative !important;
+				inset: auto !important;
+				display: flex !important;
+				flex-direction: column !important;
+				align-items: stretch !important;
+				gap: 0 !important;
+				width: 100% !important;
+				height: 100% !important;
+				padding: 4px 2px 72px !important;
+				overflow-x: hidden !important;
+				overflow-y: auto !important;
+				overscroll-behavior: contain;
+				scrollbar-width: thin;
+			}
+			html[dir="rtl"] #menu-main-nav > li {
+				position: relative !important;
+				flex: 0 0 auto !important;
+				width: 100% !important;
+				border-bottom: 1px solid rgba(255,255,255,.11) !important;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a {
+				display: flex !important;
+				align-items: center !important;
+				justify-content: space-between !important;
+				min-height: 54px !important;
+				padding: 0 4px !important;
+				color: #fff !important;
+				font-size: 1.05rem !important;
+				font-weight: 620 !important;
+				line-height: 1.45 !important;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a::after {
+				content: "←";
+				color: var(--void-red);
+				font-size: 1.05rem;
+				font-weight: 700;
+				opacity: .9;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a > svg { display: none !important; }
+			html[dir="rtl"] #menu-main-nav .menu-dropdown { display: none !important; }
+			html[dir="rtl"] #primary-menu-toggle {
+				position: relative;
+				z-index: 1100;
+				color: #fff !important;
+			}
+			html[dir="rtl"] #primary-menu-toggle .menu-button span { background-color: currentColor !important; }
+			html[dir="rtl"] body.side-menu-open #primary-menu-toggle {
+				width: 42px;
+				height: 42px;
+				border-radius: 999px;
+				background: rgba(255,255,255,.09);
+			}
+			html[dir="rtl"] #primary-menu .mobile-menu-back-button { display: none !important; }
+		}
 	</style>
 	<script id="fa-image-hydration">
 		document.addEventListener('DOMContentLoaded', function () {
@@ -299,12 +381,12 @@
 	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
 	<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->
-	<title>Our History | وید اکوستیکس</title>
+	<title>تاریخچه ما | وید اکوستیکس</title>
 	<meta name="description" content="The story of وید اکوستیکس from its beginnings to the present day." />
 	<link rel="canonical" href="https://voidacoustics.com/history//" />
 	<meta property="og:locale" content="fa_IR" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Our History | وید اکوستیکس" />
+	<meta property="og:title" content="تاریخچه ما | وید اکوستیکس" />
 	<meta property="og:description" content="The story of وید اکوستیکس from its beginnings to the present day." />
 	<meta property="og:url" content="https://voidacoustics.com/history//" />
 	<meta property="og:site_name" content="وید اکوستیکس" />
@@ -779,7 +861,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 																		<li>
 										<a data-src="https://voidacoustics.com/wp-content/uploads/Stasys-XV2-featured-1-1024x576.jpg"
 											href="https://voidacoustics.com/products/stasys/stasysxv2/">
-											Stasys XV2										</a>
+											استاسیس XV۲										</a>
 									</li>
 																</ul>
 						</div>
@@ -1031,6 +1113,9 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 
 
+
+
+
 <aside data-wg-notranslate="" class="country-selector weglot-dropdown close_outside_click closed weglot-shortcode wg-" tabindex="0" aria-expanded="false" aria-label="تغییر زبان به انگلیسی">
 	<input id="wg_choice_fa" class="weglot_choice" type="checkbox" name="menu"/>
 	<label data-l="fa" tabindex="-1" for="wg_choice_fa" class="wgcurrent wg-li weglot-lang weglot-language flag-3 wg-fa" data-code-language="wg-fa" data-name-language="FA">
@@ -1087,7 +1172,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 										<div class="flex flex-col gap-4">
 											
 											
-<h1 class="component-heading text-balance tracking-widest uppercase">history of void</h1>
+<h1 class="component-heading text-balance tracking-widest uppercase">تاریخچهٔ وید</h1>
 										</div>
 
 										
@@ -1235,7 +1320,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<div class="flex flex-col justify-between h-full gap-8 xl:pr-14">
 									<div class="h2">2002</div>
 									<div class="flex flex-col gap-4">
-										<h3 class="h4">The foundation</h3>
+										<h3 class="h4">بنیاد</h3>
 																					<div class="no-last-mb">
 												<p>Void Acoustics was founded by Rog Mogale and Alex Skan and released its first products, the Static 3 and Static 5. The first club to feature a Void system was The Tavern in Blackpool, UK, in 2002.</p>
 											</div>
@@ -1255,7 +1340,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<div class="flex flex-col justify-between h-full gap-8 xl:pr-14">
 									<div class="h2">2003</div>
 									<div class="flex flex-col gap-4">
-										<h3 class="h4">Expansion</h3>
+										<h3 class="h4">گسترش</h3>
 																					<div class="no-last-mb">
 												<p>Void expanded into a second warehouse unit, released a new product called the Static Compact, and completed its first overseas install at Rush in Antigua.</p>
 											</div>
@@ -1275,7 +1360,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<div class="flex flex-col justify-between h-full gap-8 xl:pr-14">
 									<div class="h2">2004</div>
 									<div class="flex flex-col gap-4">
-										<h3 class="h4">Distributors, shows and R&amp;D</h3>
+										<h3 class="h4">توزیع کنندگان، نمایشگاه ها و تحقیق و توسعه</h3>
 																					<div class="no-last-mb">
 												<p>The company’s first distributors came from Greece, Norway and Ireland, and trade shows in London and Germany experienced Void for the first time. Co founder Rog set up an R&amp;D lab in Asia, and new product releases included the Impulse, Infinite and Stasys series.</p>
 											</div>
@@ -1295,7 +1380,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<div class="flex flex-col justify-between h-full gap-8 xl:pr-14">
 									<div class="h2">2005</div>
 									<div class="flex flex-col gap-4">
-										<h3 class="h4">Fibreglass and a shift in direction</h3>
+										<h3 class="h4">فایبرگلاس و تغییر جهت</h3>
 																					<div class="no-last-mb">
 												<p>The first year of the iconic Air Motion, which shaped the future direction of the company. A radical new product launch with the Paraflex system, alongside many other releases including Xsys, Basys, Kryo, Mycro and additions to the Stasys series.</p>
 											</div>
@@ -1315,7 +1400,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<div class="flex flex-col justify-between h-full gap-8 xl:pr-14">
 									<div class="h2">2006</div>
 									<div class="flex flex-col gap-4">
-										<h3 class="h4">Airten and major installs</h3>
+										<h3 class="h4">ایرتن و نصب های عمده</h3>
 																					<div class="no-last-mb">
 												<p>Another busy year as Void took on many new distributors and products were installed in super clubs such as BCM in Magaluf. It was also a busy year for product launches, with the Airten and Viper series. The Stasys 3 was revised to Mk2 and the Psyco Sub was released.</p>
 											</div>
@@ -1335,7 +1420,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<div class="flex flex-col justify-between h-full gap-8 xl:pr-14">
 									<div class="h2">2007</div>
 									<div class="flex flex-col gap-4">
-										<h3 class="h4">A year of change</h3>
+										<h3 class="h4">یک سال تغییر</h3>
 																					<div class="no-last-mb">
 												<p>This was the year the company logo changed, alongside further expansion with another warehouse. Worldwide distribution increased with Pineapple Audio from Chicago joining the network. The company’s first line array products, Arcline 6 and Arcline S, were launched. The Void ‘Dome’ made its first appearance at PLASA London, as did the Stasys XV1.</p>
 											</div>
@@ -1355,7 +1440,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<div class="flex flex-col justify-between h-full gap-8 xl:pr-14">
 									<div class="h2">2008</div>
 									<div class="flex flex-col gap-4">
-										<h3 class="h4">Infinitely better</h3>
+										<h3 class="h4">بی نهایت بهتر است</h3>
 																					<div class="no-last-mb">
 												<p>The V2 series of Infinite amplifiers was released alongside the first product to feature HTT (heat transference technology), the Arcline X. High profile club installs continued, including Matter at the O2 Arena, London, and the first Dirtybird Campout in Northern California was powered by Void.</p>
 											</div>
@@ -1375,7 +1460,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<div class="flex flex-col justify-between h-full gap-8 xl:pr-14">
 									<div class="h2">2009</div>
 									<div class="flex flex-col gap-4">
-										<h3 class="h4">Installation boom</h3>
+										<h3 class="h4">بوم نصب</h3>
 																					<div class="no-last-mb">
 												<p>A busy year for new club installs worldwide, with Void products reaching more destinations than ever. The Stasys touring series saw new additions including Prime, Phil and 5 Mk2, while the Psyco Sub was revised to V2 and the Arcline 12 joined the company’s line array solutions.</p>
 											</div>
@@ -1395,7 +1480,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<div class="flex flex-col justify-between h-full gap-8 xl:pr-14">
 									<div class="h2">2010</div>
 									<div class="flex flex-col gap-4">
-										<h3 class="h4">Ibiza and culture clash</h3>
+										<h3 class="h4">ایبیزا و فرهنگ تضاد</h3>
 																					<div class="no-last-mb">
 												<p>Void emerged as a major supplier in Ibiza, the clubbing capital of the world, with DC 10, Bora Bora and Sands installing Void systems. Other high profile installs included Air in Amsterdam, Barasti in Dubai and Tantra in India. A long standing relationship with Red Bull Culture Clash began at the Roundhouse in London.</p>
 											</div>
@@ -1415,7 +1500,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<div class="flex flex-col justify-between h-full gap-8 xl:pr-14">
 									<div class="h2">2011</div>
 									<div class="flex flex-col gap-4">
-										<h3 class="h4">A wider outlook</h3>
+										<h3 class="h4">چشم انداز گسترده تر</h3>
 																					<div class="no-last-mb">
 												<p>Void systems were featured at the Outlook and Dimensions festivals in Croatia for the first time. More high profile club installations included both rooms of Sankeys in Ibiza, all three floors of Vanity in Germany and Monarch in the USA. The first Mixmag Lab in London was powered by Void, which went on to see Labs in New York, Sydney, Los Angeles, Ibiza and Johannesburg, as well as the multi venue Smirnoff Sound Collective receiving Void systems.</p>
 											</div>
@@ -1435,7 +1520,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<div class="flex flex-col justify-between h-full gap-8 xl:pr-14">
 									<div class="h2">2012</div>
 									<div class="flex flex-col gap-4">
-										<h3 class="h4">Raising the bar</h3>
+										<h3 class="h4">بالا بردن میله</h3>
 																					<div class="no-last-mb">
 												<p>A major year that saw the move into a new factory with CNC automated machinery and two polyurea spray machines. Incubus debuted at Frankfurt PL&amp;S in March, and systems were supplied to the London Olympics. Notable installations included Ocean Beach in Ibiza, Playground in the UK and Primary in the USA. The second Red Bull Culture Clash took place at Wembley Arena, London, with an audience of 20,000, where Void won the clash with a system of Arcline 12s and Stasys XV1s.</p>
 											</div>
@@ -1455,7 +1540,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<div class="flex flex-col justify-between h-full gap-8 xl:pr-14">
 									<div class="h2">2013</div>
 									<div class="flex flex-col gap-4">
-										<h3 class="h4">Super club installs expand</h3>
+										<h3 class="h4">نصب های سوپر کلاب گسترش می یابد</h3>
 																					<div class="no-last-mb">
 												<p>A busy year for international super club installations, with the legendary Tresor Club in Berlin installing Void systems in both rooms. Incubus installations took place at Eden in Ibiza and Versuz in Belgium, while The Castle in Chicago and Monasterio in Moscow competed for the title of first Incubus install. The year also saw a remarkable number of product releases, including Nexus 6, Psyco X, Stasys X V2, Stasys X Air, Tri Motion and the Venu V1 series.</p>
 											</div>
@@ -1475,7 +1560,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<div class="flex flex-col justify-between h-full gap-8 xl:pr-14">
 									<div class="h2">2014</div>
 									<div class="flex flex-col gap-4">
-										<h3 class="h4">Bigger stages</h3>
+										<h3 class="h4">مراحل بزرگتر</h3>
 																					<div class="no-last-mb">
 												<p>Major events using Void systems included Red Bull Culture Clash with 25,000 attendees at Earls Court Arena, London, four stages at Boomtown Festival UK and three stages at Outlook and Dimensions in Croatia, including one named ‘The Void’. Additional events included Pleinvrees Festival in the Netherlands and Notting Hill Carnival in London, which featured two static stages and six floats with Void systems. High profile installs included Afrobar in Italy, Mode and Studio 338 in London, Tesla in Hungary and The Church in Denver, USA.</p>
 											</div>
@@ -1495,7 +1580,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<div class="flex flex-col justify-between h-full gap-8 xl:pr-14">
 									<div class="h2">2015</div>
 									<div class="flex flex-col gap-4">
-										<h3 class="h4">See through speakers</h3>
+										<h3 class="h4">از طریق بلندگوها ببینید</h3>
 																					<div class="no-last-mb">
 												<p>Frankfurt PL&amp;S saw five new product launches, along with Rog presenting the well known video on the Nexus X and Q, where he introduced the Nexus Q as the world’s first see through speaker and explained its pressure gradient porting technology. Other releases included Air Vantage, Arcline 8 and Cyclone Bass. Major installs included ARC in Japan, Cocoon in South Korea, Main Room in Mexico, Omni in Taiwan, Skala Bielefeld in Germany and The Supperclub in Amsterdam.</p>
 											</div>
@@ -1515,7 +1600,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<div class="flex flex-col justify-between h-full gap-8 xl:pr-14">
 									<div class="h2">2016</div>
 									<div class="flex flex-col gap-4">
-										<h3 class="h4">Arcline 8 gains traction</h3>
+										<h3 class="h4">آرکلین ۸ کشش را به دست می آورد</h3>
 																					<div class="no-last-mb">
 												<p>Following its launch, the Arcline 8 was widely adopted by touring companies and was used on stages around the world. Notable events included Boomtown UK, Outlook and Dimensions in Croatia and Notting Hill Carnival. High profile installs included BO18 in Lebanon, Ethics in Texas USA, Flux in South Korea, Hooky in Texas USA, Iris in Vietnam, KOR in Taiwan, Sankeys East in the UK and ZU in Mongolia, with many southern US installs completed by award winning Diavolo Systems.</p>
 											</div>
@@ -1535,7 +1620,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<div class="flex flex-col justify-between h-full gap-8 xl:pr-14">
 									<div class="h2">2017</div>
 									<div class="flex flex-col gap-4">
-										<h3 class="h4">Global expansion</h3>
+										<h3 class="h4">گسترش جهانی</h3>
 																					<div class="no-last-mb">
 												<p>A record year for new club installs using Void systems, with distribution spanning the globe. Adidas commissioned a custom system for its Do Over events. High profile installs included Blitz in Munich, The Globe Theatre in Los Angeles, Ibiza Rocks, Ice Factory in Australia, Kyo in Malaysia, Pikes in Ibiza, Printworks in London, Spire in Houston and The Santrian in Indonesia. Void systems featured on three stages at Glastonbury Festival UK. The Chemical Brothers also used a Void system, alongside stages at Parookaville Festival in Germany.</p>
 											</div>
@@ -1555,7 +1640,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<div class="flex flex-col justify-between h-full gap-8 xl:pr-14">
 									<div class="h2">2018</div>
 									<div class="flex flex-col gap-4">
-										<h3 class="h4">Global showcase</h3>
+										<h3 class="h4">ویترین جهانی</h3>
 																					<div class="no-last-mb">
 												<p>A strong year for exhibitions, with Void participating in NAMM, LDI and InfoComm in the US, as well as shows in Germany, India and Spain. The festival season included events such as deadmau5 at Verti Music Hall in Berlin, Phoenix Festival in Switzerland, Insanity Festival in Germany, Untold Festival in Romania and MTV Raps in Brooklyn. Studio 338 in London reopened with Sven Väth headlining, and visitors travelled to Manchester for the Arcline 8 demo day. New products included ArcM monitors and Bias Q2, Q5 and D1 amplifiers.</p>
 											</div>
@@ -1575,7 +1660,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<div class="flex flex-col justify-between h-full gap-8 xl:pr-14">
 									<div class="h2">2019</div>
 									<div class="flex flex-col gap-4">
-										<h3 class="h4">Event horizon</h3>
+										<h3 class="h4">افق رویداد</h3>
 																					<div class="no-last-mb">
 												<p>High profile club installs took place across Asia, including Sel Octagon in Tokyo, Lit Station in China and Zouk Genting in Malaysia. Events worldwide continued to be powered by Void, including the final Taste The Punch at Carnival Arts UK, Electric Castle in Romania, AIM Festival in Canada, Reveilloz in Brazil, Feel Festival in Germany, Paradiso in the USA, Tribal Gathering in Panama, Lost In Paradise in Goa and numerous events across the UK. Product demo days were held in Glasgow and Cardiff, and Void sponsored the Take Note Academy.</p>
 											</div>
@@ -2080,9 +2165,9 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 			<div class="flex-1">
 				<div class="flex gap-6 justify-between flex-col md:flex-row">
 					<div class="flex flex-col gap-2">
-						<div id="copyright-menu" class="menu-copyright-nav-container"><ul id="menu-copyright-nav" class="flex items-center gap-4 flex-wrap"><li id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-611"><a href="https://voidacoustics.com/terms/">شرایط و قوانین</a></li>
+						<div id="copyright-menu" class="menu-copyright-nav-container"><ul id="menu-copyright-nav" class="flex items-center gap-4 flex-wrap"><li id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-611"><a href="https://voidacoustics.com/terms/">شرایط و ضوابط</a></li>
 <li id="menu-item-4755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-4755"><a rel="privacy-policy" href="https://voidacoustics.com/privacy/">سیاست حفظ حریم خصوصی</a></li>
-<li id="menu-item-4754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4754"><a href="https://voidacoustics.com/cookies/">سیاست کوکی‌ها</a></li>
+<li id="menu-item-4754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4754"><a href="https://voidacoustics.com/cookies/">سیاست استفاده از کوکی‌ها</a></li>
 </ul></div>							<div>
 								تولیدکننده ثبت‌شده تجهیزات الکترونیکی: WEE/EK4517VW							</div>
 											</div>

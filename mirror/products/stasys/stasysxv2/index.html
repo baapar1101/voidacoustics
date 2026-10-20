@@ -251,6 +251,88 @@
 				transition-duration: .01ms !important;
 			}
 		}
+		@media (max-width: 959px) {
+			html[dir="rtl"] body.side-menu-open { overflow: hidden !important; }
+			html[dir="rtl"] .site-header,
+			html[dir="rtl"] body.side-menu-open .site-header {
+				z-index: 1000 !important;
+				color: #fff !important;
+				background: rgba(7,7,7,.94) !important;
+			}
+			html[dir="rtl"] .site-header .page-width,
+			html[dir="rtl"] .site-header .page-width > .flex { height: 62px; }
+			html[dir="rtl"] #primary-menu.side-menu {
+				position: fixed !important;
+				top: 77px !important;
+				right: 8px !important;
+				bottom: 8px !important;
+				left: 8px !important;
+				width: auto !important;
+				height: calc(100dvh - 85px) !important;
+				padding: 12px 20px 26px !important;
+				border: 1px solid rgba(255,255,255,.12) !important;
+				border-top: 0 !important;
+				border-radius: 0 0 22px 22px !important;
+				background: rgba(7,7,7,.98) !important;
+				box-shadow: 0 24px 70px rgba(0,0,0,.44) !important;
+				color: #fff !important;
+				overflow: hidden !important;
+			}
+			html[dir="rtl"] #menu-main-nav {
+				position: relative !important;
+				inset: auto !important;
+				display: flex !important;
+				flex-direction: column !important;
+				align-items: stretch !important;
+				gap: 0 !important;
+				width: 100% !important;
+				height: 100% !important;
+				padding: 4px 2px 72px !important;
+				overflow-x: hidden !important;
+				overflow-y: auto !important;
+				overscroll-behavior: contain;
+				scrollbar-width: thin;
+			}
+			html[dir="rtl"] #menu-main-nav > li {
+				position: relative !important;
+				flex: 0 0 auto !important;
+				width: 100% !important;
+				border-bottom: 1px solid rgba(255,255,255,.11) !important;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a {
+				display: flex !important;
+				align-items: center !important;
+				justify-content: space-between !important;
+				min-height: 54px !important;
+				padding: 0 4px !important;
+				color: #fff !important;
+				font-size: 1.05rem !important;
+				font-weight: 620 !important;
+				line-height: 1.45 !important;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a::after {
+				content: "←";
+				color: var(--void-red);
+				font-size: 1.05rem;
+				font-weight: 700;
+				opacity: .9;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a > svg { display: none !important; }
+			html[dir="rtl"] #menu-main-nav .menu-dropdown { display: none !important; }
+			html[dir="rtl"] #primary-menu-toggle {
+				position: relative;
+				z-index: 1100;
+				color: #fff !important;
+			}
+			html[dir="rtl"] #primary-menu-toggle .menu-button span { background-color: currentColor !important; }
+			html[dir="rtl"] body.side-menu-open #primary-menu-toggle {
+				width: 42px;
+				height: 42px;
+				border-radius: 999px;
+				background: rgba(255,255,255,.09);
+			}
+			html[dir="rtl"] #primary-menu .mobile-menu-back-button { display: none !important; }
+		}
 	</style>
 	<script id="fa-image-hydration">
 		document.addEventListener('DOMContentLoaded', function () {
@@ -299,12 +381,12 @@
 	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
 	<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->
-	<title>Stasys XV2 | Dual 18-Inch Horn-Loaded Subwoofer | وید اکوستیکس</title>
+	<title>استاسیس ایکس‌وی۲ | ساب‌ووفر هورن‌لود دوگانهٔ ۱۸ اینچی | وید اکوستیکس</title>
 	<meta name="description" content="Discover Stasys XV2, a dual 18 inch high-impact horn-loaded ساب‌ووفر." />
 	<link rel="canonical" href="https://voidacoustics.com/products/stasys/stasysxv2//" />
 	<meta property="og:locale" content="fa_IR" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Stasys XV2 | Dual 18-Inch Horn-Loaded Subwoofer | وید اکوستیکس" />
+	<meta property="og:title" content="استاسیس ایکس‌وی۲ | ساب‌ووفر هورن‌لود دوگانهٔ ۱۸ اینچی | وید اکوستیکس" />
 	<meta property="og:description" content="Discover Stasys XV2, a dual 18 inch high-impact horn-loaded ساب‌ووفر." />
 	<meta property="og:url" content="https://voidacoustics.com/products/stasys/stasysxv2//" />
 	<meta property="og:site_name" content="وید اکوستیکس" />
@@ -779,7 +861,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 																		<li>
 										<a data-src="https://voidacoustics.com/wp-content/uploads/Stasys-XV2-featured-1-1024x576.jpg"
 											href="https://voidacoustics.com/products/stasys/stasysxv2/">
-											Stasys XV2										</a>
+											استاسیس XV۲										</a>
 									</li>
 																</ul>
 						</div>
@@ -1031,6 +1113,9 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 
 
+
+
+
 <aside data-wg-notranslate="" class="country-selector weglot-dropdown close_outside_click closed weglot-shortcode wg-" tabindex="0" aria-expanded="false" aria-label="تغییر زبان به انگلیسی">
 	<input id="wg_choice_fa" class="weglot_choice" type="checkbox" name="menu"/>
 	<label data-l="fa" tabindex="-1" for="wg_choice_fa" class="wgcurrent wg-li weglot-lang weglot-language flag-3 wg-fa" data-code-language="wg-fa" data-name-language="FA">
@@ -1080,7 +1165,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="splide__slide">
 						<div style="--overlay-opacity: 0"
 							class="relative text-white before:absolute before:inset-0 before:bg-black before:z-30 overflow-hidden px-gutter flex before:opacity-[var(--overlay-opacity)] min-h-screen-d items-center">
-							<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" width="2560" height="1440" data-src="https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Header-1920x1080-1-scaled.jpg" class="absolute z-20 inset-0 w-full h-full object-cover hidden md:inline-block" alt="Stasys XV2" decoding="async" fetchpriority="high" data-srcset="https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Header-1920x1080-1-scaled.jpg 2560w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Header-1920x1080-1-300x169.jpg 300w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Header-1920x1080-1-1024x576.jpg 1024w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Header-1920x1080-1-768x432.jpg 768w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Header-1920x1080-1-1536x864.jpg 1536w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Header-1920x1080-1-2048x1152.jpg 2048w" data-sizes="(max-width: 2560px) 100vw, 2560px" /><noscript><img width="2560" height="1440" src="https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Header-1920x1080-1-scaled.jpg" class="absolute z-20 inset-0 w-full h-full object-cover hidden md:inline-block" alt="Stasys XV2" decoding="async" fetchpriority="high" srcset="https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Header-1920x1080-1-scaled.jpg 2560w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Header-1920x1080-1-300x169.jpg 300w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Header-1920x1080-1-1024x576.jpg 1024w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Header-1920x1080-1-768x432.jpg 768w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Header-1920x1080-1-1536x864.jpg 1536w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Header-1920x1080-1-2048x1152.jpg 2048w" sizes="(max-width: 2560px) 100vw, 2560px" /></noscript><img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" width="1540" height="2400" data-src="https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Mobile-Header-1.jpg" class="absolute z-20 inset-0 w-full h-full object-cover md:hidden" alt="" decoding="async" data-srcset="https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Mobile-Header-1.jpg 1540w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Mobile-Header-1-193x300.jpg 193w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Mobile-Header-1-657x1024.jpg 657w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Mobile-Header-1-768x1197.jpg 768w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Mobile-Header-1-986x1536.jpg 986w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Mobile-Header-1-1314x2048.jpg 1314w" data-sizes="(max-width: 1540px) 100vw, 1540px" /><noscript><img width="1540" height="2400" src="https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Mobile-Header-1.jpg" class="absolute z-20 inset-0 w-full h-full object-cover md:hidden" alt="" decoding="async" srcset="https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Mobile-Header-1.jpg 1540w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Mobile-Header-1-193x300.jpg 193w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Mobile-Header-1-657x1024.jpg 657w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Mobile-Header-1-768x1197.jpg 768w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Mobile-Header-1-986x1536.jpg 986w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Mobile-Header-1-1314x2048.jpg 1314w" sizes="(max-width: 1540px) 100vw, 1540px" /></noscript>							<div class="page-width relative z-30 py-24 flex flex-col justify-start items-start">
+							<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" width="2560" height="1440" data-src="https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Header-1920x1080-1-scaled.jpg" class="absolute z-20 inset-0 w-full h-full object-cover hidden md:inline-block" alt="استاسیس XV۲" decoding="async" fetchpriority="high" data-srcset="https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Header-1920x1080-1-scaled.jpg 2560w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Header-1920x1080-1-300x169.jpg 300w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Header-1920x1080-1-1024x576.jpg 1024w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Header-1920x1080-1-768x432.jpg 768w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Header-1920x1080-1-1536x864.jpg 1536w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Header-1920x1080-1-2048x1152.jpg 2048w" data-sizes="(max-width: 2560px) 100vw, 2560px" /><noscript><img width="2560" height="1440" src="https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Header-1920x1080-1-scaled.jpg" class="absolute z-20 inset-0 w-full h-full object-cover hidden md:inline-block" alt="Stasys XV2" decoding="async" fetchpriority="high" srcset="https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Header-1920x1080-1-scaled.jpg 2560w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Header-1920x1080-1-300x169.jpg 300w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Header-1920x1080-1-1024x576.jpg 1024w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Header-1920x1080-1-768x432.jpg 768w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Header-1920x1080-1-1536x864.jpg 1536w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Header-1920x1080-1-2048x1152.jpg 2048w" sizes="(max-width: 2560px) 100vw, 2560px" /></noscript><img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" width="1540" height="2400" data-src="https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Mobile-Header-1.jpg" class="absolute z-20 inset-0 w-full h-full object-cover md:hidden" alt="" decoding="async" data-srcset="https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Mobile-Header-1.jpg 1540w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Mobile-Header-1-193x300.jpg 193w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Mobile-Header-1-657x1024.jpg 657w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Mobile-Header-1-768x1197.jpg 768w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Mobile-Header-1-986x1536.jpg 986w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Mobile-Header-1-1314x2048.jpg 1314w" data-sizes="(max-width: 1540px) 100vw, 1540px" /><noscript><img width="1540" height="2400" src="https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Mobile-Header-1.jpg" class="absolute z-20 inset-0 w-full h-full object-cover md:hidden" alt="" decoding="async" srcset="https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Mobile-Header-1.jpg 1540w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Mobile-Header-1-193x300.jpg 193w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Mobile-Header-1-657x1024.jpg 657w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Mobile-Header-1-768x1197.jpg 768w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Mobile-Header-1-986x1536.jpg 986w, https://voidacoustics.com/wp-content/uploads/Stasys-xv2-Mobile-Header-1-1314x2048.jpg 1314w" sizes="(max-width: 1540px) 100vw, 1540px" /></noscript>							<div class="page-width relative z-30 py-24 flex flex-col justify-start items-start">
 								<div class="flex flex-col gap-10 lg:w-1/2 items-center lg:items-start text-center lg:text-left"
 								>
 									<div class="flex flex-col gap-6">
@@ -1096,7 +1181,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												
 											
 											
-<h1 class="component-heading text-balance tracking-widest">STASYS XV2</h1>
+<h1 class="component-heading text-balance tracking-widest">استاسیس ایکس‌وی۲</h1>
 										</div>
 
 										
@@ -1147,7 +1232,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 	
 	
-<h3 class="component-heading text-balance">Engineered for advanced performance</h3>
+<h3 class="component-heading text-balance">برای عملکرد پیشرفته مهندسی شده است</h3>
 
 	
 		<div class="no-last-mb content-component content-list-check">
@@ -1172,7 +1257,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									
 										<li class="splide__slide">
 											<div class="aspect-[630/450] rounded-2xl overflow-hidden relative">
-												<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" width="608" height="512" data-src="https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-608x512.jpg" class="w-full h-full absolute inset-0 object-cover group-hover/video-link:scale-110 transition-transform duration-300" alt="Stasys XV2" decoding="async" data-srcset="https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-608x512.jpg 608w, https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-300x253.jpg 300w, https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-1024x862.jpg 1024w, https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-768x647.jpg 768w, https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-1536x1293.jpg 1536w, https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-2048x1725.jpg 2048w, https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-1216x1024.jpg 1216w" data-sizes="(max-width: 608px) 100vw, 608px" /><noscript><img width="608" height="512" src="https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-608x512.jpg" class="w-full h-full absolute inset-0 object-cover group-hover/video-link:scale-110 transition-transform duration-300" alt="Stasys XV2" decoding="async" srcset="https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-608x512.jpg 608w, https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-300x253.jpg 300w, https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-1024x862.jpg 1024w, https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-768x647.jpg 768w, https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-1536x1293.jpg 1536w, https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-2048x1725.jpg 2048w, https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-1216x1024.jpg 1216w" sizes="(max-width: 608px) 100vw, 608px" /></noscript>											</div>
+												<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" width="608" height="512" data-src="https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-608x512.jpg" class="w-full h-full absolute inset-0 object-cover group-hover/video-link:scale-110 transition-transform duration-300" alt="استاسیس XV۲" decoding="async" data-srcset="https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-608x512.jpg 608w, https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-300x253.jpg 300w, https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-1024x862.jpg 1024w, https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-768x647.jpg 768w, https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-1536x1293.jpg 1536w, https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-2048x1725.jpg 2048w, https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-1216x1024.jpg 1216w" data-sizes="(max-width: 608px) 100vw, 608px" /><noscript><img width="608" height="512" src="https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-608x512.jpg" class="w-full h-full absolute inset-0 object-cover group-hover/video-link:scale-110 transition-transform duration-300" alt="Stasys XV2" decoding="async" srcset="https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-608x512.jpg 608w, https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-300x253.jpg 300w, https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-1024x862.jpg 1024w, https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-768x647.jpg 768w, https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-1536x1293.jpg 1536w, https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-2048x1725.jpg 2048w, https://voidacoustics.com/wp-content/uploads/stasysxv2-overview-1-1216x1024.jpg 1216w" sizes="(max-width: 608px) 100vw, 608px" /></noscript>											</div>
 										</li>
 
 									
@@ -1192,7 +1277,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 	<div class="page-width flex flex-col gap-10 sm:gap-14">
 
 		
-<h2 class="component-heading text-balance">Stasys XV2 at a glance</h2>
+<h2 class="component-heading text-balance">استاسیس XV۲ در یک نگاه</h2>
 
 		
 			<ul class="flex gap-y-7 sm:gap-y-16 md:gap-y-24 text-base sm:text-xl lg:text-2xl md:text-center sm:pb-8 flex-wrap justify-between">
@@ -1258,7 +1343,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 	
 	
-<h3 class="component-heading text-balance">Flexible integration and deployment</h3>
+<h3 class="component-heading text-balance">یکپارچه سازی و استقرار انعطاف‌پذیر</h3>
 
 	
 		<div class="no-last-mb content-component content-list-check">
@@ -1338,7 +1423,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 	
 	
-<h3 class="component-heading text-balance">Improved phase consistency</h3>
+<h3 class="component-heading text-balance">سازگاری فاز بهبود یافته است</h3>
 
 	
 		<div class="no-last-mb content-component content-list-check">
@@ -1388,7 +1473,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Inch-Size.svg" class="w-full h-full object-contain" alt="" decoding="async" /><noscript><img src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Inch-Size.svg" class="w-full h-full object-contain" alt="" decoding="async" /></noscript>							</span>
 											</div>
 
-											<h2 class="text-2xl font-medium text-balance">High-output, dual 18 inch, horn-loaded low-frequency enclosure</h2>
+											<h2 class="text-2xl font-medium text-balance">محفظه فرکانس پایین دوگانه ۱۸ اینچی با خروجی بالا</h2>
 					
 									</div>
 							<div class="flex flex-col gap-4 lg:pr-8">
@@ -1397,7 +1482,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Power-Handling.svg" class="w-full h-full object-contain" alt="" decoding="async" /><noscript><img src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Power-Handling.svg" class="w-full h-full object-contain" alt="" decoding="async" /></noscript>							</span>
 											</div>
 
-											<h2 class="text-2xl font-medium text-balance">3200 watts AES power handling</h2>
+											<h2 class="text-2xl font-medium text-balance">پاور هندلینگ AES ۳۲۰۰ وات</h2>
 					
 									</div>
 							<div class="flex flex-col gap-4 lg:pr-8">
@@ -1406,7 +1491,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Negligible-power-compression.svg" class="w-full h-full object-contain" alt="" decoding="async" /><noscript><img src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Negligible-power-compression.svg" class="w-full h-full object-contain" alt="" decoding="async" /></noscript>							</span>
 											</div>
 
-											<h2 class="text-2xl font-medium text-balance">Negligible power compression</h2>
+											<h2 class="text-2xl font-medium text-balance">فشرده سازی توان ناچیز</h2>
 					
 									</div>
 							<div class="flex flex-col gap-4 lg:pr-8">
@@ -1415,7 +1500,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Phase-Coherent-Behaviour.svg" class="w-full h-full object-contain" alt="" decoding="async" /><noscript><img src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Phase-Coherent-Behaviour.svg" class="w-full h-full object-contain" alt="" decoding="async" /></noscript>							</span>
 											</div>
 
-											<h2 class="text-2xl font-medium text-balance">Fast transient response and extremely low group delay</h2>
+											<h2 class="text-2xl font-medium text-balance">پاسخ سریع گذرا و تاخیر گروهی بسیار کم</h2>
 					
 									</div>
 							<div class="flex flex-col gap-4 lg:pr-8">
@@ -1424,7 +1509,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Optional-castors-and-covers.svg" class="w-full h-full object-contain" alt="" decoding="async" /><noscript><img src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Optional-castors-and-covers.svg" class="w-full h-full object-contain" alt="" decoding="async" /></noscript>							</span>
 											</div>
 
-											<h2 class="text-2xl font-medium text-balance">Optional castors and protective covers</h2>
+											<h2 class="text-2xl font-medium text-balance">کاستورها و پوشش های محافظ اختیاری</h2>
 					
 									</div>
 							<div class="flex flex-col gap-4 lg:pr-8">
@@ -1433,7 +1518,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Tough-TourCoat.svg" class="w-full h-full object-contain" alt="" decoding="async" /><noscript><img src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Tough-TourCoat.svg" class="w-full h-full object-contain" alt="" decoding="async" /></noscript>							</span>
 											</div>
 
-											<h2 class="text-2xl font-medium text-balance">Black textured ‘TourCoat’ polyurea finish</h2>
+											<h2 class="text-2xl font-medium text-balance">روکش پلی اوره با بافت مشکی «TourCoat».</h2>
 					
 									</div>
 							<div class="flex flex-col gap-4 lg:pr-8">
@@ -1442,7 +1527,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Truck-Friendly.svg" class="w-full h-full object-contain" alt="" decoding="async" /><noscript><img src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Truck-Friendly.svg" class="w-full h-full object-contain" alt="" decoding="async" /></noscript>							</span>
 											</div>
 
-											<h2 class="text-2xl font-medium text-balance">Truck pack-friendly dimensions</h2>
+											<h2 class="text-2xl font-medium text-balance">ابعاد مناسب برای بسته بندی کامیون</h2>
 					
 									</div>
 							<div class="flex flex-col gap-4 lg:pr-8">
@@ -1451,7 +1536,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Colour-Custom.svg" class="w-full h-full object-contain" alt="" decoding="async" /><noscript><img src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Colour-Custom.svg" class="w-full h-full object-contain" alt="" decoding="async" /></noscript>							</span>
 											</div>
 
-											<h2 class="text-2xl font-medium text-balance">Available as standard in black</h2>
+											<h2 class="text-2xl font-medium text-balance">به صورت استاندارد در رنگ مشکی موجود است</h2>
 					
 									</div>
 					</div>
@@ -1467,7 +1552,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<div class="flex gap-4 justify-between sm:items-center flex-col sm:flex-row">
 											<div>
 							
-<h2 class="component-heading text-balance">Where Stasys XV2 performs</h2>
+<h2 class="component-heading text-balance">جایی که استاسیس XV۲ اجرا می کند</h2>
 						</div>
 														</div>
 			</div>
@@ -1542,7 +1627,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <section class="px-gutter py-14 lg:py-24 bg-surface-200">
 	<div class="page-width flex flex-col gap-12 md:gap-16">
 		
-<h2 class="component-heading text-balance">Stasys XV2 Technical Resources</h2>
+<h2 class="component-heading text-balance">استاسیس XV۲ منابع فنی</h2>
 		<div class="flex gap-12 md:gap-24 lg:gap-32 flex-col md:flex-row" data-tabs>
 			<div class="xl:w-80 flex-none">
 				<div class="tabs-mobile-container sticky top-[var(--scrollTopOffset)]">
@@ -1614,16 +1699,16 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 														<div class="flex gap-12 lg:gap-20 flex-col lg:flex-row">
 																	<div class="flex-1 no-last-mb accordion-downloads-content list-bordered">
 										<ul>
-<li>High-output, dual 18 inch, horn-loaded low-frequency enclosure</li>
-<li>3200 Watts AES power handling</li>
-<li>Negligible power compression</li>
-<li>Fast transient response and extremely low group delay</li>
-<li>Optional castors and protective covers</li>
-<li>18 mm birch plywood construction</li>
-<li>Black textured ‘TourCoat’ polyurea finish</li>
-<li>Truck pack-friendly dimensions</li>
-<li>Available as standard in black</li>
-<li>White finishes are available upon request</li>
+<li>محفظه فرکانس پایین دوگانه ۱۸ اینچی با خروجی بالا</li>
+<li>پاور هندلینگ AES ۳۲۰۰ وات</li>
+<li>فشرده سازی توان ناچیز</li>
+<li>پاسخ سریع گذرا و تاخیر گروهی بسیار کم</li>
+<li>کاستورها و پوشش های محافظ اختیاری</li>
+<li>ساخت تخته سه لا توس ۱۸ میلی متر</li>
+<li>روکش پلی اوره با بافت مشکی «TourCoat».</li>
+<li>ابعاد مناسب برای بسته بندی کامیون</li>
+<li>به صورت استاندارد در رنگ مشکی موجود است</li>
+<li>روکش های سفید در صورت درخواست در دسترس هستند</li>
 </ul>
 									</div>
 																							</div>
@@ -1861,7 +1946,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 											</div>
 				
 				
-<h3 class="component-heading text-balance h4">8Street Brickell, Miami</h3>
+<h3 class="component-heading text-balance h4">ایت‌استریت بریکل، میامی</h3>
 				
 							</div>
 		</div>
@@ -1886,7 +1971,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 											</div>
 				
 				
-<h3 class="component-heading text-balance h4">Bestial, Madrid</h3>
+<h3 class="component-heading text-balance h4">بستیال، مادرید</h3>
 				
 							</div>
 		</div>
@@ -1911,7 +1996,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 											</div>
 				
 				
-<h3 class="component-heading text-balance h4">Blinders Sports Lounge, Charlotte</h3>
+<h3 class="component-heading text-balance h4">بلایندرز اسپورتس لانژ، شارلوت</h3>
 				
 							</div>
 		</div>
@@ -1936,7 +2021,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 											</div>
 				
 				
-<h3 class="component-heading text-balance h4">Boomtown Fair 2024</h3>
+<h3 class="component-heading text-balance h4">بوم‌تاون ۲۰۲۴</h3>
 				
 							</div>
 		</div>
@@ -2125,9 +2210,9 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 			<div class="flex-1">
 				<div class="flex gap-6 justify-between flex-col md:flex-row">
 					<div class="flex flex-col gap-2">
-						<div id="copyright-menu" class="menu-copyright-nav-container"><ul id="menu-copyright-nav" class="flex items-center gap-4 flex-wrap"><li id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-611"><a href="https://voidacoustics.com/terms/">شرایط و قوانین</a></li>
+						<div id="copyright-menu" class="menu-copyright-nav-container"><ul id="menu-copyright-nav" class="flex items-center gap-4 flex-wrap"><li id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-611"><a href="https://voidacoustics.com/terms/">شرایط و ضوابط</a></li>
 <li id="menu-item-4755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-4755"><a rel="privacy-policy" href="https://voidacoustics.com/privacy/">سیاست حفظ حریم خصوصی</a></li>
-<li id="menu-item-4754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4754"><a href="https://voidacoustics.com/cookies/">سیاست کوکی‌ها</a></li>
+<li id="menu-item-4754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4754"><a href="https://voidacoustics.com/cookies/">سیاست استفاده از کوکی‌ها</a></li>
 </ul></div>							<div>
 								تولیدکننده ثبت‌شده تجهیزات الکترونیکی: WEE/EK4517VW							</div>
 											</div>

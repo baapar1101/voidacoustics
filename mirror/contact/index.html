@@ -251,6 +251,88 @@
 				transition-duration: .01ms !important;
 			}
 		}
+		@media (max-width: 959px) {
+			html[dir="rtl"] body.side-menu-open { overflow: hidden !important; }
+			html[dir="rtl"] .site-header,
+			html[dir="rtl"] body.side-menu-open .site-header {
+				z-index: 1000 !important;
+				color: #fff !important;
+				background: rgba(7,7,7,.94) !important;
+			}
+			html[dir="rtl"] .site-header .page-width,
+			html[dir="rtl"] .site-header .page-width > .flex { height: 62px; }
+			html[dir="rtl"] #primary-menu.side-menu {
+				position: fixed !important;
+				top: 77px !important;
+				right: 8px !important;
+				bottom: 8px !important;
+				left: 8px !important;
+				width: auto !important;
+				height: calc(100dvh - 85px) !important;
+				padding: 12px 20px 26px !important;
+				border: 1px solid rgba(255,255,255,.12) !important;
+				border-top: 0 !important;
+				border-radius: 0 0 22px 22px !important;
+				background: rgba(7,7,7,.98) !important;
+				box-shadow: 0 24px 70px rgba(0,0,0,.44) !important;
+				color: #fff !important;
+				overflow: hidden !important;
+			}
+			html[dir="rtl"] #menu-main-nav {
+				position: relative !important;
+				inset: auto !important;
+				display: flex !important;
+				flex-direction: column !important;
+				align-items: stretch !important;
+				gap: 0 !important;
+				width: 100% !important;
+				height: 100% !important;
+				padding: 4px 2px 72px !important;
+				overflow-x: hidden !important;
+				overflow-y: auto !important;
+				overscroll-behavior: contain;
+				scrollbar-width: thin;
+			}
+			html[dir="rtl"] #menu-main-nav > li {
+				position: relative !important;
+				flex: 0 0 auto !important;
+				width: 100% !important;
+				border-bottom: 1px solid rgba(255,255,255,.11) !important;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a {
+				display: flex !important;
+				align-items: center !important;
+				justify-content: space-between !important;
+				min-height: 54px !important;
+				padding: 0 4px !important;
+				color: #fff !important;
+				font-size: 1.05rem !important;
+				font-weight: 620 !important;
+				line-height: 1.45 !important;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a::after {
+				content: "←";
+				color: var(--void-red);
+				font-size: 1.05rem;
+				font-weight: 700;
+				opacity: .9;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a > svg { display: none !important; }
+			html[dir="rtl"] #menu-main-nav .menu-dropdown { display: none !important; }
+			html[dir="rtl"] #primary-menu-toggle {
+				position: relative;
+				z-index: 1100;
+				color: #fff !important;
+			}
+			html[dir="rtl"] #primary-menu-toggle .menu-button span { background-color: currentColor !important; }
+			html[dir="rtl"] body.side-menu-open #primary-menu-toggle {
+				width: 42px;
+				height: 42px;
+				border-radius: 999px;
+				background: rgba(255,255,255,.09);
+			}
+			html[dir="rtl"] #primary-menu .mobile-menu-back-button { display: none !important; }
+		}
 	</style>
 	<script id="fa-image-hydration">
 		document.addEventListener('DOMContentLoaded', function () {
@@ -779,7 +861,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 																		<li>
 										<a data-src="https://voidacoustics.com/wp-content/uploads/Stasys-XV2-featured-1-1024x576.jpg"
 											href="https://voidacoustics.com/products/stasys/stasysxv2/">
-											Stasys XV2										</a>
+											استاسیس XV۲										</a>
 									</li>
 																</ul>
 						</div>
@@ -1031,6 +1113,9 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 
 
+
+
+
 <aside data-wg-notranslate="" class="country-selector weglot-dropdown close_outside_click closed weglot-shortcode wg-" tabindex="0" aria-expanded="false" aria-label="تغییر زبان به انگلیسی">
 	<input id="wg_choice_fa" class="weglot_choice" type="checkbox" name="menu"/>
 	<label data-l="fa" tabindex="-1" for="wg_choice_fa" class="wgcurrent wg-li weglot-lang weglot-language flag-3 wg-fa" data-code-language="wg-fa" data-name-language="FA">
@@ -1122,7 +1207,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 	
 	
-<h3 class="component-heading text-balance">How can we help?</h3>
+<h3 class="component-heading text-balance">چطور می‌توانیم کمک کنیم؟</h3>
 
 	
 		<div class="no-last-mb content-component content-list-check">
@@ -1246,7 +1331,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <line x1="23.0349" y1="22.8711" x2="9.14618" y2="8.98234" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
 </svg>
 </a>
-						<h2 data-pertners-count style="display: none;">Results</h2>
+						<h2 data-pertners-count style="display: none;">نتایج</h2>
 					</div>
 					<div data-partners-list class="flex flex-col gap-6"></div>
 				</div>
@@ -1313,7 +1398,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 </g>
 </svg>
 </span>
-											<span>Sales enquiry</span>
+											<span>درخواست فروش</span>
 										</button>
 									</li>
 
@@ -1325,7 +1410,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <path d="M8.94444 9.72181V3.6896M8.94444 9.72181L13.3517 12.3511C13.6406 12.5235 14 12.3057 14 11.9583V1.45309C14 1.10571 13.6406 0.88793 13.3517 1.06028L8.94444 3.6896M8.94444 9.72181H3.88889M8.94444 3.6896H3.88889C2.2934 3.6896 1 5.03996 1 6.70571C1 8.37143 2.2934 9.72181 3.88889 9.72181M3.88889 9.72181L4.43573 13.7182C4.53636 14.4537 5.13968 15 5.85128 15C6.72144 15 7.38993 14.1954 7.26687 13.296L6.77778 9.72181L3.88889 9.72181Z" stroke="currentColor"/>
 </svg>
 </span>
-											<span>Marketing enquiry</span>
+											<span>درخواست همکاری بازاریابی</span>
 										</button>
 									</li>
 
@@ -1337,7 +1422,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <path d="M0.5 13C0.5 13.2761 0.723858 13.5 1 13.5C1.27614 13.5 1.5 13.2761 1.5 13H1H0.5ZM9.40909 13C9.40909 13.2761 9.63295 13.5 9.90909 13.5C10.1852 13.5 10.4091 13.2761 10.4091 13H9.90909H9.40909ZM8.13636 9.11765C8.13636 9.39379 8.36022 9.61765 8.63636 9.61765C8.91251 9.61765 9.13636 9.39379 9.13636 9.11765H8.63636H8.13636ZM14.5 9.44118C14.5 9.71732 14.7239 9.94118 15 9.94118C15.2761 9.94118 15.5 9.71732 15.5 9.44118H15H14.5ZM1 13H1.5V12.3529H1H0.5V13H1ZM1 12.3529H1.5C1.5 10.1197 3.27834 8.32353 5.45455 8.32353V7.82353V7.32353C2.7104 7.32353 0.5 9.58316 0.5 12.3529H1ZM5.45455 7.82353V8.32353C7.63076 8.32353 9.40909 10.1197 9.40909 12.3529H9.90909H10.4091C10.4091 9.58316 8.19869 7.32353 5.45455 7.32353V7.82353ZM9.90909 12.3529H9.40909V13H9.90909H10.4091V12.3529H9.90909ZM8.63636 9.11765H9.13636C9.13636 7.59911 10.3449 6.38235 11.8182 6.38235V5.88235V5.38235C9.77696 5.38235 8.13636 7.06261 8.13636 9.11765H8.63636ZM11.8182 5.88235V6.38235C13.2915 6.38235 14.5 7.59911 14.5 9.11765H15H15.5C15.5 7.06261 13.8594 5.38235 11.8182 5.38235V5.88235ZM15 9.11765H14.5V9.44118H15H15.5V9.11765H15ZM5.45455 7.82353V8.32353C7.1443 8.32353 8.5 6.93297 8.5 5.23529H8H7.5C7.5 6.39646 6.57637 7.32353 5.45455 7.32353V7.82353ZM8 5.23529H8.5C8.5 3.53759 7.1443 2.14706 5.45455 2.14706V2.64706V3.14706C6.57637 3.14706 7.5 4.07411 7.5 5.23529H8ZM5.45455 2.64706V2.14706C3.76476 2.14706 2.40909 3.5376 2.40909 5.23529H2.90909H3.40909C3.40909 4.0741 4.3327 3.14706 5.45455 3.14706V2.64706ZM2.90909 5.23529H2.40909C2.40909 6.93296 3.76476 8.32353 5.45455 8.32353V7.82353V7.32353C4.3327 7.32353 3.40909 6.39646 3.40909 5.23529H2.90909ZM11.8182 5.88235V6.38235C13.1565 6.38235 14.2273 5.2815 14.2273 3.94118H13.7273H13.2273C13.2273 4.74501 12.5886 5.38235 11.8182 5.38235V5.88235ZM13.7273 3.94118H14.2273C14.2273 2.60085 13.1565 1.5 11.8182 1.5V2V2.5C12.5886 2.5 13.2273 3.13734 13.2273 3.94118H13.7273ZM11.8182 2V1.5C10.4798 1.5 9.40909 2.60085 9.40909 3.94118H9.90909H10.4091C10.4091 3.13734 11.0478 2.5 11.8182 2.5V2ZM9.90909 3.94118H9.40909C9.40909 5.2815 10.4798 6.38235 11.8182 6.38235V5.88235V5.38235C11.0478 5.38235 10.4091 4.74501 10.4091 3.94118H9.90909Z" fill="currentColor"/>
 </svg>
 </span>
-											<span>Become a Void partner</span>
+											<span>همکار رسمی وید شوید</span>
 										</button>
 									</li>
 
@@ -1365,7 +1450,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 </g>
 </svg>
 </span>
-											<span>Amplifer service request</span>
+											<span>درخواست خدمات آمپلی‌فایر</span>
 										</button>
 									</li>
 
@@ -1382,7 +1467,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 						style="display: block" class="scroll-to-margin">
 						<div class="flex flex-col gap-10">
 
-															<h2 class="h3">Sales enquiry</h2>
+															<h2 class="h3">درخواست فروش</h2>
 							
 							
 <div class="wpcf7 no-js" id="wpcf7-f383-p6-o1" lang="en-US" dir="ltr" data-wpcf7-id="383">
@@ -1443,7 +1528,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 						style="display: none" class="scroll-to-margin">
 						<div class="flex flex-col gap-10">
 
-															<h2 class="h3">Marketing enquiry</h2>
+															<h2 class="h3">درخواست همکاری بازاریابی</h2>
 							
 							
 <div class="wpcf7 no-js" id="wpcf7-f740-p6-o2" lang="en-US" dir="ltr" data-wpcf7-id="740">
@@ -1490,7 +1575,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 						style="display: none" class="scroll-to-margin">
 						<div class="flex flex-col gap-10">
 
-															<h2 class="h3">Become a Void partner</h2>
+															<h2 class="h3">همکار رسمی وید شوید</h2>
 							
 							
 <div class="wpcf7 no-js" id="wpcf7-f386-p6-o3" lang="en-US" dir="ltr" data-wpcf7-id="386">
@@ -1607,7 +1692,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 						style="display: none" class="scroll-to-margin">
 						<div class="flex flex-col gap-10">
 
-															<h2 class="h3">Amplifer service request</h2>
+															<h2 class="h3">درخواست خدمات آمپلی‌فایر</h2>
 							
 							
 <div class="wpcf7 no-js" id="wpcf7-f421-p6-o5" lang="en-US" dir="ltr" data-wpcf7-id="421">
@@ -1763,7 +1848,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 		<div class="flex flex-col gap-4">
 			
-<h2 class="component-heading text-balance">Looking for something else?</h2>
+<h2 class="component-heading text-balance">دنبال مورد دیگری هستید؟</h2>
 					</div>
 
 		
@@ -1997,9 +2082,9 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 			<div class="flex-1">
 				<div class="flex gap-6 justify-between flex-col md:flex-row">
 					<div class="flex flex-col gap-2">
-						<div id="copyright-menu" class="menu-copyright-nav-container"><ul id="menu-copyright-nav" class="flex items-center gap-4 flex-wrap"><li id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-611"><a href="https://voidacoustics.com/terms/">شرایط و قوانین</a></li>
+						<div id="copyright-menu" class="menu-copyright-nav-container"><ul id="menu-copyright-nav" class="flex items-center gap-4 flex-wrap"><li id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-611"><a href="https://voidacoustics.com/terms/">شرایط و ضوابط</a></li>
 <li id="menu-item-4755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-4755"><a rel="privacy-policy" href="https://voidacoustics.com/privacy/">سیاست حفظ حریم خصوصی</a></li>
-<li id="menu-item-4754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4754"><a href="https://voidacoustics.com/cookies/">سیاست کوکی‌ها</a></li>
+<li id="menu-item-4754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4754"><a href="https://voidacoustics.com/cookies/">سیاست استفاده از کوکی‌ها</a></li>
 </ul></div>							<div>
 								تولیدکننده ثبت‌شده تجهیزات الکترونیکی: WEE/EK4517VW							</div>
 											</div>

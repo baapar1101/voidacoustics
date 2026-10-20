@@ -251,6 +251,88 @@
 				transition-duration: .01ms !important;
 			}
 		}
+		@media (max-width: 959px) {
+			html[dir="rtl"] body.side-menu-open { overflow: hidden !important; }
+			html[dir="rtl"] .site-header,
+			html[dir="rtl"] body.side-menu-open .site-header {
+				z-index: 1000 !important;
+				color: #fff !important;
+				background: rgba(7,7,7,.94) !important;
+			}
+			html[dir="rtl"] .site-header .page-width,
+			html[dir="rtl"] .site-header .page-width > .flex { height: 62px; }
+			html[dir="rtl"] #primary-menu.side-menu {
+				position: fixed !important;
+				top: 77px !important;
+				right: 8px !important;
+				bottom: 8px !important;
+				left: 8px !important;
+				width: auto !important;
+				height: calc(100dvh - 85px) !important;
+				padding: 12px 20px 26px !important;
+				border: 1px solid rgba(255,255,255,.12) !important;
+				border-top: 0 !important;
+				border-radius: 0 0 22px 22px !important;
+				background: rgba(7,7,7,.98) !important;
+				box-shadow: 0 24px 70px rgba(0,0,0,.44) !important;
+				color: #fff !important;
+				overflow: hidden !important;
+			}
+			html[dir="rtl"] #menu-main-nav {
+				position: relative !important;
+				inset: auto !important;
+				display: flex !important;
+				flex-direction: column !important;
+				align-items: stretch !important;
+				gap: 0 !important;
+				width: 100% !important;
+				height: 100% !important;
+				padding: 4px 2px 72px !important;
+				overflow-x: hidden !important;
+				overflow-y: auto !important;
+				overscroll-behavior: contain;
+				scrollbar-width: thin;
+			}
+			html[dir="rtl"] #menu-main-nav > li {
+				position: relative !important;
+				flex: 0 0 auto !important;
+				width: 100% !important;
+				border-bottom: 1px solid rgba(255,255,255,.11) !important;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a {
+				display: flex !important;
+				align-items: center !important;
+				justify-content: space-between !important;
+				min-height: 54px !important;
+				padding: 0 4px !important;
+				color: #fff !important;
+				font-size: 1.05rem !important;
+				font-weight: 620 !important;
+				line-height: 1.45 !important;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a::after {
+				content: "←";
+				color: var(--void-red);
+				font-size: 1.05rem;
+				font-weight: 700;
+				opacity: .9;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a > svg { display: none !important; }
+			html[dir="rtl"] #menu-main-nav .menu-dropdown { display: none !important; }
+			html[dir="rtl"] #primary-menu-toggle {
+				position: relative;
+				z-index: 1100;
+				color: #fff !important;
+			}
+			html[dir="rtl"] #primary-menu-toggle .menu-button span { background-color: currentColor !important; }
+			html[dir="rtl"] body.side-menu-open #primary-menu-toggle {
+				width: 42px;
+				height: 42px;
+				border-radius: 999px;
+				background: rgba(255,255,255,.09);
+			}
+			html[dir="rtl"] #primary-menu .mobile-menu-back-button { display: none !important; }
+		}
 	</style>
 	<script id="fa-image-hydration">
 		document.addEventListener('DOMContentLoaded', function () {
@@ -299,12 +381,12 @@
 	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
 	<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->
-	<title>Cyclone 10 | IP-55 Rated 10-Inch Loudspeaker | وید اکوستیکس</title>
+	<title>سایکلون ۱۰ | بلندگوی ۱۰ اینچی با رتبه IP-۵۵ | وید اکوستیکس</title>
 	<meta name="description" content="Discover Cyclone 10, an IP-55 rated 10 inch two-way بلندگو." />
 	<link rel="canonical" href="https://voidacoustics.com/products/cyclone/cyclone10//" />
 	<meta property="og:locale" content="fa_IR" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Cyclone 10 | IP-55 Rated 10-Inch Loudspeaker | وید اکوستیکس" />
+	<meta property="og:title" content="سایکلون ۱۰ | بلندگوی ۱۰ اینچی با رتبه IP-۵۵ | وید اکوستیکس" />
 	<meta property="og:description" content="Discover Cyclone 10, an IP-55 rated 10 inch two-way بلندگو." />
 	<meta property="og:url" content="https://voidacoustics.com/products/cyclone/cyclone10//" />
 	<meta property="og:site_name" content="وید اکوستیکس" />
@@ -779,7 +861,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 																		<li>
 										<a data-src="https://voidacoustics.com/wp-content/uploads/Stasys-XV2-featured-1-1024x576.jpg"
 											href="https://voidacoustics.com/products/stasys/stasysxv2/">
-											Stasys XV2										</a>
+											استاسیس XV۲										</a>
 									</li>
 																</ul>
 						</div>
@@ -1031,6 +1113,9 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 
 
+
+
+
 <aside data-wg-notranslate="" class="country-selector weglot-dropdown close_outside_click closed weglot-shortcode wg-" tabindex="0" aria-expanded="false" aria-label="تغییر زبان به انگلیسی">
 	<input id="wg_choice_fa" class="weglot_choice" type="checkbox" name="menu"/>
 	<label data-l="fa" tabindex="-1" for="wg_choice_fa" class="wgcurrent wg-li weglot-lang weglot-language flag-3 wg-fa" data-code-language="wg-fa" data-name-language="FA">
@@ -1147,7 +1232,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 	
 	
-<h3 class="component-heading text-balance">Weather-resistant performance</h3>
+<h3 class="component-heading text-balance">عملکرد مقاوم در برابر آب و هوا</h3>
 
 	
 		<div class="no-last-mb content-component content-list-check">
@@ -1192,7 +1277,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 	<div class="page-width flex flex-col gap-10 sm:gap-14">
 
 		
-<h2 class="component-heading text-balance">Cyclone 10 at a glance</h2>
+<h2 class="component-heading text-balance">سایکلون ۱۰ در یک نگاه</h2>
 
 		
 			<ul class="flex gap-y-7 sm:gap-y-16 md:gap-y-24 text-base sm:text-xl lg:text-2xl md:text-center sm:pb-8 flex-wrap justify-between">
@@ -1249,7 +1334,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 		<div class="flex flex-col gap-10 sm:gap-14 sm:px-16 site-max:px-0">
 
 			
-<h2 class="component-heading text-balance">Real world installations</h2>
+<h2 class="component-heading text-balance">پروژه‌های اجراشده</h2>
 
 			
 				<div class="splide slider-outside-arrows -mx-gutter sm:mx-0" role="group" aria-label="Gallery Slider"
@@ -1301,7 +1386,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 	
 	
-<h3 class="component-heading text-balance">Flexible installation and customisation</h3>
+<h3 class="component-heading text-balance">نصب و سفارشی‌سازی منعطف</h3>
 
 	
 		<div class="no-last-mb content-component content-list-check">
@@ -1381,7 +1466,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 	
 	
-<h3 class="component-heading text-balance">Consistent and controlled sound</h3>
+<h3 class="component-heading text-balance">صدای ثابت و کنترل شده</h3>
 
 	
 		<div class="no-last-mb content-component content-list-check">
@@ -1431,7 +1516,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Inch-Size.svg" class="w-full h-full object-contain" alt="" decoding="async" /><noscript><img src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Inch-Size.svg" class="w-full h-full object-contain" alt="" decoding="async" /></noscript>							</span>
 											</div>
 
-											<h2 class="text-2xl font-medium text-balance">Passive 10 inch two-way surface-mount loudspeaker</h2>
+											<h2 class="text-2xl font-medium text-balance">بلندگوی غیرفعال ۱۰ اینچی دوطرفه روی سطح</h2>
 					
 									</div>
 							<div class="flex flex-col gap-4 lg:pr-8">
@@ -1440,7 +1525,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Phoenix-Connectors.svg" class="w-full h-full object-contain" alt="" decoding="async" /><noscript><img src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Phoenix-Connectors.svg" class="w-full h-full object-contain" alt="" decoding="async" /></noscript>							</span>
 											</div>
 
-											<h2 class="text-2xl font-medium text-balance">Weather-resistant input glands with Phoenix connector and link-through functionality</h2>
+											<h2 class="text-2xl font-medium text-balance">غدد ورودی مقاوم در برابر آب و هوا با کانکتور فونیکس و قابلیت اتصال از طریق</h2>
 					
 									</div>
 							<div class="flex flex-col gap-4 lg:pr-8">
@@ -1449,7 +1534,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Low-Resonance.svg" class="w-full h-full object-contain" alt="" decoding="async" /><noscript><img src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Low-Resonance.svg" class="w-full h-full object-contain" alt="" decoding="async" /></noscript>							</span>
 											</div>
 
-											<h2 class="text-2xl font-medium text-balance">Low-resonance fibreglass composite construction</h2>
+											<h2 class="text-2xl font-medium text-balance">ساخت کامپوزیت فایبرگلاس کم رزونانس</h2>
 					
 									</div>
 							<div class="flex flex-col gap-4 lg:pr-8">
@@ -1458,7 +1543,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Nominal-Dispersion.svg" class="w-full h-full object-contain" alt="" decoding="async" /><noscript><img src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Nominal-Dispersion.svg" class="w-full h-full object-contain" alt="" decoding="async" /></noscript>							</span>
 											</div>
 
-											<h2 class="text-2xl font-medium text-balance">Controlled 80°H x 60°V dispersion pattern</h2>
+											<h2 class="text-2xl font-medium text-balance">الگوی پراکندگی ۸۰°H x ۶۰°V کنترل شده</h2>
 					
 									</div>
 							<div class="flex flex-col gap-4 lg:pr-8">
@@ -1467,7 +1552,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Brackets.svg" class="w-full h-full object-contain" alt="" decoding="async" /><noscript><img src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Brackets.svg" class="w-full h-full object-contain" alt="" decoding="async" /></noscript>							</span>
 											</div>
 
-											<h2 class="text-2xl font-medium text-balance">T80-style fixing points for compatibility with a wide range of mounting options</h2>
+											<h2 class="text-2xl font-medium text-balance">نقاط اتصال استاندارد T80 برای سازگاری با طیف گسترده‌ای از تجهیزات نصب</h2>
 					
 									</div>
 							<div class="flex flex-col gap-4 lg:pr-8">
@@ -1476,7 +1561,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_IP-Rating-3.svg" class="w-full h-full object-contain" alt="" decoding="async" /><noscript><img src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_IP-Rating-3.svg" class="w-full h-full object-contain" alt="" decoding="async" /></noscript>							</span>
 											</div>
 
-											<h2 class="text-2xl font-medium text-balance">Weather-protected with an IP-55 rating</h2>
+											<h2 class="text-2xl font-medium text-balance">محافظت شده در برابر آب و هوا با رتبه IP-۵۵</h2>
 					
 									</div>
 							<div class="flex flex-col gap-4 lg:pr-8">
@@ -1485,7 +1570,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_UV-Resilient.svg" class="w-full h-full object-contain" alt="" decoding="async" /><noscript><img src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_UV-Resilient.svg" class="w-full h-full object-contain" alt="" decoding="async" /></noscript>							</span>
 											</div>
 
-											<h2 class="text-2xl font-medium text-balance">UV-resilient finish</h2>
+											<h2 class="text-2xl font-medium text-balance">پوشش مقاوم در برابر اشعه ماوراء بنفش</h2>
 					
 									</div>
 							<div class="flex flex-col gap-4 lg:pr-8">
@@ -1494,7 +1579,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Colour-Custom.svg" class="w-full h-full object-contain" alt="" decoding="async" /><noscript><img src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Colour-Custom.svg" class="w-full h-full object-contain" alt="" decoding="async" /></noscript>							</span>
 											</div>
 
-											<h2 class="text-2xl font-medium text-balance">Custom RAL and KROME finishes upon request</h2>
+											<h2 class="text-2xl font-medium text-balance">رنگ‌های سفارشی رال و پرداخت کروم، بنا به سفارش</h2>
 					
 									</div>
 					</div>
@@ -1510,7 +1595,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<div class="flex gap-4 justify-between sm:items-center flex-col sm:flex-row">
 											<div>
 							
-<h2 class="component-heading text-balance">Where Cyclone 10 performs</h2>
+<h2 class="component-heading text-balance">جایی که سایکلون ۱۰ اجرا می کند</h2>
 						</div>
 														</div>
 			</div>
@@ -1673,7 +1758,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <section class="px-gutter py-14 lg:py-24 bg-surface-200">
 	<div class="page-width flex flex-col gap-12 md:gap-16">
 		
-<h2 class="component-heading text-balance">Cyclone 10 Technical Resources</h2>
+<h2 class="component-heading text-balance">سایکلون ۱۰ منابع فنی</h2>
 		<div class="flex gap-12 md:gap-24 lg:gap-32 flex-col md:flex-row" data-tabs>
 			<div class="xl:w-80 flex-none">
 				<div class="tabs-mobile-container sticky top-[var(--scrollTopOffset)]">
@@ -1745,15 +1830,15 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 														<div class="flex gap-12 lg:gap-20 flex-col lg:flex-row">
 																	<div class="flex-1 no-last-mb accordion-downloads-content list-bordered">
 										<ul>
-<li>Passive 10 inch two-way surface-mount loudspeaker</li>
-<li>Weather-resistant input glands with Phoenix connector and link-through functionality</li>
-<li>Low-resonance fibreglass composite construction</li>
-<li>Controlled 80°H x 60°V dispersion pattern</li>
+<li>بلندگوی غیرفعال ۱۰ اینچی دوطرفه روی سطح</li>
+<li>غدد ورودی مقاوم در برابر آب و هوا با کانکتور فونیکس و قابلیت اتصال از طریق</li>
+<li>ساخت کامپوزیت فایبرگلاس کم رزونانس</li>
+<li>الگوی پراکندگی ۸۰°H x ۶۰°V کنترل شده</li>
 <li>Full range reflex-loaded design</li>
 <li>Stainless steel grille and fasteners</li>
 <li>T80-style fixing points for compatibility with a wide range of mounting options</li>
-<li>Weather-protected with an IP-55 rating</li>
-<li>UV-resilient finish</li>
+<li>محافظت شده در برابر آب و هوا با رتبه IP-۵۵</li>
+<li>پوشش مقاوم در برابر اشعه ماوراء بنفش</li>
 <li>Available as standard in red with a black grille, black with a black grille, and white with a white grille</li>
 <li>Custom RAL and KROME finishes are available upon request</li>
 </ul>
@@ -2009,7 +2094,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 											</div>
 				
 				
-<h3 class="component-heading text-balance h4">BarYard at Kimpton Maa-Lai, Bangkok</h3>
+<h3 class="component-heading text-balance h4">باریارد در کیمپتون ما-لای، بانکوک</h3>
 				
 							</div>
 		</div>
@@ -2034,7 +2119,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 											</div>
 				
 				
-<h3 class="component-heading text-balance h4">Bayz Hilton Beach, Tel Aviv</h3>
+<h3 class="component-heading text-balance h4">بیز هیلتون بیچ، تل‌آویو</h3>
 				
 							</div>
 		</div>
@@ -2059,7 +2144,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 											</div>
 				
 				
-<h3 class="component-heading text-balance h4">Gilgamesh, London</h3>
+<h3 class="component-heading text-balance h4">گیلگمش، لندن</h3>
 				
 							</div>
 		</div>
@@ -2084,7 +2169,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 											</div>
 				
 				
-<h3 class="component-heading text-balance h4">Noku Beach House, Bali</h3>
+<h3 class="component-heading text-balance h4">نوکو بیچ هاوس، بالی</h3>
 				
 							</div>
 		</div>
@@ -2273,9 +2358,9 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 			<div class="flex-1">
 				<div class="flex gap-6 justify-between flex-col md:flex-row">
 					<div class="flex flex-col gap-2">
-						<div id="copyright-menu" class="menu-copyright-nav-container"><ul id="menu-copyright-nav" class="flex items-center gap-4 flex-wrap"><li id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-611"><a href="https://voidacoustics.com/terms/">شرایط و قوانین</a></li>
+						<div id="copyright-menu" class="menu-copyright-nav-container"><ul id="menu-copyright-nav" class="flex items-center gap-4 flex-wrap"><li id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-611"><a href="https://voidacoustics.com/terms/">شرایط و ضوابط</a></li>
 <li id="menu-item-4755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-4755"><a rel="privacy-policy" href="https://voidacoustics.com/privacy/">سیاست حفظ حریم خصوصی</a></li>
-<li id="menu-item-4754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4754"><a href="https://voidacoustics.com/cookies/">سیاست کوکی‌ها</a></li>
+<li id="menu-item-4754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4754"><a href="https://voidacoustics.com/cookies/">سیاست استفاده از کوکی‌ها</a></li>
 </ul></div>							<div>
 								تولیدکننده ثبت‌شده تجهیزات الکترونیکی: WEE/EK4517VW							</div>
 											</div>

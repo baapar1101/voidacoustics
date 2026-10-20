@@ -251,6 +251,88 @@
 				transition-duration: .01ms !important;
 			}
 		}
+		@media (max-width: 959px) {
+			html[dir="rtl"] body.side-menu-open { overflow: hidden !important; }
+			html[dir="rtl"] .site-header,
+			html[dir="rtl"] body.side-menu-open .site-header {
+				z-index: 1000 !important;
+				color: #fff !important;
+				background: rgba(7,7,7,.94) !important;
+			}
+			html[dir="rtl"] .site-header .page-width,
+			html[dir="rtl"] .site-header .page-width > .flex { height: 62px; }
+			html[dir="rtl"] #primary-menu.side-menu {
+				position: fixed !important;
+				top: 77px !important;
+				right: 8px !important;
+				bottom: 8px !important;
+				left: 8px !important;
+				width: auto !important;
+				height: calc(100dvh - 85px) !important;
+				padding: 12px 20px 26px !important;
+				border: 1px solid rgba(255,255,255,.12) !important;
+				border-top: 0 !important;
+				border-radius: 0 0 22px 22px !important;
+				background: rgba(7,7,7,.98) !important;
+				box-shadow: 0 24px 70px rgba(0,0,0,.44) !important;
+				color: #fff !important;
+				overflow: hidden !important;
+			}
+			html[dir="rtl"] #menu-main-nav {
+				position: relative !important;
+				inset: auto !important;
+				display: flex !important;
+				flex-direction: column !important;
+				align-items: stretch !important;
+				gap: 0 !important;
+				width: 100% !important;
+				height: 100% !important;
+				padding: 4px 2px 72px !important;
+				overflow-x: hidden !important;
+				overflow-y: auto !important;
+				overscroll-behavior: contain;
+				scrollbar-width: thin;
+			}
+			html[dir="rtl"] #menu-main-nav > li {
+				position: relative !important;
+				flex: 0 0 auto !important;
+				width: 100% !important;
+				border-bottom: 1px solid rgba(255,255,255,.11) !important;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a {
+				display: flex !important;
+				align-items: center !important;
+				justify-content: space-between !important;
+				min-height: 54px !important;
+				padding: 0 4px !important;
+				color: #fff !important;
+				font-size: 1.05rem !important;
+				font-weight: 620 !important;
+				line-height: 1.45 !important;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a::after {
+				content: "←";
+				color: var(--void-red);
+				font-size: 1.05rem;
+				font-weight: 700;
+				opacity: .9;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a > svg { display: none !important; }
+			html[dir="rtl"] #menu-main-nav .menu-dropdown { display: none !important; }
+			html[dir="rtl"] #primary-menu-toggle {
+				position: relative;
+				z-index: 1100;
+				color: #fff !important;
+			}
+			html[dir="rtl"] #primary-menu-toggle .menu-button span { background-color: currentColor !important; }
+			html[dir="rtl"] body.side-menu-open #primary-menu-toggle {
+				width: 42px;
+				height: 42px;
+				border-radius: 999px;
+				background: rgba(255,255,255,.09);
+			}
+			html[dir="rtl"] #primary-menu .mobile-menu-back-button { display: none !important; }
+		}
 	</style>
 	<script id="fa-image-hydration">
 		document.addEventListener('DOMContentLoaded', function () {
@@ -299,12 +381,12 @@
 	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
 	<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->
-	<title>Understanding سیستم‌های صوتی | وید اکوستیکس</title>
+	<title>درک سیستم های صوتی | وید اکوستیکس</title>
 	<meta name="description" content="مقدمه‌ای جامع بر طراحی سیستم‌های صوتی و اصول علمی و مهندسی دستیابی به صدایی استثنایی." />
 	<link rel="canonical" href="https://voidacoustics.com/understandsound//" />
 	<meta property="og:locale" content="fa_IR" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Understanding سیستم‌های صوتی | وید اکوستیکس" />
+	<meta property="og:title" content="درک سیستم های صوتی | وید اکوستیکس" />
 	<meta property="og:description" content="مقدمه‌ای جامع بر طراحی سیستم‌های صوتی و اصول علمی و مهندسی دستیابی به صدایی استثنایی." />
 	<meta property="og:url" content="https://voidacoustics.com/understandsound//" />
 	<meta property="og:site_name" content="وید اکوستیکس" />
@@ -779,7 +861,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 																		<li>
 										<a data-src="https://voidacoustics.com/wp-content/uploads/Stasys-XV2-featured-1-1024x576.jpg"
 											href="https://voidacoustics.com/products/stasys/stasysxv2/">
-											Stasys XV2										</a>
+											استاسیس XV۲										</a>
 									</li>
 																</ul>
 						</div>
@@ -1031,6 +1113,9 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 
 
+
+
+
 <aside data-wg-notranslate="" class="country-selector weglot-dropdown close_outside_click closed weglot-shortcode wg-" tabindex="0" aria-expanded="false" aria-label="تغییر زبان به انگلیسی">
 	<input id="wg_choice_fa" class="weglot_choice" type="checkbox" name="menu"/>
 	<label data-l="fa" tabindex="-1" for="wg_choice_fa" class="wgcurrent wg-li weglot-lang weglot-language flag-3 wg-fa" data-code-language="wg-fa" data-name-language="FA">
@@ -1131,7 +1216,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 	
 	
-<h2 class="component-heading text-balance h3">Great sound is designed with intention</h2>
+<h2 class="component-heading text-balance h3">صدای عالی، آگاهانه طراحی می‌شود</h2>
 
 	
 		<div class="no-last-mb content-component content-list-check">
@@ -1191,7 +1276,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <section class="px-gutter py-24 tabbed-features-gradient text-white">
 	<div class="page-width flex flex-col gap-14">
 		
-<h2 class="component-heading text-balance">System components</h2>
+<h2 class="component-heading text-balance">اجزای سیستم</h2>
 		<div class="flex flex-col sm:flex-row gap-8 sm:gap-0" data-tabs>
 			<div class="md:w-80 md:flex-none sm:pr-6 hidden md:block">
 				<ul class="flex sm:flex-col gap-2 sm:gap-1 tabbed-features-nav -mx-gutter sm:mx-0 px-gutter sm:px-0 overflow-x-auto sm:overflow-hidden">
@@ -1287,7 +1372,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<div class="p-10 w-full flex flex-col gap-6 md:gap-10">
 									<div class="flex flex-col gap-4">
 																					<div class="text-eyebrow text-primary">Main loudspeakers</div>
-																															<h3 class="text-2xl font-medium">The core of the system</h3>
+																															<h3 class="text-2xl font-medium">هسته سیستم</h3>
 																			</div>
 																			<div class="no-last-mb content-component content-list-check">
 											<p>The main loudspeakers are typically full-range and define much of the system’s character, output and coverage. They may be used either side of a stage, distributed around a hospitality space or installed as part of a wider venue system.</p>
@@ -1316,7 +1401,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<div class="p-10 w-full flex flex-col gap-6 md:gap-10">
 									<div class="flex flex-col gap-4">
 																					<div class="text-eyebrow text-primary">Fill and delay loudspeakers</div>
-																															<h3 class="text-2xl font-medium">Coverage where it&#039;s needed</h3>
+																															<h3 class="text-2xl font-medium">پوشش در جایی که لازم است</h3>
 																			</div>
 																			<div class="no-last-mb content-component content-list-check">
 											<p>In larger or more complex spaces, the main loudspeakers may not cover every listening area evenly. Fill loudspeakers support areas that need extra coverage, while delay loudspeakers help keep sound clear and aligned throughout a room or audience area.</p>
@@ -1344,7 +1429,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<div class="p-10 w-full flex flex-col gap-6 md:gap-10">
 									<div class="flex flex-col gap-4">
 																					<div class="text-eyebrow text-primary">ساب‌ووفرها</div>
-																															<h3 class="text-2xl font-medium">The low-frequency foundation</h3>
+																															<h3 class="text-2xl font-medium">پایه فرکانس پایین</h3>
 																			</div>
 																			<div class="no-last-mb content-component content-list-check">
 											<p>Subwoofers reproduce the lowest frequencies in a system. They add weight, depth and physical impact that most full-range loudspeakers cannot deliver on their own, especially in clubs, live events and high-output hospitality spaces.</p>
@@ -1373,7 +1458,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<div class="p-10 w-full flex flex-col gap-6 md:gap-10">
 									<div class="flex flex-col gap-4">
 																					<div class="text-eyebrow text-primary">Amplification</div>
-																															<h3 class="text-2xl font-medium">Power behind the system</h3>
+																															<h3 class="text-2xl font-medium">قدرت پشت سیستم</h3>
 																			</div>
 																			<div class="no-last-mb content-component content-list-check">
 											<p>Amplifiers take the audio signal and provide the power needed to drive loudspeakers safely and consistently. The right amplifier choice affects output, reliability, efficiency and long-term system performance.</p>
@@ -1402,7 +1487,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<div class="p-10 w-full flex flex-col gap-6 md:gap-10">
 									<div class="flex flex-col gap-4">
 																					<div class="text-eyebrow text-primary">DSP, zoning and control</div>
-																															<h3 class="text-2xl font-medium">Making the system work</h3>
+																															<h3 class="text-2xl font-medium">کارکردن سیستم</h3>
 																			</div>
 																			<div class="no-last-mb content-component content-list-check">
 											<p>DSP shapes the audio signal before it reaches the loudspeakers, while zoning and control make it easier to manage sources, volume levels and day-to-day operation across a venue.</p>
@@ -1431,7 +1516,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 		<div class="flex flex-col gap-4">
 			
-<h2 class="component-heading text-balance">Example applications</h2>
+<h2 class="component-heading text-balance">نمونه‌های کاربرد</h2>
 					</div>
 
 		
@@ -1441,7 +1526,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 					<div class="rounded-2xl overflow-hidden flex flex-col">
 						<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" width="395" height="215" data-src="https://voidacoustics.com/wp-content/uploads/Hospitality-card-air-395x215.jpg" class="w-full" alt="سری Air" decoding="async" data-srcset="https://voidacoustics.com/wp-content/uploads/Hospitality-card-air-395x215.jpg 395w, https://voidacoustics.com/wp-content/uploads/Hospitality-card-air-300x163.jpg 300w, https://voidacoustics.com/wp-content/uploads/Hospitality-card-air-768x418.jpg 768w, https://voidacoustics.com/wp-content/uploads/Hospitality-card-air-790x430.jpg 790w, https://voidacoustics.com/wp-content/uploads/Hospitality-card-air.jpg 1000w" data-sizes="(max-width: 395px) 100vw, 395px" /><noscript><img width="395" height="215" src="https://voidacoustics.com/wp-content/uploads/Hospitality-card-air-395x215.jpg" class="w-full" alt="Air Series" decoding="async" srcset="https://voidacoustics.com/wp-content/uploads/Hospitality-card-air-395x215.jpg 395w, https://voidacoustics.com/wp-content/uploads/Hospitality-card-air-300x163.jpg 300w, https://voidacoustics.com/wp-content/uploads/Hospitality-card-air-768x418.jpg 768w, https://voidacoustics.com/wp-content/uploads/Hospitality-card-air-790x430.jpg 790w, https://voidacoustics.com/wp-content/uploads/Hospitality-card-air.jpg 1000w" sizes="(max-width: 395px) 100vw, 395px" /></noscript>						<div class="bg-surface-200 p-6 lg:p-10 flex flex-col items-center text-center gap-8 flex-1 justify-between">
 							<div class="flex flex-col gap-4">
-								<h3>Relaxed dining spaces</h3>
+								<h3>فضاهای غذاخوری آرام</h3>
 								<div class="no-last-mb">
 									<p>Even, comfortable sound that supports conversation while adding atmosphere across restaurants and hospitality spaces.</p>
 								</div>
@@ -1460,7 +1545,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 					<div class="rounded-2xl overflow-hidden flex flex-col">
 						<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" width="395" height="215" data-src="https://voidacoustics.com/wp-content/uploads/nightclubsbars-card3-395x215.jpg" class="w-full" alt="سری Stasys" decoding="async" data-srcset="https://voidacoustics.com/wp-content/uploads/nightclubsbars-card3-395x215.jpg 395w, https://voidacoustics.com/wp-content/uploads/nightclubsbars-card3-300x163.jpg 300w, https://voidacoustics.com/wp-content/uploads/nightclubsbars-card3-1024x557.jpg 1024w, https://voidacoustics.com/wp-content/uploads/nightclubsbars-card3-768x418.jpg 768w, https://voidacoustics.com/wp-content/uploads/nightclubsbars-card3-1536x836.jpg 1536w, https://voidacoustics.com/wp-content/uploads/nightclubsbars-card3-2048x1114.jpg 2048w, https://voidacoustics.com/wp-content/uploads/nightclubsbars-card3-790x430.jpg 790w" data-sizes="(max-width: 395px) 100vw, 395px" /><noscript><img width="395" height="215" src="https://voidacoustics.com/wp-content/uploads/nightclubsbars-card3-395x215.jpg" class="w-full" alt="Stasys Series" decoding="async" srcset="https://voidacoustics.com/wp-content/uploads/nightclubsbars-card3-395x215.jpg 395w, https://voidacoustics.com/wp-content/uploads/nightclubsbars-card3-300x163.jpg 300w, https://voidacoustics.com/wp-content/uploads/nightclubsbars-card3-1024x557.jpg 1024w, https://voidacoustics.com/wp-content/uploads/nightclubsbars-card3-768x418.jpg 768w, https://voidacoustics.com/wp-content/uploads/nightclubsbars-card3-1536x836.jpg 1536w, https://voidacoustics.com/wp-content/uploads/nightclubsbars-card3-2048x1114.jpg 2048w, https://voidacoustics.com/wp-content/uploads/nightclubsbars-card3-790x430.jpg 790w" sizes="(max-width: 395px) 100vw, 395px" /></noscript>						<div class="bg-surface-200 p-6 lg:p-10 flex flex-col items-center text-center gap-8 flex-1 justify-between">
 							<div class="flex flex-col gap-4">
-								<h3>High-energy club venues</h3>
+								<h3>سالن های باشگاه پر انرژی</h3>
 								<div class="no-last-mb">
 									<p>Full-range, high-output sound for music-led spaces where low-end energy, clarity and coverage shape the experience.</p>
 								</div>
@@ -1479,7 +1564,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 					<div class="rounded-2xl overflow-hidden flex flex-col">
 						<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" width="395" height="215" data-src="https://voidacoustics.com/wp-content/uploads/Retail-card1-395x215.jpg" class="w-full" alt="سری Air" decoding="async" data-srcset="https://voidacoustics.com/wp-content/uploads/Retail-card1-395x215.jpg 395w, https://voidacoustics.com/wp-content/uploads/Retail-card1-300x163.jpg 300w, https://voidacoustics.com/wp-content/uploads/Retail-card1-1024x557.jpg 1024w, https://voidacoustics.com/wp-content/uploads/Retail-card1-768x418.jpg 768w, https://voidacoustics.com/wp-content/uploads/Retail-card1-1536x836.jpg 1536w, https://voidacoustics.com/wp-content/uploads/Retail-card1-2048x1114.jpg 2048w, https://voidacoustics.com/wp-content/uploads/Retail-card1-790x430.jpg 790w" data-sizes="(max-width: 395px) 100vw, 395px" /><noscript><img width="395" height="215" src="https://voidacoustics.com/wp-content/uploads/Retail-card1-395x215.jpg" class="w-full" alt="Air Series" decoding="async" srcset="https://voidacoustics.com/wp-content/uploads/Retail-card1-395x215.jpg 395w, https://voidacoustics.com/wp-content/uploads/Retail-card1-300x163.jpg 300w, https://voidacoustics.com/wp-content/uploads/Retail-card1-1024x557.jpg 1024w, https://voidacoustics.com/wp-content/uploads/Retail-card1-768x418.jpg 768w, https://voidacoustics.com/wp-content/uploads/Retail-card1-1536x836.jpg 1536w, https://voidacoustics.com/wp-content/uploads/Retail-card1-2048x1114.jpg 2048w, https://voidacoustics.com/wp-content/uploads/Retail-card1-790x430.jpg 790w" sizes="(max-width: 395px) 100vw, 395px" /></noscript>						<div class="bg-surface-200 p-6 lg:p-10 flex flex-col items-center text-center gap-8 flex-1 justify-between">
 							<div class="flex flex-col gap-4">
-								<h3>Branded retail environments</h3>
+								<h3>محیط های خرده‌فروشی مارک دار</h3>
 								<div class="no-last-mb">
 									<p>Controlled audio for retail spaces where atmosphere, brand identity and customer experience all need to work together.</p>
 								</div>
@@ -1505,7 +1590,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 	<div class="page-width flex flex-col gap-10 sm:gap-14">
 
 		
-<h2 class="component-heading text-balance">Why a great system matters</h2>
+<h2 class="component-heading text-balance">چرا یک سیستم صوتی عالی اهمیت دارد؟</h2>
 
 		
 			<ul class="flex gap-y-7 sm:gap-y-16 md:gap-y-24 text-base sm:text-xl lg:text-2xl md:text-center sm:pb-8 flex-wrap justify-between">
@@ -1591,7 +1676,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 	
 	
-<h3 class="component-heading text-balance">Different uses need different systems</h3>
+<h3 class="component-heading text-balance">استفاده های مختلف به سیستم های متفاوتی نیاز دارند</h3>
 
 	
 		<div class="no-last-mb content-component content-list-check">
@@ -1670,7 +1755,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 	
 	
-<h3 class="component-heading text-balance">Scale changes the system design</h3>
+<h3 class="component-heading text-balance">مقیاس طراحی سیستم را تغییر می دهد</h3>
 
 	
 		<div class="no-last-mb content-component content-list-check">
@@ -1750,7 +1835,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 	
 	
-<h3 class="component-heading text-balance">Outdoor solutions need careful consideration</h3>
+<h3 class="component-heading text-balance">راه حل های فضای باز نیاز به بررسی دقیق دارند</h3>
 
 	
 		<div class="no-last-mb content-component content-list-check">
@@ -2360,9 +2445,9 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 			<div class="flex-1">
 				<div class="flex gap-6 justify-between flex-col md:flex-row">
 					<div class="flex flex-col gap-2">
-						<div id="copyright-menu" class="menu-copyright-nav-container"><ul id="menu-copyright-nav" class="flex items-center gap-4 flex-wrap"><li id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-611"><a href="https://voidacoustics.com/terms/">شرایط و قوانین</a></li>
+						<div id="copyright-menu" class="menu-copyright-nav-container"><ul id="menu-copyright-nav" class="flex items-center gap-4 flex-wrap"><li id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-611"><a href="https://voidacoustics.com/terms/">شرایط و ضوابط</a></li>
 <li id="menu-item-4755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-4755"><a rel="privacy-policy" href="https://voidacoustics.com/privacy/">سیاست حفظ حریم خصوصی</a></li>
-<li id="menu-item-4754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4754"><a href="https://voidacoustics.com/cookies/">سیاست کوکی‌ها</a></li>
+<li id="menu-item-4754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4754"><a href="https://voidacoustics.com/cookies/">سیاست استفاده از کوکی‌ها</a></li>
 </ul></div>							<div>
 								تولیدکننده ثبت‌شده تجهیزات الکترونیکی: WEE/EK4517VW							</div>
 											</div>

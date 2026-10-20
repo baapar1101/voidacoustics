@@ -251,6 +251,88 @@
 				transition-duration: .01ms !important;
 			}
 		}
+		@media (max-width: 959px) {
+			html[dir="rtl"] body.side-menu-open { overflow: hidden !important; }
+			html[dir="rtl"] .site-header,
+			html[dir="rtl"] body.side-menu-open .site-header {
+				z-index: 1000 !important;
+				color: #fff !important;
+				background: rgba(7,7,7,.94) !important;
+			}
+			html[dir="rtl"] .site-header .page-width,
+			html[dir="rtl"] .site-header .page-width > .flex { height: 62px; }
+			html[dir="rtl"] #primary-menu.side-menu {
+				position: fixed !important;
+				top: 77px !important;
+				right: 8px !important;
+				bottom: 8px !important;
+				left: 8px !important;
+				width: auto !important;
+				height: calc(100dvh - 85px) !important;
+				padding: 12px 20px 26px !important;
+				border: 1px solid rgba(255,255,255,.12) !important;
+				border-top: 0 !important;
+				border-radius: 0 0 22px 22px !important;
+				background: rgba(7,7,7,.98) !important;
+				box-shadow: 0 24px 70px rgba(0,0,0,.44) !important;
+				color: #fff !important;
+				overflow: hidden !important;
+			}
+			html[dir="rtl"] #menu-main-nav {
+				position: relative !important;
+				inset: auto !important;
+				display: flex !important;
+				flex-direction: column !important;
+				align-items: stretch !important;
+				gap: 0 !important;
+				width: 100% !important;
+				height: 100% !important;
+				padding: 4px 2px 72px !important;
+				overflow-x: hidden !important;
+				overflow-y: auto !important;
+				overscroll-behavior: contain;
+				scrollbar-width: thin;
+			}
+			html[dir="rtl"] #menu-main-nav > li {
+				position: relative !important;
+				flex: 0 0 auto !important;
+				width: 100% !important;
+				border-bottom: 1px solid rgba(255,255,255,.11) !important;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a {
+				display: flex !important;
+				align-items: center !important;
+				justify-content: space-between !important;
+				min-height: 54px !important;
+				padding: 0 4px !important;
+				color: #fff !important;
+				font-size: 1.05rem !important;
+				font-weight: 620 !important;
+				line-height: 1.45 !important;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a::after {
+				content: "←";
+				color: var(--void-red);
+				font-size: 1.05rem;
+				font-weight: 700;
+				opacity: .9;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a > svg { display: none !important; }
+			html[dir="rtl"] #menu-main-nav .menu-dropdown { display: none !important; }
+			html[dir="rtl"] #primary-menu-toggle {
+				position: relative;
+				z-index: 1100;
+				color: #fff !important;
+			}
+			html[dir="rtl"] #primary-menu-toggle .menu-button span { background-color: currentColor !important; }
+			html[dir="rtl"] body.side-menu-open #primary-menu-toggle {
+				width: 42px;
+				height: 42px;
+				border-radius: 999px;
+				background: rgba(255,255,255,.09);
+			}
+			html[dir="rtl"] #primary-menu .mobile-menu-back-button { display: none !important; }
+		}
 	</style>
 	<script id="fa-image-hydration">
 		document.addEventListener('DOMContentLoaded', function () {
@@ -299,12 +381,12 @@
 	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
 	<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->
-	<title>Lanna Festival 2023 | Festival Sound System, Gijón | وید اکوستیکس</title>
+	<title>فستیوال لانا ۲۰۲۳ | سیستم صوتی جشنواره، گیخون | وید اکوستیکس</title>
 	<meta name="description" content="A وید اکوستیکس سیستم صوتی delivering clarity, precision and powerful low-end performance at Lanna Festival, Gijón." />
 	<link rel="canonical" href="https://voidacoustics.com/insights/lanna2023//" />
 	<meta property="og:locale" content="fa_IR" />
 	<meta property="og:type" content="article" />
-	<meta property="og:title" content="Lanna Festival 2023 | Festival Sound System, Gijón | وید اکوستیکس" />
+	<meta property="og:title" content="فستیوال لانا ۲۰۲۳ | سیستم صوتی جشنواره، گیخون | وید اکوستیکس" />
 	<meta property="og:description" content="A وید اکوستیکس سیستم صوتی delivering clarity, precision and powerful low-end performance at Lanna Festival, Gijón." />
 	<meta property="og:url" content="https://voidacoustics.com/insights/lanna2023//" />
 	<meta property="og:site_name" content="وید اکوستیکس" />
@@ -833,7 +915,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 																		<li>
 										<a data-src="https://voidacoustics.com/wp-content/uploads/Stasys-XV2-featured-1-1024x576.jpg"
 											href="https://voidacoustics.com/products/stasys/stasysxv2/">
-											Stasys XV2										</a>
+											استاسیس XV۲										</a>
 									</li>
 																</ul>
 						</div>
@@ -1085,6 +1167,9 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 
 
+
+
+
 <aside data-wg-notranslate="" class="country-selector weglot-dropdown close_outside_click closed weglot-shortcode wg-" tabindex="0" aria-expanded="false" aria-label="تغییر زبان به انگلیسی">
 	<input id="wg_choice_fa" class="weglot_choice" type="checkbox" name="menu"/>
 	<label data-l="fa" tabindex="-1" for="wg_choice_fa" class="wgcurrent wg-li weglot-lang weglot-language flag-3 wg-fa" data-code-language="wg-fa" data-name-language="FA">
@@ -1140,7 +1225,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 			
 		
 		
-<h1 class="component-heading text-balance uppercase tracking-widest">Lanna Festival 2023</h1>
+<h1 class="component-heading text-balance uppercase tracking-widest">فستیوال لانا ۲۰۲۳</h1>
 
 		
 	</div>
@@ -1160,7 +1245,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 							
 <div class="wp-block-group is-layout-constrained wp-block-group-is-layout-constrained">
 <div class="wp-block-group is-layout-constrained wp-block-group-is-layout-constrained">
-<h3 id="void-acoustics-supercharges-the-main-stage-at-lanna-festival" class="wp-block-heading">Void Acoustics supercharges the main stage at Lanna Festival</h3>
+<h3 id="void-acoustics-supercharges-the-main-stage-at-lanna-festival" class="wp-block-heading">وید اکوستیکس صحنه اصلی را در جشنواره لانا شارژ می کند</h3>
 
 
 
@@ -1177,7 +1262,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
 <div class="wp-block-group block-system-includes block-system-includes--sticky is-layout-constrained wp-block-group-is-layout-constrained">
-<h4 id="system-includes" class="wp-block-heading">System includes</h4>
+<h4 id="system-includes" class="wp-block-heading">اجزای سیستم</h4>
 
 
 
@@ -1252,7 +1337,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 
 
-<h3 id="air-motions-deliver-crisp-sounds" class="wp-block-heading">Air Motions deliver crisp sounds</h3>
+<h3 id="air-motions-deliver-crisp-sounds" class="wp-block-heading">حرکات ایر صداهای واضحی را ارائه می دهد</h3>
 
 
 
@@ -1272,7 +1357,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 
 
-<h3 id="building-on-a-successful-debut" class="wp-block-heading">Building on a successful debut</h3>
+<h3 id="building-on-a-successful-debut" class="wp-block-heading">بر اساس یک اولین کار موفق</h3>
 
 
 
@@ -1331,7 +1416,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <section class="py-14 lg:py-24 px-gutter">
 	<div class="page-width flex flex-col gap-10 sm:gap-12">
 		
-<h2 class="component-heading text-balance">Explore featured products</h2>
+<h2 class="component-heading text-balance">محصولات منتخب را ببینید</h2>
 
 		<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 sm:gap-y-12">
 
@@ -1392,7 +1477,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<div class="flex gap-4 justify-between sm:items-center flex-col sm:flex-row">
 											<div>
 							
-<h2 class="component-heading text-balance">Browse more real world success stories</h2>
+<h2 class="component-heading text-balance">پروژه‌های موفق بیشتری را ببینید</h2>
 						</div>
 																<div class="flex-none">
 							
@@ -1429,7 +1514,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 											</div>
 				
 				
-<h3 class="component-heading text-balance h4">Boomtown Fair 2026</h3>
+<h3 class="component-heading text-balance h4">بوم‌تاون ۲۰۲۶</h3>
 				
 							</div>
 		</div>
@@ -1454,7 +1539,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 											</div>
 				
 				
-<h3 class="component-heading text-balance h4">Basilica de Lourdes, Santiago</h3>
+<h3 class="component-heading text-balance h4">باسیلیکای لورد، سانتیاگو</h3>
 				
 							</div>
 		</div>
@@ -1479,7 +1564,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 											</div>
 				
 				
-<h3 class="component-heading text-balance h4">Bazique Festival 2025</h3>
+<h3 class="component-heading text-balance h4">فستیوال بازیک ۲۰۲۵</h3>
 				
 							</div>
 		</div>
@@ -1504,7 +1589,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 											</div>
 				
 				
-<h3 class="component-heading text-balance h4">DJ Sally, Guangzhou</h3>
+<h3 class="component-heading text-balance h4">دی‌جی سالی، گوانگژو</h3>
 				
 							</div>
 		</div>
@@ -1529,7 +1614,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 											</div>
 				
 				
-<h3 class="component-heading text-balance h4">Vision &#038; Colour Music Festival 2024</h3>
+<h3 class="component-heading text-balance h4">فستیوال موسیقی ویژن اند کالر ۲۰۲۴</h3>
 				
 							</div>
 		</div>
@@ -1554,7 +1639,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 											</div>
 				
 				
-<h3 class="component-heading text-balance h4">Wolfkop Weekender 2025</h3>
+<h3 class="component-heading text-balance h4">وُلف‌کاپ ویکندر ۲۰۲۵</h3>
 				
 							</div>
 		</div>
@@ -1743,9 +1828,9 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 			<div class="flex-1">
 				<div class="flex gap-6 justify-between flex-col md:flex-row">
 					<div class="flex flex-col gap-2">
-						<div id="copyright-menu" class="menu-copyright-nav-container"><ul id="menu-copyright-nav" class="flex items-center gap-4 flex-wrap"><li id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-611"><a href="https://voidacoustics.com/terms/">شرایط و قوانین</a></li>
+						<div id="copyright-menu" class="menu-copyright-nav-container"><ul id="menu-copyright-nav" class="flex items-center gap-4 flex-wrap"><li id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-611"><a href="https://voidacoustics.com/terms/">شرایط و ضوابط</a></li>
 <li id="menu-item-4755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-4755"><a rel="privacy-policy" href="https://voidacoustics.com/privacy/">سیاست حفظ حریم خصوصی</a></li>
-<li id="menu-item-4754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4754"><a href="https://voidacoustics.com/cookies/">سیاست کوکی‌ها</a></li>
+<li id="menu-item-4754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4754"><a href="https://voidacoustics.com/cookies/">سیاست استفاده از کوکی‌ها</a></li>
 </ul></div>							<div>
 								تولیدکننده ثبت‌شده تجهیزات الکترونیکی: WEE/EK4517VW							</div>
 											</div>

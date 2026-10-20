@@ -251,6 +251,88 @@
 				transition-duration: .01ms !important;
 			}
 		}
+		@media (max-width: 959px) {
+			html[dir="rtl"] body.side-menu-open { overflow: hidden !important; }
+			html[dir="rtl"] .site-header,
+			html[dir="rtl"] body.side-menu-open .site-header {
+				z-index: 1000 !important;
+				color: #fff !important;
+				background: rgba(7,7,7,.94) !important;
+			}
+			html[dir="rtl"] .site-header .page-width,
+			html[dir="rtl"] .site-header .page-width > .flex { height: 62px; }
+			html[dir="rtl"] #primary-menu.side-menu {
+				position: fixed !important;
+				top: 77px !important;
+				right: 8px !important;
+				bottom: 8px !important;
+				left: 8px !important;
+				width: auto !important;
+				height: calc(100dvh - 85px) !important;
+				padding: 12px 20px 26px !important;
+				border: 1px solid rgba(255,255,255,.12) !important;
+				border-top: 0 !important;
+				border-radius: 0 0 22px 22px !important;
+				background: rgba(7,7,7,.98) !important;
+				box-shadow: 0 24px 70px rgba(0,0,0,.44) !important;
+				color: #fff !important;
+				overflow: hidden !important;
+			}
+			html[dir="rtl"] #menu-main-nav {
+				position: relative !important;
+				inset: auto !important;
+				display: flex !important;
+				flex-direction: column !important;
+				align-items: stretch !important;
+				gap: 0 !important;
+				width: 100% !important;
+				height: 100% !important;
+				padding: 4px 2px 72px !important;
+				overflow-x: hidden !important;
+				overflow-y: auto !important;
+				overscroll-behavior: contain;
+				scrollbar-width: thin;
+			}
+			html[dir="rtl"] #menu-main-nav > li {
+				position: relative !important;
+				flex: 0 0 auto !important;
+				width: 100% !important;
+				border-bottom: 1px solid rgba(255,255,255,.11) !important;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a {
+				display: flex !important;
+				align-items: center !important;
+				justify-content: space-between !important;
+				min-height: 54px !important;
+				padding: 0 4px !important;
+				color: #fff !important;
+				font-size: 1.05rem !important;
+				font-weight: 620 !important;
+				line-height: 1.45 !important;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a::after {
+				content: "←";
+				color: var(--void-red);
+				font-size: 1.05rem;
+				font-weight: 700;
+				opacity: .9;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a > svg { display: none !important; }
+			html[dir="rtl"] #menu-main-nav .menu-dropdown { display: none !important; }
+			html[dir="rtl"] #primary-menu-toggle {
+				position: relative;
+				z-index: 1100;
+				color: #fff !important;
+			}
+			html[dir="rtl"] #primary-menu-toggle .menu-button span { background-color: currentColor !important; }
+			html[dir="rtl"] body.side-menu-open #primary-menu-toggle {
+				width: 42px;
+				height: 42px;
+				border-radius: 999px;
+				background: rgba(255,255,255,.09);
+			}
+			html[dir="rtl"] #primary-menu .mobile-menu-back-button { display: none !important; }
+		}
 	</style>
 	<script id="fa-image-hydration">
 		document.addEventListener('DOMContentLoaded', function () {
@@ -299,12 +381,12 @@
 	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
 	<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->
-	<title>ArcM 12 | 12-Inch Coaxial Stage Monitor | وید اکوستیکس</title>
+	<title>آرک‌ام ۱۲ | مانیتور مرحله کواکسیال ۱۲ اینچی | وید اکوستیکس</title>
 	<meta name="description" content="Discover ArcM 12, a 12 inch coaxial stage monitor." />
 	<link rel="canonical" href="https://voidacoustics.com/products/arcline/arcm12//" />
 	<meta property="og:locale" content="fa_IR" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="ArcM 12 | 12-Inch Coaxial Stage Monitor | وید اکوستیکس" />
+	<meta property="og:title" content="آرک‌ام ۱۲ | مانیتور مرحله کواکسیال ۱۲ اینچی | وید اکوستیکس" />
 	<meta property="og:description" content="Discover ArcM 12, a 12 inch coaxial stage monitor." />
 	<meta property="og:url" content="https://voidacoustics.com/products/arcline/arcm12//" />
 	<meta property="og:site_name" content="وید اکوستیکس" />
@@ -779,7 +861,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 																		<li>
 										<a data-src="https://voidacoustics.com/wp-content/uploads/Stasys-XV2-featured-1-1024x576.jpg"
 											href="https://voidacoustics.com/products/stasys/stasysxv2/">
-											Stasys XV2										</a>
+											استاسیس XV۲										</a>
 									</li>
 																</ul>
 						</div>
@@ -1031,6 +1113,9 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 
 
+
+
+
 <aside data-wg-notranslate="" class="country-selector weglot-dropdown close_outside_click closed weglot-shortcode wg-" tabindex="0" aria-expanded="false" aria-label="تغییر زبان به انگلیسی">
 	<input id="wg_choice_fa" class="weglot_choice" type="checkbox" name="menu"/>
 	<label data-l="fa" tabindex="-1" for="wg_choice_fa" class="wgcurrent wg-li weglot-lang weglot-language flag-3 wg-fa" data-code-language="wg-fa" data-name-language="FA">
@@ -1147,7 +1232,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 	
 	
-<h3 class="component-heading text-balance">Designed for clean stages and flexible use</h3>
+<h3 class="component-heading text-balance">برای مراحل تمیز و استفاده انعطاف‌پذیر طراحی‌شده است</h3>
 
 	
 		<div class="no-last-mb content-component content-list-check">
@@ -1192,7 +1277,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 	<div class="page-width flex flex-col gap-10 sm:gap-14">
 
 		
-<h2 class="component-heading text-balance">ArcM 12 at a glance</h2>
+<h2 class="component-heading text-balance">آرک‌ام ۱۲ در یک نگاه</h2>
 
 		
 			<ul class="flex gap-y-7 sm:gap-y-16 md:gap-y-24 text-base sm:text-xl lg:text-2xl md:text-center sm:pb-8 flex-wrap justify-between">
@@ -1291,7 +1376,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 	
 	
-<h3 class="component-heading text-balance">Versatile monitoring across applications</h3>
+<h3 class="component-heading text-balance">نظارت همه کاره در سراسر برنامه ها</h3>
 
 	
 		<div class="no-last-mb content-component content-list-check">
@@ -1356,7 +1441,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Inch-Size.svg" class="w-full h-full object-contain" alt="" decoding="async" /><noscript><img src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Inch-Size.svg" class="w-full h-full object-contain" alt="" decoding="async" /></noscript>							</span>
 											</div>
 
-											<h2 class="text-2xl font-medium text-balance">High-power 12 inch + 1.4 inch coaxial neodymium transducer</h2>
+											<h2 class="text-2xl font-medium text-balance">مبدل نئودیمیوم کواکسیال ۱۲ اینچ + ۱.۴ اینچ با قدرت بالا</h2>
 					
 									</div>
 							<div class="flex flex-col gap-4 lg:pr-8">
@@ -1365,7 +1450,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_NEarfield-Applications-1.svg" class="w-full h-full object-contain" alt="" decoding="async" /><noscript><img src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_NEarfield-Applications-1.svg" class="w-full h-full object-contain" alt="" decoding="async" /></noscript>							</span>
 											</div>
 
-											<h2 class="text-2xl font-medium text-balance">Two wedge operating modes (stage and nearfield monitoring)</h2>
+											<h2 class="text-2xl font-medium text-balance">دو حالت عملکرد گوه ای (نظارت مرحله و میدان نزدیک)</h2>
 					
 									</div>
 							<div class="flex flex-col gap-4 lg:pr-8">
@@ -1374,7 +1459,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Rigging-and-Mounting.svg" class="w-full h-full object-contain" alt="" decoding="async" /><noscript><img src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Rigging-and-Mounting.svg" class="w-full h-full object-contain" alt="" decoding="async" /></noscript>							</span>
 											</div>
 
-											<h2 class="text-2xl font-medium text-balance">Integral pole mount for 35 mm diameter poles</h2>
+											<h2 class="text-2xl font-medium text-balance">پایه پایه یکپارچه برای قطب های با قطر ۳۵ میلی متر</h2>
 					
 									</div>
 							<div class="flex flex-col gap-4 lg:pr-8">
@@ -1383,7 +1468,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Arcm-Low-Profile.svg" class="w-full h-full object-contain" alt="" decoding="async" /><noscript><img src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Arcm-Low-Profile.svg" class="w-full h-full object-contain" alt="" decoding="async" /></noscript>							</span>
 											</div>
 
-											<h2 class="text-2xl font-medium text-balance">Low-profile design for cleaner stage lines</h2>
+											<h2 class="text-2xl font-medium text-balance">طراحی کم حاشیه برای خطوط صحنه تمیزتر</h2>
 					
 									</div>
 							<div class="flex flex-col gap-4 lg:pr-8">
@@ -1392,7 +1477,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Compact-2-way.svg" class="w-full h-full object-contain" alt="" decoding="async" /><noscript><img src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Compact-2-way.svg" class="w-full h-full object-contain" alt="" decoding="async" /></noscript>							</span>
 											</div>
 
-											<h2 class="text-2xl font-medium text-balance">Switch between single channel passive or bi-amped operation</h2>
+											<h2 class="text-2xl font-medium text-balance">بین عملکرد تک کاناله غیرفعال یا دو آمپر سوئیچ کنید</h2>
 					
 									</div>
 							<div class="flex flex-col gap-4 lg:pr-8">
@@ -1401,7 +1486,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Tough-TourCoat.svg" class="w-full h-full object-contain" alt="" decoding="async" /><noscript><img src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Tough-TourCoat.svg" class="w-full h-full object-contain" alt="" decoding="async" /></noscript>							</span>
 											</div>
 
-											<h2 class="text-2xl font-medium text-balance">Multi-laminate plywood construction with &#039;TourCoat&#039; finish</h2>
+											<h2 class="text-2xl font-medium text-balance">ساخت تخته چندلایه چندلایه با روکش 'TourCoat'</h2>
 					
 									</div>
 							<div class="flex flex-col gap-4 lg:pr-8">
@@ -1410,7 +1495,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Brackets.svg" class="w-full h-full object-contain" alt="" decoding="async" /><noscript><img src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Brackets.svg" class="w-full h-full object-contain" alt="" decoding="async" /></noscript>							</span>
 											</div>
 
-											<h2 class="text-2xl font-medium text-balance">T80-style rear fixing points</h2>
+											<h2 class="text-2xl font-medium text-balance">نقاط ثابت عقب به سبک T۸۰</h2>
 					
 									</div>
 							<div class="flex flex-col gap-4 lg:pr-8">
@@ -1419,7 +1504,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Colour-Custom.svg" class="w-full h-full object-contain" alt="" decoding="async" /><noscript><img src="https://voidacoustics.com/wp-content/uploads/WEBSITE-ICONS_Colour-Custom.svg" class="w-full h-full object-contain" alt="" decoding="async" /></noscript>							</span>
 											</div>
 
-											<h2 class="text-2xl font-medium text-balance">Available as standard in black with a black grille</h2>
+											<h2 class="text-2xl font-medium text-balance">به صورت استاندارد در رنگ مشکی با جلوپنجره مشکی موجود است</h2>
 					
 									</div>
 					</div>
@@ -1435,7 +1520,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 								<div class="flex gap-4 justify-between sm:items-center flex-col sm:flex-row">
 											<div>
 							
-<h2 class="component-heading text-balance">Where ArcM 12 performs</h2>
+<h2 class="component-heading text-balance">جایی که آرک‌ام ۱۲ اجرا می کند</h2>
 						</div>
 														</div>
 			</div>
@@ -1510,7 +1595,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <section class="px-gutter py-14 lg:py-24 bg-surface-200">
 	<div class="page-width flex flex-col gap-12 md:gap-16">
 		
-<h2 class="component-heading text-balance">ArcM 12 Technical Resources</h2>
+<h2 class="component-heading text-balance">آرک‌ام ۱۲ منابع فنی</h2>
 		<div class="flex gap-12 md:gap-24 lg:gap-32 flex-col md:flex-row" data-tabs>
 			<div class="xl:w-80 flex-none">
 				<div class="tabs-mobile-container sticky top-[var(--scrollTopOffset)]">
@@ -1583,15 +1668,15 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 																	<div class="flex-1 no-last-mb accordion-downloads-content list-bordered">
 										<ul>
 <li data-section-id="v5sooh" data-start="1405" data-end="1459">High-power 12 inch + 1.4 inch coaxial neodymium transducer, with 3.5 inch voice coil</li>
-<li data-section-id="v5sooh" data-start="1405" data-end="1459">Two wedge operating modes (stage and nearfield monitoring)</li>
-<li data-section-id="v5sooh" data-start="1405" data-end="1459">Integral pole mount for 35 mm diameter poles</li>
-<li data-section-id="v5sooh" data-start="1405" data-end="1459">Low-profile design for cleaner stage lines</li>
+<li data-section-id="v5sooh" data-start="1405" data-end="1459">دو حالت عملکرد گوه ای (نظارت مرحله و میدان نزدیک)</li>
+<li data-section-id="v5sooh" data-start="1405" data-end="1459">پایه پایه یکپارچه برای قطب های با قطر ۳۵ میلی متر</li>
+<li data-section-id="v5sooh" data-start="1405" data-end="1459">طراحی کم حاشیه برای خطوط صحنه تمیزتر</li>
 <li data-section-id="v5sooh" data-start="1405" data-end="1459">FEA optimised porting</li>
-<li data-section-id="v5sooh" data-start="1405" data-end="1459">Switch between single channel passive or bi-amped operation</li>
+<li data-section-id="v5sooh" data-start="1405" data-end="1459">بین عملکرد تک کاناله غیرفعال یا دو آمپر سوئیچ کنید</li>
 <li data-section-id="v5sooh" data-start="1405" data-end="1459">Multi-laminate plywood construction with &#8216;TourCoat&#8217; finish</li>
-<li data-section-id="v5sooh" data-start="1405" data-end="1459">T80-style rear fixing points</li>
-<li data-section-id="v5sooh" data-start="1405" data-end="1459">Available as standard in black with a black grille</li>
-<li data-section-id="v5sooh" data-start="1405" data-end="1459">White finishes are available upon request</li>
+<li data-section-id="v5sooh" data-start="1405" data-end="1459">نقاط ثابت عقب به سبک T۸۰</li>
+<li data-section-id="v5sooh" data-start="1405" data-end="1459">به صورت استاندارد در رنگ مشکی با جلوپنجره مشکی موجود است</li>
+<li data-section-id="v5sooh" data-start="1405" data-end="1459">روکش های سفید در صورت درخواست در دسترس هستند</li>
 </ul>
 									</div>
 																							</div>
@@ -1844,7 +1929,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 											</div>
 				
 				
-<h3 class="component-heading text-balance h4">Bazique Festival 2025</h3>
+<h3 class="component-heading text-balance h4">فستیوال بازیک ۲۰۲۵</h3>
 				
 							</div>
 		</div>
@@ -1869,7 +1954,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 											</div>
 				
 				
-<h3 class="component-heading text-balance h4">Boomtown Fair 2024</h3>
+<h3 class="component-heading text-balance h4">بوم‌تاون ۲۰۲۴</h3>
 				
 							</div>
 		</div>
@@ -1894,7 +1979,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 											</div>
 				
 				
-<h3 class="component-heading text-balance h4">Chrome Ekkamai, Bangkok</h3>
+<h3 class="component-heading text-balance h4">کروم اکامای، بانکوک</h3>
 				
 							</div>
 		</div>
@@ -1919,7 +2004,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 											</div>
 				
 				
-<h3 class="component-heading text-balance h4">DJ Sally, Guangzhou</h3>
+<h3 class="component-heading text-balance h4">دی‌جی سالی، گوانگژو</h3>
 				
 							</div>
 		</div>
@@ -2108,9 +2193,9 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 			<div class="flex-1">
 				<div class="flex gap-6 justify-between flex-col md:flex-row">
 					<div class="flex flex-col gap-2">
-						<div id="copyright-menu" class="menu-copyright-nav-container"><ul id="menu-copyright-nav" class="flex items-center gap-4 flex-wrap"><li id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-611"><a href="https://voidacoustics.com/terms/">شرایط و قوانین</a></li>
+						<div id="copyright-menu" class="menu-copyright-nav-container"><ul id="menu-copyright-nav" class="flex items-center gap-4 flex-wrap"><li id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-611"><a href="https://voidacoustics.com/terms/">شرایط و ضوابط</a></li>
 <li id="menu-item-4755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-4755"><a rel="privacy-policy" href="https://voidacoustics.com/privacy/">سیاست حفظ حریم خصوصی</a></li>
-<li id="menu-item-4754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4754"><a href="https://voidacoustics.com/cookies/">سیاست کوکی‌ها</a></li>
+<li id="menu-item-4754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4754"><a href="https://voidacoustics.com/cookies/">سیاست استفاده از کوکی‌ها</a></li>
 </ul></div>							<div>
 								تولیدکننده ثبت‌شده تجهیزات الکترونیکی: WEE/EK4517VW							</div>
 											</div>

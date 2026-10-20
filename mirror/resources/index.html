@@ -251,6 +251,88 @@
 				transition-duration: .01ms !important;
 			}
 		}
+		@media (max-width: 959px) {
+			html[dir="rtl"] body.side-menu-open { overflow: hidden !important; }
+			html[dir="rtl"] .site-header,
+			html[dir="rtl"] body.side-menu-open .site-header {
+				z-index: 1000 !important;
+				color: #fff !important;
+				background: rgba(7,7,7,.94) !important;
+			}
+			html[dir="rtl"] .site-header .page-width,
+			html[dir="rtl"] .site-header .page-width > .flex { height: 62px; }
+			html[dir="rtl"] #primary-menu.side-menu {
+				position: fixed !important;
+				top: 77px !important;
+				right: 8px !important;
+				bottom: 8px !important;
+				left: 8px !important;
+				width: auto !important;
+				height: calc(100dvh - 85px) !important;
+				padding: 12px 20px 26px !important;
+				border: 1px solid rgba(255,255,255,.12) !important;
+				border-top: 0 !important;
+				border-radius: 0 0 22px 22px !important;
+				background: rgba(7,7,7,.98) !important;
+				box-shadow: 0 24px 70px rgba(0,0,0,.44) !important;
+				color: #fff !important;
+				overflow: hidden !important;
+			}
+			html[dir="rtl"] #menu-main-nav {
+				position: relative !important;
+				inset: auto !important;
+				display: flex !important;
+				flex-direction: column !important;
+				align-items: stretch !important;
+				gap: 0 !important;
+				width: 100% !important;
+				height: 100% !important;
+				padding: 4px 2px 72px !important;
+				overflow-x: hidden !important;
+				overflow-y: auto !important;
+				overscroll-behavior: contain;
+				scrollbar-width: thin;
+			}
+			html[dir="rtl"] #menu-main-nav > li {
+				position: relative !important;
+				flex: 0 0 auto !important;
+				width: 100% !important;
+				border-bottom: 1px solid rgba(255,255,255,.11) !important;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a {
+				display: flex !important;
+				align-items: center !important;
+				justify-content: space-between !important;
+				min-height: 54px !important;
+				padding: 0 4px !important;
+				color: #fff !important;
+				font-size: 1.05rem !important;
+				font-weight: 620 !important;
+				line-height: 1.45 !important;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a::after {
+				content: "←";
+				color: var(--void-red);
+				font-size: 1.05rem;
+				font-weight: 700;
+				opacity: .9;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a > svg { display: none !important; }
+			html[dir="rtl"] #menu-main-nav .menu-dropdown { display: none !important; }
+			html[dir="rtl"] #primary-menu-toggle {
+				position: relative;
+				z-index: 1100;
+				color: #fff !important;
+			}
+			html[dir="rtl"] #primary-menu-toggle .menu-button span { background-color: currentColor !important; }
+			html[dir="rtl"] body.side-menu-open #primary-menu-toggle {
+				width: 42px;
+				height: 42px;
+				border-radius: 999px;
+				background: rgba(255,255,255,.09);
+			}
+			html[dir="rtl"] #primary-menu .mobile-menu-back-button { display: none !important; }
+		}
 	</style>
 	<script id="fa-image-hydration">
 		document.addEventListener('DOMContentLoaded', function () {
@@ -299,12 +381,12 @@
 	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
 	<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->
-	<title>Resources | Product Documents, Training & Support | Void Acoustics</title>
+	<title>منابع | اسناد محصول، آموزش و پشتیبانی | وید اکوستیکس</title>
 	<meta name="description" content="ویدیوهای آموزشی، مستندات فنی محصولات، کاتالوگ‌ها و منابع مهندسی وید اکوستیکس." />
 	<link rel="canonical" href="https://voidacoustics.com/resources//" />
 	<meta property="og:locale" content="fa_IR" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Resources | Product Documents, Training &amp; Support | Void Acoustics" />
+	<meta property="og:title" content="منابع | اسناد محصول، آموزش و پشتیبانی | وید اکوستیکس" />
 	<meta property="og:description" content="ویدیوهای آموزشی، مستندات فنی محصولات، کاتالوگ‌ها و منابع مهندسی وید اکوستیکس." />
 	<meta property="og:url" content="https://voidacoustics.com/resources//" />
 	<meta property="og:site_name" content="وید اکوستیکس" />
@@ -779,7 +861,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 																		<li>
 										<a data-src="https://voidacoustics.com/wp-content/uploads/Stasys-XV2-featured-1-1024x576.jpg"
 											href="https://voidacoustics.com/products/stasys/stasysxv2/">
-											Stasys XV2										</a>
+											استاسیس XV۲										</a>
 									</li>
 																</ul>
 						</div>
@@ -1031,6 +1113,9 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 
 
+
+
+
 <aside data-wg-notranslate="" class="country-selector weglot-dropdown close_outside_click closed weglot-shortcode wg-" tabindex="0" aria-expanded="false" aria-label="تغییر زبان به انگلیسی">
 	<input id="wg_choice_fa" class="weglot_choice" type="checkbox" name="menu"/>
 	<label data-l="fa" tabindex="-1" for="wg_choice_fa" class="wgcurrent wg-li weglot-lang weglot-language flag-3 wg-fa" data-code-language="wg-fa" data-name-language="FA">
@@ -1122,7 +1207,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 	
 	
-<h3 class="component-heading text-balance">All in one place</h3>
+<h3 class="component-heading text-balance">همه‌چیز در یک‌جا</h3>
 
 	
 		<div class="no-last-mb content-component content-list-check">
@@ -1192,7 +1277,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <path d="M1 6.8125V2.4125C1 2.18468 1.18804 2 1.42 2H5.74464C5.84489 2 5.94184 2.03523 6.01796 2.09931L8.23205 3.96319C8.30814 4.02727 8.40509 4.0625 8.5054 4.0625H14.58C14.812 4.0625 15 4.24718 15 4.475V6.8125M1 6.8125V12.5875C1 12.8153 1.18804 13 1.42 13H14.58C14.812 13 15 12.8153 15 12.5875V6.8125M1 6.8125H15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 </span>
-											<span>Product documents</span>
+											<span>اسناد محصولات</span>
 										</button>
 									</li>
 
@@ -1234,7 +1319,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 </g>
 </svg>
 </span>
-											<span>Amplifer service request</span>
+											<span>درخواست خدمات آمپلی‌فایر</span>
 										</button>
 									</li>
 
@@ -1246,7 +1331,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <path d="M8 14V3.5M8 14C8 13.1716 8.62678 12.5 9.4 12.5H15M8 14C8 13.1716 7.37322 12.5 6.6 12.5H1M8 3.5C8 2.67157 8.62678 2 9.4 2H14.58C14.812 2 15 2.20147 15 2.45V12.2857M8 3.5C8 2.67157 7.37322 2 6.6 2H1.42C1.18804 2 1 2.20147 1 2.45V12.2857" stroke="currentColor" stroke-linecap="round"/>
 </svg>
 </span>
-											<span>Brochures</span>
+											<span>بروشورها</span>
 										</button>
 									</li>
 
@@ -1258,7 +1343,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <path d="M9.375 10.1L10.4062 11.15M10.75 1V3.38C10.75 3.61196 10.9347 3.8 11.1625 3.8H13.5M5.59375 8.35C5.59375 9.50983 6.51717 10.45 7.65625 10.45C8.22681 10.45 8.74319 10.2141 9.11657 9.83295C9.48871 9.45306 9.71875 8.9289 9.71875 8.35C9.71875 7.19017 8.79537 6.25 7.65625 6.25C6.51717 6.25 5.59375 7.19017 5.59375 8.35ZM2.5 14.58V1.42C2.5 1.18804 2.68468 1 2.9125 1H10.9229C11.0323 1 11.1372 1.04425 11.2145 1.12302L13.3792 3.32698C13.4566 3.40575 13.5 3.51258 13.5 3.62397V14.58C13.5 14.812 13.3153 15 13.0875 15H2.9125C2.68468 15 2.5 14.812 2.5 14.58Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 </span>
-											<span>Useful documents</span>
+											<span>اسناد کاربردی</span>
 										</button>
 									</li>
 
@@ -1272,7 +1357,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 </g>
 </svg>
 </span>
-											<span>Legacy documents</span>
+											<span>اسناد محصولات قدیمی</span>
 										</button>
 									</li>
 
@@ -1289,7 +1374,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 						style="display: block" class="scroll-to-margin">
 						<div class="flex flex-col gap-6">
 
-															<h2 class="h3">Product documents</h2>
+															<h2 class="h3">اسناد محصولات</h2>
 							
 																<div data-accordion class="flex flex-col gap-2">
 																					<div class="border-2 border-surface-200 rounded-lg group/accordion-wrap accordion-item">
@@ -2234,7 +2319,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Air-Array-Ground-Stack-Bracket.pdf" target="_blank" rel="noopener">Air Array Ground Stack Bracket</a></li>
-<li>Air Array Fly Frame</li>
+<li>فریم پرواز ایر اَری</li>
 <li>Air Array Fly Frame Flight Case</li>
 <li>Air Array Sling</li>
 </ul>
@@ -2573,7 +2658,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 																					<div class="border-2 border-surface-200 rounded-lg group/accordion-wrap accordion-item">
 												<button type="button" data-accordion-toggle
 														class="py-5 px-6 flex items-center justify-between gap-4 w-full font-medium bg-surface-200 group-hover/accordion-wrap:bg-surface-50 transition-colors duration-300">
-													<span>Stasys XV2</span>
+													<span>استاسیس XV۲</span>
 													<span class="group-hover/accordion-wrap:text-primary"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 <line x1="17" y1="8.78516" y2="8.78516" stroke="currentColor" stroke-width="3"/>
 <line x1="8.21875" y1="17" x2="8.21875" y2="-6.55671e-08" stroke="currentColor" stroke-width="3"/>
@@ -2669,7 +2754,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><a href="https://voidacoustics.com/wp-content/uploads/Venu_8_V2_v2.2.gll">Venu 8 V2 GLL</a></li>
 </ul>
 </div>
-																																											<div class="flex-1 no-last-mb"><h5>Accesories</h5>
+																																											<div class="flex-1 no-last-mb"><h5>لوازم جانبی</h5>
 <ul>
 <li><a href="https://voidacoustics.com/wp-content/uploads/3-Hole-Top-Hat-Black.pdf" target="_blank" rel="noopener">3 Hole Top Hat Black</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/3-Hole-Top-Hat-White.pdf" target="_blank" rel="noopener">3 Hole Top Hat White</a></li>
@@ -3452,7 +3537,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 							
 															<div class="flex flex-col gap-24">
 																			<div class="flex flex-col gap-8">
-											<h3 class="h3">Inca Series Tutorials</h3>
+											<h3 class="h3">سری آموزشی اینکا</h3>
 											<div class="grid sm:grid-cols-2 gap-x-6 gap-y-12">
 												
 													<a href="https://www.youtube.com/embed/EGOosGi1BIY?si=GBtQS3YRhMSfmqpH"
@@ -3532,7 +3617,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 																							</div>
 										</div>
 																			<div class="flex flex-col gap-8">
-											<h3 class="h3">Bias Series Tutorials</h3>
+											<h3 class="h3">سری آموزشی بایاس</h3>
 											<div class="grid sm:grid-cols-2 gap-x-6 gap-y-12">
 												
 													<a href="https://www.youtube.com/embed/mxnyY5Su4Q8?si=gT723myypsQMrIx5"
@@ -3684,7 +3769,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 						style="display: none" class="scroll-to-margin">
 						<div class="flex flex-col gap-6">
 
-															<h2 class="h3">Amplifer service request</h2>
+															<h2 class="h3">درخواست خدمات آمپلی‌فایر</h2>
 							
 															
 <div class="wpcf7 no-js" id="wpcf7-f421-p13-o2" lang="en-US" dir="ltr" data-wpcf7-id="421">
@@ -3834,7 +3919,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 						style="display: none" class="scroll-to-margin">
 						<div class="flex flex-col gap-6">
 
-															<h2 class="h3">Brochures</h2>
+															<h2 class="h3">بروشورها</h2>
 							
 															
 									<div class="grid sm:grid-cols-2 gap-x-6 gap-y-12">
@@ -3956,7 +4041,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 						style="display: none" class="scroll-to-margin">
 						<div class="flex flex-col gap-6">
 
-															<h2 class="h3">Useful documents</h2>
+															<h2 class="h3">اسناد کاربردی</h2>
 							
 																<div data-accordion class="flex flex-col gap-2">
 																					<div class="border-2 border-surface-200 rounded-lg group/accordion-wrap accordion-item">
@@ -4076,7 +4161,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 						style="display: none" class="scroll-to-margin">
 						<div class="flex flex-col gap-6">
 
-															<h2 class="h3">Legacy documents</h2>
+															<h2 class="h3">اسناد محصولات قدیمی</h2>
 							
 																<div data-accordion class="flex flex-col gap-2">
 																					<div class="border-2 border-surface-200 rounded-lg group/accordion-wrap accordion-item">
@@ -5202,9 +5287,9 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 			<div class="flex-1">
 				<div class="flex gap-6 justify-between flex-col md:flex-row">
 					<div class="flex flex-col gap-2">
-						<div id="copyright-menu" class="menu-copyright-nav-container"><ul id="menu-copyright-nav" class="flex items-center gap-4 flex-wrap"><li id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-611"><a href="https://voidacoustics.com/terms/">شرایط و قوانین</a></li>
+						<div id="copyright-menu" class="menu-copyright-nav-container"><ul id="menu-copyright-nav" class="flex items-center gap-4 flex-wrap"><li id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-611"><a href="https://voidacoustics.com/terms/">شرایط و ضوابط</a></li>
 <li id="menu-item-4755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-4755"><a rel="privacy-policy" href="https://voidacoustics.com/privacy/">سیاست حفظ حریم خصوصی</a></li>
-<li id="menu-item-4754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4754"><a href="https://voidacoustics.com/cookies/">سیاست کوکی‌ها</a></li>
+<li id="menu-item-4754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4754"><a href="https://voidacoustics.com/cookies/">سیاست استفاده از کوکی‌ها</a></li>
 </ul></div>							<div>
 								تولیدکننده ثبت‌شده تجهیزات الکترونیکی: WEE/EK4517VW							</div>
 											</div>

@@ -251,6 +251,88 @@
 				transition-duration: .01ms !important;
 			}
 		}
+		@media (max-width: 959px) {
+			html[dir="rtl"] body.side-menu-open { overflow: hidden !important; }
+			html[dir="rtl"] .site-header,
+			html[dir="rtl"] body.side-menu-open .site-header {
+				z-index: 1000 !important;
+				color: #fff !important;
+				background: rgba(7,7,7,.94) !important;
+			}
+			html[dir="rtl"] .site-header .page-width,
+			html[dir="rtl"] .site-header .page-width > .flex { height: 62px; }
+			html[dir="rtl"] #primary-menu.side-menu {
+				position: fixed !important;
+				top: 77px !important;
+				right: 8px !important;
+				bottom: 8px !important;
+				left: 8px !important;
+				width: auto !important;
+				height: calc(100dvh - 85px) !important;
+				padding: 12px 20px 26px !important;
+				border: 1px solid rgba(255,255,255,.12) !important;
+				border-top: 0 !important;
+				border-radius: 0 0 22px 22px !important;
+				background: rgba(7,7,7,.98) !important;
+				box-shadow: 0 24px 70px rgba(0,0,0,.44) !important;
+				color: #fff !important;
+				overflow: hidden !important;
+			}
+			html[dir="rtl"] #menu-main-nav {
+				position: relative !important;
+				inset: auto !important;
+				display: flex !important;
+				flex-direction: column !important;
+				align-items: stretch !important;
+				gap: 0 !important;
+				width: 100% !important;
+				height: 100% !important;
+				padding: 4px 2px 72px !important;
+				overflow-x: hidden !important;
+				overflow-y: auto !important;
+				overscroll-behavior: contain;
+				scrollbar-width: thin;
+			}
+			html[dir="rtl"] #menu-main-nav > li {
+				position: relative !important;
+				flex: 0 0 auto !important;
+				width: 100% !important;
+				border-bottom: 1px solid rgba(255,255,255,.11) !important;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a {
+				display: flex !important;
+				align-items: center !important;
+				justify-content: space-between !important;
+				min-height: 54px !important;
+				padding: 0 4px !important;
+				color: #fff !important;
+				font-size: 1.05rem !important;
+				font-weight: 620 !important;
+				line-height: 1.45 !important;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a::after {
+				content: "←";
+				color: var(--void-red);
+				font-size: 1.05rem;
+				font-weight: 700;
+				opacity: .9;
+			}
+			html[dir="rtl"] #menu-main-nav > li > a > svg { display: none !important; }
+			html[dir="rtl"] #menu-main-nav .menu-dropdown { display: none !important; }
+			html[dir="rtl"] #primary-menu-toggle {
+				position: relative;
+				z-index: 1100;
+				color: #fff !important;
+			}
+			html[dir="rtl"] #primary-menu-toggle .menu-button span { background-color: currentColor !important; }
+			html[dir="rtl"] body.side-menu-open #primary-menu-toggle {
+				width: 42px;
+				height: 42px;
+				border-radius: 999px;
+				background: rgba(255,255,255,.09);
+			}
+			html[dir="rtl"] #primary-menu .mobile-menu-back-button { display: none !important; }
+		}
 	</style>
 	<script id="fa-image-hydration">
 		document.addEventListener('DOMContentLoaded', function () {
@@ -775,7 +857,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 																		<li>
 										<a data-src="https://voidacoustics.com/wp-content/uploads/Stasys-XV2-featured-1-1024x576.jpg"
 											href="https://voidacoustics.com/products/stasys/stasysxv2/">
-											Stasys XV2										</a>
+											استاسیس XV۲										</a>
 									</li>
 																</ul>
 						</div>
@@ -1027,6 +1109,9 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 
 
+
+
+
 <aside data-wg-notranslate="" class="country-selector weglot-dropdown close_outside_click closed weglot-shortcode wg-" tabindex="0" aria-expanded="false" aria-label="تغییر زبان به انگلیسی">
 	<input id="wg_choice_fa" class="weglot_choice" type="checkbox" name="menu"/>
 	<label data-l="fa" tabindex="-1" for="wg_choice_fa" class="wgcurrent wg-li weglot-lang weglot-language flag-3 wg-fa" data-code-language="wg-fa" data-name-language="FA">
@@ -1100,7 +1185,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-0-1-who-we-are"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>1. Who We Are</span>
+											<span>۱. ما چه کسی هستیم</span>
 										</a>
 									</li>
 
@@ -1108,7 +1193,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-1-2-definitions"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>2. Definitions</span>
+											<span>۲. تعاریف</span>
 										</a>
 									</li>
 
@@ -1116,7 +1201,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-2-3-the-data-we-collect-about-you"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>3. The Data We Collect About You</span>
+											<span>۳. داده هایی که درباره شما جمع آوری می کنیم</span>
 										</a>
 									</li>
 
@@ -1124,7 +1209,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-3-4-how-we-collect-your-data"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>4. How We Collect Your Data</span>
+											<span>۴. چگونه داده های شما را جمع آوری می کنیم</span>
 										</a>
 									</li>
 
@@ -1132,7 +1217,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-4-5-how-we-use-your-personal-data"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>5. How We Use Your Personal Data</span>
+											<span>۵. چگونه از داده های شخصی شما استفاده می کنیم</span>
 										</a>
 									</li>
 
@@ -1140,7 +1225,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-5-6-marketing-communications"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>6. Marketing Communications</span>
+											<span>۶. ارتباطات بازاریابی</span>
 										</a>
 									</li>
 
@@ -1148,7 +1233,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-6-7-cookies"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>7. Cookies</span>
+											<span>۷. کوکی ها</span>
 										</a>
 									</li>
 
@@ -1156,7 +1241,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-7-8-sharing-your-data"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>8. Sharing Your Data</span>
+											<span>۸. به اشتراک گذاری داده های خود</span>
 										</a>
 									</li>
 
@@ -1164,7 +1249,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-8-9-international-transfers"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>9. International Transfers</span>
+											<span>۹. نقل و انتقالات بین المللی</span>
 										</a>
 									</li>
 
@@ -1172,7 +1257,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-9-10-data-security"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>10. Data Security</span>
+											<span>۱۰. امنیت داده ها</span>
 										</a>
 									</li>
 
@@ -1180,7 +1265,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-10-11-data-retention"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>11. Data Retention</span>
+											<span>۱۱. حفظ داده ها</span>
 										</a>
 									</li>
 
@@ -1188,7 +1273,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-11-12-your-legal-rights"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>12. Your Legal Rights</span>
+											<span>۱۲. حقوق قانونی شما</span>
 										</a>
 									</li>
 
@@ -1196,7 +1281,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-12-13-complaints"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>13. Complaints</span>
+											<span>۱۳. شکایات</span>
 										</a>
 									</li>
 
@@ -1204,7 +1289,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-13-14-third-party-links"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>14. Third-Party Links</span>
+											<span>۱۴. پیوندهای شخص ثالث</span>
 										</a>
 									</li>
 
@@ -1212,7 +1297,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-14-15-changes-to-this-policy"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>15. Changes to This Policy</span>
+											<span>۱۵. تغییرات در این سیاست</span>
 										</a>
 									</li>
 
@@ -1220,7 +1305,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 									<li class="flex-none sm:flex-auto">
 										<a href="#content-15-16-contact-us"
 											class="flex items-center gap-4 py-1 px-2 rounded-lg font-medium hover:text-primary w-full text-left transition-all">
-											<span>16. Contact Us</span>
+											<span>۱۶. با ما تماس بگیرید</span>
 										</a>
 									</li>
 
@@ -1230,7 +1315,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 					</div>
 					<div class="lg:w-8/12 flex flex-col gap-16">
 													<div id="content-0-1-who-we-are" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">1. Who We Are</h2>
+								<h2 class="h3">۱. ما چه کسی هستیم</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p><strong>Last updated: 8 April 2026</strong></p>
 <p>Void Acoustics Research Limited (“Void”, “we”, “us”, or “our”) respects your privacy and is committed to protecting your personal data. This privacy policy explains how we collect, use, store, and protect your personal data when you visit our website or interact with us.</p>
@@ -1245,7 +1330,7 @@ BH12 4NU<br />
 								</div>
 							</div>
 													<div id="content-1-2-definitions" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">2. Definitions</h2>
+								<h2 class="h3">۲. تعاریف</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p class="isSelectedEnd">In this privacy policy:</p>
 <ul data-spread="false">
@@ -1257,7 +1342,7 @@ BH12 4NU<br />
 								</div>
 							</div>
 													<div id="content-2-3-the-data-we-collect-about-you" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">3. The Data We Collect About You</h2>
+								<h2 class="h3">۳. داده هایی که درباره شما جمع آوری می کنیم</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p class="isSelectedEnd">We may collect, use, store, and transfer different kinds of personal data, including:</p>
 <ul data-spread="false">
@@ -1273,7 +1358,7 @@ BH12 4NU<br />
 								</div>
 							</div>
 													<div id="content-3-4-how-we-collect-your-data" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">4. How We Collect Your Data</h2>
+								<h2 class="h3">۴. چگونه داده های شما را جمع آوری می کنیم</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p class="isSelectedEnd">We collect personal data through:</p>
 <ul data-spread="false">
@@ -1284,7 +1369,7 @@ BH12 4NU<br />
 								</div>
 							</div>
 													<div id="content-4-5-how-we-use-your-personal-data" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">5. How We Use Your Personal Data</h2>
+								<h2 class="h3">۵. چگونه از داده های شخصی شما استفاده می کنیم</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p class="isSelectedEnd">We will only use your personal data where permitted by law.</p>
 <p class="isSelectedEnd">Under UK GDPR, we rely on the following lawful bases:</p>
@@ -1305,7 +1390,7 @@ BH12 4NU<br />
 								</div>
 							</div>
 													<div id="content-5-6-marketing-communications" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">6. Marketing Communications</h2>
+								<h2 class="h3">۶. ارتباطات بازاریابی</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p class="isSelectedEnd">We may send you marketing communications relating to similar products or services where permitted by law.</p>
 <p class="isSelectedEnd">You can opt out of marketing communications at any time by:</p>
@@ -1317,7 +1402,7 @@ BH12 4NU<br />
 								</div>
 							</div>
 													<div id="content-6-7-cookies" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">7. Cookies</h2>
+								<h2 class="h3">۷. کوکی ها</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p class="isSelectedEnd">Our website uses cookies and similar technologies to distinguish you from other users and improve your browsing experience.</p>
 <p class="isSelectedEnd">We use:</p>
@@ -1327,11 +1412,11 @@ BH12 4NU<br />
 <li><strong>Marketing cookies</strong> – where applicable</li>
 </ul>
 <p class="isSelectedEnd">You can control cookies through your browser settings.</p>
-<p>For more information, please see our <a href="https://voidacoustics.com/cookie-policy/">سیاست کوکی‌ها</a>.</p>
+<p>For more information, please see our <a href="https://voidacoustics.com/cookie-policy/">سیاست استفاده از کوکی‌ها</a>.</p>
 								</div>
 							</div>
 													<div id="content-7-8-sharing-your-data" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">8. Sharing Your Data</h2>
+								<h2 class="h3">۸. به اشتراک گذاری داده های خود</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p class="isSelectedEnd">We may share your personal data with:</p>
 <ul data-spread="false">
@@ -1344,7 +1429,7 @@ BH12 4NU<br />
 								</div>
 							</div>
 													<div id="content-8-9-international-transfers" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">9. International Transfers</h2>
+								<h2 class="h3">۹. نقل و انتقالات بین المللی</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p class="isSelectedEnd">Some of our service providers may be based outside the United Kingdom or the European Economic Area (“EEA”).</p>
 <p class="isSelectedEnd">Where this occurs, we ensure appropriate safeguards are in place, including:</p>
@@ -1356,20 +1441,20 @@ BH12 4NU<br />
 								</div>
 							</div>
 													<div id="content-9-10-data-security" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">10. Data Security</h2>
+								<h2 class="h3">۱۰. امنیت داده ها</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p>We have implemented appropriate technical and organisational security measures designed to protect your personal data from unauthorised access, loss, misuse, alteration, or disclosure.</p>
 								</div>
 							</div>
 													<div id="content-10-11-data-retention" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">11. Data Retention</h2>
+								<h2 class="h3">۱۱. حفظ داده ها</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p class="isSelectedEnd">We retain personal data only for as long as necessary to fulfil the purposes for which it was collected, including legal, regulatory, tax, accounting, or reporting requirements.</p>
 <p>By law, we may retain certain records, including customer and financial records, for up to six years.</p>
 								</div>
 							</div>
 													<div id="content-11-12-your-legal-rights" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">12. Your Legal Rights</h2>
+								<h2 class="h3">۱۲. حقوق قانونی شما</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p class="isSelectedEnd">Under UK GDPR, you have the right to:</p>
 <ul data-spread="false">
@@ -1385,7 +1470,7 @@ BH12 4NU<br />
 								</div>
 							</div>
 													<div id="content-12-13-complaints" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">13. Complaints</h2>
+								<h2 class="h3">۱۳. شکایات</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p class="isSelectedEnd">You have the right to lodge a complaint with the Information Commissioner’s Office (“ICO”), the UK supervisory authority for data protection matters.</p>
 <p class="isSelectedEnd">Website: <a href="https://ico.org.uk">https://ico.org.uk</a></p>
@@ -1393,19 +1478,19 @@ BH12 4NU<br />
 								</div>
 							</div>
 													<div id="content-13-14-third-party-links" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">14. Third-Party Links</h2>
+								<h2 class="h3">۱۴. پیوندهای شخص ثالث</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p>Our website may contain links to third-party websites. We are not responsible for the privacy policies, content, or practices of third-party websites.</p>
 								</div>
 							</div>
 													<div id="content-14-15-changes-to-this-policy" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">15. Changes to This Policy</h2>
+								<h2 class="h3">۱۵. تغییرات در این سیاست</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p>We may update this privacy policy from time to time. Any changes will be published on this page together with an updated revision date.</p>
 								</div>
 							</div>
 													<div id="content-15-16-contact-us" class="flex flex-col gap-6 scroll-to-margin">
-								<h2 class="h3">16. Contact Us</h2>
+								<h2 class="h3">۱۶. با ما تماس بگیرید</h2>
 								<div class="no-last-mb content-component content-style-lists">
 									<p class="isSelectedEnd">If you have any questions about this privacy policy or how we handle your personal data, please contact us at:</p>
 <p>Email: <a href="mailto:hello@voidacoustics.com">hello@voidacoustics.com</a></p>
@@ -1903,9 +1988,9 @@ BH12 4NU<br />
 			<div class="flex-1">
 				<div class="flex gap-6 justify-between flex-col md:flex-row">
 					<div class="flex flex-col gap-2">
-						<div id="copyright-menu" class="menu-copyright-nav-container"><ul id="menu-copyright-nav" class="flex items-center gap-4 flex-wrap"><li id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-611"><a href="https://voidacoustics.com/terms/">شرایط و قوانین</a></li>
+						<div id="copyright-menu" class="menu-copyright-nav-container"><ul id="menu-copyright-nav" class="flex items-center gap-4 flex-wrap"><li id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-611"><a href="https://voidacoustics.com/terms/">شرایط و ضوابط</a></li>
 <li id="menu-item-4755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy current-menu-item page_item page-item-3 current_page_item menu-item-4755"><a rel="privacy-policy" href="https://voidacoustics.com/privacy/" aria-current="page">سیاست حفظ حریم خصوصی</a></li>
-<li id="menu-item-4754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4754"><a href="https://voidacoustics.com/cookies/">سیاست کوکی‌ها</a></li>
+<li id="menu-item-4754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4754"><a href="https://voidacoustics.com/cookies/">سیاست استفاده از کوکی‌ها</a></li>
 </ul></div>							<div>
 								تولیدکننده ثبت‌شده تجهیزات الکترونیکی: WEE/EK4517VW							</div>
 											</div>
