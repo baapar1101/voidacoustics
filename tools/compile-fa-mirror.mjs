@@ -87,7 +87,38 @@ const curatedTranslations = {
   'Deny': 'رد کردن',
   'Save': 'ذخیره',
   'Manage Cookies': 'مدیریت کوکی‌ها',
-  'Stay ahead with our monthly newsletter featuring product updates, events, case studies and more.': 'با خبرنامهٔ ماهانهٔ ما از محصولات تازه، رویدادها و پروژه‌های جدید باخبر شوید.'
+  'Stay ahead with our monthly newsletter featuring product updates, events, case studies and more.': 'با خبرنامهٔ ماهانهٔ ما از محصولات تازه، رویدادها و پروژه‌های جدید باخبر شوید.',
+  'Hero Slider': 'اسلایدر اصلی',
+  'Cards Slider': 'اسلایدر کارت‌ها',
+  'White Void Acoustics Tri Motion': 'بلندگوی سفید ترای موشن وید اکوستیکس',
+  'Natural Wood Customisation': 'سفارشی‌سازی با روکش چوب طبیعی',
+  'Nightlife Heritage': 'میراث فرهنگ شب',
+  'Bars and Restaurants': 'بارها و رستوران‌ها',
+  'Beach, Pool and Rooftop': 'ساحل، استخر و روف‌تاپ',
+  'Hotels and Resorts': 'هتل‌ها و اقامتگاه‌ها',
+  'Health and Wellbeing': 'سلامت و تندرستی',
+  'Fashion and Retail': 'مد و خرده‌فروشی',
+  'Festivals and Events': 'جشنواره‌ها و رویدادها',
+  'Arts and Culture': 'هنر و فرهنگ',
+  'Apres': 'اَپره‌اسکی',
+  'Hear Void Map': 'نقشهٔ تجربهٔ صدای وید',
+  'Where to buy Void Acoustics': 'از کجا محصولات وید اکوستیکس را بخریم',
+  'Incubus Series': 'سری اینکیوبس',
+  'Nexus Series': 'سری نکسوس',
+  'Your browser does not support the video tag.': 'مرورگر شما از پخش ویدئو پشتیبانی نمی‌کند.',
+  'Flagship dance system for iconic nightlife and festival spaces': 'سیستم صوتی پرچمدار برای کلاب‌ها و جشنواره‌های شاخص',
+  'Scalable modular system for immersive dance environments': 'سیستم ماژولار و توسعه‌پذیر برای تجربه‌ای فراگیر در فضای رقص',
+  'Tour-grade systems for large-scale events and venues': 'سیستم‌های حرفه‌ای تور برای رویدادها و مجموعه‌های بزرگ',
+  'Compact loudspeakers for design led hospitality spaces': 'بلندگوهای جمع‌وجور برای فضاهای پذیرایی با طراحی خاص',
+  'Discreet ceiling loudspeakers for seamlessly integrated spaces': 'بلندگوهای سقفی ظریف برای هماهنگی کامل با معماری فضا',
+  'A comprehensive overview of all Void subwoofers': 'معرفی کامل همهٔ ساب‌ووفرهای وید',
+  'I consent to Void Acoustics collecting, processing, and storing my information in accordance with the Void Acoustics privacy notice.': 'با جمع‌آوری، پردازش و نگهداری اطلاعاتم مطابق اطلاعیهٔ حریم خصوصی وید اکوستیکس موافقم.',
+  'Subscribe': 'عضویت',
+  '2026 Void Acoustics Ltd': '۲۰۲۶ وید اکوستیکس با مسئولیت محدود',
+  'The technical storage or access is strictly necessary for the legitimate purpose of enabling the use of a specific service explicitly requested by the subscriber or user, or for the sole purpose of carrying out the transmission of a communication over an electronic communications network.': 'ذخیره‌سازی یا دسترسی فنی فقط برای ارائهٔ سرویسی که کاربر درخواست کرده یا انتقال ارتباط از طریق شبکهٔ الکترونیکی ضروری است.',
+  'Manage {vendor_count} vendors': 'مدیریت {vendor_count} ارائه‌دهنده',
+  'Read more about these purposes': 'دربارهٔ این موارد بیشتر بخوانید',
+  'Read more about TCF purposes on Cookie Database': 'دربارهٔ اهداف TCF در پایگاه دادهٔ کوکی بیشتر بخوانید'
 };
 
 Object.assign(glossary, headingTranslations, curatedTranslations);
@@ -666,10 +697,10 @@ export async function compileAll() {
         }
       }
 
-      // 10. Translatable attributes on elements (alt, title, aria-label, placeholder)
+      // 10. Translatable attributes on elements (including submit labels)
       if (node.attrs && node.sourceCodeLocation?.attrs) {
         for (const attr of node.attrs) {
-          if (['alt', 'title', 'aria-label', 'placeholder'].includes(attr.name)) {
+          if (['alt', 'title', 'aria-label', 'placeholder', 'value'].includes(attr.name)) {
             const loc = node.sourceCodeLocation.attrs[attr.name];
             if (loc && attr.value && attr.value.trim().length > 1) {
               const trans = translateAttr(attr.name, attr.value);
