@@ -13,7 +13,7 @@ const sortedGlossaryKeys = Object.keys(glossary).sort((a, b) => b.length - a.len
 
 // Inline Persian Logo SVG for header (fill="currentColor" to adapt to header themes)
 const FA_LOGO_SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="140" height="56" viewBox="0 0 900 360" fill="none" class="header-fa-logo">
-  <path d="m 557.57189,302.12 q -16.184,0 -28.084,-2.618 -11.662,-2.38 -22.61,-8.806 l 13.804,-25.942 q 9.758,4.998 18.326,6.902 8.568,2.142 17.85,2.142 13.566,0 20.706,-7.378 7.378,-7.378 7.378,-20.23 V 245 h -23.562 q -25.466,0 -39.27,-14.28 -13.566,-14.518 -13.566,-41.174 0,-20.23 9.758,-34.034 9.996,-14.042 27.132,-21.182 17.136,-7.14 38.794,-7.14 h 36.176 v 118.524 q 0,27.132 -16.422,41.65 -16.422,14.756 -46.41,14.756 z m 27.37,-85.68 v -60.69 h -7.616 q -15.232,0 -23.8,8.568 -8.568,8.568 -8.568,24.276 0,27.846 23.562,27.846 z M 404.06605,245 q -1.19,0 -1.19,-1.19 v -26.418 q 0,-0.952 1.19,-0.952 h 41.65 v -89.25 h 35.462 V 245 Z m 19.278,59.5 q -7.378,0 -11.662,-4.76 -4.284,-4.522 -4.284,-12.376 0,-7.854 4.284,-12.614 4.284,-4.522 11.662,-4.522 7.378,0 11.424,4.522 4.284,4.522 4.284,12.614 0,8.092 -4.284,12.614 -4.284,4.522 -11.424,4.522 z m 40.46,0 q -7.378,0 -11.662,-4.76 -4.284,-4.522 -4.284,-12.376 0,-7.854 4.284,-12.614 4.284,-4.522 11.662,-4.522 7.378,0 11.424,4.522 4.284,4.76 4.284,12.614 0,7.854 -4.284,12.376 -4.284,4.76 -11.424,4.76 z M 270.07591,216.44 h 79.492 q -4.998,-21.896 -11.9,-35.462 -7.14,-13.566 -18.088,-23.324 -10.71,-9.996 -26.418,-16.422 l 13.328,-33.32 q 31.416,12.614 50.456,38.794 19.278,26.18 28.322,69.734 h 31.178 q 1.19,0 1.19,0.952 v 26.418 q 0,1.19 -1.19,1.19 h -146.37 z" style="font-weight:700;font-size:238px;direction:rtl;text-anchor:middle;fill:currentColor" aria-label="وید"/>
+  <path fill="currentColor" d="m 557.57189,302.12 q -16.184,0 -28.084,-2.618 -11.662,-2.38 -22.61,-8.806 l 13.804,-25.942 q 9.758,4.998 18.326,6.902 8.568,2.142 17.85,2.142 13.566,0 20.706,-7.378 7.378,-7.378 7.378,-20.23 V 245 h -23.562 q -25.466,0 -39.27,-14.28 -13.566,-14.518 -13.566,-41.174 0,-20.23 9.758,-34.034 9.996,-14.042 27.132,-21.182 17.136,-7.14 38.794,-7.14 h 36.176 v 118.524 q 0,27.132 -16.422,41.65 -16.422,14.756 -46.41,14.756 z m 27.37,-85.68 v -60.69 h -7.616 q -15.232,0 -23.8,8.568 -8.568,8.568 -8.568,24.276 0,27.846 23.562,27.846 z M 404.06605,245 q -1.19,0 -1.19,-1.19 v -26.418 q 0,-0.952 1.19,-0.952 h 41.65 v -89.25 h 35.462 V 245 Z m 19.278,59.5 q -7.378,0 -11.662,-4.76 -4.284,-4.522 -4.284,-12.376 0,-7.854 4.284,-12.614 4.284,-4.522 11.662,-4.522 7.378,0 11.424,4.522 4.284,4.522 4.284,12.614 0,8.092 -4.284,12.614 -4.284,4.522 -11.424,4.522 z m 40.46,0 q -7.378,0 -11.662,-4.76 -4.284,-4.522 -4.284,-12.376 0,-7.854 4.284,-12.614 4.284,-4.522 11.662,-4.522 7.378,0 11.424,4.522 4.284,4.76 4.284,12.614 0,7.854 -4.284,12.376 -4.284,4.76 -11.424,4.76 z M 270.07591,216.44 h 79.492 q -4.998,-21.896 -11.9,-35.462 -7.14,-13.566 -18.088,-23.324 -10.71,-9.996 -26.418,-16.422 l 13.328,-33.32 q 31.416,12.614 50.456,38.794 19.278,26.18 28.322,69.734 h 31.178 q 1.19,0 1.19,0.952 v 26.418 q 0,1.19 -1.19,1.19 h -146.37 z" style="font-weight:700;font-size:238px;direction:rtl;text-anchor:middle;fill:currentColor" aria-label="وید"/>
 </svg>`;
 
 // Head injections for Persian
@@ -34,8 +34,22 @@ const FA_HEAD_INJECTION = `
 		[dir="rtl"] .text-left { text-align: right; }
 		[dir="rtl"] .text-right { text-align: left; }
 		[dir="rtl"] .mr-auto { margin-right: 0; margin-left: auto; }
-		[dir="rtl"] .ml-auto { margin-left: 0; margin-right: auto; }
-		[dir="rtl"] .header-logo svg { max-height: 48px; width: auto; }
+		[dir="rtl"] .header-logo svg {
+			display: inline-block;
+			height: 37px;
+			width: auto;
+			vertical-align: middle;
+		}
+		@media (min-width: 960px) {
+			[dir="rtl"] .header-logo svg {
+				height: 3.5rem;
+				width: auto;
+			}
+		}
+		.site-footer .header-logo svg {
+			height: 2.25rem !important;
+			width: auto !important;
+		}
 		[dir="rtl"] .splide, html[dir="rtl"] .splide { direction: rtl; }
 		[dir="rtl"] .splide__track, html[dir="rtl"] .splide__track { direction: rtl; }
 		[dir="rtl"] .splide__list, html[dir="rtl"] .splide__list { direction: rtl; }
@@ -163,7 +177,9 @@ export async function compileAll() {
 
     function addRepl(startOffset, endOffset, replacement) {
       if (typeof startOffset === 'number' && typeof endOffset === 'number' && startOffset <= endOffset) {
-        replacements.push({ startOffset, endOffset, replacement });
+        if (!replacements.some(r => r.startOffset === startOffset && r.endOffset === endOffset)) {
+          replacements.push({ startOffset, endOffset, replacement });
+        }
       }
     }
 
@@ -244,16 +260,12 @@ export async function compileAll() {
         }
       }
 
-      // 7. Header Logo (inline SVG replacement)
-      if (node.nodeName === 'a' && node.attrs?.some((a) => a.name === 'class' && a.value.includes('header-logo'))) {
+      // 7. Header & Footer Logo (inline SVG replacement)
+      if (node.attrs?.some((a) => a.name === 'class' && a.value.includes('header-logo'))) {
         // Find inner svg
         const svgChild = node.childNodes?.find((c) => c.nodeName === 'svg');
         if (svgChild?.sourceCodeLocation) {
           addRepl(svgChild.sourceCodeLocation.startOffset, svgChild.sourceCodeLocation.endOffset, FA_LOGO_SVG);
-        }
-        if (node.sourceCodeLocation?.attrs?.['aria-label']) {
-          const aLoc = node.sourceCodeLocation.attrs['aria-label'];
-          addRepl(aLoc.startOffset, aLoc.endOffset, `aria-label="صفحه اصلی وید اکوستیکس"`);
         }
       }
 
@@ -345,12 +357,22 @@ export async function compileAll() {
       addRepl(headLoc.endOffset, headLoc.endOffset, hreflangs);
     }
 
-    // Sort replacements descending by startOffset
-    replacements.sort((a, b) => b.startOffset - a.startOffset);
+    // Sort replacements descending by startOffset, then endOffset descending
+    replacements.sort((a, b) => b.startOffset - a.startOffset || b.endOffset - a.endOffset);
+
+    // Apply only strictly non-overlapping replacements
+    const cleanReplacements = [];
+    let lastStart = Infinity;
+    for (const r of replacements) {
+      if (r.endOffset <= lastStart) {
+        cleanReplacements.push(r);
+        lastStart = r.startOffset;
+      }
+    }
 
     // Apply replacements cleanly
     let faHtml = originalHtml;
-    for (const r of replacements) {
+    for (const r of cleanReplacements) {
       faHtml = faHtml.slice(0, r.startOffset) + r.replacement + faHtml.slice(r.endOffset);
     }
 
