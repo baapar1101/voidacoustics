@@ -804,7 +804,7 @@ export async function compileAll() {
       const translated = translateText(plain).trim();
       return translated !== plain ? `<${tag}${attrs}>${escapeHtml(translated)}</${tag}>` : full;
     });
-    faHtml = faHtml.replace(/(\/wp-content\/themes\/void2025\/js\/app\.js)(?:\?[^"']*)?/g, '$1?v=20261020-fa2');
+    faHtml = faHtml.replace(/(\/wp-content\/themes\/void2025\/js\/app\.js)(?:\?[^"']*)?/g, '$1?v=20261020-fa3');
 
     // Give the Persian homepage a compact editorial bridge between the
     // cinematic hero and the product story, using the same visual language.
@@ -859,7 +859,7 @@ export async function compileAll() {
 	<link rel="alternate" href="${faPath}" hreflang="x-default" />
 `;
     enHtml = enHtml.replace(/<head>/i, `<head>${enHreflangs}`);
-    enHtml = enHtml.replace(/(\/wp-content\/themes\/void2025\/js\/app\.js)(?:\?[^"']*)?/g, '$1?v=20261020-fa2');
+    enHtml = enHtml.replace(/(\/wp-content\/themes\/void2025\/js\/app\.js)(?:\?[^"']*)?/g, '$1?v=20261020-fa3');
 
     fs.writeFileSync(file, enHtml, 'utf8');
     enUpdated++;
