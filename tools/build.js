@@ -38,8 +38,6 @@ function rewrite(html) {
   // protocol-relative  //voidacoustics.com/foo
   out = out.replace(/(^|["'(=\s])\/\/(?:www\.)?voidacoustics\.com(\/[^\s"'`)\\]*)?/g,
     (m, pre, p) => `${pre}${p && p.length > 1 ? p : '/'}`);
-  // drop the complianz CSS template placeholder (never resolvable)
-  out = out.replace(/\/wp-content\/uploads\/complianz\/css\/banner-[^"'\s]*\.css[^"'\s]*/g, '');
   // drop cache-busting query strings on local asset refs
   // Strip the WP cache-busting param. Value may be dotted (ver=6.1.7) or hex
   // (ver=2c532d7e2be36f6af233), so match up to the next delimiter -- NOT [0-9a-f]+,

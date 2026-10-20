@@ -24,6 +24,62 @@
 		[dir="rtl"] .mr-auto { margin-right: 0; margin-left: auto; }
 		[dir="rtl"] .ml-auto { margin-left: 0; margin-right: auto; }
 		[dir="rtl"] .header-logo svg { max-height: 48px; width: auto; }
+		[dir="rtl"] .splide, html[dir="rtl"] .splide { direction: rtl; }
+		[dir="rtl"] .splide__track, html[dir="rtl"] .splide__track { direction: rtl; }
+		[dir="rtl"] .splide__list, html[dir="rtl"] .splide__list { direction: rtl; }
+		[dir="rtl"] .slider-outside-arrows .splide__arrows .splide__arrow--prev,
+		html[dir="rtl"] .slider-outside-arrows .splide__arrows .splide__arrow--prev,
+		.splide--rtl.slider-outside-arrows .splide__arrows .splide__arrow--prev,
+		.splide__arrows--rtl .splide__arrow--prev {
+			left: auto !important;
+			right: -4rem !important;
+		}
+		[dir="rtl"] .slider-outside-arrows .splide__arrows .splide__arrow--prev svg,
+		html[dir="rtl"] .slider-outside-arrows .splide__arrows .splide__arrow--prev svg,
+		.splide--rtl.slider-outside-arrows .splide__arrows .splide__arrow--prev svg,
+		.splide__arrows--rtl .splide__arrow--prev svg {
+			--tw-rotate: 0deg !important;
+			transform: translate(var(--tw-translate-x, 0), var(--tw-translate-y, 0)) rotate(0deg) skewX(var(--tw-skew-x, 0)) skewY(var(--tw-skew-y, 0)) scaleX(var(--tw-scale-x, 1)) scaleY(var(--tw-scale-y, 1)) !important;
+		}
+		[dir="rtl"] .slider-outside-arrows .splide__arrows .splide__arrow--next,
+		html[dir="rtl"] .slider-outside-arrows .splide__arrows .splide__arrow--next,
+		.splide--rtl.slider-outside-arrows .splide__arrows .splide__arrow--next,
+		.splide__arrows--rtl .splide__arrow--next {
+			right: auto !important;
+			left: -4rem !important;
+		}
+		[dir="rtl"] .slider-outside-arrows .splide__arrows .splide__arrow--next svg,
+		html[dir="rtl"] .slider-outside-arrows .splide__arrows .splide__arrow--next svg,
+		.splide--rtl.slider-outside-arrows .splide__arrows .splide__arrow--next svg,
+		.splide__arrows--rtl .splide__arrow--next svg {
+			--tw-rotate: 180deg !important;
+			transform: translate(var(--tw-translate-x, 0), var(--tw-translate-y, 0)) rotate(180deg) skewX(var(--tw-skew-x, 0)) skewY(var(--tw-skew-y, 0)) scaleX(var(--tw-scale-x, 1)) scaleY(var(--tw-scale-y, 1)) !important;
+		}
+		[dir="rtl"] .slider-progress, html[dir="rtl"] .slider-progress { direction: rtl; }
+		[dir="rtl"] .slider-progress .slider-progress-bar, html[dir="rtl"] .slider-progress .slider-progress-bar {
+			margin-right: 0 !important;
+			margin-left: auto !important;
+		}
+		/* Complianz Cookie Banner safety overrides */
+		.cmplz-cookiebanner {
+			max-width: 380px !important;
+			box-sizing: border-box !important;
+		}
+		.cmplz-cookiebanner .cmplz-close svg,
+		.cmplz-close svg,
+		.svg-inline--fa.fa-times {
+			max-width: 20px !important;
+			max-height: 20px !important;
+			width: 20px !important;
+			height: 20px !important;
+		}
+		.cmplz-cookiebanner .cmplz-logo img,
+		.cmplz-cookiebanner .cmplz-logo svg {
+			max-height: 35px !important;
+			max-width: 140px !important;
+			width: auto !important;
+			height: auto !important;
+		}
 	</style>
 
 	
@@ -797,6 +853,8 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li id="menu-item-4226" class="mobile-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4226"><a href="https://voidacoustics.com/careers/">فرصت‌های شغلی</a></li>
 </ul></div>
 											<!--Weglot 6.2-->
+
+
 
 <aside data-wg-notranslate="" class="country-selector weglot-dropdown close_outside_click closed weglot-shortcode wg-" tabindex="0" aria-expanded="false" aria-label="زبان انتخاب شده: فارسی">
 	<input id="wg_choice_fa" class="weglot_choice" type="checkbox" name="menu"/>
