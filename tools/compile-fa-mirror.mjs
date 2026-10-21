@@ -121,6 +121,196 @@ const curatedTranslations = {
   'Read more about TCF purposes on Cookie Database': 'دربارهٔ اهداف TCF در پایگاه دادهٔ کوکی بیشتر بخوانید'
 };
 
+Object.assign(curatedTranslations, {
+  // Shared labels and contact details
+  'Contact Us | Void Acoustics': 'تماس با ما | وید اکوستیکس',
+  'Insights | Case Studies, Blogs, News & Events | Void Acoustics': 'تازه‌های وید | پروژه‌ها، مقالات، اخبار و رویدادها',
+  'Resources | Product Documents, Training & Support | Void Acoustics': 'منابع وید | اسناد محصولات، آموزش و پشتیبانی',
+  'About Us | Void Acoustics': 'دربارهٔ ما | وید اکوستیکس',
+  'Discover | Sound Systems for Every Setting | Void Acoustics': 'کشف کنید | راهکارهای صوتی برای هر فضا | وید اکوستیکس',
+  'Sales enquiries, technical support and partnership enquiries for Void Acoustics.': 'ارتباط با واحد فروش، پشتیبانی فنی و همکاری تجاری وید اکوستیکس.',
+  'Case studies, blog articles and news from Void Acoustics.': 'پروژه‌ها، مقاله‌ها، اخبار و رویدادهای وید اکوستیکس.',
+  'Training videos, product documentation, brochures and technical resources from Void Acoustics.': 'ویدئوهای آموزشی، اسناد محصولات، بروشورها و منابع فنی وید اکوستیکس.',
+  'The history, design philosophy and innovation behind Void Acoustics.': 'داستان شکل‌گیری، فلسفهٔ طراحی و نوآوری‌های وید اکوستیکس.',
+  'Real-world installations and sound systems across hospitality, entertainment and commercial environments.': 'راهکارها و پروژه‌های واقعی سیستم صوتی برای فضاهای پذیرایی، سرگرمی و تجاری.',
+  'Text Image Slides': 'اسلایدهای تصویری',
+  'Quotes Slider': 'دیدگاه مشتریان',
+  'Contact form': 'فرم تماس',
+  'Unit L, The Fulcrum': 'واحد L، ساختمان Fulcrum',
+  'Vantage Way': 'خیابان ونتج',
+  'Poole, Dorset': 'پول، دورست',
+  '© 2026 Void Acoustics Ltd': '© ۲۰۲۶ وید اکوستیکس',
+
+  // Contac
+  'Contact Void Acoustics': 'با وید اکوستیکس در تماس باشید',
+  'Whether you’re planning a system, need technical support, exploring a partnership, or have a general enquiry, our team is here to help.': 'چه در حال طراحی یک سیستم باشید، چه به پشتیبانی فنی نیاز داشته باشید یا بخواهید دربارهٔ همکاری با ما گفت‌وگو کنید، تیم ما آمادهٔ راهنمایی شماست.',
+  'Select the most relevant option below and your enquiry will be directed to the right team, from sales and marketing to technical support and service.': 'موضوع مرتبط را از میان گزینه‌های زیر انتخاب کنید تا درخواست شما مستقیماً به تیم مناسب، از فروش و بازاریابی تا پشتیبانی فنی و خدمات، ارجاع شود.',
+  'We aim to respond as quickly as possible, wherever you are in the world.': 'در هر کجای جهان که باشید، تلاش می‌کنیم در کوتاه‌ترین زمان پاسخ‌گوی شما باشیم.',
+  'Search by city or postcode': 'جست‌وجو بر اساس شهر یا کد پستی',
+  'Dealer': 'فروشنده',
+  'Distributor': 'توزیع‌کننده',
+  'Integrator': 'مجری سیستم',
+  'Search partners': 'جست‌وجوی نمایندگان',
+  'Gallery view': 'نمایش فهرستی',
+  'Map view': 'نمایش روی نقشه',
+  'Results': 'نتایج',
+  'No partners found...': 'نماینده‌ای پیدا نشد',
+  'The search did not return any partners.': 'برای این محدوده نماینده‌ای پیدا نشد.',
+  'Please try again with an alternative search area or contact us': 'محدودهٔ دیگری را جست‌وجو کنید یا با ما تماس بگیرید.',
+  'Back to map view': 'بازگشت به نقشه',
+  'Explore Departments': 'انتخاب واحد مربوطه',
+  'Sales enquiry': 'درخواست فروش',
+  'Marketing enquiry': 'درخواست بازاریابی',
+  'Become a Void partner': 'درخواست همکاری با وید',
+  'Technical support': 'پشتیبانی فنی',
+  'Amplifer service request': 'درخواست تعمیر آمپلی‌فایر',
+  'Your full name *': 'نام و نام خانوادگی *',
+  'Company name *': 'نام شرکت *',
+  'Telephone number *': 'شماره تماس *',
+  'Country *': 'کشور *',
+  'Post/ZIP code *': 'کد پستی *',
+  'Enquiry type *': 'موضوع درخواست *',
+  'Please select': 'لطفاً انتخاب کنید',
+  'Discuss a project or installation': 'مشاوره دربارهٔ پروژه یا نصب',
+  'Request product information': 'دریافت اطلاعات محصول',
+  'Other': 'سایر موارد',
+  'How did you hear about us? *': 'چگونه با ما آشنا شدید؟ *',
+  'Heard and seen Void at a venue': 'تجربهٔ محصولات وید در یک مجموعه',
+  'Social media': 'شبکه‌های اجتماعی',
+  'Online search': 'جست‌وجوی اینترنتی',
+  'Tradeshow': 'نمایشگاه تخصصی',
+  'Word of mouth': 'معرفی دوستان و همکاران',
+  'How can we help? *': 'چطور می‌توانیم کمک کنیم؟ *',
+  'Attend a Void Experience': 'حضور در رویداد تجربهٔ وید',
+  'Host a Void Experience': 'میزبانی رویداد تجربهٔ وید',
+  'Trade shows and exhibitions': 'نمایشگاه‌ها و رویدادهای تخصصی',
+  'Collaborations': 'همکاری‌های مشترک',
+  'Press and media': 'مطبوعات و رسانه',
+  'Social media and content': 'شبکه‌های اجتماعی و تولید محتوا',
+  'Feature my case study': 'انتشار پروژهٔ من',
+  'Website URL': 'نشانی وب‌سایت',
+  'Current brands sold': 'برندهایی که هم‌اکنون عرضه می‌کنید',
+  'Number of current employees': 'تعداد کارکنان فعلی',
+  'Why do you want to become a Void partner? *': 'چرا مایل به همکاری با وید هستید؟ *',
+  'Product model *': 'مدل محصول *',
+  'Serial number *': 'شماره سریال *',
+  'Billing Information': 'اطلاعات صورتحساب',
+  'Address *': 'نشانی *',
+  'City *': 'شهر *',
+  'Country code *': 'پیش‌شماره کشور *',
+  'VAT number': 'شماره مالیات بر ارزش افزوده',
+  'Shipping Information': 'اطلاعات ارسال',
+  'Device Information': 'اطلاعات دستگاه',
+  'Failure description *': 'شرح ایراد *',
+  'Power': 'برق و تغذیه',
+  'Audio': 'صدا',
+  'Mechanics': 'بخش مکانیکی',
+  'In-Out': 'ورودی و خروجی',
+  'What is the fault with the amplifier? *': 'ایراد آمپلی‌فایر چیست؟ *',
+  'Please provide as much detail as possible, including: A detailed description of the fault. Which channel(s) are affected. What product(s) or speaker(s) are connected. Any error messages or warning lights. Whether the fault is constant or intermittent. Any troubleshooting already carried out. Any known cause (e.g. liquid damage, physical damage, power surge or overheating).': 'لطفاً جزئیات کامل را بنویسید: شرح دقیق ایراد، کانال‌های درگیر، محصولات یا بلندگوهای متصل، پیام خطا یا چراغ هشدار، دائمی یا مقطعی بودن مشکل، بررسی‌های انجام‌شده و علت احتمالی مانند نفوذ مایع، آسیب فیزیکی، نوسان برق یا داغ‌شدن.',
+  'Find an authorised distributor, dealer or integrator ready to support your upcoming project.': 'نماینده، فروشنده یا مجری رسمی مناسب برای پشتیبانی از پروژهٔ بعدی خود را پیدا کنید.',
+  'Join our team of passionate designers, engineers and audio specialists shaping the future of sound.': 'به تیم طراحان، مهندسان و متخصصان صدای ما بپیوندید و در ساخت آیندهٔ صدا سهیم شوید.',
+  'View vacancies': 'مشاهده فرصت‌های شغلی',
+  'Access product documents, brochures, training and support tools to help you get the most from your system.': 'به اسناد محصولات، بروشورها، آموزش‌ها و ابزارهای پشتیبانی دسترسی پیدا کنید تا بهترین نتیجه را از سیستم خود بگیرید.',
+  'Browse resources': 'مشاهده منابع',
+
+  // Insights
+  'Stories, projects and events from the world of Void Acoustics': 'داستان‌ها، پروژه‌ها و رویدادهایی از دنیای وید اکوستیکس',
+  'Explore the spaces, people and projects shaping Void around the world. From real installations and case studies to product news, event updates and behind-the-scenes stories, this is where we share what we’re building, where we’re being heard and what’s happening next.': 'با فضاها، آدم‌ها و پروژه‌هایی آشنا شوید که حضور وید را در سراسر جهان شکل می‌دهند؛ از پروژه‌های واقعی و مطالعات موردی تا خبر محصولات، رویدادها و روایت‌های پشت صحنه. اینجا جایی است که تازه‌ترین ساخته‌ها، تجربه‌های شنیداری و برنامه‌های آینده را با شما در میان می‌گذاریم.',
+  'Explore Void Acoustics Insights': 'در تازه‌های وید جست‌وجو کنید',
+  'What are you looking for today?': 'امروز به‌دنبال چه چیزی هستید؟',
+  'Clear Search': 'پاک‌کردن جست‌وجو',
+  'Explore Insights': 'دسته‌بندی مطالب',
+  'All Insights': 'همه مطالب',
+  'Blog': 'وبلاگ',
+  'News': 'اخبار',
+  'Upcoming Events': 'رویدادهای پیش رو',
+  'Past Events': 'رویدادهای گذشته',
+  'Clear Filters': 'پاک‌کردن فیلترها',
+  'Load more': 'نمایش مطالب بیشتر',
+
+  // Resources
+  'Access product documentation, brochures, training materials and support tools to help you get the most from your system.': 'اسناد محصولات، بروشورها، محتوای آموزشی و ابزارهای پشتیبانی را یک‌جا در اختیار داشته باشید تا بیشترین بهره را از سیستم خود ببرید.',
+  'From specification and installation through to servicing and ongoing use, we’re here to support you.': 'از انتخاب و نصب تا سرویس و استفادهٔ روزمره، همراه شما هستیم.',
+  'Select the relevant resources below to find the information, downloads or tools you need.': 'دستهٔ مناسب را انتخاب کنید تا سریع‌تر به اطلاعات، فایل دانلودی یا ابزار مورد نیاز برسید.',
+  'All Resources': 'همه منابع',
+  'Select Resource': 'انتخاب نوع منبع',
+  'Product documents': 'اسناد محصولات',
+  'Training videos': 'ویدئوهای آموزشی',
+  'Brochures': 'بروشورها',
+  'Useful documents': 'اسناد کاربردی',
+  'Legacy documents': 'اسناد محصولات قدیمی',
+  'Inca Series Tutorials': 'آموزش‌های سری Inca',
+  'Bias Series Tutorials': 'آموزش‌های سری Bias',
+  'Application Notes': 'راهنماهای کاربردی',
+  'Cleaning and Maintenance': 'نظافت و نگهداری',
+  'Cleaning and Maintenance Krome': 'نظافت و نگهداری روکش Krome',
+  'Bias Patch Panel Setup': 'راه‌اندازی پنل اتصال Bias',
+  'Service and Warranty': 'خدمات و گارانتی',
+  'Service and Warranty Procedure': 'فرایند خدمات و گارانتی',
+  'Certification': 'گواهی‌ها',
+  'Simulation Files': 'فایل‌های شبیه‌سازی',
+  'Product Overview Brochure': 'بروشور معرفی محصولات',
+  'Series Overview Brochure': 'بروشور معرفی سری‌ها',
+  'Global Installation Brochure': 'بروشور پروژه‌های جهانی',
+  'US Installation Brochure': 'بروشور پروژه‌های آمریکا',
+  'Wellbeing Brochure': 'بروشور فضاهای سلامت و تندرستی',
+  'Touring Brochure': 'بروشور اجرای زنده و تور',
+  'Hotel Brochure': 'بروشور هتل‌ها',
+  'Amplifier Comparison Matrix': 'جدول مقایسهٔ آمپلی‌فایرها',
+  'Arclite Vertical Fly Bar': 'میلهٔ پرواز عمودی Arclite',
+
+  // Abou
+  'About Void Acoustics': 'دربارهٔ وید اکوستیکس',
+  'Our history': 'تاریخچهٔ ما',
+  'Void Acoustics was never built around the idea of hiding another black box in a room. Our products are designed to be seen, chosen, customised and used in environments where sound, design and atmosphere all matter.': 'وید اکوستیکس از ابتدا برای پنهان‌کردن یک جعبهٔ سیاه دیگر در گوشهٔ فضا ساخته نشد. محصولات ما طوری طراحی می‌شوند که دیده شوند، آگاهانه انتخاب شوند و با هویت هر پروژه هماهنگ باشند؛ در فضاهایی که صدا، طراحی و اتمسفر همگی اهمیت دارند.',
+  'From sculpted fibreglass and Natural Wood finishes to the ‘TourCoat’ finish and 25 years of nightlife heritage, Void has been shaped by spaces that demand more from audio.': 'از فرم‌های مجسمه‌وار فایبرگلاس و پرداخت چوب طبیعی تا پوشش مقاوم TourCoat و ۲۵ سال تجربه در فرهنگ شب، وید در فضاهایی رشد کرده است که از صدا انتظاری فراتر دارند.',
+  'Void Acoustics team': 'تیم وید اکوستیکس',
+  'Void Acoustics Team': 'تیم وید اکوستیکس',
+  'Materials from Void Acoustics': 'متریال‌های وید اکوستیکس',
+  'Customisation is central to the Void Acoustics approach. Our products can be adapted to suit the space, the brand and the creative direction of the project.': 'سفارشی‌سازی در قلب رویکرد وید اکوستیکس قرار دارد. هر محصول می‌تواند متناسب با فضا، هویت برند و مسیر خلاقانهٔ پروژه تنظیم و تکمیل شود.',
+  'Customisation at Void Acoustics': 'سفارشی‌سازی در وید اکوستیکس',
+  'That is what gives Void its edge. Loudspeakers that look different, feel personal and have the performance heritage to back them up.': 'همین نگاه، تمایز وید را می‌سازد: بلندگوهایی با ظاهری متفاوت، هویتی شخصی و عملکردی که سال‌ها تجربه پشتوانهٔ آن است.',
+  'Raise Tokyo - Nightlife': 'کلاب Raise توکیو',
+  'Read case study': 'مطالعهٔ این پروژه',
+  '“The Void Acoustics sound system at Spectrum 360 was absolutely unbelievable this year. It felt like the experience reached a whole new level. Just wow.”': '«سیستم صوتی وید اکوستیکس در Spectrum 360 امسال باورنکردنی بود. انگار کل تجربه به سطح تازه‌ای رسیده بود؛ واقعاً شگفت‌انگیز.»',
+  'Co Founder and Creative Director, Boomtown Fair': 'هم‌بنیان‌گذار و مدیر خلاقیت Boomtown Fair',
+  '“Void Acoustics loudspeakers sound exceptional, and the subwoofers are amazing. During initial sound checks, we turned it up to the max and could hear it a mile away. It was so loud the ground was shaking! I had heard Void before, but not in an outdoor setting. We were blown away by how impressive it sounded.”': '«بلندگوهای وید اکوستیکس صدایی استثنایی دارند و ساب‌ووفرها فوق‌العاده‌اند. در نخستین تست صدا، سیستم را تا آخر بالا بردیم و از فاصله‌ای بسیار دور هم شنیده می‌شد؛ زمین واقعاً می‌لرزید. پیش‌تر وید را شنیده بودم، اما نه در فضای باز. نتیجه فراتر از انتظار ما بود.»',
+  'Senior Vice President, Smart Systems USA': 'معاون ارشد Smart Systems آمریکا',
+  '“We wanted more than just sound that can be heard. We wanted sound that is high quality and fundamentally different from conventional retail environments. When I walked through Nextopia after the Void Acoustics installation was completed, I was truly impressed.”': '«ما فقط صدایی شنیدنی نمی‌خواستیم؛ کیفیتی بالا و تجربه‌ای متفاوت از فضاهای خرده‌فروشی معمولی می‌خواستیم. وقتی پس از تکمیل نصب وید اکوستیکس در Nextopia قدم زدم، واقعاً تحت تأثیر قرار گرفتم.»',
+  'Group CEO, Siam Piwat Thailand': 'مدیرعامل گروه Siam Piwat تایلند',
+  '“Having worked with Void Acoustics for many years, they are always innovative and supportive in the drive to improve. The sound quality is unique, iconic, and truly stands out.”': '«پس از سال‌ها همکاری با وید اکوستیکس، همیشه نوآوری و همراهی آن‌ها را در مسیر بهترشدن دیده‌ایم. کیفیت صدا منحصربه‌فرد و شاخص است و واقعاً خود را نشان می‌دهد.»',
+  'Technical Manager, Studio 338 London': 'مدیر فنی Studio 338 لندن',
+  '“Void takes the sound experience to a completely different level. I clearly remember feeling the different frequencies hitting my body, something I had never experienced before with any other sound system. That was when I knew we had to use Void Acoustics for our festival.”': '«وید تجربهٔ صدا را به سطحی کاملاً متفاوت می‌برد. هنوز برخورد فرکانس‌های مختلف با بدنم را به‌وضوح به یاد دارم؛ حسی که با هیچ سیستم دیگری تجربه نکرده بودم. همان لحظه فهمیدم که جشنوارهٔ ما باید از وید اکوستیکس استفاده کند.»',
+  'Organiser, Bazique Festival South Africa': 'برگزارکنندهٔ جشنواره Bazique، آفریقای جنوبی',
+  '“From a technical perspective, Void’s products are designed extremely thoroughly with flexible installation methods. The product line is very rich, allowing customers to choose what’s right for different occasions.”': '«از نظر فنی، محصولات وید با دقتی بسیار بالا و روش‌های نصب منعطف طراحی شده‌اند. تنوع محصولات به مشتریان اجازه می‌دهد برای هر کاربرد، انتخاب درستی داشته باشند.»',
+  'System Engineer, Real Music Acoustics & Lighting Technology': 'مهندس سیستم، Real Music Acoustics & Lighting Technology',
+  '“Void gives us the flexibility to design around architectural demands while still delivering amazing sound. URBNSURF is a flagship venue and we’re proud to have helped shape the experience.”': '«وید به ما انعطاف لازم را می‌دهد تا ضمن پاسخ به نیازهای معماری، صدایی فوق‌العاده ارائه کنیم. URBNSURF مجموعه‌ای شاخص است و افتخار می‌کنیم که در شکل‌دادن تجربهٔ آن سهم داشته‌ایم.»',
+  'Co-Owner of Buzz Speaker Hire': 'هم‌مالک Buzz Speaker Hire',
+  'From the UK to around the world, Void Acoustics has become synonymous with innovation, artistry and a deep connection to sound, music and people.': 'از بریتانیا تا سراسر جهان، نام وید اکوستیکس با نوآوری، هنر و پیوندی عمیق میان صدا، موسیقی و انسان گره خورده است.',
+  'Void Acoustics began in 2002 with a vision to transform the club experience and place sound at the centre of the story. Founders Rog Mogale and Alex Skan sought to create audio systems that could fill any space with immersive sound, energy and emotion.': 'وید اکوستیکس در سال ۲۰۰۲ با چشم‌اندازی برای دگرگون‌کردن تجربهٔ کلاب و قراردادن صدا در مرکز روایت آغاز شد. راگ موگاله و الکس اسکن می‌خواستند سیستم‌هایی بسازند که هر فضا را با صدایی فراگیر، انرژی و احساس پر کند.',
+  'What started in Poole in the South of England, with wood-crafted loudspeakers, quickly evolved into a global brand of striking audio solutions that have long transcended their original purpose.': 'کاری که در شهر پول در جنوب انگلستان با بلندگوهای دست‌ساز چوبی آغاز شد، خیلی زود به برندی جهانی با راهکارهای صوتی خیره‌کننده تبدیل شد؛ محصولاتی که مدت‌هاست از کاربرد اولیهٔ خود فراتر رفته‌اند.',
+  'Explore history': 'مرور تاریخچهٔ وید',
+  'Void Acoustics is built by people who care deeply about sound, design, music and the spaces our products become part of. Many of us are DJs, musicians, engineers and lifelong music lovers. That passion matters.': 'وید اکوستیکس را افرادی می‌سازند که عمیقاً به صدا، طراحی، موسیقی و فضاهایی که محصولات ما بخشی از آن‌ها می‌شوند اهمیت می‌دهند. بسیاری از ما دی‌جی، موسیقی‌دان، مهندس یا دوستدار همیشگی موسیقی هستیم و این اشتیاق در کارمان دیده می‌شود.',
+  'We believe the best work happens when people communicate properly, listen to each other and respect different points of view. We challenge ideas, not people. We accept when we are wrong, course-correct when needed and keep moving towards the right outcome.': 'باور داریم بهترین نتیجه زمانی شکل می‌گیرد که درست با هم گفت‌وگو کنیم، به یکدیگر گوش بدهیم و به دیدگاه‌های متفاوت احترام بگذاریم. ایده‌ها را به چالش می‌کشیم، اشتباه را می‌پذیریم و هرجا لازم باشد مسیر را اصلاح می‌کنیم.',
+  'There is a strong family spirit at Void, built on respect across the organisation, pride in the work and a shared responsibility to do right by each other, our customers and the venues that trust us.': 'روحیه‌ای خانوادگی در وید جریان دارد که بر احترام، افتخار به کار و مسئولیت مشترک در برابر یکدیگر، مشتریان و مجموعه‌هایی که به ما اعتماد می‌کنند بنا شده است.',
+  'The result is a company shaped by teamwork, honesty and a genuine love of music. That is what keeps us moving forward.': 'نتیجه، شرکتی است که با کار تیمی، صداقت و عشق واقعی به موسیقی شکل گرفته؛ نیرویی که ما را رو به جلو می‌برد.',
+
+  // Discover
+  'Design-led onboard sound for entertaining, luxury interiors and private living': 'صدای یکپارچه با طراحی برای سرگرمی، فضاهای لوکس و زندگی خصوصی روی آب',
+  'Intentional sound that guides attention, supports immersion and respects the space': 'صدایی هدفمند که توجه را هدایت می‌کند، تجربه را فراگیر می‌سازد و به هویت فضا احترام می‌گذارد',
+  'Nightlife systems with physical low-end impact and unmistakable visual presence': 'سیستم‌های کلاب با بیس ملموس و حضوری بصری که نمی‌توان نادیده گرفت',
+  'Design-led sound for homes that live, entertain and perform beautifully': 'صدایی هماهنگ با معماری برای خانه‌هایی که زندگی، سرگرمی و اجرا را زیبا در کنار هم دارند',
+  'Sound that shapes brand identity and makes boutique spaces feel considered': 'صدایی که هویت برند را کامل می‌کند و به فضاهای بوتیک شخصیت می‌بخشد',
+  'Controlled audio that moves between calm focus and high-energy performance': 'صدایی کنترل‌شده که از تمرکز آرام تا اجرای پرانرژی همراه فضاست',
+  'Outdoor sound for open-air spaces that move from relaxation to celebration': 'صدای فضای باز برای محیط‌هایی که از آرامش روز تا جشن شب تغییر می‌کنند',
+  'Sound across the guest journey, from arrival spaces to late-night venues': 'تجربه‌ای صوتی در سراسر مسیر مهمان؛ از لحظهٔ ورود تا فضاهای شبانه',
+  'Powerful sound and and impact for immersive events, stages and open-air gatherings': 'صدایی قدرتمند و اثرگذار برای رویدادهای فراگیر، صحنه‌ها و گردهمایی‌های فضای باز',
+  'Physical low-end energy and sculpted visual presence built for the booth': 'انرژی ملموس فرکانس‌های پایین و فرمی مجسمه‌وار، ساخته‌شده برای اتاق دی‌جی',
+  'Mountain hospitality sound for terraces, chalets and late-night alpine venues': 'صدای حرفه‌ای برای تراس‌ها، کلبه‌ها و مجموعه‌های شبانهٔ کوهستانی',
+  'Audio that balances conversation, atmosphere and energy throughout the venue': 'صدایی که در تمام مجموعه میان گفت‌وگو، اتمسفر و انرژی تعادل برقرار می‌کند'
+});
+
 Object.assign(glossary, headingTranslations, curatedTranslations);
 
 // Sort dictionary keys by length descending to match longest phrases first if needed
@@ -148,6 +338,25 @@ function normalizeLegacyLinks(html) {
   for (const [legacyPath, currentPath] of LEGACY_PAGE_PATHS) {
     html = html.replaceAll(legacyPath, currentPath);
   }
+  return html;
+}
+
+const RESOURCE_ASSET_REPLACEMENTS = new Map([
+  ['TD10685-2.0-Void-Acoustics-Arclite-Spec-Sheet1.pdf', 'TD10685-2.0-Void-Acoustics-Arclite-Spec-Sheet.pdf'],
+  ['UG10589-2-3-Void-Acoustics-Cyclone-Bass-User-Guide-1.pdf', 'UG10589-2.3-Void-Acoustics-Cyclone-Bass-User-Guide-1.pdf'],
+  ['UG10607-3.2-Bias-D1-Q1-Q1.5-Q2.pdf', 'UG10607-4-0-Void-Acoustics-Bias-D1-Q1-Q15-Q2-User-Guide.pdf'],
+  ['UG10607-3.2-Bias-D1-Q1-Q1.5-Q2-1.pdf', 'UG10607-4-0-Void-Acoustics-Bias-D1-Q1-Q15-Q2-User-Guide.pdf'],
+  ['UG10607-3.2-Bias-D1-Q1-Q1.5-Q2-2.pdf', 'UG10607-4-0-Void-Acoustics-Bias-D1-Q1-Q15-Q2-User-Guide.pdf']
+]);
+
+function normalizeResourceAssets(html) {
+  for (const [oldName, newName] of RESOURCE_ASSET_REPLACEMENTS) {
+    html = html.replaceAll(oldName, newName);
+  }
+  // These two legacy documents are no longer present and have no accurate
+  // successor. Remove only their download rows instead of leaving dead links.
+  html = html.replace(/<li><a[^>]+href="[^"]*TD10690-1\.0-Bias-Q1\.5-Specification-Sheet\.pdf"[^>]*>[\s\S]*?<\/a><\/li>\s*/gi, '');
+  html = html.replace(/<li><a[^>]+href="[^"]*Venu_Series_User_Guide_V1\.0\.pdf"[^>]*>[\s\S]*?<\/a><\/li>\s*/gi, '');
   return html;
 }
 
@@ -694,6 +903,160 @@ const FA_HEAD_INJECTION = `
 				display: flex !important;
 			}
 		}
+
+		/* Polished content pages: contact, insights, resources, about and discover. */
+		html[dir="rtl"] body:is(.page-id-6,.page-id-9,.page-id-11,.page-id-13,.page-id-257) main .hero-slider h1 {
+			max-width: 18ch;
+			font-weight: 850;
+			line-height: 1.18;
+			text-shadow: 0 3px 24px rgba(0,0,0,.42);
+		}
+		html[dir="rtl"] body:is(.page-id-6,.page-id-9,.page-id-11,.page-id-13) main .layout-combine-space .content-component {
+			font-size: 1.04rem;
+			line-height: 2;
+			color: #3e3e3e;
+		}
+		html[dir="rtl"] body:is(.page-id-6,.page-id-9,.page-id-13) main [data-tabs] > .lg\\:w-4\\/12 .tabs-mobile-content {
+			padding: 1.25rem;
+			border: 1px solid #e3e3e3;
+			border-radius: 1.25rem;
+			background: linear-gradient(145deg,#fafafa 0%,#f1f1f1 100%);
+			box-shadow: 0 18px 48px rgba(0,0,0,.06);
+		}
+		html[dir="rtl"] body:is(.page-id-6,.page-id-9,.page-id-13) main .departments-list button {
+			min-height: 46px;
+			text-align: right !important;
+			border: 1px solid transparent;
+		}
+		html[dir="rtl"] body:is(.page-id-6,.page-id-9,.page-id-13) main .departments-list .item-active > button,
+		html[dir="rtl"] body:is(.page-id-6,.page-id-9,.page-id-13) main .departments-list button:hover {
+			border-color: rgba(255,2,61,.18);
+			background: #fff;
+			box-shadow: 0 8px 24px rgba(0,0,0,.055);
+		}
+		html[dir="rtl"] body:is(.page-id-6,.page-id-13) main [data-tabs-content] {
+			padding: clamp(1.25rem,3vw,2.5rem);
+			border: 1px solid #e7e7e7;
+			border-radius: 1.5rem;
+			background: #fff;
+			box-shadow: 0 22px 62px rgba(0,0,0,.065);
+		}
+		html[dir="rtl"] body:is(.page-id-6,.page-id-13) main .form-group label,
+		html[dir="rtl"] body:is(.page-id-6,.page-id-13) main .form-heading {
+			display: block;
+			margin-bottom: .55rem;
+			font-weight: 650;
+			text-align: right;
+		}
+		html[dir="rtl"] body:is(.page-id-6,.page-id-13) main .wpcf7 input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
+		html[dir="rtl"] body:is(.page-id-6,.page-id-13) main .wpcf7 select,
+		html[dir="rtl"] body:is(.page-id-6,.page-id-13) main .wpcf7 textarea {
+			width: 100%;
+			text-align: right;
+			direction: rtl;
+			border-radius: .85rem;
+			background-color: #fafafa;
+			transition: border-color .2s ease,box-shadow .2s ease,background-color .2s ease;
+		}
+		html[dir="rtl"] body:is(.page-id-6,.page-id-13) main .wpcf7 input:focus,
+		html[dir="rtl"] body:is(.page-id-6,.page-id-13) main .wpcf7 select:focus,
+		html[dir="rtl"] body:is(.page-id-6,.page-id-13) main .wpcf7 textarea:focus {
+			outline: none;
+			border-color: #ff023d;
+			background: #fff;
+			box-shadow: 0 0 0 4px rgba(255,2,61,.1);
+		}
+		html[dir="rtl"] body.page-id-6 main .partner-locator > .bg-surface-200 {
+			background:
+				radial-gradient(circle at 10% 20%,rgba(255,2,61,.09),transparent 30%),
+				#f1f1f1;
+		}
+		html[dir="rtl"] body.page-id-6 main .partner-checkbox label { margin-right: .45rem; }
+		html[dir="rtl"] body.page-id-9 main section.bg-surface-200 {
+			background:
+				radial-gradient(circle at 88% 18%,rgba(255,2,61,.11),transparent 28%),
+				#ededed;
+		}
+		html[dir="rtl"] body.page-id-9 main [data-insights-search] {
+			text-align: right;
+			direction: rtl;
+		}
+		html[dir="rtl"] body.page-id-13 main .accordion-item {
+			overflow: hidden;
+			border-width: 1px !important;
+			border-color: #dedede !important;
+			border-radius: 1rem !important;
+			background: #fff;
+			box-shadow: 0 9px 26px rgba(0,0,0,.04);
+		}
+		html[dir="rtl"] body.page-id-13 main .accordion-item [data-accordion-toggle] {
+			text-align: right;
+			background: linear-gradient(100deg,#f1f1f1,#fafafa);
+		}
+		html[dir="rtl"] body.page-id-13 main .accordion-item a {
+			line-height: 1.8;
+		}
+		html[dir="rtl"] body.page-id-11 main .layout-combine-space img {
+			border-radius: 1.25rem;
+			box-shadow: 0 24px 60px rgba(0,0,0,.13);
+		}
+		html[dir="rtl"] body.page-id-11 main .benefits-gradient {
+			background:
+				radial-gradient(circle at 12% 12%,rgba(255,2,61,.28),transparent 25%),
+				linear-gradient(140deg,#050505 0%,#191919 48%,#050505 100%);
+		}
+		html[dir="rtl"] body.page-id-257 main > section.py-14 .grid > a {
+			gap: 0 !important;
+			height: 100%;
+			overflow: hidden;
+			border: 1px solid #e4e4e4;
+			border-radius: 1.25rem;
+			background: #fff;
+			box-shadow: 0 14px 40px rgba(0,0,0,.065);
+			transition: transform .28s ease,box-shadow .28s ease,border-color .28s ease;
+		}
+		html[dir="rtl"] body.page-id-257 main > section.py-14 .grid > a:hover {
+			transform: translateY(-6px);
+			border-color: rgba(255,2,61,.35);
+			box-shadow: 0 24px 58px rgba(0,0,0,.12);
+		}
+		html[dir="rtl"] body.page-id-257 main > section.py-14 .grid > a > div:last-child {
+			min-height: 155px;
+			padding: 1.35rem 1.4rem 1.5rem;
+			justify-content: flex-start;
+		}
+		html[dir="rtl"] body.page-id-257 main > section.py-14 .grid > a p {
+			color: #5b5b5b;
+			font-size: .95rem;
+			line-height: 1.85;
+		}
+
+		@media (max-width: 959px) {
+			html[dir="rtl"] body:is(.page-id-6,.page-id-9,.page-id-11,.page-id-13,.page-id-257) main .hero-slider .page-width {
+				padding-top: 7rem !important;
+				padding-bottom: 5rem !important;
+			}
+			html[dir="rtl"] body:is(.page-id-6,.page-id-9,.page-id-13) main .tabs-mobile-container {
+				position: relative !important;
+				top: auto !important;
+			}
+			html[dir="rtl"] body:is(.page-id-6,.page-id-9,.page-id-13) main .tabs-mobile-content {
+				border-radius: 1rem;
+			}
+			html[dir="rtl"] body:is(.page-id-6,.page-id-13) main [data-tabs-content] {
+				padding: 1.1rem;
+				border-radius: 1.1rem;
+				box-shadow: 0 12px 34px rgba(0,0,0,.06);
+			}
+			html[dir="rtl"] body:is(.page-id-6,.page-id-13) main .form-row {
+				display: grid !important;
+				grid-template-columns: minmax(0,1fr) !important;
+				gap: 0 !important;
+			}
+			html[dir="rtl"] body.page-id-257 main > section.py-14 .grid > a > div:last-child {
+				min-height: 0;
+			}
+		}
 	</style>
 	<script id="fa-image-hydration">
 		document.addEventListener('DOMContentLoaded', function () {
@@ -731,6 +1094,99 @@ function escapeHtml(str) {
     .replace(/'/g, '&#39;');
 }
 
+const technicalLabelRules = [
+  [/Firmware Update Guide/gi, 'راهنمای به‌روزرسانی فرم‌ویر'],
+  [/Downloading Amplifier Models and Loudspeaker Presets/gi, 'دانلود مدل‌های آمپلی‌فایر و پریست‌های بلندگو'],
+  [/Adding Amplifiers to the Workspace/gi, 'افزودن آمپلی‌فایرها به محیط کار'],
+  [/Adding Loudspeakers to the Workspace/gi, 'افزودن بلندگوها به محیط کار'],
+  [/Amplifier Firmware Upgrade/gi, 'ارتقای فرم‌ویر آمپلی‌فایر'],
+  [/Armonia Installation Guide/gi, 'راهنمای نصب Armonia'],
+  [/Live View Config Tab/gi, 'تنظیمات نمای زنده'],
+  [/Specifications? Sheet/gi, 'برگه مشخصات فنی'],
+  [/Specfication Sheet/gi, 'برگه مشخصات فنی'],
+  [/User Guide/gi, 'راهنمای کاربر'],
+  [/User Manual/gi, 'دفترچه راهنمای کاربر'],
+  [/user manual/gi, 'دفترچه راهنمای کاربر'],
+  [/Series Manual/gi, 'راهنمای سری'],
+  [/\bManual\b/gi, 'دفترچه راهنما'],
+  [/Line Drawing/gi, 'نقشهٔ ابعادی'],
+  [/3D Model/gi, 'مدل سه‌بعدی'],
+  [/Control Software/gi, 'نرم‌افزار کنترل'],
+  [/\bSoftware\b/gi, 'نرم‌افزار'],
+  [/Preset Library/gi, 'کتابخانهٔ پریست‌ها'],
+  [/\bPresets\b/gi, 'پریست‌ها'],
+  [/\bFirmware\b/gi, 'فرم‌ویر'],
+  [/Comparison Matrix/gi, 'جدول مقایسه'],
+  [/Patch Panel Data Sheet/gi, 'دیتاشیت پنل اتصال'],
+  [/Patch Panel Setup/gi, 'راه‌اندازی پنل اتصال'],
+  [/Ceiling Bracket/gi, 'براکت سقفی'],
+  [/Pole Bracket Kit/gi, 'کیت براکت پایه'],
+  [/Pole Bracket/gi, 'براکت پایه'],
+  [/Stud Bracket/gi, 'براکت پیچی'],
+  [/Wall Bracket/gi, 'براکت دیواری'],
+  [/Tilt Bracket/gi, 'براکت زاویه‌دار'],
+  [/Multi Bracket Extension/gi, 'افزونهٔ براکت چندمنظوره'],
+  [/Multi Bracket/gi, 'براکت چندمنظوره'],
+  [/Truss Bracket/gi, 'براکت تراس'],
+  [/Yoke Bracket/gi, 'براکت یوک'],
+  [/Mounting Board/gi, 'صفحهٔ نصب'],
+  [/Ground Stack Board/gi, 'صفحهٔ استک زمینی'],
+  [/Rigging Assembly/gi, 'مجموعهٔ ریگینگ'],
+  [/Fly Frame Flightcase/gi, 'کیس حمل فریم پرواز'],
+  [/Fly Frame Extension Bracket Set/gi, 'مجموعه براکت توسعهٔ فریم پرواز'],
+  [/Fly Frame/gi, 'فریم پرواز'],
+  [/Vertical Fly Bar/gi, 'میلهٔ پرواز عمودی'],
+  [/Lift Beam/gi, 'تیر بالابر'],
+  [/Flightcase/gi, 'کیس حمل'],
+  [/Rack Mount Kit/gi, 'کیت نصب رک'],
+  [/Wall\/Desktop Mount Kit/gi, 'کیت نصب دیواری/رومیزی'],
+  [/Heavy Duty Top Hat Casting/gi, 'اتصال پایهٔ تقویت‌شده'],
+  [/Heavy Duty Top Hat/gi, 'اتصال پایهٔ تقویت‌شده'],
+  [/Mounting Bracket/gi, 'براکت نصب'],
+  [/USB Drivers/gi, 'درایورهای USB'],
+  [/EU Declaration Loudspeakers/gi, 'اظهارنامهٔ اتحادیه اروپا برای بلندگوها'],
+  [/UK Declaration Loudspeakers/gi, 'اظهارنامهٔ بریتانیا برای بلندگوها'],
+  [/EU Declaration Amplifiers/gi, 'اظهارنامهٔ اتحادیه اروپا برای آمپلی‌فایرها'],
+  [/UK Declaration Amplifiers/gi, 'اظهارنامهٔ بریتانیا برای آمپلی‌فایرها'],
+  [/Product Brochure/gi, 'بروشور محصولات'],
+  [/Series Overview Brochure/gi, 'بروشور معرفی سری‌ها'],
+  [/Installations Brochure/gi, 'بروشور پروژه‌ها'],
+  [/Installation Brochure/gi, 'بروشور پروژه‌ها'],
+  [/Wellbeing Brochure/gi, 'بروشور فضاهای سلامت'],
+  [/Touring Brochure/gi, 'بروشور اجرای زنده'],
+  [/Hotel Brochure/gi, 'بروشور هتل‌ها'],
+  [/Tutorial/gi, 'آموزش'],
+  [/Dashboard/gi, 'داشبورد'],
+  [/Input/gi, 'ورودی'],
+  [/Output/gi, 'خروجی'],
+  [/Settings/gi, 'تنظیمات'],
+  [/Zones/gi, 'زون‌ها'],
+  [/\bPlot\b/gi, 'نمودار'],
+  [/\bBlack\b/gi, 'مشکی'],
+  [/\bWhite\b/gi, 'سفید'],
+  [/Left Handed/gi, 'نسخهٔ چپ'],
+  [/Right Handed/gi, 'نسخهٔ راست'],
+  [/With Rigging/gi, 'با ریگینگ'],
+  [/Without Rigging|w\/o Rigging/gi, 'بدون ریگینگ'],
+  [/\bRigging\b/gi, 'ریگینگ'],
+  [/\bLeft\b/gi, 'چپ'],
+  [/\bRight\b/gi, 'راست']
+];
+
+function translateTechnicalLabel(text) {
+  if (!text) return text;
+  const isTechnicalLabel = /User Guide|User Manual|\bManual\b|Specifications? Sheet|Specfication Sheet|Line Drawing|3D Model|Firmware|Software|Preset|Bracket|Mount|Rigging|Flightcase|Fly Frame|Lift Beam|Top Hat|Declaration|Brochure|Tutorial|\bPlot\b|\bSettings\b|USB Drivers|Comparison Matrix|Data Sheet/i.test(text);
+  if (!isTechnicalLabel || text.length > 180) return text;
+  let translated = text;
+  let changed = false;
+  for (const [pattern, replacement] of technicalLabelRules) {
+    const next = translated.replace(pattern, replacement);
+    if (next !== translated) changed = true;
+    translated = next;
+  }
+  return changed ? translated.replace(/\s+[–-]\s+/g, ' – ') : text;
+}
+
 function translateText(text) {
   if (!text) return text;
   const trimmed = text.trim();
@@ -743,6 +1199,10 @@ function translateText(text) {
     if (k.toLowerCase() === lower) {
       return text.replace(trimmed, glossary[k]);
     }
+  }
+  const technical = translateTechnicalLabel(trimmed);
+  if (technical !== trimmed) {
+    return text.replace(trimmed, technical);
   }
   return text;
 }
@@ -924,6 +1384,12 @@ export async function compileAll() {
       if (node.attrs && node.sourceCodeLocation?.attrs) {
         for (const attr of node.attrs) {
           if (['alt', 'title', 'aria-label', 'placeholder', 'value'].includes(attr.name)) {
+            // Option, checkbox, radio and hidden values are machine-readable
+            // identifiers. Translating them breaks filtering and form submits.
+            if (attr.name === 'value') {
+              const inputType = node.attrs.find((a) => a.name === 'type')?.value?.toLowerCase();
+              if (node.nodeName !== 'input' || !['submit', 'button', 'reset'].includes(inputType)) continue;
+            }
             const loc = node.sourceCodeLocation.attrs[attr.name];
             if (loc && attr.value && attr.value.trim().length > 1) {
               const trans = translateAttr(attr.name, attr.value);
@@ -1027,8 +1493,8 @@ export async function compileAll() {
       const translated = translateText(plain).trim();
       return translated !== plain ? `<${tag}${attrs}>${escapeHtml(translated)}</${tag}>` : full;
     });
-    faHtml = faHtml.replace(/(\/wp-content\/themes\/void2025\/js\/app\.js)(?:\?[^"']*)?/g, '$1?v=20261021-fa4');
-    faHtml = normalizeLegacyLinks(faHtml);
+    faHtml = faHtml.replace(/(\/wp-content\/themes\/void2025\/js\/app\.js)(?:\?[^"']*)?/g, '$1?v=20261021-fa5');
+    faHtml = normalizeResourceAssets(normalizeLegacyLinks(faHtml));
 
     // Give the Persian homepage a compact editorial bridge between the
     // cinematic hero and the product story, using the same visual language.
@@ -1083,8 +1549,8 @@ export async function compileAll() {
 	<link rel="alternate" href="${faPath}" hreflang="x-default" />
 `;
     enHtml = enHtml.replace(/<head>/i, `<head>${enHreflangs}`);
-    enHtml = enHtml.replace(/(\/wp-content\/themes\/void2025\/js\/app\.js)(?:\?[^"']*)?/g, '$1?v=20261021-fa4');
-    enHtml = normalizeLegacyLinks(enHtml);
+    enHtml = enHtml.replace(/(\/wp-content\/themes\/void2025\/js\/app\.js)(?:\?[^"']*)?/g, '$1?v=20261021-fa5');
+    enHtml = normalizeResourceAssets(normalizeLegacyLinks(enHtml));
 
     fs.writeFileSync(file, enHtml, 'utf8');
     enUpdated++;

@@ -437,6 +437,9 @@
 				color: var(--void-red);
 				font-size: 1.25rem;
 			}
+			html[dir="rtl"] #menu-main-nav .menu-series-list li.has-children > a svg {
+				display: none !important;
+			}
 			html[dir="rtl"] #menu-main-nav [data-parent-lvl1],
 			html[dir="rtl"] #menu-main-nav [data-parent-lvl2] {
 				min-height: 48px;
@@ -477,9 +480,6 @@
 			html[dir="rtl"] #menu-main-nav #products-by-series {
 				height: auto !important;
 				min-height: 100% !important;
-			}
-			html[dir="rtl"] #menu-main-nav .menu-series-list li.has-children > a svg {
-				display: none !important;
 			}
 			html[dir="rtl"] body:has(#menu-main-nav > li.parent-sub-open) #menu-main-nav {
 				padding-bottom: 0 !important;
@@ -536,6 +536,160 @@
 			html[dir="rtl"] body:has(#menu-main-nav .parent-sub-open) #primary-menu .mobile-menu-back-button,
 			html[dir="rtl"] body:has(#menu-main-nav .mobile-menu-level-3-open) #primary-menu .mobile-menu-back-button {
 				display: flex !important;
+			}
+		}
+
+		/* Polished content pages: contact, insights, resources, about and discover. */
+		html[dir="rtl"] body:is(.page-id-6,.page-id-9,.page-id-11,.page-id-13,.page-id-257) main .hero-slider h1 {
+			max-width: 18ch;
+			font-weight: 850;
+			line-height: 1.18;
+			text-shadow: 0 3px 24px rgba(0,0,0,.42);
+		}
+		html[dir="rtl"] body:is(.page-id-6,.page-id-9,.page-id-11,.page-id-13) main .layout-combine-space .content-component {
+			font-size: 1.04rem;
+			line-height: 2;
+			color: #3e3e3e;
+		}
+		html[dir="rtl"] body:is(.page-id-6,.page-id-9,.page-id-13) main [data-tabs] > .lg\:w-4\/12 .tabs-mobile-content {
+			padding: 1.25rem;
+			border: 1px solid #e3e3e3;
+			border-radius: 1.25rem;
+			background: linear-gradient(145deg,#fafafa 0%,#f1f1f1 100%);
+			box-shadow: 0 18px 48px rgba(0,0,0,.06);
+		}
+		html[dir="rtl"] body:is(.page-id-6,.page-id-9,.page-id-13) main .departments-list button {
+			min-height: 46px;
+			text-align: right !important;
+			border: 1px solid transparent;
+		}
+		html[dir="rtl"] body:is(.page-id-6,.page-id-9,.page-id-13) main .departments-list .item-active > button,
+		html[dir="rtl"] body:is(.page-id-6,.page-id-9,.page-id-13) main .departments-list button:hover {
+			border-color: rgba(255,2,61,.18);
+			background: #fff;
+			box-shadow: 0 8px 24px rgba(0,0,0,.055);
+		}
+		html[dir="rtl"] body:is(.page-id-6,.page-id-13) main [data-tabs-content] {
+			padding: clamp(1.25rem,3vw,2.5rem);
+			border: 1px solid #e7e7e7;
+			border-radius: 1.5rem;
+			background: #fff;
+			box-shadow: 0 22px 62px rgba(0,0,0,.065);
+		}
+		html[dir="rtl"] body:is(.page-id-6,.page-id-13) main .form-group label,
+		html[dir="rtl"] body:is(.page-id-6,.page-id-13) main .form-heading {
+			display: block;
+			margin-bottom: .55rem;
+			font-weight: 650;
+			text-align: right;
+		}
+		html[dir="rtl"] body:is(.page-id-6,.page-id-13) main .wpcf7 input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
+		html[dir="rtl"] body:is(.page-id-6,.page-id-13) main .wpcf7 select,
+		html[dir="rtl"] body:is(.page-id-6,.page-id-13) main .wpcf7 textarea {
+			width: 100%;
+			text-align: right;
+			direction: rtl;
+			border-radius: .85rem;
+			background-color: #fafafa;
+			transition: border-color .2s ease,box-shadow .2s ease,background-color .2s ease;
+		}
+		html[dir="rtl"] body:is(.page-id-6,.page-id-13) main .wpcf7 input:focus,
+		html[dir="rtl"] body:is(.page-id-6,.page-id-13) main .wpcf7 select:focus,
+		html[dir="rtl"] body:is(.page-id-6,.page-id-13) main .wpcf7 textarea:focus {
+			outline: none;
+			border-color: #ff023d;
+			background: #fff;
+			box-shadow: 0 0 0 4px rgba(255,2,61,.1);
+		}
+		html[dir="rtl"] body.page-id-6 main .partner-locator > .bg-surface-200 {
+			background:
+				radial-gradient(circle at 10% 20%,rgba(255,2,61,.09),transparent 30%),
+				#f1f1f1;
+		}
+		html[dir="rtl"] body.page-id-6 main .partner-checkbox label { margin-right: .45rem; }
+		html[dir="rtl"] body.page-id-9 main section.bg-surface-200 {
+			background:
+				radial-gradient(circle at 88% 18%,rgba(255,2,61,.11),transparent 28%),
+				#ededed;
+		}
+		html[dir="rtl"] body.page-id-9 main [data-insights-search] {
+			text-align: right;
+			direction: rtl;
+		}
+		html[dir="rtl"] body.page-id-13 main .accordion-item {
+			overflow: hidden;
+			border-width: 1px !important;
+			border-color: #dedede !important;
+			border-radius: 1rem !important;
+			background: #fff;
+			box-shadow: 0 9px 26px rgba(0,0,0,.04);
+		}
+		html[dir="rtl"] body.page-id-13 main .accordion-item [data-accordion-toggle] {
+			text-align: right;
+			background: linear-gradient(100deg,#f1f1f1,#fafafa);
+		}
+		html[dir="rtl"] body.page-id-13 main .accordion-item a {
+			line-height: 1.8;
+		}
+		html[dir="rtl"] body.page-id-11 main .layout-combine-space img {
+			border-radius: 1.25rem;
+			box-shadow: 0 24px 60px rgba(0,0,0,.13);
+		}
+		html[dir="rtl"] body.page-id-11 main .benefits-gradient {
+			background:
+				radial-gradient(circle at 12% 12%,rgba(255,2,61,.28),transparent 25%),
+				linear-gradient(140deg,#050505 0%,#191919 48%,#050505 100%);
+		}
+		html[dir="rtl"] body.page-id-257 main > section.py-14 .grid > a {
+			gap: 0 !important;
+			height: 100%;
+			overflow: hidden;
+			border: 1px solid #e4e4e4;
+			border-radius: 1.25rem;
+			background: #fff;
+			box-shadow: 0 14px 40px rgba(0,0,0,.065);
+			transition: transform .28s ease,box-shadow .28s ease,border-color .28s ease;
+		}
+		html[dir="rtl"] body.page-id-257 main > section.py-14 .grid > a:hover {
+			transform: translateY(-6px);
+			border-color: rgba(255,2,61,.35);
+			box-shadow: 0 24px 58px rgba(0,0,0,.12);
+		}
+		html[dir="rtl"] body.page-id-257 main > section.py-14 .grid > a > div:last-child {
+			min-height: 155px;
+			padding: 1.35rem 1.4rem 1.5rem;
+			justify-content: flex-start;
+		}
+		html[dir="rtl"] body.page-id-257 main > section.py-14 .grid > a p {
+			color: #5b5b5b;
+			font-size: .95rem;
+			line-height: 1.85;
+		}
+
+		@media (max-width: 959px) {
+			html[dir="rtl"] body:is(.page-id-6,.page-id-9,.page-id-11,.page-id-13,.page-id-257) main .hero-slider .page-width {
+				padding-top: 7rem !important;
+				padding-bottom: 5rem !important;
+			}
+			html[dir="rtl"] body:is(.page-id-6,.page-id-9,.page-id-13) main .tabs-mobile-container {
+				position: relative !important;
+				top: auto !important;
+			}
+			html[dir="rtl"] body:is(.page-id-6,.page-id-9,.page-id-13) main .tabs-mobile-content {
+				border-radius: 1rem;
+			}
+			html[dir="rtl"] body:is(.page-id-6,.page-id-13) main [data-tabs-content] {
+				padding: 1.1rem;
+				border-radius: 1.1rem;
+				box-shadow: 0 12px 34px rgba(0,0,0,.06);
+			}
+			html[dir="rtl"] body:is(.page-id-6,.page-id-13) main .form-row {
+				display: grid !important;
+				grid-template-columns: minmax(0,1fr) !important;
+				gap: 0 !important;
+			}
+			html[dir="rtl"] body.page-id-257 main > section.py-14 .grid > a > div:last-child {
+				min-height: 0;
 			}
 		}
 	</style>
@@ -641,7 +795,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 var wagConfig = {"ajaxUrl":"https://voidacoustics.com/wp-admin/admin-ajax.php","markerIcon":"https://voidacoustics.com/wp-content/themes/void2025/images/svg/marker.svg"};
 //# sourceURL=tailpress-js-extra
 </script>
-<script id="tailpress-js" src="https://voidacoustics.com/wp-content/themes/void2025/js/app.js?v=20261021-fa4"></script>
+<script id="tailpress-js" src="https://voidacoustics.com/wp-content/themes/void2025/js/app.js?v=20261021-fa5"></script>
 <script id="facebook-signal-js-extra">
 var facebookSignalConfig = {"cookieName":"wc_facebook_signals_state","ajaxUrl":"https://voidacoustics.com/wp-admin/admin-ajax.php","signalsAction":"fbpix_set_pixel_signals","signalsNonce":"98db904a04"};
 //# sourceURL=facebook-signal-js-extra
@@ -1414,7 +1568,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 	<a class="button button--white button--outline button--md"
 		target=""
 		href="https://voidacoustics.com/flyframe/">
-		View Air Array Fly Frame	</a>
+		View Air Array فریم پرواز	</a>
 </div>
 										</div>
 									
@@ -1464,7 +1618,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 				<div class="md:flex-1 w-full">
 
 					
-						<div id="slider-text-image-6abe626023638" class="splide" role="group" aria-label="Text Image Slides" data-slider="text-image">
+						<div id="slider-text-image-6abe626023638" class="splide" role="group" aria-label="اسلایدهای تصویری" data-slider="text-image">
 							<div class="splide__track">
 								<ul class="splide__list">
 
@@ -1577,7 +1731,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 				<div class="md:flex-1 w-full">
 
 					
-						<div id="slider-text-image-6abe626027b4c" class="splide" role="group" aria-label="Text Image Slides" data-slider="text-image">
+						<div id="slider-text-image-6abe626027b4c" class="splide" role="group" aria-label="اسلایدهای تصویری" data-slider="text-image">
 							<div class="splide__track">
 								<ul class="splide__list">
 
@@ -1698,7 +1852,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 				<div class="md:flex-1 w-full">
 
 					
-						<div id="slider-text-image-6abe62602e683" class="splide" role="group" aria-label="Text Image Slides" data-slider="text-image">
+						<div id="slider-text-image-6abe62602e683" class="splide" role="group" aria-label="اسلایدهای تصویری" data-slider="text-image">
 							<div class="splide__track">
 								<ul class="splide__list">
 
@@ -1753,7 +1907,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 				<div class="md:flex-1 w-full">
 
 					
-						<div id="slider-text-image-6abe62602f726" class="splide" role="group" aria-label="Text Image Slides" data-slider="text-image">
+						<div id="slider-text-image-6abe62602f726" class="splide" role="group" aria-label="اسلایدهای تصویری" data-slider="text-image">
 							<div class="splide__track">
 								<ul class="splide__list">
 
@@ -1954,7 +2108,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 	
 		<div class="no-last-mb content-component content-list-check">
-			<p class="PDq2pG_selectionAnchorContainer" data-start="486" data-end="855">Designed specifically for the Air Array, the Fly Frame expands the deployment possibilities of the <a href="https://voidacoustics.com/products/incubus/">سیستم پرچمدار Incubus</a> with additional flown configurations. Seven angle adjustment positions provide greater flexibility across a range of requirements.</p>
+			<p class="PDq2pG_selectionAnchorContainer" data-start="486" data-end="855">Designed specifically for the Air Array, the فریم پرواز expands the deployment possibilities of the <a href="https://voidacoustics.com/products/incubus/">سیستم پرچمدار Incubus</a> with additional flown configurations. Seven angle adjustment positions provide greater flexibility across a range of requirements.</p>
 <p data-start="486" data-end="855">Five lifting shackles are included as standard, while an optional three-leg sling and touring case are available for lifting and transport.</p>
 		</div>
 
@@ -1970,7 +2124,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 	<a class="button button--red button--filled button--md"
 		target=""
 		href="https://voidacoustics.com/flyframe/">
-		View Air Array Fly Frame	</a>
+		View Air Array فریم پرواز	</a>
 </div>
 
 		
@@ -1984,7 +2138,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 				<div class="md:flex-1 w-full">
 
 					
-						<div id="slider-text-image-6abe62604862f" class="splide" role="group" aria-label="Text Image Slides" data-slider="text-image">
+						<div id="slider-text-image-6abe62604862f" class="splide" role="group" aria-label="اسلایدهای تصویری" data-slider="text-image">
 							<div class="splide__track">
 								<ul class="splide__list">
 
@@ -2016,7 +2170,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 				<div class="tabs-mobile-container sticky top-[var(--scrollTopOffset)]">
 					<div class="tabs-mobile-control-wrap">
 						<button type="button" class="button button--filled button--black w-full flex items-center button--lg justify-between" data-toggle="mobile-tabs">
-							<span>انتخاب منبع</span>
+							<span>انتخاب نوع منبع</span>
 							<span class="-rotate-90"><svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M7 1L1 7.5003L7 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
@@ -2117,8 +2271,8 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li><strong>Connections:</strong> 2 x 8-pin locking connector</li>
 <li><strong>Enclosure:</strong> Fibreglass composite</li>
 <li><strong>Finish:</strong> Smooth cellulose</li>
-<li><strong>Mounting:</strong> Ground stand or fly frame</li>
-<li><strong>Rigging:</strong> سیستم نصب یکپارچه</li>
+<li><strong>Mounting:</strong> Ground stand or فریم پرواز</li>
+<li><strong>ریگینگ:</strong> سیستم نصب یکپارچه</li>
 <li><strong>Colour:</strong>Available as standard in red. Custom RAL and KROME finishes are available upon request</li>
 </ul>
 <p><strong><sup><span class="TextRun SCXW175312034 BCX0" lang="EN-GB" xml:lang="EN-GB" data-contrast="auto"><span class="NormalTextRun Superscript SCXW175312034 BCX0" data-fontsize="12">1</span></span></sup></strong><span class="TextRun SCXW175312034 BCX0" lang="EN-GB" xml:lang="EN-GB" data-contrast="auto"><span class="NormalTextRun SCXW175312034 BCX0"><strong><sup> </sup></strong>-10 dB IEC60268-5  </span></span><strong><sup><span class="TextRun SCXW175312034 BCX0" lang="EN-GB" xml:lang="EN-GB" data-contrast="auto"><span class="NormalTextRun Superscript SCXW175312034 BCX0" data-fontsize="12">2</span></span></sup></strong><span class="TextRun SCXW175312034 BCX0" lang="EN-GB" xml:lang="EN-GB" data-contrast="auto"><span class="NormalTextRun SCXW175312034 BCX0"> Calculated  </span></span><strong><sup><span class="TextRun SCXW175312034 BCX0" lang="EN-GB" xml:lang="EN-GB" data-contrast="auto"><span class="NormalTextRun Superscript SCXW175312034 BCX0" data-fontsize="12">3</span></span></sup></strong><span class="TextRun SCXW175312034 BCX0" lang="EN-GB" xml:lang="EN-GB" data-contrast="auto"><span class="NormalTextRun SCXW175312034 BCX0"> Measured i</span><span class="NormalTextRun SCXW175312034 BCX0">n half space</span></span><span class="EOP SCXW175312034 BCX0" data-ccp-props="{}"> </span></p>
@@ -2135,15 +2289,15 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 																	<div class="flex-1 no-last-mb accordion-downloads-content ">
 										<h5>مستندات پشتیبان</h5>
 <ul>
-<li><a href="https://voidacoustics.com/wp-content/uploads/UG10570-3.0-Void-Acoustics-Incubus-System-User-Guide.pdf">Incubus System User Guide</a></li>
-<li><a href="https://voidacoustics.com/wp-content/uploads/TD10758-2.0-Void-Acoustics-Air-Array-Spec-Sheet.pdf" target="_blank" rel="noopener">Air Array Specification Sheet</a></li>
-<li><a href="https://voidacoustics.com/wp-content/uploads/Air-Array-Line-Drawing.pdf" target="_blank" rel="noopener">Air Array Line Drawing (pdf)</a></li>
-<li><a href="https://voidacoustics.com/wp-content/uploads/Air-Array-Line-Drawing.dwg">Air Array Line Drawing (dwg)</a></li>
-<li><a href="https://voidacoustics.com/wp-content/uploads/air-array-with-bracket-line-drawing-pdf.pdf" target="_blank" rel="noopener">Air Array with Bracket Line Drawing (pdf)</a></li>
-<li><a href="https://voidacoustics.com/wp-content/uploads/airarraywithbracket-1.dwg">Air Array with Bracket Line Drawing (dwg)</a></li>
-<li><a href="https://voidacoustics.com/wp-content/uploads/Air_Array_3D.dwg">Air Array 3D Model</a></li>
-<li><a href="https://voidacoustics.com/wp-content/uploads/Air_Array_Bracket_3D.dwg">Air Array Bracket 3D Model</a></li>
-<li><a href="https://voidacoustics.com/wp-content/uploads/Incubus-Full-Stack-3D-simple.dwg">Incubus Stack 3D Model</a></li>
+<li><a href="https://voidacoustics.com/wp-content/uploads/UG10570-3.0-Void-Acoustics-Incubus-System-User-Guide.pdf">Incubus System راهنمای کاربر</a></li>
+<li><a href="https://voidacoustics.com/wp-content/uploads/TD10758-2.0-Void-Acoustics-Air-Array-Spec-Sheet.pdf" target="_blank" rel="noopener">Air Array برگه مشخصات فنی</a></li>
+<li><a href="https://voidacoustics.com/wp-content/uploads/Air-Array-Line-Drawing.pdf" target="_blank" rel="noopener">Air Array نقشهٔ ابعادی (pdf)</a></li>
+<li><a href="https://voidacoustics.com/wp-content/uploads/Air-Array-Line-Drawing.dwg">Air Array نقشهٔ ابعادی (dwg)</a></li>
+<li><a href="https://voidacoustics.com/wp-content/uploads/air-array-with-bracket-line-drawing-pdf.pdf" target="_blank" rel="noopener">Air Array with Bracket نقشهٔ ابعادی (pdf)</a></li>
+<li><a href="https://voidacoustics.com/wp-content/uploads/airarraywithbracket-1.dwg">Air Array with Bracket نقشهٔ ابعادی (dwg)</a></li>
+<li><a href="https://voidacoustics.com/wp-content/uploads/Air_Array_3D.dwg">Air Array مدل سه‌بعدی</a></li>
+<li><a href="https://voidacoustics.com/wp-content/uploads/Air_Array_Bracket_3D.dwg">Air Array Bracket مدل سه‌بعدی</a></li>
+<li><a href="https://voidacoustics.com/wp-content/uploads/Incubus-Full-Stack-3D-simple.dwg">Incubus Stack مدل سه‌بعدی</a></li>
 <li><a href="https://voidacoustics.com/wp-content/uploads/Air_Array_v2.3.gll">Air Array GLL</a></li>
 </ul>
 									</div>
@@ -2511,7 +2665,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li id="menu-item-7578" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7578"><a href="https://voidacoustics.com/merchandise/">محصولات اختصاصی وید</a></li>
 <li id="menu-item-235" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-235"><a href="https://voidacoustics.com/contact/">تماس با ما</a></li>
 </ul></div></div></div><div class="footer-widgets flex-1"><div id="block-7" class="widget widget_block widget_text">
-<p class="wp-block-paragraph">Unit L, The Fulcrum <br>Vantage Way <br>Poole, Dorset <br>BH12 4NU <br>انگلستان</p>
+<p class="wp-block-paragraph">واحد L، ساختمان Fulcrum <br>خیابان ونتج <br>پول، دورست <br>BH12 4NU <br>انگلستان</p>
 </div><div id="block-8" class="widget widget_block">
 <ul class="wp-block-list">
 <li><a href="mailto:hello@voidacoustics.com">hello@voidacoustics.com</a></li>
@@ -2592,7 +2746,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 </ul>		</div>
 		<div class="flex gap-6 flex-col-reverse md:flex-row">
 			<div class="text-white md:w-48 lg:w-[290px] flex-none">
-				<div>&copy; 2026 Void Acoustics Ltd</div>
+				<div>© ۲۰۲۶ وید اکوستیکس</div>
 			</div>
 			<div class="flex-1">
 				<div class="flex gap-6 justify-between flex-col md:flex-row">
@@ -2648,7 +2802,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 			</div>
 
 			<div class="footer-widgets footer-widgets--mobile"><div id="block-7" class="widget widget_block widget_text">
-<p class="wp-block-paragraph">Unit L, The Fulcrum <br>Vantage Way <br>Poole, Dorset <br>BH12 4NU <br>انگلستان</p>
+<p class="wp-block-paragraph">واحد L، ساختمان Fulcrum <br>خیابان ونتج <br>پول، دورست <br>BH12 4NU <br>انگلستان</p>
 </div><div id="block-8" class="widget widget_block">
 <ul class="wp-block-list">
 <li><a href="mailto:hello@voidacoustics.com">hello@voidacoustics.com</a></li>

@@ -437,6 +437,9 @@
 				color: var(--void-red);
 				font-size: 1.25rem;
 			}
+			html[dir="rtl"] #menu-main-nav .menu-series-list li.has-children > a svg {
+				display: none !important;
+			}
 			html[dir="rtl"] #menu-main-nav [data-parent-lvl1],
 			html[dir="rtl"] #menu-main-nav [data-parent-lvl2] {
 				min-height: 48px;
@@ -477,9 +480,6 @@
 			html[dir="rtl"] #menu-main-nav #products-by-series {
 				height: auto !important;
 				min-height: 100% !important;
-			}
-			html[dir="rtl"] #menu-main-nav .menu-series-list li.has-children > a svg {
-				display: none !important;
 			}
 			html[dir="rtl"] body:has(#menu-main-nav > li.parent-sub-open) #menu-main-nav {
 				padding-bottom: 0 !important;
@@ -538,6 +538,160 @@
 				display: flex !important;
 			}
 		}
+
+		/* Polished content pages: contact, insights, resources, about and discover. */
+		html[dir="rtl"] body:is(.page-id-6,.page-id-9,.page-id-11,.page-id-13,.page-id-257) main .hero-slider h1 {
+			max-width: 18ch;
+			font-weight: 850;
+			line-height: 1.18;
+			text-shadow: 0 3px 24px rgba(0,0,0,.42);
+		}
+		html[dir="rtl"] body:is(.page-id-6,.page-id-9,.page-id-11,.page-id-13) main .layout-combine-space .content-component {
+			font-size: 1.04rem;
+			line-height: 2;
+			color: #3e3e3e;
+		}
+		html[dir="rtl"] body:is(.page-id-6,.page-id-9,.page-id-13) main [data-tabs] > .lg\:w-4\/12 .tabs-mobile-content {
+			padding: 1.25rem;
+			border: 1px solid #e3e3e3;
+			border-radius: 1.25rem;
+			background: linear-gradient(145deg,#fafafa 0%,#f1f1f1 100%);
+			box-shadow: 0 18px 48px rgba(0,0,0,.06);
+		}
+		html[dir="rtl"] body:is(.page-id-6,.page-id-9,.page-id-13) main .departments-list button {
+			min-height: 46px;
+			text-align: right !important;
+			border: 1px solid transparent;
+		}
+		html[dir="rtl"] body:is(.page-id-6,.page-id-9,.page-id-13) main .departments-list .item-active > button,
+		html[dir="rtl"] body:is(.page-id-6,.page-id-9,.page-id-13) main .departments-list button:hover {
+			border-color: rgba(255,2,61,.18);
+			background: #fff;
+			box-shadow: 0 8px 24px rgba(0,0,0,.055);
+		}
+		html[dir="rtl"] body:is(.page-id-6,.page-id-13) main [data-tabs-content] {
+			padding: clamp(1.25rem,3vw,2.5rem);
+			border: 1px solid #e7e7e7;
+			border-radius: 1.5rem;
+			background: #fff;
+			box-shadow: 0 22px 62px rgba(0,0,0,.065);
+		}
+		html[dir="rtl"] body:is(.page-id-6,.page-id-13) main .form-group label,
+		html[dir="rtl"] body:is(.page-id-6,.page-id-13) main .form-heading {
+			display: block;
+			margin-bottom: .55rem;
+			font-weight: 650;
+			text-align: right;
+		}
+		html[dir="rtl"] body:is(.page-id-6,.page-id-13) main .wpcf7 input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
+		html[dir="rtl"] body:is(.page-id-6,.page-id-13) main .wpcf7 select,
+		html[dir="rtl"] body:is(.page-id-6,.page-id-13) main .wpcf7 textarea {
+			width: 100%;
+			text-align: right;
+			direction: rtl;
+			border-radius: .85rem;
+			background-color: #fafafa;
+			transition: border-color .2s ease,box-shadow .2s ease,background-color .2s ease;
+		}
+		html[dir="rtl"] body:is(.page-id-6,.page-id-13) main .wpcf7 input:focus,
+		html[dir="rtl"] body:is(.page-id-6,.page-id-13) main .wpcf7 select:focus,
+		html[dir="rtl"] body:is(.page-id-6,.page-id-13) main .wpcf7 textarea:focus {
+			outline: none;
+			border-color: #ff023d;
+			background: #fff;
+			box-shadow: 0 0 0 4px rgba(255,2,61,.1);
+		}
+		html[dir="rtl"] body.page-id-6 main .partner-locator > .bg-surface-200 {
+			background:
+				radial-gradient(circle at 10% 20%,rgba(255,2,61,.09),transparent 30%),
+				#f1f1f1;
+		}
+		html[dir="rtl"] body.page-id-6 main .partner-checkbox label { margin-right: .45rem; }
+		html[dir="rtl"] body.page-id-9 main section.bg-surface-200 {
+			background:
+				radial-gradient(circle at 88% 18%,rgba(255,2,61,.11),transparent 28%),
+				#ededed;
+		}
+		html[dir="rtl"] body.page-id-9 main [data-insights-search] {
+			text-align: right;
+			direction: rtl;
+		}
+		html[dir="rtl"] body.page-id-13 main .accordion-item {
+			overflow: hidden;
+			border-width: 1px !important;
+			border-color: #dedede !important;
+			border-radius: 1rem !important;
+			background: #fff;
+			box-shadow: 0 9px 26px rgba(0,0,0,.04);
+		}
+		html[dir="rtl"] body.page-id-13 main .accordion-item [data-accordion-toggle] {
+			text-align: right;
+			background: linear-gradient(100deg,#f1f1f1,#fafafa);
+		}
+		html[dir="rtl"] body.page-id-13 main .accordion-item a {
+			line-height: 1.8;
+		}
+		html[dir="rtl"] body.page-id-11 main .layout-combine-space img {
+			border-radius: 1.25rem;
+			box-shadow: 0 24px 60px rgba(0,0,0,.13);
+		}
+		html[dir="rtl"] body.page-id-11 main .benefits-gradient {
+			background:
+				radial-gradient(circle at 12% 12%,rgba(255,2,61,.28),transparent 25%),
+				linear-gradient(140deg,#050505 0%,#191919 48%,#050505 100%);
+		}
+		html[dir="rtl"] body.page-id-257 main > section.py-14 .grid > a {
+			gap: 0 !important;
+			height: 100%;
+			overflow: hidden;
+			border: 1px solid #e4e4e4;
+			border-radius: 1.25rem;
+			background: #fff;
+			box-shadow: 0 14px 40px rgba(0,0,0,.065);
+			transition: transform .28s ease,box-shadow .28s ease,border-color .28s ease;
+		}
+		html[dir="rtl"] body.page-id-257 main > section.py-14 .grid > a:hover {
+			transform: translateY(-6px);
+			border-color: rgba(255,2,61,.35);
+			box-shadow: 0 24px 58px rgba(0,0,0,.12);
+		}
+		html[dir="rtl"] body.page-id-257 main > section.py-14 .grid > a > div:last-child {
+			min-height: 155px;
+			padding: 1.35rem 1.4rem 1.5rem;
+			justify-content: flex-start;
+		}
+		html[dir="rtl"] body.page-id-257 main > section.py-14 .grid > a p {
+			color: #5b5b5b;
+			font-size: .95rem;
+			line-height: 1.85;
+		}
+
+		@media (max-width: 959px) {
+			html[dir="rtl"] body:is(.page-id-6,.page-id-9,.page-id-11,.page-id-13,.page-id-257) main .hero-slider .page-width {
+				padding-top: 7rem !important;
+				padding-bottom: 5rem !important;
+			}
+			html[dir="rtl"] body:is(.page-id-6,.page-id-9,.page-id-13) main .tabs-mobile-container {
+				position: relative !important;
+				top: auto !important;
+			}
+			html[dir="rtl"] body:is(.page-id-6,.page-id-9,.page-id-13) main .tabs-mobile-content {
+				border-radius: 1rem;
+			}
+			html[dir="rtl"] body:is(.page-id-6,.page-id-13) main [data-tabs-content] {
+				padding: 1.1rem;
+				border-radius: 1.1rem;
+				box-shadow: 0 12px 34px rgba(0,0,0,.06);
+			}
+			html[dir="rtl"] body:is(.page-id-6,.page-id-13) main .form-row {
+				display: grid !important;
+				grid-template-columns: minmax(0,1fr) !important;
+				gap: 0 !important;
+			}
+			html[dir="rtl"] body.page-id-257 main > section.py-14 .grid > a > div:last-child {
+				min-height: 0;
+			}
+		}
 	</style>
 	<script id="fa-image-hydration">
 		document.addEventListener('DOMContentLoaded', function () {
@@ -586,13 +740,13 @@
 	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
 	<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->
-	<title>بینش | مطالعات موردی، وبلاگ ها، اخبار و رویدادها | وید اکوستیکس</title>
-	<meta name="description" content="Case studies, blog articles and news from وید اکوستیکس." />
+	<title>تازه‌های وید | پروژه‌ها، مقالات، اخبار و رویدادها</title>
+	<meta name="description" content="پروژه‌ها، مقاله‌ها، اخبار و رویدادهای وید اکوستیکس." />
 	<link rel="canonical" href="https://voidacoustics.com/insights//" />
 	<meta property="og:locale" content="fa_IR" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="بینش | مطالعات موردی، وبلاگ ها، اخبار و رویدادها | وید اکوستیکس" />
-	<meta property="og:description" content="Case studies, blog articles and news from وید اکوستیکس." />
+	<meta property="og:title" content="تازه‌های وید | پروژه‌ها، مقالات، اخبار و رویدادها" />
+	<meta property="og:description" content="پروژه‌ها، مقاله‌ها، اخبار و رویدادهای وید اکوستیکس." />
 	<meta property="og:url" content="https://voidacoustics.com/insights//" />
 	<meta property="og:site_name" content="وید اکوستیکس" />
 	<meta property="article:publisher" content="https://facebook.com/VoidAcoustics" />
@@ -641,7 +795,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 var wagConfig = {"ajaxUrl":"https://voidacoustics.com/wp-admin/admin-ajax.php","markerIcon":"https://voidacoustics.com/wp-content/themes/void2025/images/svg/marker.svg"};
 //# sourceURL=tailpress-js-extra
 </script>
-<script id="tailpress-js" src="https://voidacoustics.com/wp-content/themes/void2025/js/app.js?v=20261021-fa4"></script>
+<script id="tailpress-js" src="https://voidacoustics.com/wp-content/themes/void2025/js/app.js?v=20261021-fa5"></script>
 <script id="facebook-signal-js-extra">
 var facebookSignalConfig = {"cookieName":"wc_facebook_signals_state","ajaxUrl":"https://voidacoustics.com/wp-admin/admin-ajax.php","signalsAction":"fbpix_set_pixel_signals","signalsNonce":"6ebbc4474c"};
 //# sourceURL=facebook-signal-js-extra
@@ -1414,11 +1568,11 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 
 	
 	
-<h3 class="component-heading text-balance">داستان ها، پروژه ها و رویدادها از دنیای وید اکوستیکس</h3>
+<h3 class="component-heading text-balance">داستان‌ها، پروژه‌ها و رویدادهایی از دنیای وید اکوستیکس</h3>
 
 	
 		<div class="no-last-mb content-component content-list-check">
-			<p>Explore the spaces, people and projects shaping Void around the world. From real installations and case studies to product news, event updates and behind-the-scenes stories, this is where we share what we&#8217;re building, where we&#8217;re being heard and what&#8217;s happening next.</p>
+			<p>با فضاها، آدم‌ها و پروژه‌هایی آشنا شوید که حضور وید را در سراسر جهان شکل می‌دهند؛ از پروژه‌های واقعی و مطالعات موردی تا خبر محصولات، رویدادها و روایت‌های پشت صحنه. اینجا جایی است که تازه‌ترین ساخته‌ها، تجربه‌های شنیداری و برنامه‌های آینده را با شما در میان می‌گذاریم.</p>
 		</div>
 
 	
@@ -1447,7 +1601,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 				<div class="md:flex-1 w-full">
 
 					
-						<div id="slider-text-image-6ac036812df3c" class="splide" role="group" aria-label="Text Image Slides" data-slider="text-image">
+						<div id="slider-text-image-6ac036812df3c" class="splide" role="group" aria-label="اسلایدهای تصویری" data-slider="text-image">
 							<div class="splide__track">
 								<ul class="splide__list">
 
@@ -1474,16 +1628,16 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 	<section class="px-gutter bg-surface-200 py-14 lg:py-24">
 		<div class="page-width ">
 			<div class="max-w-4xl flex flex-col gap-10 text-center mx-auto">
-				<div class="h2">Explore Void Acoustics Insights</div>
+				<div class="h2">در تازه‌های وید جست‌وجو کنید</div>
 				<div class="search-input-group search-input-group--white flex-1">
 					<div class="w-8 h-8 flex items-center justify-center"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M13.5056 8.49146C13.5056 6.70934 12.5364 5.08354 11.0044 4.17685C9.44113 3.27016 7.53395 3.27016 6.00195 4.17685C4.43869 5.08354 3.50073 6.70934 3.50073 8.49146C3.50073 10.3048 4.43869 11.9306 6.00195 12.8373C7.53395 13.744 9.44113 13.744 11.0044 12.8373C12.5364 11.9306 13.5056 10.3048 13.5056 8.49146ZM12.5364 13.619C11.4108 14.4944 10.0039 14.9946 8.50318 14.9946C4.90767 14.9946 2 12.087 2 8.49146C2 4.92722 4.90767 1.98828 8.50318 1.98828C12.0674 1.98828 15.0064 4.92722 15.0064 8.49146C15.0064 10.0235 14.4748 11.4304 13.5994 12.5559L17.789 16.7142C18.0703 17.0269 18.0703 17.4959 17.789 17.7772C17.4763 18.0899 17.0073 18.0899 16.7259 17.7772L12.5364 13.619Z" fill="currentColor"/>
 </svg>
 </div>
-					<input type="text" name="keyword" placeholder="What are you looking for today?" class="w-full"
+					<input type="text" name="keyword" placeholder="امروز به‌دنبال چه چیزی هستید؟" class="w-full"
 							data-insights-search>
 					<button type="button" class="text-surface-200 hover:text-primary transition-colors"
-							aria-label="Clear Search" data-insights-search-clear>
+							aria-label="پاک‌کردن جست‌وجو" data-insights-search-clear>
 						<span class="w-8 h-8 flex items-center justify-center"><svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
 <line x1="22.8672" y1="8.9846" x2="8.97843" y2="22.8734" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
 <line x1="23.0349" y1="22.8711" x2="9.14618" y2="8.98234" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
@@ -1506,7 +1660,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 						<button type="button"
 								class="button button--outline button--black w-full flex items-center button--lg justify-between"
 								data-toggle="mobile-tabs">
-							<span>Explore Insights</span>
+							<span>دسته‌بندی مطالب</span>
 							<span class="-rotate-90"><svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M7 1L1 7.5003L7 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
@@ -1515,7 +1669,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 					</div>
 					<div class="tabs-mobile-content">
 						<div class="flex flex-col gap-4 lg:gap-8 xl:pr-24">
-							<div class="text-eyebrow pl-2">All Insights</div>
+							<div class="text-eyebrow pl-2">همه مطالب</div>
 							<ul class="flex flex-col gap-1 mx-0 px-0 overflow-hidden departments-list">
 
 								
@@ -1576,7 +1730,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												<span class="flex gap-4 py-0.5 px-2 rounded-lg hover:text-primary w-full text-left transition-all">
 													<span>
 														<input type="checkbox" name="tags[]"
-																value="قایق‌های تفریحی و یاتینگ">
+																value="yachting">
 													</span>
 													<span>قایق‌های تفریحی و یاتینگ</span>
 												</span>
@@ -1667,7 +1821,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 												<span class="flex gap-4 py-0.5 px-2 rounded-lg hover:text-primary w-full text-left transition-all">
 													<span>
 														<input type="checkbox" name="tags[]"
-																value="خانگی و ویلایی">
+																value="residential">
 													</span>
 													<span>خانگی و ویلایی</span>
 												</span>
@@ -1690,7 +1844,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 </g>
 </svg>
 </span>
-											<span>Blog</span>
+											<span>وبلاگ</span>
 										</button>
 																			</li>
 
@@ -1709,7 +1863,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 </g>
 </svg>
 </span>
-											<span>News</span>
+											<span>اخبار</span>
 										</button>
 																			</li>
 
@@ -1723,7 +1877,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <path d="M10.1667 2.47368V1M10.1667 2.47368V3.94737M10.1667 2.47368H6.91667M1.5 6.89474V13.5263C1.5 14.3402 2.1467 15 2.94444 15H13.0556C13.8533 15 14.5 14.3402 14.5 13.5263V6.89474M1.5 6.89474H14.5M1.5 6.89474V3.94737C1.5 3.13347 2.1467 2.47368 2.94444 2.47368H4.38889M14.5 6.89474V3.94737C14.5 3.13347 13.8533 2.47368 13.0556 2.47368H12.6944M4.38889 1V3.94737" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 </span>
-											<span>Upcoming Events</span>
+											<span>رویدادهای پیش رو</span>
 										</button>
 																			</li>
 
@@ -1737,7 +1891,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <path d="M10.1667 2.47368V1M10.1667 2.47368V3.94737M10.1667 2.47368H6.91667M1.5 6.89474V13.5263C1.5 14.3402 2.1467 15 2.94444 15H13.0556C13.8533 15 14.5 14.3402 14.5 13.5263V6.89474M1.5 6.89474H14.5M1.5 6.89474V3.94737C1.5 3.13347 2.1467 2.47368 2.94444 2.47368H4.38889M14.5 6.89474V3.94737C14.5 3.13347 13.8533 2.47368 13.0556 2.47368H12.6944M4.38889 1V3.94737" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 </span>
-											<span>Past Events</span>
+											<span>رویدادهای گذشته</span>
 										</button>
 																			</li>
 
@@ -1745,7 +1899,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 							</ul>
 							<div class="insights-clear-filters-wrapper" style="display: none;">
 								<button type="button" data-insights-clear-filters class="underline hover:no-underline">
-									Clear Filters
+									پاک‌کردن فیلترها
 								</button>
 							</div>
 						</div>
@@ -1761,7 +1915,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 				<div data-load-more-container class="hidden mt-12">
 					<div class="flex justify-center">
 						<button type="button" data-load-more-insights
-								class="button button--filled button--red button--lg">Load more
+								class="button button--filled button--red button--lg">نمایش مطالب بیشتر
 						</button>
 					</div>
 				</div>
@@ -1849,7 +2003,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <li id="menu-item-7578" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7578"><a href="https://voidacoustics.com/merchandise/">محصولات اختصاصی وید</a></li>
 <li id="menu-item-235" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-235"><a href="https://voidacoustics.com/contact/">تماس با ما</a></li>
 </ul></div></div></div><div class="footer-widgets flex-1"><div id="block-7" class="widget widget_block widget_text">
-<p class="wp-block-paragraph">Unit L, The Fulcrum <br>Vantage Way <br>Poole, Dorset <br>BH12 4NU <br>انگلستان</p>
+<p class="wp-block-paragraph">واحد L، ساختمان Fulcrum <br>خیابان ونتج <br>پول، دورست <br>BH12 4NU <br>انگلستان</p>
 </div><div id="block-8" class="widget widget_block">
 <ul class="wp-block-list">
 <li><a href="mailto:hello@voidacoustics.com">hello@voidacoustics.com</a></li>
@@ -1930,7 +2084,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 </ul>		</div>
 		<div class="flex gap-6 flex-col-reverse md:flex-row">
 			<div class="text-white md:w-48 lg:w-[290px] flex-none">
-				<div>&copy; 2026 Void Acoustics Ltd</div>
+				<div>© ۲۰۲۶ وید اکوستیکس</div>
 			</div>
 			<div class="flex-1">
 				<div class="flex gap-6 justify-between flex-col md:flex-row">
@@ -1986,7 +2140,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 			</div>
 
 			<div class="footer-widgets footer-widgets--mobile"><div id="block-7" class="widget widget_block widget_text">
-<p class="wp-block-paragraph">Unit L, The Fulcrum <br>Vantage Way <br>Poole, Dorset <br>BH12 4NU <br>انگلستان</p>
+<p class="wp-block-paragraph">واحد L، ساختمان Fulcrum <br>خیابان ونتج <br>پول، دورست <br>BH12 4NU <br>انگلستان</p>
 </div><div id="block-8" class="widget widget_block">
 <ul class="wp-block-list">
 <li><a href="mailto:hello@voidacoustics.com">hello@voidacoustics.com</a></li>
