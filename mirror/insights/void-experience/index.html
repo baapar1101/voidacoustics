@@ -273,7 +273,9 @@
 				border: 1px solid rgba(255,255,255,.12) !important;
 				border-top: 0 !important;
 				border-radius: 0 0 22px 22px !important;
-				background: rgba(7,7,7,.98) !important;
+				background:
+					radial-gradient(circle at 88% -12%, rgba(255,2,61,.22), transparent 36%),
+					linear-gradient(155deg, rgba(16,16,16,.99), rgba(4,4,4,.99)) !important;
 				box-shadow: 0 24px 70px rgba(0,0,0,.44) !important;
 				color: #fff !important;
 				overflow: hidden !important;
@@ -293,12 +295,35 @@
 				overscroll-behavior: contain;
 				scrollbar-width: thin;
 			}
+			html[dir="rtl"] #menu-main-nav::before {
+				content: "کاوش در دنیای وید";
+				display: flex;
+				align-items: center;
+				min-height: 44px;
+				padding: 0 4px;
+				border-bottom: 1px solid rgba(255,255,255,.15);
+				color: rgba(255,255,255,.58);
+				font-size: .72rem;
+				font-weight: 650;
+				letter-spacing: 0 !important;
+			}
+			html[dir="rtl"] #menu-main-nav::after {
+				content: "";
+				position: absolute;
+				top: 21px;
+				right: 154px;
+				width: 30px;
+				height: 2px;
+				border-radius: 999px;
+				background: var(--void-red);
+			}
 			html[dir="rtl"] #menu-main-nav > li {
 				position: relative !important;
 				flex: 0 0 auto !important;
 				width: 100% !important;
 				border-bottom: 1px solid rgba(255,255,255,.11) !important;
 			}
+			html[dir="rtl"] #menu-main-nav > li.has-dropdown { position: static !important; }
 			html[dir="rtl"] #menu-main-nav > li > a {
 				display: flex !important;
 				align-items: center !important;
@@ -311,12 +336,20 @@
 				line-height: 1.45 !important;
 			}
 			html[dir="rtl"] #menu-main-nav > li > a::after {
-				content: "‹";
+				content: "↗";
 				color: var(--void-red);
-				font-size: 1.65rem;
+				font-size: .9rem;
 				font-weight: 700;
 				line-height: 1;
 				opacity: .9;
+			}
+			html[dir="rtl"] #menu-main-nav > li.has-dropdown > a::after {
+				content: "+";
+				font-size: 1.35rem;
+			}
+			html[dir="rtl"] #menu-main-nav > li.has-dropdown > a:active,
+			html[dir="rtl"] #menu-main-nav > li.has-dropdown > a:focus-visible {
+				color: var(--void-red) !important;
 			}
 			html[dir="rtl"] #menu-main-nav::-webkit-scrollbar { width: 4px; }
 			html[dir="rtl"] #menu-main-nav::-webkit-scrollbar-track { background: transparent; }
@@ -325,7 +358,142 @@
 				background: rgba(255,255,255,.26);
 			}
 			html[dir="rtl"] #menu-main-nav > li > a > svg { display: none !important; }
-			html[dir="rtl"] #menu-main-nav .menu-dropdown { display: none !important; }
+			html[dir="rtl"] #menu-main-nav .menu-dropdown {
+				display: block !important;
+				position: absolute !important;
+				inset: 0 !important;
+				width: 100% !important;
+				height: 100% !important;
+				padding: 0 !important;
+				border-radius: 16px !important;
+				background: #070707 !important;
+				color: #fff !important;
+				opacity: 0 !important;
+				visibility: hidden !important;
+				transform: translateX(-104%) !important;
+				transition: transform .42s cubic-bezier(.22,.8,.22,1), opacity .25s ease !important;
+				overflow: hidden !important;
+				z-index: 60 !important;
+			}
+			html[dir="rtl"] body.side-menu-open #menu-main-nav > li.has-dropdown.parent-sub-open > .menu-dropdown {
+				opacity: 1 !important;
+				visibility: visible !important;
+				transform: translateX(0) !important;
+			}
+			html[dir="rtl"] #menu-main-nav .menu-dropdown > .page-width,
+			html[dir="rtl"] #menu-main-nav .menu-dropdown .menu-dropdown__inner {
+				width: 100% !important;
+				height: 100% !important;
+				max-width: none !important;
+				margin: 0 !important;
+			}
+			html[dir="rtl"] #menu-main-nav .menu-dropdown .menu-dropdown__inner {
+				padding: 64px 14px 26px !important;
+				border-radius: 16px !important;
+				background:
+					radial-gradient(circle at 90% 0, rgba(255,2,61,.16), transparent 34%),
+					#070707 !important;
+				color: #fff !important;
+				overflow-x: hidden !important;
+				overflow-y: auto !important;
+				scrollbar-width: thin;
+			}
+			html[dir="rtl"] #menu-main-nav .menu-dropdown .menu-dropdown__inner > .flex,
+			html[dir="rtl"] #menu-main-nav .menu-dropdown .menu-dropdown__inner > .flex > .flex-1 {
+				display: block !important;
+				width: 100% !important;
+				height: auto !important;
+			}
+			html[dir="rtl"] #menu-main-nav .menu-dropdown .menu-dropdown__inner > .flex > .flex-1 > .flex:first-child {
+				position: relative !important;
+				z-index: 1 !important;
+				width: 100% !important;
+				height: auto !important;
+				min-height: 100% !important;
+				background: transparent !important;
+				overflow: visible !important;
+			}
+			html[dir="rtl"] #menu-main-nav .menu-dropdown ul {
+				gap: 0 !important;
+				padding: 0 !important;
+				opacity: 1 !important;
+			}
+			html[dir="rtl"] #menu-main-nav .menu-dropdown li {
+				border-bottom: 1px solid rgba(255,255,255,.1);
+			}
+			html[dir="rtl"] #menu-main-nav .menu-dropdown li > a {
+				display: flex !important;
+				align-items: center !important;
+				justify-content: space-between !important;
+				min-height: 48px !important;
+				padding: 8px 4px !important;
+				color: rgba(255,255,255,.9) !important;
+				font-size: .94rem !important;
+				font-weight: 540 !important;
+				line-height: 1.55 !important;
+			}
+			html[dir="rtl"] #menu-main-nav .menu-dropdown li.has-children > a::after {
+				content: "+";
+				color: var(--void-red);
+				font-size: 1.25rem;
+			}
+			html[dir="rtl"] #menu-main-nav [data-parent-lvl1],
+			html[dir="rtl"] #menu-main-nav [data-parent-lvl2] {
+				min-height: 48px;
+				margin-bottom: 8px;
+				padding: 0 4px 12px !important;
+				border-bottom: 1px solid rgba(255,255,255,.16);
+				color: #fff;
+				font-size: 1.05rem;
+				font-weight: 750;
+			}
+			html[dir="rtl"] #menu-main-nav [data-parent-lvl1] a,
+			html[dir="rtl"] #menu-main-nav [data-parent-lvl2] a { color: #fff !important; }
+			html[dir="rtl"] #menu-main-nav .tracking-eyebrow {
+				margin-top: 18px;
+				padding: 0 4px 10px !important;
+				color: rgba(255,255,255,.5) !important;
+				font-size: .68rem !important;
+			}
+			html[dir="rtl"] #menu-main-nav .mobile-menu-level-3 {
+				position: absolute !important;
+				inset: 0 !important;
+				width: 100% !important;
+				height: 100% !important;
+				padding: 64px 14px 26px !important;
+				border-radius: 16px !important;
+				background:
+					radial-gradient(circle at 90% 0, rgba(255,2,61,.18), transparent 34%),
+					#070707 !important;
+				color: #fff !important;
+				transform: translateX(-104%) !important;
+				overflow-x: hidden !important;
+				overflow-y: auto !important;
+				z-index: 75 !important;
+			}
+			html[dir="rtl"] #menu-main-nav .mobile-menu-level-3.mobile-menu-level-3-open {
+				transform: translateX(0) !important;
+			}
+			html[dir="rtl"] #menu-main-nav #products-by-series {
+				height: auto !important;
+				min-height: 100% !important;
+			}
+			html[dir="rtl"] #menu-main-nav .menu-series-list li.has-children > a svg {
+				display: none !important;
+			}
+			html[dir="rtl"] body:has(#menu-main-nav > li.parent-sub-open) #menu-main-nav {
+				padding-bottom: 0 !important;
+				overflow: hidden !important;
+			}
+			html[dir="rtl"] #menu-main-nav .menu-dropdown .menu-dropdown__inner::-webkit-scrollbar,
+			html[dir="rtl"] #menu-main-nav .mobile-menu-level-3::-webkit-scrollbar { width: 4px; }
+			html[dir="rtl"] #menu-main-nav .menu-dropdown .menu-dropdown__inner::-webkit-scrollbar-track,
+			html[dir="rtl"] #menu-main-nav .mobile-menu-level-3::-webkit-scrollbar-track { background: transparent; }
+			html[dir="rtl"] #menu-main-nav .menu-dropdown .menu-dropdown__inner::-webkit-scrollbar-thumb,
+			html[dir="rtl"] #menu-main-nav .mobile-menu-level-3::-webkit-scrollbar-thumb {
+				border-radius: 999px;
+				background: rgba(255,255,255,.24);
+			}
 			html[dir="rtl"] #primary-menu-toggle {
 				position: relative;
 				z-index: 1100;
@@ -338,7 +506,37 @@
 				border-radius: 999px;
 				background: rgba(255,255,255,.09);
 			}
-			html[dir="rtl"] #primary-menu .mobile-menu-back-button { display: none !important; }
+			html[dir="rtl"] #primary-menu .mobile-menu-back-button {
+				position: absolute !important;
+				top: 18px !important;
+				left: auto !important;
+				right: 16px !important;
+				display: none !important;
+				align-items: center !important;
+				justify-content: center !important;
+				gap: 7px;
+				width: auto !important;
+				height: 34px !important;
+				padding: 0 12px !important;
+				border: 1px solid rgba(255,255,255,.15);
+				border-radius: 999px;
+				background: rgba(255,255,255,.08);
+				color: #fff;
+				z-index: 90 !important;
+			}
+			html[dir="rtl"] #primary-menu .mobile-menu-back-button::after {
+				content: "بازگشت";
+				font-size: .75rem;
+				font-weight: 650;
+			}
+			html[dir="rtl"] #primary-menu .mobile-menu-back-button svg {
+				width: 10px;
+				transform: rotate(-90deg) !important;
+			}
+			html[dir="rtl"] body:has(#menu-main-nav .parent-sub-open) #primary-menu .mobile-menu-back-button,
+			html[dir="rtl"] body:has(#menu-main-nav .mobile-menu-level-3-open) #primary-menu .mobile-menu-back-button {
+				display: flex !important;
+			}
 		}
 	</style>
 	<script id="fa-image-hydration">
@@ -440,7 +638,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 var wagConfig = {"ajaxUrl":"https://voidacoustics.com/wp-admin/admin-ajax.php","markerIcon":"https://voidacoustics.com/wp-content/themes/void2025/images/svg/marker.svg"};
 //# sourceURL=tailpress-js-extra
 </script>
-<script id="tailpress-js" src="https://voidacoustics.com/wp-content/themes/void2025/js/app.js?v=20261020-fa3"></script>
+<script id="tailpress-js" src="https://voidacoustics.com/wp-content/themes/void2025/js/app.js?v=20261021-fa4"></script>
 <script id="facebook-signal-js-extra">
 var facebookSignalConfig = {"cookieName":"wc_facebook_signals_state","ajaxUrl":"https://voidacoustics.com/wp-admin/admin-ajax.php","signalsAction":"fbpix_set_pixel_signals","signalsNonce":"deed2e85c6"};
 //# sourceURL=facebook-signal-js-extra
