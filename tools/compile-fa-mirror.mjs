@@ -341,6 +341,57 @@ function normalizeLegacyLinks(html) {
   return html;
 }
 
+const ENGLISH_LINK_ASSET_PATH = /^(?:\/wp-(?:content|includes|admin)\/|\/favicon(?:[./]|$)|\/void_fa_logo(?:[._/]|$)|.*\.(?:pdf|zip|dwg|dxf|step|stp|igs|iges|obj|fbx|3ds|skp|jpg|jpeg|png|gif|webp|svg|ico|avif|mp4|webm|mov|mp3|wav|css|js|mjs|json|xml|woff2?|ttf|eot)(?:[?#]|$))/i;
+
+/** Keep page navigation inside the English namespace.
+ *
+ * The source mirror uses same-site absolute links. The static build later turns
+ * those into root-relative links, which used to send English visitors back to
+ * the Persian pages. Only page anchors are namespaced; downloads and assets
+ * continue to use their shared root paths.
+ */
+function localizeEnglishAnchorLinks(html) {
+  return html.replace(/(<a\b[^>]*?\bhref=)(["'])([^"']*)(\2)/gi, (full, prefix, quote, href) => {
+    const value = href.trim();
+    if (!value || /^(?:#|mailto:|tel:|javascript:|data:)/i.test(value)) return full;
+
+    let pathWithSuffix;
+    if (/^https?:\/\//i.test(value)) {
+      try {
+        const url = new URL(value);
+        if (!/^(?:www\.)?voidacoustics\.com$/i.test(url.hostname)) return full;
+        pathWithSuffix = `${url.pathname}${url.search}${url.hash}`;
+      } catch {
+        return full;
+      }
+    } else if (value.startsWith('/') && !value.startsWith('//')) {
+      pathWithSuffix = value;
+    } else {
+      return full;
+    }
+
+    const pathname = pathWithSuffix.split(/[?#]/, 1)[0];
+    if (ENGLISH_LINK_ASSET_PATH.test(pathname) || /^\/en(?:\/|$)/i.test(pathname)) return full;
+
+    const localized = pathname === '/'
+      ? `/en/${pathWithSuffix.slice(1)}`
+      : `/en${pathWithSuffix}`;
+    return `${prefix}${quote}${localized}${quote}`;
+  });
+}
+
+// Compilation is intentionally repeatable. Once the English mirror contains
+// /en/ links, remove that namespace again while generating Persian pages.
+function localizePersianAnchorLinks(html) {
+  return html.replace(/(<a\b[^>]*?\bhref=)(["'])(\/en(?:\/|(?=[?#]|$))[^"']*)(\2)/gi, (full, prefix, quote, href) => {
+    const suffix = href.slice(3);
+    const localized = !suffix || suffix === '/'
+      ? '/'
+      : /^[?#]/.test(suffix) ? `/${suffix}` : suffix;
+    return `${prefix}${quote}${localized}${quote}`;
+  });
+}
+
 const RESOURCE_ASSET_REPLACEMENTS = new Map([
   ['TD10685-2.0-Void-Acoustics-Arclite-Spec-Sheet1.pdf', 'TD10685-2.0-Void-Acoustics-Arclite-Spec-Sheet.pdf'],
   ['UG10589-2-3-Void-Acoustics-Cyclone-Bass-User-Guide-1.pdf', 'UG10589-2.3-Void-Acoustics-Cyclone-Bass-User-Guide-1.pdf'],
@@ -1454,6 +1505,7 @@ export async function compileAll() {
     for (const r of cleanReplacements) {
       faHtml = faHtml.slice(0, r.startOffset) + r.replacement + faHtml.slice(r.endOffset);
     }
+    faHtml = localizePersianAnchorLinks(faHtml);
 
     // Parent-level replacements can overlap translated child nodes in parse5.
     // Normalize the language control and consent copy after DOM edits so these
@@ -1519,7 +1571,7 @@ export async function compileAll() {
     // 2. UPDATE ENGLISH PAGE (mirror/en/<slug>/index.html)
     // ==========================================
     // Clean up Weglot switcher, remove scripts, set clean hreflangs
-    let enHtml = originalHtml;
+    let enHtml = localizeEnglishAnchorLinks(originalHtml);
 
     // Replace weglot aside switcher in English page
     const enSwitcherHtml = `
