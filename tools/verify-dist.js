@@ -10,7 +10,7 @@ const path = require('path');
 
 const OUT = path.join(__dirname, '..', 'dist');
 const TEXT = new Set(['html', 'htm', 'css', 'js', 'mjs', 'json', 'svg', 'xml']);
-const ASSET = new Set(['css','js','mjs','jpg','jpeg','png','gif','webp','avif','svg','ico','woff','woff2','ttf','otf','eot','mp4','webm','mp3','pdf','zip']);
+const ASSET = new Set(['css','js','mjs','json','webmanifest','jpg','jpeg','png','gif','webp','avif','svg','ico','woff','woff2','ttf','otf','eot','mp4','webm','mp3','pdf','zip']);
 
 async function walk(dir, base = dir, acc = []) {
   for (const e of await fsp.readdir(dir, { withFileTypes: true })) {
@@ -77,7 +77,8 @@ async function main() {
       if (/^(https?:)?\/\//i.test(p) || /^(mailto|tel|javascript|data):/i.test(p)) continue;
       if (!p.startsWith('/')) continue;
       p = decodeURIComponent(p.split('#')[0].split('?')[0]);
-      if (/\.[a-z0-9]{2,5}$/i.test(p) && !/\/$/.test(p)) continue; // asset, already checked
+      const pageExt = path.extname(p).slice(1).toLowerCase();
+      if ((ASSET.has(pageExt) || /\.[a-z0-9]{2,5}$/i.test(p)) && !/\/$/.test(p)) continue; // asset or endpoint, checked separately
       pageRefs++;
       const cand = p.endsWith('/') ? path.join(OUT, p, 'index.html') : path.join(OUT, p, 'index.html');
       const alt = p.endsWith('/') ? path.join(OUT, p) : path.join(OUT, p + '.html');

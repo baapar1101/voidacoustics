@@ -416,6 +416,26 @@ const FA_LOGO_SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="140" height=
   <path fill="currentColor" d="m 557.57189,302.12 q -16.184,0 -28.084,-2.618 -11.662,-2.38 -22.61,-8.806 l 13.804,-25.942 q 9.758,4.998 18.326,6.902 8.568,2.142 17.85,2.142 13.566,0 20.706,-7.378 7.378,-7.378 7.378,-20.23 V 245 h -23.562 q -25.466,0 -39.27,-14.28 -13.566,-14.518 -13.566,-41.174 0,-20.23 9.758,-34.034 9.996,-14.042 27.132,-21.182 17.136,-7.14 38.794,-7.14 h 36.176 v 118.524 q 0,27.132 -16.422,41.65 -16.422,14.756 -46.41,14.756 z m 27.37,-85.68 v -60.69 h -7.616 q -15.232,0 -23.8,8.568 -8.568,8.568 -8.568,24.276 0,27.846 23.562,27.846 z M 404.06605,245 q -1.19,0 -1.19,-1.19 v -26.418 q 0,-0.952 1.19,-0.952 h 41.65 v -89.25 h 35.462 V 245 Z m 19.278,59.5 q -7.378,0 -11.662,-4.76 -4.284,-4.522 -4.284,-12.376 0,-7.854 4.284,-12.614 4.284,-4.522 11.662,-4.522 7.378,0 11.424,4.522 4.284,4.522 4.284,12.614 0,8.092 -4.284,12.614 -4.284,4.522 -11.424,4.522 z m 40.46,0 q -7.378,0 -11.662,-4.76 -4.284,-4.522 -4.284,-12.376 0,-7.854 4.284,-12.614 4.284,-4.522 11.662,-4.522 7.378,0 11.424,4.522 4.284,4.76 4.284,12.614 0,7.854 -4.284,12.376 -4.284,4.76 -11.424,4.76 z M 270.07591,216.44 h 79.492 q -4.998,-21.896 -11.9,-35.462 -7.14,-13.566 -18.088,-23.324 -10.71,-9.996 -26.418,-16.422 l 13.328,-33.32 q 31.416,12.614 50.456,38.794 19.278,26.18 28.322,69.734 h 31.178 q 1.19,0 1.19,0.952 v 26.418 q 0,1.19 -1.19,1.19 h -146.37 z" style="font-weight:700;font-size:238px;direction:rtl;text-anchor:middle;fill:currentColor" aria-label="وید"/>
 </svg>`;
 
+const MOBILE_HEAD_MARKER = /\n?<!-- void-mobile-ui:start -->[\s\S]*?<!-- void-mobile-ui:end -->\n?/gi;
+
+function injectMobileExperience(html, isEnglish) {
+  const manifest = isEnglish ? '/manifest-en.webmanifest' : '/manifest-fa.webmanifest';
+  const injection = `
+<!-- void-mobile-ui:start -->
+<meta name="theme-color" content="#070707" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Void Acoustics" />
+<link rel="manifest" href="${manifest}" />
+<link rel="stylesheet" href="/void-mobile.css?v=20261021-2" />
+<script defer src="/void-mobile.js?v=20261021-2"></script>
+<!-- void-mobile-ui:end -->
+`;
+  const clean = html.replace(MOBILE_HEAD_MARKER, '\n');
+  return clean.replace(/<\/head>/i, `${injection}</head>`);
+}
+
 // Head injections for Persian
 const FA_HEAD_INJECTION = `
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1547,6 +1567,7 @@ export async function compileAll() {
     });
     faHtml = faHtml.replace(/(\/wp-content\/themes\/void2025\/js\/app\.js)(?:\?[^"']*)?/g, '$1?v=20261021-fa5');
     faHtml = normalizeResourceAssets(normalizeLegacyLinks(faHtml));
+    faHtml = injectMobileExperience(faHtml, false);
 
     // Give the Persian homepage a compact editorial bridge between the
     // cinematic hero and the product story, using the same visual language.
@@ -1603,6 +1624,7 @@ export async function compileAll() {
     enHtml = enHtml.replace(/<head>/i, `<head>${enHreflangs}`);
     enHtml = enHtml.replace(/(\/wp-content\/themes\/void2025\/js\/app\.js)(?:\?[^"']*)?/g, '$1?v=20261021-fa5');
     enHtml = normalizeResourceAssets(normalizeLegacyLinks(enHtml));
+    enHtml = injectMobileExperience(enHtml, true);
 
     fs.writeFileSync(file, enHtml, 'utf8');
     enUpdated++;
