@@ -14,6 +14,16 @@
     const option = menu?.querySelector('a');
     if (!input || !label || !menu || !option) return;
 
+    // Older mirrored pages may contain a doubled trailing slash in the
+    // generated language destination. Keep navigation and browser history clean.
+    try {
+      const destination = new URL(option.getAttribute('href'), location.origin);
+      destination.pathname = destination.pathname.replace(/\/{2,}/g, '/');
+      option.setAttribute('href', `${destination.pathname}${destination.search}${destination.hash}`);
+    } catch {
+      // Preserve the original destination if it is not a valid local URL.
+    }
+
     const isFa = document.documentElement.dir === 'rtl' || /^fa\b/i.test(document.documentElement.lang || '');
     const current = isFa
       ? { code: 'FA', name: 'فارسی' }

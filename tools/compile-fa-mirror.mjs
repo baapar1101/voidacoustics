@@ -429,8 +429,8 @@ function injectMobileExperience(html, isEnglish) {
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta name="apple-mobile-web-app-title" content="Void Acoustics" />
 <link rel="manifest" href="${manifest}" />
-<link rel="stylesheet" href="/void-mobile.css?v=20261022-7" />
-<script defer src="/void-mobile.js?v=20261022-7"></script>
+<link rel="stylesheet" href="/void-mobile.css?v=20261022-8" />
+<script defer src="/void-mobile.js?v=20261022-8"></script>
 <!-- void-mobile-ui:end -->
 `;
   const clean = html.replace(MOBILE_HEAD_MARKER, '\n');
@@ -1305,7 +1305,7 @@ export async function compileAll() {
   for (const file of files) {
     const rel = path.relative(EN_DIR, file).replace(/\\/g, '/');
     const slug = rel.replace(/(^|\/)index\.html$/i, '$1').replace(/\.html$/i, '');
-    const cleanSlug = slug === 'index' ? '' : slug;
+    const cleanSlug = (slug === 'index' ? '' : slug).replace(/\/+$/, '');
 
     const faPath = cleanSlug === '' ? '/' : `/${cleanSlug}/`;
     const enPath = cleanSlug === '' ? '/en/' : `/en/${cleanSlug}/`;

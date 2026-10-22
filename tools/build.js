@@ -46,8 +46,8 @@ function rewrite(html) {
   // Keep custom UI assets cache-safe without rewriting every mirrored page
   // whenever the shared controls change.
   out = out
-    .replace(/(\/void-mobile\.css)(?:\?v=[^\s"'`)]*)?/gi, '$1?v=20261022-7')
-    .replace(/(\/void-mobile\.js)(?:\?v=[^\s"'`)]*)?/gi, '$1?v=20261022-7');
+    .replace(/(\/void-mobile\.css)(?:\?v=[^\s"'`)]*)?/gi, '$1?v=20261022-8')
+    .replace(/(\/void-mobile\.js)(?:\?v=[^\s"'`)]*)?/gi, '$1?v=20261022-8');
   return out;
 }
 
