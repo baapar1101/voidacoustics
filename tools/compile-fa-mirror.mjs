@@ -429,8 +429,8 @@ function injectMobileExperience(html, isEnglish) {
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta name="apple-mobile-web-app-title" content="Void Acoustics" />
 <link rel="manifest" href="${manifest}" />
-<link rel="stylesheet" href="/void-mobile.css?v=20261022-5" />
-<script defer src="/void-mobile.js?v=20261022-5"></script>
+<link rel="stylesheet" href="/void-mobile.css?v=20261022-6" />
+<script defer src="/void-mobile.js?v=20261022-6"></script>
 <!-- void-mobile-ui:end -->
 `;
   const clean = html.replace(MOBILE_HEAD_MARKER, '\n');

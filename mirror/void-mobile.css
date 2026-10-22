@@ -248,6 +248,65 @@ html:is([dir], :not([dir])) body .site-header .void-language-switch > ul a:focus
   place-items: center;
 }
 
+/* Weglot's legacy stylesheet assigns every label child a full control width.
+   Pin the enhanced control's internal geometry after those broad rules. */
+html:is([dir], :not([dir])) body .site-header .country-selector.void-language-switch > label.wgcurrent {
+  padding: 0 12px !important;
+}
+
+html:is([dir], :not([dir])) body .site-header .country-selector.void-language-switch > label .void-language-switch__icon {
+  display: grid !important;
+  width: 17px !important;
+  min-width: 17px !important;
+  height: 17px !important;
+  min-height: 17px !important;
+  place-items: center !important;
+}
+
+html:is([dir], :not([dir])) body .site-header .country-selector.void-language-switch > label .void-language-switch__icon svg {
+  display: block !important;
+  width: 17px !important;
+  min-width: 17px !important;
+  height: 17px !important;
+  min-height: 17px !important;
+}
+
+html:is([dir], :not([dir])) body .site-header .country-selector.void-language-switch > label .void-language-switch__current {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  width: auto !important;
+  min-width: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+html:is([dir], :not([dir])) body .site-header .country-selector.void-language-switch > label .void-language-switch__name,
+html:is([dir], :not([dir])) body .site-header .country-selector.void-language-switch > label .void-language-switch__code {
+  width: auto !important;
+  min-width: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  line-height: 1 !important;
+}
+
+html:is([dir], :not([dir])) body .site-header .country-selector.void-language-switch > label .void-language-switch__chevron {
+  display: grid !important;
+  width: 10px !important;
+  min-width: 10px !important;
+  height: 7px !important;
+  min-height: 7px !important;
+  place-items: center !important;
+}
+
+html:is([dir], :not([dir])) body .site-header .country-selector.void-language-switch > label .void-language-switch__chevron svg {
+  display: block !important;
+  width: 10px !important;
+  min-width: 10px !important;
+  height: 7px !important;
+  min-height: 7px !important;
+}
+
 html {
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
@@ -401,7 +460,7 @@ html {
     box-shadow: none !important;
   }
 
-  html:is([dir], :not([dir])) body .site-header .void-language-switch > label {
+  html:is([dir], :not([dir])) body .site-header .country-selector.void-language-switch > label.wgcurrent {
     width: 68px !important;
     min-width: 68px !important;
     height: 42px !important;
@@ -413,10 +472,14 @@ html {
     box-shadow: 0 5px 18px rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.08) !important;
   }
 
-  .void-language-switch__name { display: none; }
-  .void-language-switch__code {
-    color: #fff;
-    font-size: 11px;
+  html:is([dir], :not([dir])) body .site-header .country-selector.void-language-switch > label .void-language-switch__name {
+    display: none !important;
+  }
+
+  html:is([dir], :not([dir])) body .site-header .country-selector.void-language-switch > label .void-language-switch__code {
+    display: block !important;
+    color: #fff !important;
+    font-size: 11px !important;
   }
 
   html:is([dir], :not([dir])) body .site-header .void-language-switch > ul {
@@ -1042,7 +1105,7 @@ html {
     background: transparent !important;
   }
 
-  html:is([dir], :not([dir])) body .site-header .void-language-switch > label {
+  html:is([dir], :not([dir])) body .site-header .country-selector.void-language-switch > label.wgcurrent {
     width: 62px !important;
     min-width: 62px !important;
     height: 38px !important;
