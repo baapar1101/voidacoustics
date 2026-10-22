@@ -307,6 +307,78 @@ html:is([dir], :not([dir])) body .site-header .country-selector.void-language-sw
   min-height: 7px !important;
 }
 
+html:is([dir], :not([dir])) body .site-header .country-selector.void-language-switch > ul a.weglot-lang,
+html:is([dir], :not([dir])) body .site-header .country-selector.void-language-switch > ul a[class*="weglot-language-"] {
+  flex-wrap: nowrap !important;
+  white-space: normal !important;
+  overflow: hidden !important;
+}
+
+html:is([dir], :not([dir])) body .site-header .country-selector.void-language-switch > ul a .void-language-switch__option-icon {
+  display: grid !important;
+  flex: 0 0 22px !important;
+  width: 22px !important;
+  min-width: 22px !important;
+  height: 22px !important;
+  min-height: 22px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  place-items: center !important;
+}
+
+html:is([dir], :not([dir])) body .site-header .country-selector.void-language-switch > ul a .void-language-switch__option-icon svg {
+  display: block !important;
+  width: 22px !important;
+  min-width: 22px !important;
+  height: 22px !important;
+  min-height: 22px !important;
+}
+
+html:is([dir], :not([dir])) body .site-header .country-selector.void-language-switch > ul a .void-language-switch__option-copy {
+  display: flex !important;
+  flex: 1 1 auto !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 3px !important;
+  width: auto !important;
+  min-width: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: normal !important;
+}
+
+html[dir="rtl"] body .site-header .country-selector.void-language-switch > ul a .void-language-switch__option-copy {
+  align-items: flex-end !important;
+  text-align: right !important;
+}
+
+html:is([dir], :not([dir])) body .site-header .country-selector.void-language-switch > ul a .void-language-switch__option-copy strong,
+html:is([dir], :not([dir])) body .site-header .country-selector.void-language-switch > ul a .void-language-switch__option-copy small {
+  display: block !important;
+  width: auto !important;
+  min-width: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+}
+
+html:is([dir], :not([dir])) body .site-header .country-selector.void-language-switch > ul a .void-language-switch__option-code {
+  display: grid !important;
+  flex: 0 0 32px !important;
+  width: 32px !important;
+  min-width: 32px !important;
+  height: 26px !important;
+  min-height: 26px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  place-items: center !important;
+}
+
 html {
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
