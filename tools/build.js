@@ -43,6 +43,11 @@ function rewrite(html) {
   // (ver=2c532d7e2be36f6af233), so match up to the next delimiter -- NOT [0-9a-f]+,
   // which truncates at the first '.' and corrupts the filename.
   out = out.replace(/(\/wp-(?:content|includes)\/[^\s"'`)]*?)\?ver=[^&\s"'`)]*/gi, '$1');
+  // Keep custom UI assets cache-safe without rewriting every mirrored page
+  // whenever the shared controls change.
+  out = out
+    .replace(/(\/void-mobile\.css)(?:\?v=[^\s"'`)]*)?/gi, '$1?v=20261022-5')
+    .replace(/(\/void-mobile\.js)(?:\?v=[^\s"'`)]*)?/gi, '$1?v=20261022-5');
   return out;
 }
 

@@ -1,6 +1,90 @@
 (() => {
   'use strict';
 
+  const languageIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.8 12h16.4M12 3.5c2.15 2.3 3.25 5.13 3.25 8.5S14.15 18.2 12 20.5M12 3.5C9.85 5.8 8.75 8.63 8.75 12s1.1 6.2 3.25 8.5"/></svg>';
+  const chevronIcon = '<svg viewBox="0 0 12 8" aria-hidden="true"><path d="m1 1.25 5 5 5-5"/></svg>';
+
+  const enhanceLanguageSwitcher = () => {
+    const switcher = document.querySelector('.site-header .country-selector');
+    if (!switcher || switcher.dataset.voidLanguageReady === 'true') return;
+
+    const input = switcher.querySelector('.weglot_choice');
+    const label = switcher.querySelector('label');
+    const menu = switcher.querySelector('ul');
+    const option = menu?.querySelector('a');
+    if (!input || !label || !menu || !option) return;
+
+    const isFa = document.documentElement.dir === 'rtl' || /^fa\b/i.test(document.documentElement.lang || '');
+    const current = isFa
+      ? { code: 'FA', name: 'فارسی' }
+      : { code: 'EN', name: 'English' };
+    const target = isFa
+      ? { code: 'EN', name: 'English', note: 'نمایش سایت به انگلیسی' }
+      : { code: 'FA', name: 'فارسی', note: 'View site in Persian' };
+
+    switcher.dataset.voidLanguageReady = 'true';
+    switcher.classList.add('void-language-switch');
+    switcher.setAttribute('aria-label', isFa ? 'انتخاب زبان سایت' : 'Choose site language');
+    switcher.setAttribute('aria-expanded', 'false');
+
+    const menuId = `${input.id || 'void-language'}-menu`;
+    menu.id = menuId;
+    menu.setAttribute('role', 'menu');
+    menu.querySelectorAll('li').forEach((item) => item.setAttribute('role', 'none'));
+
+    label.tabIndex = 0;
+    label.setAttribute('role', 'button');
+    label.setAttribute('aria-haspopup', 'menu');
+    label.setAttribute('aria-controls', menuId);
+    label.setAttribute('aria-expanded', 'false');
+    label.setAttribute('aria-label', isFa ? 'زبان فعلی فارسی؛ تغییر زبان' : 'Current language English; change language');
+    label.innerHTML = `
+      <span class="void-language-switch__icon">${languageIcon}</span>
+      <span class="void-language-switch__current">
+        <span class="void-language-switch__name">${current.name}</span>
+        <span class="void-language-switch__code">${current.code}</span>
+      </span>
+      <span class="void-language-switch__chevron">${chevronIcon}</span>`;
+
+    option.setAttribute('role', 'menuitem');
+    option.setAttribute('aria-label', target.note);
+    option.innerHTML = `
+      <span class="void-language-switch__option-icon">${languageIcon}</span>
+      <span class="void-language-switch__option-copy">
+        <strong>${target.name}</strong>
+        <small>${target.note}</small>
+      </span>
+      <span class="void-language-switch__option-code">${target.code}</span>`;
+
+    const sync = () => {
+      const open = input.checked;
+      switcher.classList.toggle('is-open', open);
+      switcher.classList.toggle('closed', !open);
+      switcher.classList.toggle('open', open);
+      switcher.setAttribute('aria-expanded', String(open));
+      label.setAttribute('aria-expanded', String(open));
+    };
+
+    input.addEventListener('change', sync);
+    label.addEventListener('keydown', (event) => {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      event.preventDefault();
+      input.click();
+    });
+    document.addEventListener('pointerdown', (event) => {
+      if (!input.checked || switcher.contains(event.target)) return;
+      input.checked = false;
+      sync();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape' || !input.checked) return;
+      input.checked = false;
+      sync();
+      label.focus();
+    });
+    sync();
+  };
+
   const icons = {
     home: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 10.5 12 3l8.5 7.5v9a1.5 1.5 0 0 1-1.5 1.5H5a1.5 1.5 0 0 1-1.5-1.5z"/><path d="M9 21v-7h6v7"/></svg>',
     products: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></svg>',
@@ -10,6 +94,7 @@
   };
 
   const init = () => {
+    enhanceLanguageSwitcher();
     if (document.querySelector('.void-mobile-dock')) return;
 
     const html = document.documentElement;

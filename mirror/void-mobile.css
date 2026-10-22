@@ -7,6 +7,247 @@
   --void-app-safe-top: env(safe-area-inset-top, 0px);
 }
 
+/* Brand language control: compact in the app header, descriptive when open. */
+html:is([dir], :not([dir])) body .site-header .country-selector.void-language-switch {
+  position: relative !important;
+  width: auto !important;
+  min-width: 0 !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+  isolation: isolate;
+}
+
+html:is([dir], :not([dir])) body .site-header .void-language-switch > input {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+html:is([dir], :not([dir])) body .site-header .void-language-switch > label {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  width: auto !important;
+  min-width: 108px !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  margin: 0 !important;
+  padding: 0 12px !important;
+  border: 1px solid rgba(255,255,255,.15) !important;
+  border-radius: 14px !important;
+  background: rgba(255,255,255,.075) !important;
+  color: #fff !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.08) !important;
+  font: inherit !important;
+  cursor: pointer !important;
+  user-select: none;
+  transition: border-color .2s ease, background-color .2s ease, box-shadow .2s ease, transform .2s ease !important;
+}
+
+html:is([dir], :not([dir])) body .site-header .void-language-switch > label:hover,
+html:is([dir], :not([dir])) body .site-header .void-language-switch > label:focus-visible,
+html:is([dir], :not([dir])) body .site-header .void-language-switch.is-open > label {
+  border-color: rgba(255,2,61,.72) !important;
+  background: rgba(255,2,61,.13) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 0 0 3px rgba(255,2,61,.1) !important;
+  outline: 0 !important;
+}
+
+html:is([dir], :not([dir])) body .site-header .void-language-switch > label:active {
+  transform: scale(.97);
+}
+
+.void-language-switch__icon,
+.void-language-switch__option-icon {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  color: var(--void-app-red);
+}
+
+.void-language-switch__icon {
+  width: 17px;
+  height: 17px;
+}
+
+.void-language-switch__icon svg,
+.void-language-switch__option-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.65;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.void-language-switch__current {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.void-language-switch__name {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.void-language-switch__code {
+  color: rgba(255,255,255,.5);
+  font-family: "Outfit", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: .08em;
+}
+
+.void-language-switch__chevron {
+  display: grid;
+  flex: 0 0 auto;
+  width: 10px;
+  height: 7px;
+  place-items: center;
+  color: rgba(255,255,255,.7);
+  transition: transform .25s ease, color .2s ease;
+}
+
+.void-language-switch__chevron svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.void-language-switch.is-open .void-language-switch__chevron {
+  color: var(--void-app-red);
+  transform: rotate(180deg);
+}
+
+html:is([dir], :not([dir])) body .site-header .void-language-switch > ul {
+  position: absolute !important;
+  top: calc(100% + 10px) !important;
+  inset-inline-end: 0 !important;
+  z-index: 1200 !important;
+  display: block !important;
+  width: 210px !important;
+  min-width: 210px !important;
+  margin: 0 !important;
+  padding: 6px !important;
+  border: 1px solid rgba(255,255,255,.13) !important;
+  border-radius: 17px !important;
+  background: rgba(7,7,7,.97) !important;
+  box-shadow: 0 22px 56px rgba(0,0,0,.42), inset 0 1px 0 rgba(255,255,255,.07) !important;
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translateY(-7px) scale(.98) !important;
+  transform-origin: top center;
+  transition: opacity .2s ease, transform .25s cubic-bezier(.22,.8,.22,1), visibility .2s ease !important;
+}
+
+html:is([dir], :not([dir])) body .site-header .void-language-switch.is-open > ul,
+html:is([dir], :not([dir])) body .site-header .void-language-switch > input:checked ~ ul {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+html:is([dir], :not([dir])) body .site-header .void-language-switch > ul > li {
+  width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+html:is([dir], :not([dir])) body .site-header .void-language-switch > ul a {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  width: 100% !important;
+  min-height: 54px !important;
+  padding: 8px 10px !important;
+  border: 1px solid transparent !important;
+  border-radius: 12px !important;
+  background: rgba(255,255,255,.055) !important;
+  color: #fff !important;
+  text-align: start !important;
+  text-decoration: none !important;
+  transition: border-color .2s ease, background-color .2s ease !important;
+}
+
+html:is([dir], :not([dir])) body .site-header .void-language-switch > ul a:hover,
+html:is([dir], :not([dir])) body .site-header .void-language-switch > ul a:focus-visible {
+  border-color: rgba(255,2,61,.42) !important;
+  background: rgba(255,2,61,.12) !important;
+  outline: 0 !important;
+}
+
+.void-language-switch__option-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.void-language-switch__option-copy {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.void-language-switch__option-copy strong {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.void-language-switch__option-copy small {
+  color: rgba(255,255,255,.53);
+  font-size: 10px;
+  font-weight: 450;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+.void-language-switch__option-code {
+  display: grid;
+  flex: 0 0 auto;
+  width: 32px;
+  height: 26px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 8px;
+  background: rgba(255,255,255,.06);
+  color: rgba(255,255,255,.72);
+  font-family: "Outfit", sans-serif;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: .08em;
+  place-items: center;
+}
+
 html {
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
@@ -149,6 +390,39 @@ html {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+  }
+
+  html:is([dir], :not([dir])) body .site-header .country-selector.void-language-switch {
+    width: auto !important;
+    min-width: 0 !important;
+    height: auto !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  html:is([dir], :not([dir])) body .site-header .void-language-switch > label {
+    width: 68px !important;
+    min-width: 68px !important;
+    height: 42px !important;
+    min-height: 42px !important;
+    gap: 6px !important;
+    padding: 0 9px !important;
+    border-radius: 14px !important;
+    background: #070707 !important;
+    box-shadow: 0 5px 18px rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.08) !important;
+  }
+
+  .void-language-switch__name { display: none; }
+  .void-language-switch__code {
+    color: #fff;
+    font-size: 11px;
+  }
+
+  html:is([dir], :not([dir])) body .site-header .void-language-switch > ul {
+    top: calc(100% + 8px) !important;
+    width: 202px !important;
+    min-width: 202px !important;
   }
 
   html:is([dir], :not([dir])) body .site-header #primary-menu-toggle .menu-button {
@@ -759,6 +1033,22 @@ html {
     width: 38px !important;
     min-width: 38px !important;
     height: 38px !important;
+  }
+
+  html:is([dir], :not([dir])) body .site-header .country-selector.void-language-switch {
+    width: auto !important;
+    min-width: 0 !important;
+    height: auto !important;
+    background: transparent !important;
+  }
+
+  html:is([dir], :not([dir])) body .site-header .void-language-switch > label {
+    width: 62px !important;
+    min-width: 62px !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    gap: 5px !important;
+    padding: 0 7px !important;
   }
 
   .void-mobile-dock__item span {
