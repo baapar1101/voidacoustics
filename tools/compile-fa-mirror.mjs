@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import * as parse5 from 'parse5';
+import { polishTriMotionPersian } from './polish-trimotion-fa.mjs';
 
 const EN_DIR = path.join(process.cwd(), 'mirror', 'en');
 const ROOT_MIRROR = path.join(process.cwd(), 'mirror');
@@ -1567,6 +1568,9 @@ export async function compileAll() {
     });
     faHtml = faHtml.replace(/(\/wp-content\/themes\/void2025\/js\/app\.js)(?:\?[^"']*)?/g, '$1?v=20261021-fa5');
     faHtml = normalizeResourceAssets(normalizeLegacyLinks(faHtml));
+    if (cleanSlug === 'products/air/trimotion') {
+      faHtml = polishTriMotionPersian(faHtml);
+    }
     faHtml = injectMobileExperience(faHtml, false);
 
     // Give the Persian homepage a compact editorial bridge between the
