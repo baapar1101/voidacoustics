@@ -7,6 +7,13 @@
   --void-app-safe-top: env(safe-area-inset-top, 0px);
 }
 
+/* App-only chrome is opt-in at the mobile breakpoint. Without this desktop
+   baseline, the injected dock SVGs render at their intrinsic full width. */
+.void-mobile-dock,
+.void-scroll-progress {
+  display: none;
+}
+
 /* Brand language control: compact in the app header, descriptive when open. */
 html:is([dir], :not([dir])) body .site-header .country-selector.void-language-switch {
   position: relative !important;
@@ -987,6 +994,7 @@ html {
   }
 
   .void-scroll-progress {
+    display: block;
     position: fixed;
     top: 0;
     right: 0;
