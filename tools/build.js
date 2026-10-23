@@ -26,6 +26,7 @@ const TEXT_EXT = new Set(['html', 'htm', 'css', 'js', 'mjs', 'json', 'svg', 'xml
 const FA_BUSINESS_ADDRESS = 'استان اصفهان، شهرستان اصفهان<br>بخش مرکزی، شهر اصفهان<br>خلجا، خیابان شیخ بهایی<br>بن بست مینا ۲۹، پلاک ۴۷۵<br>ساختمان ایزدی';
 const EN_BUSINESS_ADDRESS = 'Izadi Building, No. 475<br>Mina 29 Dead End, Sheikh Bahaei Street<br>Khalaja, Isfahan City, Central District<br>Isfahan County, Isfahan Province<br>Iran';
 const BUSINESS_PHONE = '+989901046596';
+const BUSINESS_EMAIL = 'info@voidacoustics.ir';
 
 function shouldProcess(file) {
   const ext = path.extname(file).slice(1).toLowerCase();
@@ -37,6 +38,7 @@ function normalizeBusinessContact(html) {
   const localizedAddress = isPersian ? FA_BUSINESS_ADDRESS : EN_BUSINESS_ADDRESS;
   const localizedInlineAddress = localizedAddress.replaceAll('<br>', isPersian ? '، ' : ', ');
   return html
+    .replaceAll('hello@voidacoustics.com', BUSINESS_EMAIL)
     .replace(/Unit L, The Fulcrum, Vantage Way, Poole, Dorset, BH12 4NU, United Kingdom/gi, localizedInlineAddress)
     .replace(/Unit L, The Fulcrum\s*<br\s*\/?>\s*Vantage Way\s*<br\s*\/?>\s*Poole, Dorset\s*<br\s*\/?>\s*BH12 4NU\s*<br\s*\/?>\s*United Kingdom/gi, localizedAddress)
     .replace(/واحد L، ساختمان Fulcrum\s*<br\s*\/?>\s*خیابان ونتج\s*<br\s*\/?>\s*پول، دورست\s*<br\s*\/?>\s*BH12 4NU\s*<br\s*\/?>\s*انگلستان/g, FA_BUSINESS_ADDRESS)
