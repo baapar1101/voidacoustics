@@ -347,9 +347,13 @@ const EN_BUSINESS_ADDRESS = 'Izadi Building, No. 475<br>Mina 29 Dead End, Sheikh
 const BUSINESS_PHONE = '+989901046596';
 
 function normalizeBusinessContact(html) {
+  const isPersian = /<html\b[^>]*\blang=["']fa/i.test(html);
+  const localizedAddress = isPersian ? FA_BUSINESS_ADDRESS : EN_BUSINESS_ADDRESS;
+  const localizedInlineAddress = localizedAddress.replaceAll('<br>', isPersian ? '، ' : ', ');
   return html
-    .replace(/Unit L, The Fulcrum\s*<br>\s*Vantage Way\s*<br>\s*Poole, Dorset\s*<br>\s*BH12 4NU\s*<br>\s*United Kingdom/gi, EN_BUSINESS_ADDRESS)
-    .replace(/واحد L، ساختمان Fulcrum\s*<br>\s*خیابان ونتج\s*<br>\s*پول، دورست\s*<br>\s*BH12 4NU\s*<br>\s*انگلستان/g, FA_BUSINESS_ADDRESS)
+    .replace(/Unit L, The Fulcrum, Vantage Way, Poole, Dorset, BH12 4NU, United Kingdom/gi, localizedInlineAddress)
+    .replace(/Unit L, The Fulcrum\s*<br\s*\/?>\s*Vantage Way\s*<br\s*\/?>\s*Poole, Dorset\s*<br\s*\/?>\s*BH12 4NU\s*<br\s*\/?>\s*United Kingdom/gi, localizedAddress)
+    .replace(/واحد L، ساختمان Fulcrum\s*<br\s*\/?>\s*خیابان ونتج\s*<br\s*\/?>\s*پول، دورست\s*<br\s*\/?>\s*BH12 4NU\s*<br\s*\/?>\s*انگلستان/g, FA_BUSINESS_ADDRESS)
     .replace(/<li><strong>Europe:<\/strong>\s*<a href="tel:4401202666006">\+44 \(0\) 1202 666006<\/a><\/li>/gi, `<li><strong>Phone:</strong> <a href="tel:${BUSINESS_PHONE}">${BUSINESS_PHONE}</a></li>`)
     .replace(/<li><strong>America:<\/strong>\s*<a href="tel:16306866616">\+1 \(630\) 6866616<\/a><\/li>/gi, '')
     .replace(/<li><strong>اروپا:<\/strong>\s*<a href="tel:4401202666006">\+44 \(0\) 1202 666006<\/a><\/li>/g, `<li><strong>تماس:</strong> <a href="tel:${BUSINESS_PHONE}">${BUSINESS_PHONE}</a></li>`)
