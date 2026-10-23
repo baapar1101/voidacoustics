@@ -354,9 +354,9 @@ function normalizeBusinessContact(html) {
     .replace(/Unit L, The Fulcrum, Vantage Way, Poole, Dorset, BH12 4NU, United Kingdom/gi, localizedInlineAddress)
     .replace(/Unit L, The Fulcrum\s*<br\s*\/?>\s*Vantage Way\s*<br\s*\/?>\s*Poole, Dorset\s*<br\s*\/?>\s*BH12 4NU\s*<br\s*\/?>\s*United Kingdom/gi, localizedAddress)
     .replace(/واحد L، ساختمان Fulcrum\s*<br\s*\/?>\s*خیابان ونتج\s*<br\s*\/?>\s*پول، دورست\s*<br\s*\/?>\s*BH12 4NU\s*<br\s*\/?>\s*انگلستان/g, FA_BUSINESS_ADDRESS)
-    .replace(/<li><strong>Europe:<\/strong>\s*<a href="tel:4401202666006">\+44 \(0\) 1202 666006<\/a><\/li>/gi, `<li><strong>Phone:</strong> <a href="tel:${BUSINESS_PHONE}">${BUSINESS_PHONE}</a></li>`)
+    .replace(/<li><strong>Europe:<\/strong>\s*<a href="tel:4401202666006">\+44 \(0\) 1202 666006<\/a><\/li>/gi, `<li><strong>Phone:</strong> <a dir="ltr" href="tel:${BUSINESS_PHONE}">${BUSINESS_PHONE}</a></li>`)
     .replace(/<li><strong>America:<\/strong>\s*<a href="tel:16306866616">\+1 \(630\) 6866616<\/a><\/li>/gi, '')
-    .replace(/<li><strong>اروپا:<\/strong>\s*<a href="tel:4401202666006">\+44 \(0\) 1202 666006<\/a><\/li>/g, `<li><strong>تماس:</strong> <a href="tel:${BUSINESS_PHONE}">${BUSINESS_PHONE}</a></li>`)
+    .replace(/<li><strong>اروپا:<\/strong>\s*<a href="tel:4401202666006">\+44 \(0\) 1202 666006<\/a><\/li>/g, `<li><strong>تماس:</strong> <a dir="ltr" href="tel:${BUSINESS_PHONE}">${BUSINESS_PHONE}</a></li>`)
     .replace(/<li><strong>آمریکا:<\/strong>\s*<a href="tel:16306866616">\+1 \(630\) 6866616<\/a><\/li>/g, '')
     .replace(/<div>\s*(?:Registered WEEE Producer: WEE\/EK4517VW|تولیدکننده ثبت‌شده تجهیزات الکترونیکی: WEE\/EK4517VW)\s*<\/div>/gi, '');
 }
