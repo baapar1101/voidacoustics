@@ -23,15 +23,30 @@ const HOSTS = new Set(['voidacoustics.com', 'www.voidacoustics.com']);
 
 const TEXT_EXT = new Set(['html', 'htm', 'css', 'js', 'mjs', 'json', 'svg', 'xml', 'txt']);
 
+const FA_BUSINESS_ADDRESS = 'استان اصفهان، شهرستان اصفهان<br>بخش مرکزی، شهر اصفهان<br>خلجا، خیابان شیخ بهایی<br>بن بست مینا ۲۹، پلاک ۴۷۵<br>ساختمان ایزدی';
+const EN_BUSINESS_ADDRESS = 'Izadi Building, No. 475<br>Mina 29 Dead End, Sheikh Bahaei Street<br>Khalaja, Isfahan City, Central District<br>Isfahan County, Isfahan Province<br>Iran';
+const BUSINESS_PHONE = '+989901046596';
+
 function shouldProcess(file) {
   const ext = path.extname(file).slice(1).toLowerCase();
   return TEXT_EXT.has(ext);
 }
 
+function normalizeBusinessContact(html) {
+  return html
+    .replace(/Unit L, The Fulcrum\s*<br>\s*Vantage Way\s*<br>\s*Poole, Dorset\s*<br>\s*BH12 4NU\s*<br>\s*United Kingdom/gi, EN_BUSINESS_ADDRESS)
+    .replace(/واحد L، ساختمان Fulcrum\s*<br>\s*خیابان ونتج\s*<br>\s*پول، دورست\s*<br>\s*BH12 4NU\s*<br>\s*انگلستان/g, FA_BUSINESS_ADDRESS)
+    .replace(/<li><strong>Europe:<\/strong>\s*<a href="tel:4401202666006">\+44 \(0\) 1202 666006<\/a><\/li>/gi, `<li><strong>Phone:</strong> <a href="tel:${BUSINESS_PHONE}">${BUSINESS_PHONE}</a></li>`)
+    .replace(/<li><strong>America:<\/strong>\s*<a href="tel:16306866616">\+1 \(630\) 6866616<\/a><\/li>/gi, '')
+    .replace(/<li><strong>اروپا:<\/strong>\s*<a href="tel:4401202666006">\+44 \(0\) 1202 666006<\/a><\/li>/g, `<li><strong>تماس:</strong> <a href="tel:${BUSINESS_PHONE}">${BUSINESS_PHONE}</a></li>`)
+    .replace(/<li><strong>آمریکا:<\/strong>\s*<a href="tel:16306866616">\+1 \(630\) 6866616<\/a><\/li>/g, '')
+    .replace(/<div>\s*(?:Registered WEEE Producer: WEE\/EK4517VW|تولیدکننده ثبت‌شده تجهیزات الکترونیکی: WEE\/EK4517VW)\s*<\/div>/gi, '');
+}
+
 /** Rewrite every same-site absolute URL to root-relative. */
 function rewrite(html) {
   // https://voidacoustics.com/foo  and  http://www.voidacoustics.com/foo
-  let out = html.replace(
+  let out = normalizeBusinessContact(html).replace(
     /https?:\/\/(?:www\.)?voidacoustics\.com(\/[^\s"'`)\\]*)?/g,
     (m, p) => (p && p.length > 1 ? p : '/')
   );
