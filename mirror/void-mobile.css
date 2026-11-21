@@ -14,6 +14,57 @@
   display: none;
 }
 
+/* Iranian e-commerce trust seal, shared by desktop and mobile footers. */
+.site-footer .void-enamad {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 8px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, .12);
+}
+
+.site-footer .void-enamad > a {
+  display: grid;
+  place-items: center;
+  width: 112px;
+  min-height: 112px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, .28);
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.site-footer .void-enamad > a:hover,
+.site-footer .void-enamad > a:focus-visible {
+  border-color: var(--void-app-red);
+  box-shadow: 0 14px 38px rgba(0, 0, 0, .34), 0 0 0 3px rgba(255, 2, 61, .18);
+  outline: 0;
+  transform: translateY(-3px);
+}
+
+.site-footer .void-enamad img {
+  display: block;
+  width: 90px;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  .site-footer .void-enamad {
+    margin-top: 2px;
+    padding: 20px 0 calc(4px + var(--void-app-safe-bottom));
+  }
+
+  .site-footer .void-enamad > a {
+    width: 104px;
+    min-height: 104px;
+    border-radius: 16px;
+  }
+}
+
 /* Brand language control: compact in the app header, descriptive when open. */
 html:is([dir], :not([dir])) body .site-header .country-selector.void-language-switch {
   position: relative !important;

@@ -346,12 +346,18 @@ const FA_BUSINESS_ADDRESS = 'استان اصفهان، شهرستان اصفها
 const EN_BUSINESS_ADDRESS = 'Izadi Building, No. 475<br>Mina 29 Dead End, Sheikh Bahaei Street<br>Khalaja, Isfahan City, Central District<br>Isfahan County, Isfahan Province<br>Iran';
 const BUSINESS_PHONE = '+989901046596';
 const BUSINESS_EMAIL = 'info@voidacoustics.ir';
+const ENAMAD_TRUST_SEAL = `
+<div class="void-enamad" aria-label="نماد اعتماد الکترونیکی">
+  <a referrerpolicy="origin" target="_blank" rel="noopener noreferrer" href="https://trustseal.enamad.ir/?id=8811778&amp;Code=m5JIEvyFFH4fr2AHyTxlj9cdjwgQQPGm" aria-label="مشاهده اعتبار نماد اعتماد الکترونیکی">
+    <img referrerpolicy="origin" src="https://trustseal.enamad.ir/logo.aspx?id=8811778&amp;Code=m5JIEvyFFH4fr2AHyTxlj9cdjwgQQPGm" alt="نماد اعتماد الکترونیکی" loading="lazy" decoding="async" code="m5JIEvyFFH4fr2AHyTxlj9cdjwgQQPGm">
+  </a>
+</div>`;
 
 function normalizeBusinessContact(html) {
   const isPersian = /<html\b[^>]*\blang=["']fa/i.test(html);
   const localizedAddress = isPersian ? FA_BUSINESS_ADDRESS : EN_BUSINESS_ADDRESS;
   const localizedInlineAddress = localizedAddress.replaceAll('<br>', isPersian ? '، ' : ', ');
-  return html
+  let out = html
     .replaceAll('hello@voidacoustics.com', BUSINESS_EMAIL)
     .replace(/Unit L, The Fulcrum, Vantage Way, Poole, Dorset, BH12 4NU, United Kingdom/gi, localizedInlineAddress)
     .replace(/Unit L, The Fulcrum\s*<br\s*\/?>\s*Vantage Way\s*<br\s*\/?>\s*Poole, Dorset\s*<br\s*\/?>\s*BH12 4NU\s*<br\s*\/?>\s*United Kingdom/gi, localizedAddress)
@@ -361,6 +367,11 @@ function normalizeBusinessContact(html) {
     .replace(/<li><strong>اروپا:<\/strong>\s*<a href="tel:4401202666006">\+44 \(0\) 1202 666006<\/a><\/li>/g, `<li><strong>تماس:</strong> <a dir="ltr" href="tel:${BUSINESS_PHONE}">${BUSINESS_PHONE}</a></li>`)
     .replace(/<li><strong>آمریکا:<\/strong>\s*<a href="tel:16306866616">\+1 \(630\) 6866616<\/a><\/li>/g, '')
     .replace(/<div>\s*(?:Registered WEEE Producer: WEE\/EK4517VW|تولیدکننده ثبت‌شده تجهیزات الکترونیکی: WEE\/EK4517VW)\s*<\/div>/gi, '');
+
+  if (!out.includes('class="void-enamad"')) {
+    out = out.replace(/<\/footer>/i, `${ENAMAD_TRUST_SEAL}\n</footer>`);
+  }
+  return out;
 }
 
 const ENGLISH_LINK_ASSET_PATH = /^(?:\/wp-(?:content|includes|admin)\/|\/favicon(?:[./]|$)|\/void_fa_logo(?:[._/]|$)|.*\.(?:pdf|zip|dwg|dxf|step|stp|igs|iges|obj|fbx|3ds|skp|jpg|jpeg|png|gif|webp|svg|ico|avif|mp4|webm|mov|mp3|wav|css|js|mjs|json|xml|woff2?|ttf|eot)(?:[?#]|$))/i;
