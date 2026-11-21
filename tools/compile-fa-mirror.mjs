@@ -349,7 +349,7 @@ const BUSINESS_EMAIL = 'info@voidacoustics.ir';
 const ENAMAD_TRUST_SEAL = `
 <div class="void-enamad" aria-label="نماد اعتماد الکترونیکی">
   <a referrerpolicy="origin" target="_blank" rel="noopener noreferrer" href="https://trustseal.enamad.ir/?id=8811778&amp;Code=m5JIEvyFFH4fr2AHyTxlj9cdjwgQQPGm" aria-label="مشاهده اعتبار نماد اعتماد الکترونیکی">
-    <img referrerpolicy="origin" src="https://trustseal.enamad.ir/logo.aspx?id=8811778&amp;Code=m5JIEvyFFH4fr2AHyTxlj9cdjwgQQPGm" alt="نماد اعتماد الکترونیکی" loading="lazy" decoding="async" code="m5JIEvyFFH4fr2AHyTxlj9cdjwgQQPGm">
+    <img referrerpolicy="origin" src="https://reg2.enamad.ir/rc/outResource/dist/img/logopng/110.png" alt="نماد اعتماد الکترونیکی وید اکوستیکس" loading="lazy" decoding="async" code="m5JIEvyFFH4fr2AHyTxlj9cdjwgQQPGm">
   </a>
 </div>`;
 
