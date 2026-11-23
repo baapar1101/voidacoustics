@@ -27,12 +27,36 @@ const FA_BUSINESS_ADDRESS = 'استان اصفهان، شهرستان اصفها
 const EN_BUSINESS_ADDRESS = 'Izadi Building, No. 475<br>Mina 29 Dead End, Sheikh Bahaei Street<br>Khalaja, Isfahan City, Central District<br>Isfahan County, Isfahan Province<br>Iran';
 const BUSINESS_PHONE = '+989901046596';
 const BUSINESS_EMAIL = 'info@voidacoustics.ir';
+const ENAMAD_VERIFY_URL = 'https://trustseal.enamad.ir/?id=8811778&Code=m5JIEvyFFH4fr2AHyTxlj9cdjwgQQPGm';
 const ENAMAD_TRUST_SEAL = `
 <div class="void-enamad" aria-label="نماد اعتماد الکترونیکی">
-  <a referrerpolicy="origin" href="https://trustseal.enamad.ir/?id=8811778&amp;Code=m5JIEvyFFH4fr2AHyTxlj9cdjwgQQPGm" aria-label="مشاهده اعتبار نماد اعتماد الکترونیکی">
+  <a href="/enamad/" aria-label="مشاهده اعتبار نماد اعتماد الکترونیکی">
     <img referrerpolicy="origin" src="https://reg2.enamad.ir/rc/outResource/dist/img/logopng/110.png" alt="نماد اعتماد الکترونیکی وید اکوستیکس" decoding="async" code="m5JIEvyFFH4fr2AHyTxlj9cdjwgQQPGm">
   </a>
 </div>`;
+const ENAMAD_REDIRECT_PAGE = `<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="origin">
+  <meta http-equiv="refresh" content="0;url=${ENAMAD_VERIFY_URL.replace('&', '&amp;')}">
+  <title>انتقال به صفحه رسمی اینماد | وید اکوستیکس</title>
+  <style>
+    :root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;background:#070707;color:#fff;font-family:Tahoma,Arial,sans-serif}.card{width:min(100%,440px);padding:40px 28px;text-align:center;border:1px solid #2a2a2a;border-radius:24px;background:#111;box-shadow:0 24px 70px #0008}.seal{display:block;width:125px;height:auto;margin:0 auto 24px;padding:10px;border-radius:18px;background:#fff}h1{margin:0 0 12px;font-size:24px}p{margin:0 0 24px;color:#c8c8c8;line-height:1.9}.button{display:inline-flex;min-height:48px;align-items:center;justify-content:center;padding:0 24px;border-radius:999px;background:#ff023d;color:#fff;font-weight:700;text-decoration:none}.button:focus-visible{outline:3px solid #fff;outline-offset:4px}
+  </style>
+  <script>window.location.replace(${JSON.stringify(ENAMAD_VERIFY_URL)});</script>
+</head>
+<body>
+  <main class="card">
+    <img class="seal" src="https://reg2.enamad.ir/rc/outResource/dist/img/logopng/110.png" alt="نماد اعتماد الکترونیکی وید اکوستیکس">
+    <h1>در حال انتقال به صفحه رسمی اینماد</h1>
+    <p>اگر انتقال خودکار انجام نشد، دکمه زیر را انتخاب کنید.</p>
+    <a class="button" referrerpolicy="origin" href="${ENAMAD_VERIFY_URL.replace('&', '&amp;')}">مشاهده اعتبار رسمی</a>
+  </main>
+</body>
+</html>
+`;
 
 function shouldProcess(file) {
   const ext = path.extname(file).slice(1).toLowerCase();
@@ -186,6 +210,14 @@ async function main() {
     } else {
       await fsp.copyFile(from, to);
     }
+    processed++;
+  }
+
+  const enamadPage = path.join(OUT, 'enamad', 'index.html');
+  await fsp.mkdir(path.dirname(enamadPage), { recursive: true });
+  await fsp.writeFile(enamadPage, ENAMAD_REDIRECT_PAGE, 'utf8');
+  if (!files.includes('enamad/index.html')) {
+    files.push('enamad/index.html');
     processed++;
   }
 

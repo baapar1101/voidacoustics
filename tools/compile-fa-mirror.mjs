@@ -348,7 +348,7 @@ const BUSINESS_PHONE = '+989901046596';
 const BUSINESS_EMAIL = 'info@voidacoustics.ir';
 const ENAMAD_TRUST_SEAL = `
 <div class="void-enamad" aria-label="نماد اعتماد الکترونیکی">
-  <a referrerpolicy="origin" href="https://trustseal.enamad.ir/?id=8811778&amp;Code=m5JIEvyFFH4fr2AHyTxlj9cdjwgQQPGm" aria-label="مشاهده اعتبار نماد اعتماد الکترونیکی">
+  <a href="/enamad/" aria-label="مشاهده اعتبار نماد اعتماد الکترونیکی">
     <img referrerpolicy="origin" src="https://reg2.enamad.ir/rc/outResource/dist/img/logopng/110.png" alt="نماد اعتماد الکترونیکی وید اکوستیکس" decoding="async" code="m5JIEvyFFH4fr2AHyTxlj9cdjwgQQPGm">
   </a>
 </div>`;
